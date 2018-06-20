@@ -1,0 +1,30 @@
+/** HEADER **/
+
+.header {
+  background-size: cover;
+  background-position: no-repeat;
+  height: 400px;
+  text-align: left;
+  padding-bottom: 60px;
+  margin-bottom: 100px;
+}
+
+.header:before {
+  content: ' ';
+  display: inline-block;
+  vertical-align: baseline;
+  height: 100%;
+  margin-left: 60px;
+}
+
+.header-headline {
+  display: inline-block;
+  vertical-align: baseline;
+  margin-left: 40px;
+}
+
+.header-headline h1 {
+  font-family: 'Kaushan Script', cursive;
+  font-size: 80px;
+  color: #0e090c;
+}

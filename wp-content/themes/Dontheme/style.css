@@ -5,6 +5,7 @@
 */
 /** Colors **/
 /** THEME from Adobe Color CC "MORRIS" **/
+/** ADDITIONAL COLORS **/
 /** NAVIGATION BAR **/
 /* line 3, sass/_navbar.scss */
 .navbar {
@@ -59,20 +60,87 @@
   text-align: center;
 }
 
-/* line 11, sass/style.scss */
+/** HEADER **/
+/* line 3, sass/_header.scss */
+.header {
+  background-size: cover;
+  background-position: no-repeat;
+  height: 400px;
+  text-align: left;
+  padding-bottom: 60px;
+  margin-bottom: 100px;
+}
+
+/* line 12, sass/_header.scss */
+.header:before {
+  content: ' ';
+  display: inline-block;
+  vertical-align: baseline;
+  height: 100%;
+  margin-left: 60px;
+}
+
+/* line 20, sass/_header.scss */
+.header-headline {
+  display: inline-block;
+  vertical-align: baseline;
+  margin-left: 40px;
+}
+
+/* line 26, sass/_header.scss */
+.header-headline h1 {
+  font-family: 'Kaushan Script', cursive;
+  font-size: 80px;
+  color: #0e090c;
+}
+
+/** TESTIMONIALS PAGE **/
+/* line 3, sass/_testimonials.scss */
+.testimonials-box {
+  margin-bottom: 40px;
+  margin-left: 40px;
+  margin-right: 40px;
+  min-height: 280px;
+  background: #F1F0F4;
+  border: solid 1px;
+  border-color: #D8D8DB;
+  border-radius: 4px;
+  box-shadow: 0 20px 15px -12px rgba(0, 0, 0, 0.5);
+}
+
+/* line 15, sass/_testimonials.scss */
+.testimonials-image {
+  border-radius: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 15px;
+}
+
+/* line 23, sass/_testimonials.scss */
+.testimonials-icon {
+  padding-top: 15px;
+}
+
+/* line 27, sass/_testimonials.scss */
+h4 {
+  font-weight: 800;
+}
+
+/* line 13, sass/style.scss */
 html {
   height: 100%;
   box-sizing: border-box;
 }
 
-/* line 16, sass/style.scss */
+/* line 18, sass/style.scss */
 *,
 *:before,
 *:after {
   box-sizing: inherit;
 }
 
-/* line 22, sass/style.scss */
+/* line 24, sass/style.scss */
 body {
   font-family: Muli, sans-serif;
   font-size: 16px;
@@ -83,55 +151,27 @@ body {
   min-height: 100%;
 }
 
-/* line 32, sass/style.scss */
+/* line 34, sass/style.scss */
 .frontpage-headline h2 {
   text-align: center;
 }
 
-/* line 37, sass/style.scss */
-.testimonials {
-  padding-right: 0px;
-}
-
-/* line 41, sass/style.scss */
+/* line 38, sass/style.scss */
 .view-more {
   display: block;
   margin: auto;
   text-align: center;
 }
 
-/** TESTIMONIALS **/
-/* line 49, sass/style.scss */
-.testimonials-box {
-  margin-bottom: 40px;
-  margin-left: 40px;
-  margin-right: 40px;
-  min-height: 280px;
-  background: #f1f0f4;
-  border: solid 2px;
-  border-color: #a6c24a;
-  box-shadow: 0 20px 15px -12px rgba(0, 0, 0, 0.5);
-}
-
-/* line 60, sass/style.scss */
-.testimonials-image {
-  border-radius: 50%;
-}
-
-/* line 70, sass/style.scss */
-h4 {
-  font-weight: 800;
-}
-
 /** PAGE BANNER **/
-/* line 77, sass/style.scss */
+/* line 47, sass/style.scss */
 .page-banner {
   background-color: #000;
   padding-top: 800px;
   position: relative;
 }
 
-/* line 83, sass/style.scss */
+/* line 53, sass/style.scss */
 .page-banner__image {
   background-size: cover;
   position: absolute;
@@ -139,38 +179,4 @@ h4 {
   bottom: 0;
   left: 0;
   right: 0;
-}
-
-/** HEADER **/
-/* line 95, sass/style.scss */
-.header {
-  background-size: cover;
-  background-position: no-repeat;
-  height: 400px;
-  text-align: left;
-  padding-bottom: 60px;
-  margin-bottom: 100px;
-}
-
-/* line 104, sass/style.scss */
-.header:before {
-  content: ' ';
-  display: inline-block;
-  vertical-align: baseline;
-  height: 100%;
-  margin-left: 40px;
-}
-
-/* line 112, sass/style.scss */
-.header-headline {
-  display: inline-block;
-  vertical-align: baseline;
-  margin-left: 20px;
-}
-
-/* line 118, sass/style.scss */
-.header-headline h1 {
-  font-family: 'Kaushan Script', cursive;
-  font-size: 80px;
-  color: #0e090c;
 }

@@ -7,6 +7,8 @@
 @import "variables";
 @import "navbar";
 @import "footer";
+@import "header";
+@import "testimonials";
 
 html {
   height: 100%;
@@ -33,42 +35,10 @@ body {
   text-align: center;
 }
 
-
-.testimonials {
-  padding-right: 0px;
-}
-
 .view-more {
   display:block;
   margin: auto;
   text-align: center;
-}
-
-/** TESTIMONIALS **/
-
-.testimonials-box {
-  margin-bottom: 40px;
-  margin-left:40px;
-  margin-right: 40px;
-  min-height: 280px;
-  background: #f1f0f4;
-  border: solid 2px;
-  border-color: #a6c24a;
-  box-shadow: 0 20px 15px -12px rgba(0, 0, 0, 0.5);
-}
-
-.testimonials-image {
-  border-radius: 50%;
-
-
-}
-
-.quotation-mark {
-  
-}
-
-h4 {
-  font-weight: 800;
 }
 
 
@@ -87,37 +57,5 @@ h4 {
     bottom: 0;
     left: 0;
     right: 0;
- 
-}
-
-/** HEADER **/
-
-.header {
-  background-size: cover;
-  background-position: no-repeat;
-  height: 400px;
-  text-align: left;
-  padding-bottom: 60px;
-  margin-bottom: 100px;
-}
-
-.header:before {
-  content: ' ';
-  display: inline-block;
-  vertical-align: baseline;
-  height: 100%;
-  margin-left: 40px;
-}
-
-.header-headline {
-  display: inline-block;
-  vertical-align: baseline;
-  margin-left: 20px;
-}
-
-.header-headline h1 {
-  font-family: 'Kaushan Script', cursive;
-  font-size: 80px;
-  color: #0e090c;
 }
 
