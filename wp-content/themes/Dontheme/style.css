@@ -1,0 +1,176 @@
+/*
+  Theme Name: Don's Theme
+  Author: Malin Ekelund
+  Version: 1.0
+*/
+/** Colors **/
+/** THEME from Adobe Color CC "MORRIS" **/
+/** NAVIGATION BAR **/
+/* line 3, sass/_navbar.scss */
+.navbar {
+  background-color: #F1F0F4;
+  border: none;
+}
+
+/* line 8, sass/_navbar.scss */
+.navbar-default .navbar-nav li a {
+  color: #0E090C;
+  text-transform: uppercase;
+  font-family: Muli600, sans-serif;
+  font-size: 16px;
+  transition: color 800ms;
+  -webkit-transition: color 800ms;
+}
+
+/* line 17, sass/_navbar.scss */
+.navbar-default .navbar-nav li a:hover {
+  color: #8B7B82;
+  text-decoration: none;
+  transition: color 800ms;
+  -webkit-transition: color 800ms;
+}
+
+/* line 24, sass/_navbar.scss */
+.navbar li a {
+  color: #6e9ca6;
+}
+
+/* line 28, sass/_navbar.scss */
+.navbar li a:hover {
+  color: #f36e6e;
+}
+
+/* line 32, sass/_navbar.scss */
+.navbar-default .navbar-nav .current-menu-item li a {
+  color: black;
+}
+
+/** FOOTER **/
+/* line 3, sass/_footer.scss */
+.site-footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 50px;
+  background-color: #8B7B82;
+  color: #F1F0F4;
+  font-family: Muli, sans-serif;
+  text-align: center;
+}
+
+/* line 11, sass/style.scss */
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+/* line 16, sass/style.scss */
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* line 22, sass/style.scss */
+body {
+  font-family: Muli, sans-serif;
+  font-size: 16px;
+  position: relative;
+  margin: 0;
+  padding-top: 50px;
+  padding-bottom: 140px;
+  min-height: 100%;
+}
+
+/* line 32, sass/style.scss */
+.frontpage-headline h2 {
+  text-align: center;
+}
+
+/* line 37, sass/style.scss */
+.testimonials {
+  padding-right: 0px;
+}
+
+/* line 41, sass/style.scss */
+.view-more {
+  display: block;
+  margin: auto;
+  text-align: center;
+}
+
+/** TESTIMONIALS **/
+/* line 49, sass/style.scss */
+.testimonials-box {
+  margin-bottom: 40px;
+  margin-left: 40px;
+  margin-right: 40px;
+  min-height: 280px;
+  background: #f1f0f4;
+  border: solid 2px;
+  border-color: #a6c24a;
+  box-shadow: 0 20px 15px -12px rgba(0, 0, 0, 0.5);
+}
+
+/* line 60, sass/style.scss */
+.testimonials-image {
+  border-radius: 50%;
+}
+
+/* line 70, sass/style.scss */
+h4 {
+  font-weight: 800;
+}
+
+/** PAGE BANNER **/
+/* line 77, sass/style.scss */
+.page-banner {
+  background-color: #000;
+  padding-top: 800px;
+  position: relative;
+}
+
+/* line 83, sass/style.scss */
+.page-banner__image {
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+/** HEADER **/
+/* line 95, sass/style.scss */
+.header {
+  background-size: cover;
+  background-position: no-repeat;
+  height: 400px;
+  text-align: left;
+  padding-bottom: 60px;
+  margin-bottom: 100px;
+}
+
+/* line 104, sass/style.scss */
+.header:before {
+  content: ' ';
+  display: inline-block;
+  vertical-align: baseline;
+  height: 100%;
+  margin-left: 40px;
+}
+
+/* line 112, sass/style.scss */
+.header-headline {
+  display: inline-block;
+  vertical-align: baseline;
+  margin-left: 20px;
+}
+
+/* line 118, sass/style.scss */
+.header-headline h1 {
+  font-family: 'Kaushan Script', cursive;
+  font-size: 80px;
+  color: #0e090c;
+}

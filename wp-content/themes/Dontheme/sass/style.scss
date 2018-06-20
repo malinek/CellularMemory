@@ -1,0 +1,123 @@
+/*
+  Theme Name: Don's Theme
+  Author: Malin Ekelund
+  Version: 1.0
+*/
+
+@import "variables";
+@import "navbar";
+@import "footer";
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: Muli, sans-serif;
+  font-size: 16px;
+  position: relative;
+  margin: 0;
+  padding-top: 50px;
+  padding-bottom: 140px;
+  min-height: 100%;
+}
+
+.frontpage-headline h2 {
+  text-align: center;
+}
+
+
+.testimonials {
+  padding-right: 0px;
+}
+
+.view-more {
+  display:block;
+  margin: auto;
+  text-align: center;
+}
+
+/** TESTIMONIALS **/
+
+.testimonials-box {
+  margin-bottom: 40px;
+  margin-left:40px;
+  margin-right: 40px;
+  min-height: 280px;
+  background: #f1f0f4;
+  border: solid 2px;
+  border-color: #a6c24a;
+  box-shadow: 0 20px 15px -12px rgba(0, 0, 0, 0.5);
+}
+
+.testimonials-image {
+  border-radius: 50%;
+
+
+}
+
+.quotation-mark {
+  
+}
+
+h4 {
+  font-weight: 800;
+}
+
+
+/** PAGE BANNER **/
+
+.page-banner {
+  background-color: #000;
+  padding-top: 800px;
+  position: relative;
+}
+
+.page-banner__image {
+  background-size: cover;
+  position: absolute;
+  top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+ 
+}
+
+/** HEADER **/
+
+.header {
+  background-size: cover;
+  background-position: no-repeat;
+  height: 400px;
+  text-align: left;
+  padding-bottom: 60px;
+  margin-bottom: 100px;
+}
+
+.header:before {
+  content: ' ';
+  display: inline-block;
+  vertical-align: baseline;
+  height: 100%;
+  margin-left: 40px;
+}
+
+.header-headline {
+  display: inline-block;
+  vertical-align: baseline;
+  margin-left: 20px;
+}
+
+.header-headline h1 {
+  font-family: 'Kaushan Script', cursive;
+  font-size: 80px;
+  color: #0e090c;
+}
+
