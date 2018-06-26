@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
   Theme Name: Don's Theme
   Author: Malin Ekelund
@@ -7,45 +8,198 @@
 /** THEME from Adobe Color CC "MORRIS" **/
 /** ADDITIONAL COLORS **/
 /** NAVIGATION BAR **/
-/* line 3, sass/_navbar.scss */
-.navbar {
-  background-color: #F1F0F4;
-  border: none;
+/* line 10, sass/_navbar.scss */
+.navigation {
+  height: 60px;
+  background: rgba(241, 240, 244, 0.5);
 }
 
-/* line 8, sass/_navbar.scss */
-.navbar-default .navbar-nav li a {
-  color: #0E090C;
+/* line 14, sass/_navbar.scss */
+.nav-container {
+  margin: 0 auto;
+}
+
+/* line 18, sass/_navbar.scss */
+.brand {
+  position: absolute;
+  padding-left: 20px;
+  float: left;
+  line-height: 60px;
   text-transform: uppercase;
   font-family: Muli600, sans-serif;
-  font-size: 16px;
-  transition: color 800ms;
-  -webkit-transition: color 800ms;
+}
+/* line 25, sass/_navbar.scss */
+.brand a,
+.brand a:visited {
+  color: #0E090C;
+  text-decoration: none;
 }
 
-/* line 17, sass/_navbar.scss */
-.navbar-default .navbar-nav li a:hover {
+/* line 32, sass/_navbar.scss */
+nav {
+  float: right;
+}
+/* line 34, sass/_navbar.scss */
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* line 38, sass/_navbar.scss */
+nav ul li {
+  float: left;
+  position: relative;
+}
+/* line 41, sass/_navbar.scss */
+nav ul li a {
+  display: block;
+  padding: 0 20px;
+  line-height: 60px;
+  background: transparent;
+  color: #0e090c;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: Muli600, sans-serif;
+  transition: color 800ms;
+  -webkit-transition: color 800ms;
+  opacity: 0.8;
+}
+/* line 53, sass/_navbar.scss */
+nav ul li a:hover {
+  background: #8B7B82;
   color: #8B7B82;
+  background: transparent;
   text-decoration: none;
   transition: color 800ms;
   -webkit-transition: color 800ms;
 }
-
-/* line 24, sass/_navbar.scss */
-.navbar li a {
-  color: #6e9ca6;
+/* line 61, sass/_navbar.scss */
+nav ul li a:not(:only-child):after {
+  padding-left: 4px;
+  content: ' ▾';
+}
+/* line 65, sass/_navbar.scss */
+nav ul li a:focus {
+  color: #0E090C;
+  text-decoration: none;
+}
+/* line 70, sass/_navbar.scss */
+nav ul li ul li {
+  min-width: 190px;
+}
+/* line 72, sass/_navbar.scss */
+nav ul li ul li a {
+  padding: 15px;
+  line-height: 20px;
+  z-index: 1;
 }
 
-/* line 28, sass/_navbar.scss */
-.navbar li a:hover {
-  color: #f36e6e;
+/* line 82, sass/_navbar.scss */
+.nav-dropdown {
+  position: absolute;
+  display: none;
+  z-index: 1;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* line 32, sass/_navbar.scss */
-.navbar-default .navbar-nav .current-menu-item li a {
-  color: black;
+/* line 88, sass/_navbar.scss */
+.nav-mobile {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #F1F0F4;
+  height: 60px;
+  width: 60px;
 }
 
+/* line 98, sass/_navbar.scss */
+#nav-toggle {
+  position: absolute;
+  left: 18px;
+  top: 22px;
+  cursor: pointer;
+  padding: 10px 35px 16px 0px;
+}
+/* line 104, sass/_navbar.scss */
+#nav-toggle span,
+#nav-toggle span:before,
+#nav-toggle span:after {
+  cursor: pointer;
+  border-radius: 1px;
+  height: 5px;
+  width: 35px;
+  background: #8B7B82;
+  position: absolute;
+  display: block;
+  content: '';
+  transition: all 300ms ease-in-out;
+}
+/* line 117, sass/_navbar.scss */
+#nav-toggle span:before {
+  top: -10px;
+}
+/* line 120, sass/_navbar.scss */
+#nav-toggle span:after {
+  bottom: -10px;
+}
+/* line 123, sass/_navbar.scss */
+#nav-toggle.active span {
+  background-color: transparent;
+}
+/* line 125, sass/_navbar.scss */
+#nav-toggle.active span:before, #nav-toggle.active span:after {
+  top: 0;
+}
+/* line 129, sass/_navbar.scss */
+#nav-toggle.active span:before {
+  transform: rotate(45deg);
+}
+/* line 132, sass/_navbar.scss */
+#nav-toggle.active span:after {
+  transform: rotate(-45deg);
+}
+
+@media only screen and (max-width: 800px) {
+  /* line 139, sass/_navbar.scss */
+  .nav-mobile {
+    display: block;
+  }
+
+  /* line 142, sass/_navbar.scss */
+  nav {
+    width: 100%;
+    padding: 60px 0 15px;
+  }
+  /* line 145, sass/_navbar.scss */
+  nav ul {
+    display: none;
+  }
+  /* line 147, sass/_navbar.scss */
+  nav ul li {
+    float: none;
+  }
+  /* line 149, sass/_navbar.scss */
+  nav ul li a {
+    padding: 15px;
+    line-height: 20px;
+  }
+  /* line 153, sass/_navbar.scss */
+  nav ul li ul li a {
+    padding-left: 30px;
+  }
+
+  /* line 160, sass/_navbar.scss */
+  .nav-dropdown {
+    position: static;
+  }
+}
+@media screen and (min-width: 800px) {
+  /* line 166, sass/_navbar.scss */
+  .nav-list {
+    display: block !important;
+  }
+}
 /** FOOTER **/
 /* line 3, sass/_footer.scss */
 .site-footer {
@@ -53,45 +207,36 @@
   right: 0;
   bottom: 0;
   left: 0;
-  padding: 50px;
+  padding: 20px;
   background-color: #8B7B82;
   color: #F1F0F4;
   font-family: Muli, sans-serif;
   text-align: center;
 }
 
-/** HEADER **/
-/* line 3, sass/_header.scss */
-.header {
+/* line 15, sass/_footer.scss */
+.site-footer li {
+  list-style: none;
+}
+
+/** HERO **/
+/* line 3, sass/_hero.scss */
+.hero {
   background-size: cover;
   background-position: no-repeat;
   height: 400px;
   text-align: left;
-  padding-bottom: 60px;
-  margin-bottom: 100px;
+  margin-bottom: 60px;
 }
 
-/* line 12, sass/_header.scss */
-.header:before {
-  content: ' ';
-  display: inline-block;
-  vertical-align: baseline;
-  height: 100%;
-  margin-left: 60px;
-}
-
-/* line 20, sass/_header.scss */
-.header-headline {
-  display: inline-block;
-  vertical-align: baseline;
-  margin-left: 40px;
-}
-
-/* line 26, sass/_header.scss */
-.header-headline h1 {
+/* line 11, sass/_hero.scss */
+.hero-headline h1 {
   font-family: 'Kaushan Script', cursive;
   font-size: 80px;
-  color: #0e090c;
+  color: #0E090C;
+  margin-top: 0px;
+  padding-top: 220px;
+  padding-left: 100px;
 }
 
 /** TESTIMONIALS PAGE **/
@@ -145,38 +290,22 @@ body {
   font-family: Muli, sans-serif;
   font-size: 16px;
   position: relative;
-  margin: 0;
-  padding-top: 50px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-top: 0px;
   padding-bottom: 140px;
   min-height: 100%;
 }
 
-/* line 34, sass/style.scss */
+/* line 36, sass/style.scss */
 .frontpage-headline h2 {
   text-align: center;
 }
 
-/* line 38, sass/style.scss */
+/* line 40, sass/style.scss */
 .view-more {
   display: block;
   margin: auto;
   text-align: center;
-}
-
-/** PAGE BANNER **/
-/* line 47, sass/style.scss */
-.page-banner {
-  background-color: #000;
-  padding-top: 800px;
-  position: relative;
-}
-
-/* line 53, sass/style.scss */
-.page-banner__image {
-  background-size: cover;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
 }
