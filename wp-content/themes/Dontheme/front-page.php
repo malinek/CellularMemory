@@ -1,9 +1,6 @@
 <?php get_header(); ?>
 
-<div class="page-banner">
-  <div class="page-banner__image" style="background-image: url(<?php echo get_theme_file_uri('/images/flower1.jpg') ?>);">
-  </div>
-</div>
+
 
 
 
@@ -103,4 +100,4 @@
 
 -->
 
-<?php get_header(); ?>
+<?php get_footer(); ?>

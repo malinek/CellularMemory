@@ -1,0 +1,34 @@
+/** NAVIGATION BAR **/
+
+.navbar {
+  background-color: $lightlightpurple;
+  border: none;
+}
+
+.navbar-default .navbar-nav li a {
+  color: $darkpurple;
+  text-transform: uppercase;
+  font-family: Muli600, sans-serif;
+  font-size: 16px;
+  transition: color 800ms;
+  -webkit-transition: color 800ms;
+}
+
+.navbar-default .navbar-nav li a:hover {
+  color: $lightpurple;
+  text-decoration: none;
+  transition: color 800ms;
+  -webkit-transition: color 800ms;
+}
+
+.navbar li a {
+  color: #6e9ca6;
+}
+
+.navbar li a:hover {
+  color: #f36e6e;
+}
+
+.navbar-default .navbar-nav .current-menu-item li a {
+  color: black;
+}

@@ -7,7 +7,7 @@
 @import "variables";
 @import "navbar";
 @import "footer";
-@import "header";
+@import "hero";
 @import "testimonials";
 
 html {
@@ -25,8 +25,10 @@ body {
   font-family: Muli, sans-serif;
   font-size: 16px;
   position: relative;
-  margin: 0;
-  padding-top: 50px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-top: 0px;
   padding-bottom: 140px;
   min-height: 100%;
 }
@@ -36,26 +38,11 @@ body {
 }
 
 .view-more {
-  display:block;
+  display: block;
   margin: auto;
   text-align: center;
 }
 
 
-/** PAGE BANNER **/
 
-.page-banner {
-  background-color: #000;
-  padding-top: 800px;
-  position: relative;
-}
-
-.page-banner__image {
-  background-size: cover;
-  position: absolute;
-  top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-}
 
