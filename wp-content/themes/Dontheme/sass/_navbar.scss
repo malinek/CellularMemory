@@ -3,9 +3,9 @@
 $content-width: 1000px;
 $breakpoint: 800px;
 $nav-height: 60px;
-$nav-background: #F1F0F4;
-$nav-font-color: #0E090C;
-$link-hover-color: #8B7B82;
+$nav-background: #F1F0F4; /* lightlightpurple*/
+$nav-font-color: #0E090C; /*darkpurple*/
+$link-hover-color: #8B7B82; /*lightpurple*/
 
 .navigation {
   height: $nav-height;
@@ -51,7 +51,6 @@ nav {
         -webkit-transition: color 800ms;
         opacity: 0.8;
         &:hover {
-          background: $link-hover-color;
           color: $link-hover-color;
           background: transparent;
           text-decoration: none;
@@ -98,17 +97,17 @@ nav {
 #nav-toggle {
   position: absolute;
   left: 18px;
-  top: 22px;
+  top: 18px;
   cursor: pointer;
   padding: 10px 35px 16px 0px;
   span,
   span:before,
   span:after {
     cursor: pointer;
-    border-radius: 1px;
-    height: 5px;
+    border-radius: 3px;
+    height: 4px;
     width: 35px;
-    background: $lightpurple;
+    background: $darkpurple;
     position: absolute;
     display: block;
     content: '';
@@ -138,6 +137,7 @@ nav {
 @media only screen and (max-width: $breakpoint) {
   .nav-mobile {
     display: block;
+    background: transparent;
   }
    nav {
     width: 100%;

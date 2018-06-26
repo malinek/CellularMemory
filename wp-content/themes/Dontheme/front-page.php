@@ -1,8 +1,8 @@
-<?php get_header(); ?>
+<?php get_header(); 
 
+navBar();
 
-
-
+?>
 
 <div class="container">
   <div class="row">
@@ -63,41 +63,5 @@
 
   </div><!-- end row -->
 </div><!-- end container -->
-
-
-
-<!--
-      <h2>Upcoming workshops</h2>
-      <div class="col col-lg-4">
-        <p>AUG 31 - SEP 5, 2018</p>
-      </div>
-      <div class="col col-lg-8">
-        <p>LIVING FOREST, COSTA RICA</p>
-      </div>
-      <div class="col col-lg-4">
-        <p>NOV 2 - NOV 7, 2018</p>
-      </div>
-      <div class="col col-lg-8">
-        <p>BERLIN, GERMANY</p>
-      </div>
-      <div class="col col-lg-4">
-        <p> NOV 16 - NOV 18, 2018</p>
-      </div>
-      <div class="col col-lg-8">
-        <p>TAUBENBLAU, STOLZENHAGEN, GERMANY</p>
-      </div>
-
-
-    </div>
-    <div class="col col-lg-6">
-      <h2>Testimonials</h2>
-      <p>I have been working with Donald now consistently for over 15 years. During this time I have gone though such a great metamorphose that I feel like I can now say I feel love and joy pretty much most of the time and I have created a really wonderful life for myself.</p>
-
-      <p>Donald reconnected me with the divine within. His gift of bringing through the unconditional love necessary to melt away the emotional, mental and physical blocks to our divine self is beyond works. Experiencing his work helped me remember what I came to do. He is Unconditional Love.</p>
-    </div>
-
-</div>
-
--->
 
 <?php get_footer(); ?>

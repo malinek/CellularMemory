@@ -1,0 +1,24 @@
+/** PRIVATE SESSIONS PAGE **/
+
+.private-sessions-image {
+  border-radius: 2%;
+}
+
+.book-session {
+  margin-top: 20px;
+  margin-bottom: 40px;
+  background: #F1F0F4;
+  border: solid 1px;
+  border-color: $lightergreen;
+  border-radius: 4px;
+  box-shadow: 0 20px 15px -12px rgba(0, 0, 0, 0.5);
+}
+
+.book-session h3 {
+  padding-bottom: 15px;
+}
+
+.book-session h4 {
+  padding-bottom: 10px;
+  font-weight: 400;
+}
