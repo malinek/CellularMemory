@@ -1,15 +1,18 @@
-<?php
 
-  get_header(); ?>
+<?php get_header(); ?>
 
-  <div class="header" style="background-image: url(<?php echo get_theme_file_uri('/images/testimonials-header3.jpg') ?>);">
-    <div class="header-headline">
+<div class="hero" style="background-image: url(<?php echo get_theme_file_uri('/images/ball-background.jpg') ?>);">
+
+  <!-- insert navBar function here -->
+  <?php navBar(); ?>
+
+  <div class="hero-headline">
     <h1>Welcome to our blog</h1>
-    </div>
-  </div>
+  </div><!-- end hero-headline -->
+
+</div><!-- end hero -->
 
   <div class="container">
-
   <?php
   while(have_posts()) {
     the_post(); ?>
@@ -30,7 +33,6 @@
 
     </div>
   <?php }
-  
   ?>
 </div><!-- end container -->
 

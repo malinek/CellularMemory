@@ -23,6 +23,9 @@ function navBar() {
               <a href="#!">TCM</a>
             </li>
             <li>
+              <a href="#!">Payment</a>
+            </li>
+            <li>
               <a href="<?php echo site_url('/about/testimonials') ?>">Testimonials</a>
             </li>
             <li>
@@ -33,14 +36,17 @@ function navBar() {
         <li>
           <a href="<?php echo site_url('/contact') ?>">Contact</a>
         </li>
-        <li>
-          <a href="#!">Workshops</a>
+        <li <?php if (get_post_type() == 'event') echo 'class="current-menu-item"'; ?>>
+          <a href="<?php echo get_post_type_archive_link('workshop') ?>">Workshops</a>
         </li>
         <li>
           <a href="<?php echo site_url('/private-sessions') ?>">Private Sessions</a>
         </li>
         <li>
           <a href="<?php echo site_url('/blog') ?>">Blog</a>
+        </li>
+        <li>
+          <a href="#!">Publications</a>
         </li>
         <li>
           <a href="#!">Gallery</a>

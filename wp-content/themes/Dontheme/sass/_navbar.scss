@@ -7,6 +7,11 @@ $nav-background: #F1F0F4; /* lightlightpurple*/
 $nav-font-color: #0E090C; /*darkpurple*/
 $link-hover-color: #8B7B82; /*lightpurple*/
 
+/* Doesn't work, fix */
+.current-menu-item a {
+  color: $link-hover-color;
+}
+
 .navigation {
   height: $nav-height;
   background:rgba(241,240,244,0.5);
