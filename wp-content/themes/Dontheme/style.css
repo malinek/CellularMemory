@@ -309,20 +309,64 @@ h4 {
   font-weight: 400;
 }
 
-/* line 14, sass/style.scss */
-html {
-  height: 100%;
-  box-sizing: border-box;
+/** WORKSHOPS PAGES **/
+/** ARCHIVE PAGE **/
+/* line 6, sass/_workshops.scss */
+.container-workshops {
+  max-width: 800px;
 }
 
-/* line 19, sass/style.scss */
-*,
+/* line 10, sass/_workshops.scss */
+.workshops-box {
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+  background: #F1F0F4;
+  border: solid 1px;
+  border-color: #D8D8DB;
+  border-radius: 4px;
+  box-shadow: 0 20px 15px -12px rgba(0, 0, 0, 0.5);
+}
+
+/* line 20, sass/_workshops.scss */
+.date-column {
+  text-align: center;
+}
+
+/* line 24, sass/_workshops.scss */
+.calender-icon {
+  height: 100px;
+  padding-top: 0px;
+  padding-right: 20px;
+  margin-top: -45px;
+}
+
+/* line 31, sass/_workshops.scss */
+.start-date {
+  font-family: Muli800, sans-serif;
+  line-height: 1.5;
+  display: inline-block;
+  text-align: left;
+  margin-top: 0px;
+  padding-top: 40px;
+}
+
+/* line 41, sass/_workshops.scss */
+.content-workshops {
+  text-align: center;
+}
+
+/* line 15, sass/style.scss */
+html {
+  height: 100%;
+  /**box-sizing: border-box; **/
+}
+
+/***,
 *:before,
 *:after {
   box-sizing: inherit;
-}
-
-/* line 25, sass/style.scss */
+} **/
+/* line 26, sass/style.scss */
 body {
   font-family: Muli, sans-serif;
   font-size: 16px;
@@ -335,12 +379,12 @@ body {
   min-height: 100%;
 }
 
-/* line 37, sass/style.scss */
+/* line 38, sass/style.scss */
 .frontpage-headline h2 {
   text-align: center;
 }
 
-/* line 41, sass/style.scss */
+/* line 42, sass/style.scss */
 .view-more {
   display: block;
   margin: auto;

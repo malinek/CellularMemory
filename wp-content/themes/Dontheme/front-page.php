@@ -21,7 +21,7 @@ navBar();
           'meta_query' => array(
             array(
               'key' => 'workshop_start_date',
-              'compare' => '>=',
+              'compare' => '>',
               'value' => $today,
               'type' => 'numeric'
             )
@@ -39,8 +39,8 @@ navBar();
             $workshopEndDate = new DateTime(get_field('workshop_end_date'));
             echo $workshopEndDate->format('j F Y')
             ?></span>
-            
           </div>
+
           <div class="col-sm-8">
             <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
             <p><?php echo wp_trim_words(get_the_content(), 25); ?><a href="<?php the_permalink(); ?>"> Read more</a></p>
@@ -49,14 +49,13 @@ navBar();
         <?php }
       ?>
 
-      <a href="<?php echo get_post_type_archive_link('workshop') ?>">See all workshops</a>
-
-
-      
-      
-      
+      <div class="col-sm-12">
+        <button type="button" class="btn btn-default view-more"><a href="<?php echo get_post_type_archive_link('workshop') ?>">See all workshops</a></button>
+      </div>
     
     </div>
+
+    <!-- TESTIMONIALS -->
     
     <div class="col-sm-6 testimonials frontpage-headline">
       <h2>Testimonials</h2>
