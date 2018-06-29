@@ -75,4 +75,24 @@ function dons_features() {
 
 add_action('after_setup_theme', 'dons_features');
 
+// This is for the ordering of the workshops in archive-workshop.php
+function dons_adjust_queries($query) {
+  if (!is_admin() AND is_post_type_archive('workshop') AND $query->is_main_query()) {
+    $today = date('Ymd');
+    $query->set('meta_key', 'workshop_start_date');
+    $query->set('orderby', 'meta_value_num');
+    $query->set('order', 'ASC');
+    $query->set('meta_query', array(
+            array(
+              'key' => 'workshop_start_date',
+              'compare' => '>=',
+              'value' => $today,
+              'type' => 'numeric'
+            )
+          ));
+  }
+}
+
+add_action('pre_get_posts', 'dons_adjust_queries');
+
 ?>

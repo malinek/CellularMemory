@@ -1,0 +1,43 @@
+/** WORKSHOPS PAGES **/
+
+
+/** ARCHIVE PAGE **/
+
+.container-workshops {
+  max-width: 800px;
+}
+
+.workshops-box {
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+  background: #F1F0F4;
+  border: solid 1px;
+  border-color: $lightergreen;
+  border-radius: 4px;
+  box-shadow: 0 20px 15px -12px rgba(0, 0, 0, 0.5);
+}
+
+.date-column {
+  text-align: center;
+}
+
+.calender-icon {
+  height: 100px;
+  padding-top: 0px;
+  padding-right: 20px;
+  margin-top: -45px;
+}
+
+.start-date {
+  font-family: Muli800, sans-serif;
+  line-height: 1.5;
+  display: inline-block;
+  text-align: left;
+  margin-top: 0px;
+  padding-top: 40px;
+ 
+}
+
+.content-workshops {
+  text-align: center;
+}
