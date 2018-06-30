@@ -2,7 +2,7 @@
 
 <?php get_header(); ?>
 
-<div class="hero" style="background-image: url(<?php echo get_theme_file_uri('/images/field-background.jpg') ?>);">
+<div class="hero" style="background-image: url(<?php echo get_theme_file_uri('/images/summer-field.jpg') ?>);">
 
   <!-- insert navBar function here -->
   

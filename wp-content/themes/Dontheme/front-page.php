@@ -1,10 +1,36 @@
-<?php get_header(); 
+<?php get_header(); ?>
 
-navBar();
+<div class="column-sm-12 welcome-image" style="background-image: url(<?php echo get_theme_file_uri('/images/front-page8.jpg') ?>);">
 
-?>
+  <!-- insert navBar function here -->
+  
+  <?php navBar(); ?>
 
-<div class="container">
+  <div class="column-sm-12 welcome-text">
+    <h1>Clean out your closet and open up to the<br>sweetness and love of the universe<br><br>Come on in<br>Everybody is Welcome</h1>
+  </div><!-- end hero-headline -->
+
+</div><!-- end welcome-image -->
+
+<div class="container intro-text-column">
+  
+  <div class="intro-text">
+    <h3>Transforming Cellular Memory...</h3>
+
+    <h4>...is the process of taking the body/mind through deep cellular purification and metamorphosis. This is created through sitting in a transmission of divine light, allowing this energy of universal intelligence to clear out the old cloaks of world mind and awaken the sacred nature of who we truly are.</h4>
+
+    <h3>Expanding global consciousness</h3>
+
+    <h4>There are many of us who are now and have been taking our bodies through deep purification. We are learning to live in alignment with the universal principles of love, gratitude and sweetness. Together we are pioneering a new global consciousness based on inclusion, connection and the recognition that we are all in this together as a global family. Together we now move beyond the grid of old world mind; fear, separation, exclusion, bigotry, greed/competition and self hatred.</h4>
+
+    <p><a href="#" class="btn btn-default btn-lg front-page-button" role="button">Read more</a></p>
+
+  </div>
+
+  </div>
+
+  <div class="container">
+
   <div class="row">
 
     <div class="col-sm-6 frontpage-headline">
@@ -84,6 +110,7 @@ navBar();
     </div>
 
   </div><!-- end row -->
+
 </div><!-- end container -->
 
 <?php get_footer(); ?>

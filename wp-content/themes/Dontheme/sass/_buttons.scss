@@ -1,0 +1,41 @@
+/** BUTTONS **/
+
+/** FRONT PAGE BUTTON **/
+.front-page-button {
+  border: solid 1px;
+  border-radius: 4px;
+  border-color: $buttondarkerpurple;
+  color: $buttontextgreen;
+  background-color: $lightpurple;
+  width: 150px;
+}
+
+.workshops-button:hover {
+  border-color: $lightpurple;
+  color: $darkpurple;
+  background-color: $buttonlightpurple;
+}
+
+.workshops-button a {
+  font-family: Muli800, sans-serif;
+}
+
+/** WORKSHOPS BUTTON **/
+.workshops-button {
+  border: solid 1px;
+  border-radius: 4px;
+  border-color: $darkgreen;
+  color: $buttontextgreen;
+  background-color: $brightergreen;
+  width: 120px;
+}
+
+.workshops-button:hover {
+  border-color: $lightpurple;
+  color: $darkpurple;
+  background-color: $buttonlightpurple;
+}
+
+.workshops-button a {
+  font-family: Muli800, sans-serif;
+}
