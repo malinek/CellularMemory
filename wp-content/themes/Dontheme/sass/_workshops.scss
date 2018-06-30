@@ -1,6 +1,5 @@
 /** WORKSHOPS PAGES **/
 
-
 /** ARCHIVE PAGE **/
 
 .container-workshops {
@@ -29,7 +28,6 @@
 }
 
 .start-date {
-  font-family: Muli800, sans-serif;
   line-height: 1.5;
   display: inline-block;
   text-align: left;
@@ -40,4 +38,9 @@
 
 .content-workshops {
   text-align: center;
+}
+
+h3 {
+  font-family: Muli800, sans-serif;
+  color: $darkpurple;
 }

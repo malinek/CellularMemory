@@ -33,7 +33,7 @@
       <div class="col-sm-12 content-workshops">
         <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
         <p><?php the_content(); ?></p>
-        <button type="button" class="btn btn-default"><a href="<?php the_permalink(); ?>">Read more</a></button>
+        <button type="button" class="btn btn-default workshops-button"><a href="<?php the_permalink(); ?>">Read more</a></button>
       </div>
 
 
