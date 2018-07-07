@@ -363,50 +363,122 @@ h3 {
 }
 
 /** BUTTONS **/
-/** FRONT PAGE BUTTON **/
-/* line 4, sass/_buttons.scss */
-.front-page-button {
-  border: solid 1px;
-  border-radius: 4px;
+/* line 3, sass/_buttons.scss */
+.main-button {
+  padding: 12px 65px;
+  color: #F1F5E3;
+  font-family: Muli800, sans-serif;
+  font-size: 18px;
+  letter-spacing: 1.2px;
+  border: solid 0px;
+  border-radius: 6px;
+  border-color: #7d6E75;
+  background: #8b7b82;
+  background: linear-gradient(90deg, #8b7b82 0%, #d0cacd 100%);
+  transition: all 0.2s ease;
+  box-shadow: 0 12px 20px -8px rgba(0, 0, 0, 0.5);
+}
+
+/* line 18, sass/_buttons.scss */
+.main-button:hover {
+  transform: translateY(4px);
   border-color: #7d6E75;
   color: #F1F5E3;
   background-color: #8B7B82;
-  width: 150px;
 }
 
-/* line 13, sass/_buttons.scss */
-.workshops-button:hover {
-  border-color: #8B7B82;
-  color: #0E090C;
-  background-color: #c5bdc0;
-}
-
-/* line 19, sass/_buttons.scss */
-.workshops-button a {
-  font-family: Muli800, sans-serif;
-}
-
-/** WORKSHOPS BUTTON **/
-/* line 24, sass/_buttons.scss */
-.workshops-button {
-  border: solid 1px;
-  border-radius: 4px;
-  border-color: #95A660;
+/* line 25, sass/_buttons.scss */
+.main-button:active {
+  transform: translateY(3px);
+  border-color: #7d6E75;
   color: #F1F5E3;
-  background-color: #A6C24A;
-  width: 120px;
+  background-color: #8B7B82;
 }
 
-/* line 33, sass/_buttons.scss */
-.workshops-button:hover {
-  border-color: #8B7B82;
-  color: #0E090C;
-  background-color: #c5bdc0;
+/* line 32, sass/_buttons.scss */
+.main-button:focus {
+  transform: translateY(3px);
+  border-color: #7d6E75;
+  color: #F1F5E3;
+  background-color: #8B7B82;
 }
 
 /* line 39, sass/_buttons.scss */
-.workshops-button a {
-  font-family: Muli800, sans-serif;
+.purple-button, .green-button {
+  padding: 8px 25px;
+  color: #F1F5E3;
+  border: solid 1px;
+  border-radius: 4px;
+  display: block;
+  margin: auto;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+/* line 50, sass/_buttons.scss */
+.purple-button {
+  border-color: #7d6E75;
+  background-color: #8B7B82;
+}
+
+/* line 55, sass/_buttons.scss */
+.green-button {
+  border-color: #95ae42;
+  background-color: #A6C24A;
+}
+
+/* line 60, sass/_buttons.scss */
+.purple-button:hover, .green-button:hover {
+  color: #F1F5E3;
+  transform: translateY(3px);
+}
+
+/* line 65, sass/_buttons.scss */
+.purple-button:hover {
+  border-color: #7d6E75;
+  background-color: #6f6268;
+}
+
+/* line 70, sass/_buttons.scss */
+.green-button:hover {
+  border-color: #95ae42;
+  background-color: #8aa337;
+}
+
+/* line 75, sass/_buttons.scss */
+.purple-button:active, .green-button:active {
+  color: #F1F5E3;
+  transform: translateY(3px);
+}
+
+/* line 80, sass/_buttons.scss */
+.purple-button:active {
+  color: #F1F5E3;
+  background-color: #6f6268;
+}
+
+/* line 85, sass/_buttons.scss */
+.green-button:active {
+  border-color: #95ae42;
+  background-color: #8aa337;
+}
+
+/* line 90, sass/_buttons.scss */
+.purple-button:focus, .green-button:focus {
+  color: #F1F5E3;
+  transform: translateY(3px);
+}
+
+/* line 95, sass/_buttons.scss */
+.purple-button:focus {
+  border-color: #7d6E75;
+  background-color: #6f6268;
+}
+
+/* line 100, sass/_buttons.scss */
+.green-button:focus {
+  border-color: #95ae42;
+  background-color: #8aa337;
 }
 
 /** FRONT PAGE **/
@@ -416,11 +488,10 @@ h3 {
   background-position: no-repeat;
   height: 800px;
   text-align: left;
-  margin-bottom: 60px;
   opacity: 0.7;
 }
 
-/* line 12, sass/_front-page.scss */
+/* line 11, sass/_front-page.scss */
 .welcome-text h1 {
   font-family: 'Bilbo Swash Caps', cursive;
   font-size: 70px;
@@ -429,13 +500,15 @@ h3 {
   padding-top: 100px;
 }
 
-/* line 21, sass/_front-page.scss */
+/* line 20, sass/_front-page.scss */
 .intro-text-column {
   max-width: 800px;
   text-align: center;
+  margin-top: 60px;
+  margin-bottom: 60px;
 }
 
-/* line 26, sass/_front-page.scss */
+/* line 27, sass/_front-page.scss */
 .intro-text h3 {
   font-family: 'Bilbo Swash Caps', cursive;
   font-size: 30px;
@@ -443,14 +516,102 @@ h3 {
   letter-spacing: 3px;
 }
 
-/* line 33, sass/_front-page.scss */
-h4 {
+/* line 34, sass/_front-page.scss */
+.intro-text h4 {
   font-weight: 400;
   line-height: 1.6;
   text-align: justify;
+  padding-bottom: 15px;
 }
 
-/* line 17, sass/style.scss */
+/** UPCOMING WORKSHOPS AND TESTIMONIALS**/
+/* line 43, sass/_front-page.scss */
+.front-page-two-columns {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+/* line 48, sass/_front-page.scss */
+.workshop-column, .testimonials-column {
+  min-height: 540px;
+  margin-bottom: 60px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+  background: #dcd7d9;
+  border: solid 0px;
+  border-color: #D8D8DB;
+  border-radius: 10px;
+  box-shadow: 0 20px 15px -12px rgba(0, 0, 0, 0.5);
+}
+
+/* line 61, sass/_front-page.scss */
+.testimonials-column {
+  background: #ccdc96;
+}
+
+/* line 65, sass/_front-page.scss */
+.workshop-column h2, .testimonials-column h2 {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+/* line 70, sass/_front-page.scss */
+.workshop-date {
+  padding-bottom: 15px;
+}
+
+/* line 74, sass/_front-page.scss */
+.workshop-content {
+  padding-bottom: 15px;
+}
+
+/* line 78, sass/_front-page.scss */
+.workshop-date, .workshop-content span {
+  font-family: Muli800, sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.6;
+}
+
+/* line 85, sass/_front-page.scss */
+.testimonials-content {
+  padding-bottom: 15px;
+}
+
+/* line 89, sass/_front-page.scss */
+.testimonials-content p {
+  font-style: italic;
+  margin-bottom: 0px;
+  text-align: justify;
+}
+
+/* line 95, sass/_front-page.scss */
+.testimonials-content span {
+  font-family: Muli800, sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.6;
+}
+
+/* line 102, sass/_front-page.scss */
+.image-column {
+  padding-top: 10px;
+  padding-left: 5px;
+}
+
+/* line 107, sass/_front-page.scss */
+.testimonials-image-frontpage {
+  height: 115px;
+  border-radius: 50%;
+}
+
+/* line 112, sass/_front-page.scss */
+i {
+  padding-right: 20px;
+}
+
+/* line 18, sass/style.scss */
 html {
   height: 100%;
   /**box-sizing: border-box; **/
@@ -461,7 +622,7 @@ html {
 *:after {
   box-sizing: inherit;
 } **/
-/* line 28, sass/style.scss */
+/* line 29, sass/style.scss */
 body {
   font-family: Muli, sans-serif;
   font-size: 16px;
@@ -474,25 +635,13 @@ body {
   min-height: 100%;
 }
 
-/* line 40, sass/style.scss */
+/* line 41, sass/style.scss */
 a {
   color: inherit;
 }
 
-/* line 44, sass/style.scss */
+/* line 45, sass/style.scss */
 a:hover {
   color: inherit;
   text-decoration: none;
-}
-
-/* line 50, sass/style.scss */
-.frontpage-headline h2 {
-  text-align: center;
-}
-
-/* line 54, sass/style.scss */
-.view-more {
-  display: block;
-  margin: auto;
-  text-align: center;
 }

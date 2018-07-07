@@ -1,41 +1,103 @@
 /** BUTTONS **/
 
-/** FRONT PAGE BUTTON **/
-.front-page-button {
-  border: solid 1px;
-  border-radius: 4px;
+.main-button {
+  padding: 12px 65px;
+  color: $buttontextgreen;
+  font-family: Muli800, sans-serif;
+  font-size: 18px;
+  letter-spacing: 1.2px;
+  border: solid 0px;
+  border-radius: 6px;
+  border-color: $buttondarkerpurple;
+  background: rgb(139,123,130);
+  background: linear-gradient(90deg, rgba(139,123,130,1) 0%, rgba(208,202,205,1) 100%);
+  transition: all 0.2s ease;
+  box-shadow: 0 12px 20px -8px rgba(0, 0, 0, 0.5);
+}
+
+.main-button:hover {
+  transform: translateY(4px);
   border-color: $buttondarkerpurple;
   color: $buttontextgreen;
   background-color: $lightpurple;
-  width: 150px;
 }
 
-.workshops-button:hover {
-  border-color: $lightpurple;
-  color: $darkpurple;
-  background-color: $buttonlightpurple;
+.main-button:active {
+  transform: translateY(3px);
+  border-color: $buttondarkerpurple;
+  color: $buttontextgreen;
+  background-color: $lightpurple;
 }
 
-.workshops-button a {
-  font-family: Muli800, sans-serif;
+.main-button:focus {
+  transform: translateY(3px);
+  border-color: $buttondarkerpurple;
+  color: $buttontextgreen;
+  background-color: $lightpurple;
 }
 
-/** WORKSHOPS BUTTON **/
-.workshops-button {
+.purple-button, .green-button {
+  padding: 8px 25px;
+  color: $buttontextgreen;
   border: solid 1px;
   border-radius: 4px;
-  border-color: $darkgreen;
+  display: block;
+  margin: auto;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.purple-button {
+border-color: $buttondarkerpurple;
+background-color: $lightpurple;
+}
+
+.green-button {
+border-color: #95ae42;
+background-color: $brightergreen;
+}
+
+.purple-button:hover, .green-button:hover {
   color: $buttontextgreen;
-  background-color: $brightergreen;
-  width: 120px;
+  transform: translateY(3px);
 }
 
-.workshops-button:hover {
-  border-color: $lightpurple;
-  color: $darkpurple;
-  background-color: $buttonlightpurple;
+.purple-button:hover {
+  border-color: $buttondarkerpurple;
+  background-color: #6f6268;
 }
 
-.workshops-button a {
-  font-family: Muli800, sans-serif;
+.green-button:hover {
+  border-color: #95ae42;
+  background-color: #8aa337;
+}
+
+.purple-button:active, .green-button:active {
+  color: $buttontextgreen;
+  transform: translateY(3px);
+}
+
+.purple-button:active {
+  color: $buttontextgreen;
+  background-color: #6f6268;
+}
+
+.green-button:active {
+  border-color: #95ae42;
+  background-color: #8aa337;
+}
+
+.purple-button:focus, .green-button:focus {
+  color: $buttontextgreen;
+  transform: translateY(3px);
+}
+
+.purple-button:focus {
+  border-color: $buttondarkerpurple;
+  background-color: #6f6268;
+}
+
+.green-button:focus {
+  border-color: #95ae42;
+  background-color: #8aa337;
 }

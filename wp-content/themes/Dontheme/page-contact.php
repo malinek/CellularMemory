@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
- <div class="hero" style="background-image: url(<?php echo get_theme_file_uri('/images/twodrops.jpg') ?>);">
+ <div class="hero" style="background-image: url(<?php echo get_theme_file_uri('/images/contact-background.jpg') ?>);">
 
   <!-- insert navBar function here -->
   

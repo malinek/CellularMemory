@@ -23,18 +23,22 @@
 
     <h4>There are many of us who are now and have been taking our bodies through deep purification. We are learning to live in alignment with the universal principles of love, gratitude and sweetness. Together we are pioneering a new global consciousness based on inclusion, connection and the recognition that we are all in this together as a global family. Together we now move beyond the grid of old world mind; fear, separation, exclusion, bigotry, greed/competition and self hatred.</h4>
 
-    <p><a href="#" class="btn btn-default btn-lg front-page-button" role="button">Read more</a></p>
+    <button type="button" class="btn btn-default main-button"><a href="#">Read more</a></button>
 
   </div>
 
-  </div>
+</div><!-- end intro-text-column -->
 
-  <div class="container">
+<!-- Section Upcoming workshops and testimonials -->
+<div class="container-fluid front-page-two-columns">
 
   <div class="row">
 
-    <div class="col-sm-6 frontpage-headline">
-      <h2>Upcoming workshops</h2>
+    <div class="col-sm-6">
+    
+      <div class="col-sm-12 workshop-column">
+
+      <h2><i class="fa fa-calendar fa-lg"></i>Upcoming workshops</h2>
       
       <?php
         $today = date('Ymd');
@@ -61,56 +65,66 @@
             <span><?php
             $workshopStartDate = new DateTime(get_field('workshop_start_date'));
             echo $workshopStartDate->format('j F Y')
-            ?> to <?php
+            ?> -<br> <?php
             $workshopEndDate = new DateTime(get_field('workshop_end_date'));
             echo $workshopEndDate->format('j F Y')
             ?></span>
           </div>
 
-          <div class="col-sm-8">
-            <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-            <p><?php echo wp_trim_words(get_the_content(), 25); ?><a href="<?php the_permalink(); ?>"> Read more</a></p>
+          <div class="col-sm-8 workshop-content">
+            <span><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></span>
+            <p><?php echo wp_trim_words(get_the_content(), 25); ?><a href="<?php the_permalink(); ?>"><br>Read more</a></p>
           </div><!-- end div -->
         </div><!-- end row -->
         <?php }
       ?>
 
       <div class="col-sm-12">
-        <button type="button" class="btn btn-default view-more"><a href="<?php echo get_post_type_archive_link('workshop') ?>">See all workshops</a></button>
+        <button type="button" class="btn btn-default purple-button"><a href="<?php echo get_post_type_archive_link('workshop') ?>">View all workshops</a></button>
       </div>
-    
+
     </div>
+   
+    </div><!-- end col-sm-6 workshop column -->
 
     <!-- TESTIMONIALS -->
     
-    <div class="col-sm-6 testimonials frontpage-headline">
-      <h2>Testimonials</h2>
+    <div class="col-sm-6">
+   
+      <div class="col-sm-12 testimonials-column">
+
+      <h2><i class="fa fa-comments-o fa-lg"></i>Testimonials</h2>
 
       <div class="row">
-        <div class="col-sm-3">
-          <p>Place for image</p>
+        <div class="col-sm-3 image-column">
+          <img class="testimonials-image-frontpage" src="<?php echo get_template_directory_uri() . '/images/brett.jpg'; ?>" />
         </div>
-        <div class="col-sm-9">
-          <p>I have been working with Donald now consistently for over 15 years. During this time I have gone though such a great metamorphose that I feel like I can now say I feel love and joy pretty much most of the time and I have created a really wonderful life for myself.</p>
+        <div class="col-sm-9 testimonials-content">
+          <p>Donald reconnected me with the divine within. His gift of bringing through the unconditional love necessary to melt away the emotional, mental and physical blocks to our divine self is beyond works. Experiencing his work helped me remember what I came to do. He is Unconditional Love.</p>
+          <span>Brett Cotter, Energy Worker, New York</span>
         </div>
       </div><!-- end row -->
       <div class="row">
-        <div class="col-sm-3">
-          <p>Place for image</p>
+        <div class="col-sm-3 image-column">
+          <img class="testimonials-image-frontpage" src="<?php echo get_template_directory_uri() . '/images/Gretta.jpg'; ?>" />
         </div>
-        <div class="col-sm-9">
-          <p>Donald reconnected me with the divine within. His gift of bringing through the unconditional love necessary to melt away the emotional, mental and physical blocks to our divine self is beyond works. Experiencing his work helped me remember what I came to do. He is Unconditional Love.</p>
+        <div class="col-sm-9 testimonials-content">
+          <p>For 10 years before meeting Donald I suffered from chronic back pain. In the first workshop with Donald he released a deep cellular memory within me that was causing it. Since then I have had no need for regular pain killers. Donald's channel and connection with Spirit is truly awesome and I have witnessed profound changes within me and others. Thank you Donald.</p>
+          <span>Gretta Barry, Ennis, Ireland</span>
         </div>
       </div><!-- end row -->
       <div class="row">
         <div class="col-sm-12">
-          <button type="button" class="btn btn-default view-more">View all testimonials</button>
+          <button type="button" class="btn btn-default green-button"><a href="<?php echo site_url('/about/testimonials') ?>">View all testimonials</a></button>
         </div>
       </div><!-- end row -->
     </div>
+
+  </div>
 
   </div><!-- end row -->
 
 </div><!-- end container -->
 
 <?php get_footer(); ?>
+
