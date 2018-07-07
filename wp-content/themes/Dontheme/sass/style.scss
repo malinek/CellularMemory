@@ -5,6 +5,7 @@
 */
 
 @import "variables";
+@import "typography";
 @import "navbar";
 @import "footer";
 @import "hero";
@@ -47,15 +48,6 @@ a:hover {
 }
 
 
-.frontpage-headline h2 {
-  text-align: center;
-}
-
-.view-more {
-  display: block;
-  margin: auto;
-  text-align: center;
-}
 
 
 
