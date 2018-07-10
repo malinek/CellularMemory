@@ -2,19 +2,26 @@
 
 .welcome-image {
   background-size: cover;
-  background-position: no-repeat;
-  height: 800px;
-  text-align: left;
-  opacity: 0.7;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 700px;
+  position: relative;
 }
 
 .welcome-text h1 {
-  font-family: 'Bilbo Swash Caps', cursive;
-  font-size: 70px;
-  color: $darkpurple;
+  font-family: Muli800, sans-serif;
+  font-weight: 800;
+  font-size: 52px;
+  color: $buttondarkerpurple;
   text-align: center;
-  padding-top: 100px;
- 
+  margin-top: 0;
+  margin-bottom: 0;
+  border: solid black 0px;
+  border-radius: 5px;
+  position: absolute;
+  left: 20%;
+  top: 18%;
+  right: 20%;
 }
 
 .intro-text-column {
@@ -24,15 +31,8 @@
   margin-bottom: 60px;
 }
 
-.intro-text h3 {
-  font-family: 'Bilbo Swash Caps', cursive;
-  font-size: 30px;
-  font-weight: 400;
-  letter-spacing: 3px;
-}
-
-.intro-text h4 {
-  font-weight: 400;
+.intro-text p {
+  font-size: 18px;
   line-height: 1.6;
   text-align: justify;
   padding-bottom: 15px;
@@ -46,12 +46,15 @@
 }
 
 .workshop-column, .testimonials-column {
-  min-height: 540px;
+  min-height: 550px;
+  padding-top: 10px;
   margin-bottom: 60px;
   padding-bottom: 30px;
   padding-left: 30px;
   padding-right: 30px;
-  background: #dcd7d9;
+  background: rgb(185,175,180);
+  background: linear-gradient(135deg, rgba(185,175,180,1) 0%, rgba(208,202,205,1) 50%, rgba(231,228,230,1) 100%);
+  /**background: #dcd7d9; **/
   border: solid 0px;
   border-color: $lightergreen;
   border-radius: 10px;
@@ -59,7 +62,9 @@
 }
 
 .testimonials-column {
-  background: #ccdc96;
+/*background: #ccdc96; */
+background: rgb(185,175,180);
+background: linear-gradient(225deg, rgba(185,175,180,1) 0%, rgba(208,202,205,1) 50%, rgba(231,228,230,1) 100%);
 }
 
 .workshop-column h2, .testimonials-column h2 {
@@ -110,6 +115,7 @@
 }
 
 i {
+  color: $darkpurple;
   padding-right: 20px;
 }
 

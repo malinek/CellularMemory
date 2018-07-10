@@ -2,10 +2,6 @@
 
 <div class="hero" style="background-image: url(<?php echo get_theme_file_uri('/images/butterfly-background.jpg') ?>);">
 
-  <!-- insert navBar function here -->
-  
-  <?php navBar(); ?>
-
   <div class="hero-headline">
     <h1>Upcoming Workshops</h1>
   </div><!-- end hero-headline -->

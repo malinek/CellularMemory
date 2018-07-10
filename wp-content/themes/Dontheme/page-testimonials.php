@@ -2,10 +2,6 @@
 
 <div class="hero" style="background-image: url(<?php echo get_theme_file_uri('/images/testimonials-header3.jpg') ?>);">
 
-  <!-- insert navBar function here -->
-  
-  <?php navBar(); ?>
-
   <div class="hero-headline">
     <h1>Testimonials</h1>
   </div><!-- end hero-headline -->

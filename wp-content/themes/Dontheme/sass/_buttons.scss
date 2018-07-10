@@ -53,7 +53,7 @@ background-color: $lightpurple;
 }
 
 .green-button {
-border-color: #95ae42;
+border-color: $buttongreenborder;
 background-color: $brightergreen;
 }
 
@@ -64,12 +64,12 @@ background-color: $brightergreen;
 
 .purple-button:hover {
   border-color: $buttondarkerpurple;
-  background-color: #6f6268;
+  background-color: $buttonpurplehover;
 }
 
 .green-button:hover {
-  border-color: #95ae42;
-  background-color: #8aa337;
+  border-color: $buttongreenborder;
+  background-color: $buttongreenhover;
 }
 
 .purple-button:active, .green-button:active {
@@ -79,12 +79,12 @@ background-color: $brightergreen;
 
 .purple-button:active {
   color: $buttontextgreen;
-  background-color: #6f6268;
+  background-color: $buttonpurplehover;
 }
 
 .green-button:active {
-  border-color: #95ae42;
-  background-color: #8aa337;
+  border-color: $buttongreenborder;
+  background-color: $buttongreenhover;
 }
 
 .purple-button:focus, .green-button:focus {
@@ -94,10 +94,10 @@ background-color: $brightergreen;
 
 .purple-button:focus {
   border-color: $buttondarkerpurple;
-  background-color: #6f6268;
+  background-color: $buttonpurplehover;
 }
 
 .green-button:focus {
-  border-color: #95ae42;
-  background-color: #8aa337;
+  border-color: $buttongreenborder;
+  background-color: $buttongreenhover;
 }
