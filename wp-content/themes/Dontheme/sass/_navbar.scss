@@ -1,9 +1,9 @@
 /** NAVIGATION BAR **/
 
 $content-width: 1000px;
-$breakpoint: 800px;
+$breakpoint: 1050px;
 $nav-height: 60px;
-$nav-background: #F1F0F4; /* lightlightpurple*/
+$nav-background: #c7c7c7; /* lightlightpurple*/
 $nav-font-color: #0E090C; /*darkpurple*/
 $link-hover-color: #8B7B82; /*lightpurple*/
 
@@ -14,7 +14,7 @@ $link-hover-color: #8B7B82; /*lightpurple*/
 
 .navigation {
   height: $nav-height;
-  background:rgba(241,240,244,0.5);
+  background: $nav-background;
 }
 .nav-container {
   margin: 0 auto;
@@ -48,10 +48,11 @@ nav {
         padding: 0 20px;
         line-height: $nav-height;
         background: transparent;
-        color: rgba(14,9,12,1);
+        color: $nav-font-color;
+        font-size: 16px;
         text-decoration: none;
         text-transform: uppercase;
-        font-family: Muli600, sans-serif;
+        font-family: Muli800, sans-serif;
         transition: color 800ms;
         -webkit-transition: color 800ms;
         opacity: 0.8;
@@ -88,6 +89,7 @@ nav {
   display: none;
   z-index: 1;
   box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+  background: $nav-background;
 }
 .nav-mobile {
   display: none;
@@ -172,4 +174,3 @@ nav {
     display: block !important;
   }
 }
-

@@ -1,10 +1,6 @@
-
 <?php get_header(); ?>
 
 <div class="hero" style="background-image: url(<?php echo get_theme_file_uri('/images/ball-background.jpg') ?>);">
-
-  <!-- insert navBar function here -->
-  <?php navBar(); ?>
 
   <div class="hero-headline">
     <h1>Welcome to our blog</h1>

@@ -2,10 +2,6 @@
 
  <div class="hero" style="background-image: url(<?php echo get_theme_file_uri('/images/summer-background.jpg') ?>);">
 
-  <!-- insert navBar function here -->
-  
-  <?php navBar(); ?>
-
   <div class="hero-headline">
     <h1>Private Sessions</h1>
   </div><!-- end hero-headline -->
@@ -14,7 +10,7 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-sm-8">
+    <div class="col-sm-8 content-sessions">
       <?php
         while(have_posts()) {
         the_post();
