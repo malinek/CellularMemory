@@ -93,7 +93,7 @@
 
       <div class="row">
         <div class="col-sm-3 image-column">
-          <img class="testimonials-image-frontpage" src="<?php echo get_template_directory_uri() . '/images/brett.jpg'; ?>" />
+          <img class="testimonials-image-frontpage img-responsive" src="<?php echo get_template_directory_uri() . '/images/brett.jpg'; ?>" />
         </div>
         <div class="col-sm-9 testimonials-content">
           <p>Donald reconnected me with the divine within. His gift of bringing through the unconditional love necessary to melt away the emotional, mental and physical blocks to our divine self is beyond works. Experiencing his work helped me remember what I came to do. He is Unconditional Love.</p>
@@ -102,7 +102,7 @@
       </div><!-- end row -->
       <div class="row">
         <div class="col-sm-3 image-column">
-          <img class="testimonials-image-frontpage" src="<?php echo get_template_directory_uri() . '/images/Gretta.jpg'; ?>" />
+          <img class="testimonials-image-frontpage img-responsive" src="<?php echo get_template_directory_uri() . '/images/Gretta.jpg'; ?>" />
         </div>
         <div class="col-sm-9 testimonials-content">
           <p>For 10 years before meeting Donald I suffered from chronic back pain. In the first workshop with Donald he released a deep cellular memory within me that was causing it. Since then I have had no need for regular pain killers. Donald's channel and connection with Spirit is truly awesome and I have witnessed profound changes within me and others. Thank you Donald.</p>

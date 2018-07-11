@@ -34,18 +34,25 @@ h3 {
   font-size: 24px;
 }
 
-/* line 26, sass/_typography.scss */
+/* line 22, sass/_typography.scss */
+h4 {
+  font-family: Muli600, sans-serif;
+  color: #0E090C;
+  font-size: 18px;
+}
+
+/* line 29, sass/_typography.scss */
 p {
   font-family: Muli, sans-serif;
   font-size: 16px;
 }
 
-/* line 31, sass/_typography.scss */
+/* line 34, sass/_typography.scss */
 a {
   color: inherit;
 }
 
-/* line 35, sass/_typography.scss */
+/* line 38, sass/_typography.scss */
 a:hover {
   color: inherit;
   text-decoration: none;
@@ -323,7 +330,7 @@ nav ul li ul li a {
 }
 
 /* line 27, sass/_testimonials.scss */
-h4 {
+.testimonials-box h4 {
   font-weight: 800;
 }
 
@@ -530,6 +537,13 @@ h3 {
   background-color: #8aa337;
 }
 
+/* line 105, sass/_buttons.scss */
+.blog-archive-content-col .green-button {
+  text-align: left;
+  display: inline-block;
+  margin-top: 10px;
+}
+
 /** FRONT PAGE **/
 /* line 3, sass/_front-page.scss */
 .welcome-image {
@@ -685,7 +699,83 @@ i {
   text-align: justify;
 }
 
-/* line 22, sass/style.scss */
+/* BLOG ARCHIVE PAGE */
+/* line 3, sass/_blog.scss */
+.blog, .single-post {
+  background-color: #F1F0F4;
+}
+
+/* line 7, sass/_blog.scss */
+.blog-container {
+  max-width: 900px;
+  margin-bottom: 30px;
+}
+
+/* line 12, sass/_blog.scss */
+.blog-row {
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+  border-bottom: solid 2px #D8D8DB;
+}
+
+/* line 19, sass/_blog.scss */
+.blog-image-col {
+  height: 250px;
+  padding-left: 0px;
+}
+
+/* line 24, sass/_blog.scss */
+.blog-image {
+  height: 100%;
+  width: auto;
+  box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* line 30, sass/_blog.scss */
+.blog-archive-content-col {
+  padding-right: 0px;
+}
+
+/* line 34, sass/_blog.scss */
+.blog-archive-content-col h2 {
+  margin-top: -2px;
+  color: #95ae42;
+  font-family: Muli600, sans-serif;
+}
+
+/* line 41, sass/_blog.scss */
+.blog-archive-content-col h4 {
+  font-family: Muli, sans-serif;
+}
+
+/* line 45, sass/_blog.scss */
+.generic-blog-content p {
+  text-align: justify;
+}
+
+/* BLOG SINGLE PAGE */
+/* line 51, sass/_blog.scss */
+.blog-single-content-col {
+  background-color: #fff;
+}
+
+/* line 56, sass/_blog.scss */
+.blog-single-content-col h1 {
+  color: #95ae42;
+  font-weight: 800;
+  text-align: center;
+}
+
+/* line 62, sass/_blog.scss */
+.blog-single-content-col h4 {
+  text-align: center;
+  padding-bottom: 20px;
+  border-bottom: 3px dotted #e5e5e5;
+  box-shadow: inset 0 -1px 0 0 #e5e5e5, inset 0 1px 0 0 #e5e5e5, 0 1px 0 0 #e5e5e5, 0 -1px 0 0 #e5e5e5;
+  margin-bottom: 1px;
+}
+
+/* line 23, sass/style.scss */
 body {
   font-family: Muli, sans-serif;
   font-size: 16px;
