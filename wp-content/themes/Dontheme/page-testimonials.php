@@ -8,7 +8,7 @@
 
 </div><!-- end hero -->
 
-<div class="container">
+<div class="container blog-container">
   
   <div class="row testimonials-box">
     <div class="col-sm-4 image-column">
