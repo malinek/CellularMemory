@@ -20,6 +20,12 @@
       <h4>Posted on <?php the_time('F j Y'); ?></h4>
     </div>
 
+    <hr class="brace">
+
+    <div class="col-sm-4 blog-image-col-single">
+      <?php the_post_thumbnail('medium', array('class' => 'blog-image img-responsive')); ?>
+    </div>
+
     <div class="col generic-content">
       <p><?php the_content(); ?></p>
     </div>

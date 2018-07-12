@@ -2,12 +2,12 @@
 (function($) {
 
 // PARALLAX EFFECT NO JQUERY
-let p = document.getElementsByClassName('parallax')[0];
-window.onscroll = function(){
-  let scrollY = window.scrollY;
-  p.style.backgroundPosition = 'center ' + (scrollY*0.4) + 'px';
+//let p = document.getElementsByClassName('parallax')[0];
+//window.onscroll = function(){
+//  let scrollY = window.scrollY;
+//  p.style.backgroundPosition = 'center ' + (scrollY*0.4) + 'px';
   
-};﻿
+//};﻿
 
 // NAVBAR
 
