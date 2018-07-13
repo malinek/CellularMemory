@@ -19,21 +19,22 @@
     <div class="col">
       <h4>Posted on <?php the_time('F j Y'); ?></h4>
     </div>
-
-    <hr class="brace">
-
+      <hr class="page-divider first-page-divider">
+      <hr class="page-divider second-page-divider">
     <div class="col-sm-4 blog-image-col-single">
-      <?php the_post_thumbnail('medium', array('class' => 'blog-image img-responsive')); ?>
+      <?php the_post_thumbnail('medium', array('class' => 'blog-image-single img-responsive')); ?>
     </div>
-
-    <div class="col generic-content">
+    <div class="col generic-blog-content-single">
       <p><?php the_content(); ?></p>
     </div>
-
   </div>
   <?php }
   ?>
 </div><!-- end container -->
+
+<div class="button-blog-page">
+  <a href="<?php echo site_url('/blog') ?>" class="btn main-button" role="button">Back to all posts</a>
+</div>
 
 <?php
 

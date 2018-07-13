@@ -1,18 +1,18 @@
 /* BLOG ARCHIVE PAGE */
 
 .blog, .single-post {
-  background-color: $lightlightpurple;
+  background-image: url('images/leaves-pattern.png');
+  /*background-color: $lightlightpurple;*/
 }
 
 .blog-container {
   max-width: 900px;
   margin-bottom: 30px;
-  
 }
+
 .blog-row {
   margin-bottom: 30px;
   padding-bottom: 30px;
-  
   border-bottom: solid 2px $lightergreen;
 }
 
@@ -49,24 +49,24 @@
 /* BLOG SINGLE PAGE */
 
 .blog-single-content-col {
-  background-color: #fff;
- 
+  background-color: #fdfcf5;
+  padding: 24px 50px;
+  -webkit-box-shadow: 10px 10px 10px -3px rgba(111,98,104,0.2);
+  -moz-box-shadow: 10px 10px 10px -3px rgba(111,98,104,0.2);
+  box-shadow: 10px 10px 10px -3px rgba(111,98,104,0.2);
 }
 
 .blog-single-content-col h1 {
   color: $buttongreenborder;
   font-weight: 800;
   text-align: center;
-  margin-top: 50px;
 }
-
-
 
 .blog-single-content-col h4 {
   text-align: center;
-  padding-bottom: 50px;
-  border-bottom: 5px dotted $lightergreen;
-  box-shadow: inset 0 -1px 0 0 $lightergreen, 0 1px 0 0 $lightergreen;
+  padding-bottom: 15px;
+  padding-top: 4px;
+  
   
   &::before, &::after {
   content: "§";
@@ -81,64 +81,45 @@
   font-family: 'EB Garamond', serif;
   font-size: 1em;
 }
-  
 }
 
+hr.page-divider {
+  border-top: 2px solid $buttongreenborder;
+  width: 60px;
+  padding: 0px;
+  box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.2);
 
-$brace-color: white;
+}
 
-.brace {
-  width: auto;
-  min-width: 35px;
-  padding-bottom: 20px;
-  font-size: 2em;
-  line-height: 2em;
-  position: relative;
+hr.first-page-divider {
+  margin-bottom: 0px;
+  margin-top: 10px;
+}
+
+hr.second-page-divider {
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
+
+.blog-image-col-single {
+  padding-left: 0px;
+  padding-right: 25px;
+  margin-top: 6px;
+}
+
+.blog-image-single {
+  border: solid 1px $buttongreenborder;
+  padding: 10px;
+
+}
+
+.generic-blog-content-single p {
+  text-align: justify;
+}
+
+.button-blog-page {
+  display: block;
   text-align: center;
-  vertical-align: middle;
-  margin: 0 15px 15px;
-  border: none;
-  background-color: transparent;
-  background-image: 
-    radial-gradient(circle at 0 0, rgba($brace-color,0) 14.5px, $brace-color 15.5px, $brace-color 19.5px, rgba($brace-color,0) 20.5px),
-    radial-gradient(circle at 35px 0, rgba($brace-color,0) 14.5px, $brace-color 15.5px, $brace-color 19.5px, rgba($brace-color,0) 20.5px);
-  background-size: 35px 20px;
-  background-position: center bottom;
-  background-repeat: no-repeat;
-  text-transform: lowercase;
-  font-style: italic;
-  color: $brace-color;
-  filter: drop-shadow(0 1px 1px rgba(black,.15));
-  overflow: visible;
-  
-  &:before {
-    width: 50%;
-    border-top: 5px solid $brace-color;
-    border-left: 1px solid transparent; /* play with this until you like the look of it */
-    border-top-left-radius: 20% 30px;
-    height: 100%;
-    content: "";
-    absolute: top 0 left -15px;
-    box-sizing: border-box;
-    margin-top: -5px;
-  }
-  
-  &:after {
-    width: 50%;
-    border-top: 5px solid $brace-color;
-    border-right: 1px solid transparent; /* play with this until you like the look of it */
-    border-top-right-radius: 20% 30px;
-    height: 100%;
-    content: "";
-    absolute: top 0 right -15px;
-    box-sizing: border-box;
-    margin-top: -5px;
-  }
-}
-
-.blog-image-col-single, .blog-image {
-  
-  box-shadow: none;
- 
-  
+  margin: auto;
+  padding-bottom: 30px;
 }
