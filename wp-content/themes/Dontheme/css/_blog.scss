@@ -1,54 +1,43 @@
-/* BLOG ARCHIVE PAGE */
+/* POST ARCHIVE PAGE */
 
 .blog, .single-post {
   background-image: url('images/leaves-pattern.png');
   /*background-color: $lightlightpurple;*/
 }
 
-.blog-container {
+.post-container {
   max-width: 900px;
   margin-bottom: 30px;
 }
 
-.blog-row {
-  margin-bottom: 30px;
-  padding-bottom: 30px;
-  border-bottom: solid 2px $lightergreen;
-}
-
-.blog-image-col {
+.post-image-col {
   height: 250px;
-  padding-left: 0px;
+  margin-top: 5px;
 }
 
-.blog-image {
+.post-image {
   height: 100%;
   width: auto;
   box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.2);
 }
 
-.blog-archive-content-col {
-  padding-right: 0px;
-}
-
-.blog-archive-content-col h2 {
+.post-content-archive-col h2 {
   margin-top: -2px;
   color: $buttongreenborder;
   font-family: Muli600, sans-serif;
-  
 }
 
-.blog-archive-content-col h4 {
-  font-family: Muli, sans-serif;
-}
-
-.generic-blog-content p {
+.post-content-archive {
   text-align: justify;
 }
 
-/* BLOG SINGLE PAGE */
+hr.divider {
+  border-bottom: 1px solid $lightergreen;
+}
 
-.blog-single-content-col {
+/* POST SINGLE PAGE */
+
+.post-single-content-col {
   background-color: #fdfcf5;
   padding: 24px 50px;
   -webkit-box-shadow: 10px 10px 10px -3px rgba(111,98,104,0.2);
@@ -56,13 +45,13 @@
   box-shadow: 10px 10px 10px -3px rgba(111,98,104,0.2);
 }
 
-.blog-single-content-col h1 {
+.post-single-content-col h1 {
   color: $buttongreenborder;
   font-weight: 800;
   text-align: center;
 }
 
-.blog-single-content-col h4 {
+.post-single-content-col h4 {
   text-align: center;
   padding-bottom: 15px;
   padding-top: 4px;
@@ -88,7 +77,6 @@ hr.page-divider {
   width: 60px;
   padding: 0px;
   box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.2);
-
 }
 
 hr.first-page-divider {
@@ -101,25 +89,17 @@ hr.second-page-divider {
   margin-bottom: 50px;
 }
 
-.blog-image-col-single {
+.post-image-col-single {
   padding-left: 0px;
   padding-right: 25px;
   margin-top: 6px;
 }
 
-.blog-image-single {
-  border: solid 1px $buttongreenborder;
-  padding: 10px;
-
+.post-image-single {
+  border: double 6px $buttongreenborder;
+  padding: 15px;
 }
 
-.generic-blog-content-single p {
+.post-content-single {
   text-align: justify;
-}
-
-.button-blog-page {
-  display: block;
-  text-align: center;
-  margin: auto;
-  padding-bottom: 30px;
 }

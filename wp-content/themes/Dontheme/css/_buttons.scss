@@ -100,8 +100,24 @@ background-color: $brightergreen;
   background-color: $buttongreenhover;
 }
 
-.blog-archive-content-col .green-button {
+.post-content-archive-col .green-button {
   text-align: left;
   display: inline-block;
   margin-top: 10px;
+}
+
+/* Just the div, not the actual button */
+.button-post-single {
+  display: block;
+  text-align: center;
+  margin: auto;
+  padding-bottom: 30px;
+}
+
+.button-post-single .main-button {
+  padding: 10px 30px;
+  /* green gradient */
+  background: rgb(149,174,66);
+  background: linear-gradient(90deg, rgba(149,174,66,1) 0%, rgba(201,218,146,1) 100%);
+  
 }

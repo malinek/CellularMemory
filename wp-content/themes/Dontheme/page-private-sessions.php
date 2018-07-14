@@ -20,8 +20,7 @@
         ?>
     </div>
     <div class="col-sm-4">
-      <img class="private-sessions-image" src="<?php echo get_template_directory_uri() . '/images/Don-privatesessions.jpg'; ?>" />
-      </div>
+      <?php the_post_thumbnail('medium', array('class' => 'private-sessions-image img-responsive')); ?>
     </div>
   </div><!--end row-->
   </div><!-- end container -->
