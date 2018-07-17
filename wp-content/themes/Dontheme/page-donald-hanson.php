@@ -9,7 +9,7 @@
 </div><!-- end hero -->
 
 <div class="container about-don">
-  <div class="row">
+  
     <div class="col-sm-8">
       <p>
       <?php
@@ -21,11 +21,10 @@
         ?>
       </p>
     </div>
-    <div class="col-sm-4">
-      <?php the_post_thumbnail('medium', array('class' => 'private-sessions-image img-responsive')); ?>
-      </div>
+    <div class="col-sm-4 about-don-image-col">
+      <?php the_post_thumbnail('medium', array('class' => 'about-don-image img-responsive')); ?>
     </div>
-  </div><!--end row-->
+ 
 </div><!-- end container -->
 
 <?php get_footer(); ?>

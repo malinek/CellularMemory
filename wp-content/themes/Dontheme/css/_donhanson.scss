@@ -1,10 +1,34 @@
-.about-don {
-  max-width: 1100px;
-  padding-bottom: 70px;
+.page-id-15 {
+background-color: $lightlightpurple;
 }
 
-.about-don p {
-  font-size: 18px;
+.about-don {
+  max-width: 1000px;
+  padding-bottom: 70px;
+  font-size: 16px;
   line-height: 1.6;
   text-align: justify;
 }
+
+.about-don-image-col {
+  padding-top: 16px;
+  padding-left: 40px;
+}
+
+.about-don-image {
+  border: double 6px $buttongreenborder;
+  padding: 15px;
+}
+
+.private-col {
+  padding-bottom: 20px;
+}
+
+.about-don-private {
+  padding-bottom: 40px;
+}
+
+.book-session {
+  margin-left: 10px;
+}
+

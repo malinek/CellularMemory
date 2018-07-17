@@ -52,10 +52,10 @@
           <a href="<?php echo site_url('/private-sessions') ?>">Private Sessions</a>
         </li>
         <li>
-          <a href="<?php echo site_url('/blog') ?>">Blog</a>
+          <a href="<?php echo site_url('/blog') ?>">Read More</a>
         </li>
         <li>
-          <a href="#!">Publications</a>
+          <a href="<?php echo site_url('/publications') ?>">Publications</a>
         </li>
       </ul>
     </nav>
