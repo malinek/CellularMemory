@@ -1,8 +1,8 @@
 <?php get_header(); ?>
 
-<div class="hero" style="background-image: url(<?php echo get_theme_file_uri('/images/blogsingle.jpg') ?>);">
+<div class="hero" style="background-image: url(<?php echo get_theme_file_uri('/images/pine-cones.jpg') ?>);">
   <div class="hero-headline">
-    <h1>Welcome to read more</h1>
+    <h1>Publications</h1>
   </div><!-- end hero-headline -->
 </div><!-- end hero -->
 
@@ -28,7 +28,7 @@
 </div><!-- end container -->
 
 <div class="button-post-single">
-  <a href="<?php echo site_url('/blog') ?>" class="btn main-button" role="button">Back to all posts</a>
+  <a href="<?php echo site_url('/publications') ?>" class="btn main-button" role="button">Back to all publications</a>
 </div>
 
 <?php get_footer(); ?>

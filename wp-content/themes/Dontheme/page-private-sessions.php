@@ -8,31 +8,29 @@
 
 </div><!-- end hero -->
 
-<div class="container">
-  <div class="row">
-    <div class="col-sm-8 content-sessions">
-      <?php
-        while(have_posts()) {
-        the_post();
+<div class="container about-don-private">
+  
+  <div class="col-sm-8 about-don private-col">
+    <p><?php
+      while(have_posts()) {
+      the_post();
 
-        the_content();
-        }
-        ?>
-    </div>
-    <div class="col-sm-4">
-      <?php the_post_thumbnail('medium', array('class' => 'private-sessions-image img-responsive')); ?>
-    </div>
-  </div><!--end row-->
-  </div><!-- end container -->
+      the_content();
+      }
+      ?></p>
+  </div>
+  <div class="col-sm-4 about-don-image-col">
+    <?php the_post_thumbnail('medium', array('class' => 'about-don-image img-responsive')); ?>
+  </div>
+  
+  <div class="col-sm-6 book-session">
+    <h3>To book your private session</h3>
+    <h4>e-mail: info@donhanson.com (business manager)<br><br>Donald's skype address: donhanson-texas<br><br>Pay by cash / check or money order in the mail / paypal</h4>
+    <h4><strong>Cost USD 200</strong></h4>
+     <p>Paypal button goes here</p>
+  </div>
 
-  <div class="container">
-    <div class="col-sm-6 book-session">
-      <h3>To book your private session</h3>
-      <h4>e-mail: info@donhanson.com (business manager)<br><br>Donald's skype address: donhanson-texas<br><br>Pay by cash / check or money order in the mail / paypal</h4>
-      <h4><strong>Cost USD 200</strong></h4>
-       <p>Paypal button goes here</p>
-    </div>
-  </div><!-- end container -->
+</div><!-- end container -->
 
 
 
