@@ -8,7 +8,7 @@
 
 </div><!-- end hero -->
 
-<div class="container about-don-private">
+<div class="container about-don">
   
   <div class="col-sm-8 about-don private-col">
     <p><?php

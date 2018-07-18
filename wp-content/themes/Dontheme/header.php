@@ -8,7 +8,7 @@
   <body <?php body_class(); ?>>
 
   <!-- NAVIGATION MENU -->
- 
+
   <section class="navigation">
   <div class="nav-container">
     <div class="brand">
@@ -34,12 +34,6 @@
             <li>
               <a href="#!">Payment</a>
             </li>
-            <li>
-              <a href="#!">Deutsche</a>
-            </li>
-            <li>
-              <a href="#!">Gallery</a>
-            </li>
           </ul>
         </li>
         <li>
@@ -55,7 +49,11 @@
           <a href="<?php echo site_url('/blog') ?>">Read More</a>
         </li>
         <li>
-          <a href="<?php echo site_url('/publications') ?>">Publications</a>
+        <li>
+          <a href="#!">Gallery</a>
+        </li>
+        <li>
+          <a href="<?php echo site_url('/deutsche') ?>">Deutsche</a>
         </li>
       </ul>
     </nav>

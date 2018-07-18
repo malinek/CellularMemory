@@ -2,7 +2,7 @@
 
 <div class="hero" style="background-image: url(<?php echo get_theme_file_uri('/images/pine-cones.jpg') ?>);">
   <div class="hero-headline">
-    <h1>Publications</h1>
+    <h1>Deutsche</h1>
   </div><!-- end hero-headline -->
 </div><!-- end hero -->
 
@@ -28,7 +28,7 @@
 </div><!-- end container -->
 
 <div class="button-post-single">
-  <a href="<?php echo site_url('/publications') ?>" class="btn main-button" role="button">Back to all publications</a>
+  <a href="<?php echo site_url('/deutsche') ?>" class="btn main-button" role="button">Back to Deutsche</a>
 </div>
 
 <?php get_footer(); ?>

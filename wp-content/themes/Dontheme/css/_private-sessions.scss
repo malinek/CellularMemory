@@ -1,15 +1,10 @@
 /** PRIVATE SESSIONS PAGE **/
 
-.private-sessions-image {
-  
-}
-
 .book-session {
-  margin-top: 20px;
-  margin-bottom: 40px;
+  max-width: 432px;
   background: #F1F0F4;
-  border: solid 1px;
-  border-color: $lightergreen;
+  background: rgb(162,188,78);
+  background: linear-gradient(180deg, rgba(162,188,78,1) 0%, rgba(192,209,133,1) 100%);
   border-radius: 4px;
   box-shadow: 0 20px 15px -12px rgba(0, 0, 0, 0.5);
 }
