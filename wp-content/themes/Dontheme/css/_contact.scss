@@ -1,5 +1,13 @@
 /** CONTACT PAGE **/
+.page-id-13 {
+background-color: $lightlightpurple;
+}
 
 .contact-content {
   max-width: 600px;
+}
+
+.contact-content p {
+  line-height: 1.6;
+  text-align: justify;
 }

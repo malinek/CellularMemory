@@ -17,18 +17,18 @@ function dons_post_types() {
     'menu_icon' => 'dashicons-calendar-alt'
   ));
 
-  // Publications post type
-  register_post_type('publication', array(
+  // Deutsche post type
+  register_post_type('deutsche', array(
     'supports' => array('title', 'editor', 'excerpt', 'thumbnail'),
-    'rewrite' => array('slug' => 'publications'),
+    'rewrite' => array('slug' => 'deutsche'),
     'has_archive' => true,
     'public' => true,
     'labels' => array(
-      'name' => 'Publications',
-      'add_new_item' => 'Add New Publication',
-      'edit_item' => 'Edit Publication',
-      'all_items' => 'All Publications',
-      'singular_name' => 'Publication'
+      'name' => 'Deutsche',
+      'add_new_item' => 'Add New Deutsche',
+      'edit_item' => 'Edit Deutsche',
+      'all_items' => 'All Deutsche',
+      'singular_name' => 'Deutsche'
     ),
     'menu_icon' => 'dashicons-format-aside'
   ));
