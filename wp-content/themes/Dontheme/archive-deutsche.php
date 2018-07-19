@@ -14,7 +14,7 @@
   </div>
     
      <div class="col-sm-4 about-don-deutsche-img img-responsive" style="background-image: url(<?php echo get_theme_file_uri('/images/Donwithapes2.jpg') ?>);">
-    </div>
+    
   </div>
    <div class="row">
     
