@@ -8,10 +8,51 @@
   padding: 20px;
   background-color: $lightpurple;
   color: $lightlightpurple;
-  font-family: Muli, sans-serif;
   text-align: center;
+  border-top-left-radius: 200% 80%;
+  border-top-right-radius: 200% 80%;
+}
+
+.site-footer h4 {
+  color: $lightlightpurple;
+  font-size: 18px;
+}
+
+.site-footer ul {
+  padding: 0;
+  margin: 0;
 }
 
 .site-footer li {
-  list-style: none;
+  font-size: 18px;
+  text-align: left;
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
+
+.footer-column-1 {
+  text-align: left;
+  padding-left: 80px;
+}
+
+.footer-column-3 {
+  padding-right: 80px;
+}
+
+.fa-facebook-official {
+  color: $darkgreen;
+  padding-right: 10px;
+}
+
+.modal-body p {
+  color: #000;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.modal-header h4 {
+  color: #000;
+}
+
+
+

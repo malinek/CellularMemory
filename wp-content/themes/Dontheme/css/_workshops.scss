@@ -29,19 +29,15 @@
 }
 
 .start-date {
-  line-height: 1.5;
+  line-height: 1.4;
   display: inline-block;
   text-align: left;
   margin-top: 0px;
   padding-top: 40px;
- 
 }
 
-.content-workshops {
+.content-workshops h3, .content-workshops p {
   text-align: center;
 }
 
-h3 {
-  font-family: Muli800, sans-serif;
-  color: $darkpurple;
-}
+
