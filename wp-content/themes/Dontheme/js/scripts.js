@@ -12,22 +12,14 @@
 // NAVBAR
 
 
-  $(function() {
-    $('nav ul li > a:not(:only-child)').click(function(e) {
-      $(this).siblings('.nav-dropdown').toggle();
-      $('.nav-dropdown').not($(this).siblings()).hide();
-      e.stopPropagation();
-    });
-    $('html').click(function() {
-      $('.nav-dropdown').hide();
-    });
+  $('.menu-toggle').click(function() {
+  
+  $('.site-nav').toggleClass('site-nav--open', 500);
+  $(this).toggleClass('open');
+  
   });
-  document.querySelector('#nav-toggle').addEventListener('click', function() {
-    this.classList.toggle('active');
-  });
-  $('#nav-toggle').click(function() {
-    $('nav ul').toggle();
-  });
+
+ 
 
 
 // WRAPPER FOR ALL CONTENT
