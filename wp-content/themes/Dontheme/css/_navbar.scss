@@ -1,15 +1,15 @@
 /** NAVIGATION BAR **/
 
 .container {
-  width: 95%;
-  /*max-width: 1400px; */
+  width: 100%;
+  /* max-width: 1400px; */
   margin: 0 auto;
 }
 
 header {
-  background: $lightlightpurple;
+  background: #d6d3de;
   color: $darkpurple;
-  padding: 1em 0;
+  padding: 3px 0;
   position: relative;
 }
 
@@ -20,20 +20,20 @@ header::after {
 }
 
 .logo {
+  height: 60px;
+  display: block;
   float: left;
-  font-size: 1rem;
-  margin: 0;
-  text-transform: uppercase;
-  font-weight: 700;
 }
 
 .site-nav {
   position: absolute;
   top: 100%;
   right: 0%;
-  background: $lightlightpurple;
+  background: #d6d3de;
   height: 0px;
+  width: 100vw;
   overflow: hidden;
+  z-index: 10;
 }
 
 .site-nav--open {
@@ -47,45 +47,33 @@ header::after {
   position: relative;
 }
 
-.site-nav ul ul {
-  position: absolute;
-  display: none;
-  background: #ccc;
-}
-
-.site-nav ul ul li {
-  display: block;
-  padding: 0.5em 1em 1em 1em;
-}
-
 .site-nav li {
-  border-bottom: 1px solid $lightpurple;
+  border-bottom: 1px solid #c8c4d3;
 }
 
-.site-nav li:last-child {
-  border-bottom: none;
+.site-nav li:first-child {
+  border-top: 1px solid #c8c4d3;
 }
 
 .site-nav a {
   color: $darkpurple;
   font-size: 14px;
   display: block;
-  padding: 2em 4em 2em 1.5em;
+  padding: 26px 30px 26px 80px;
   text-transform: uppercase;
   text-decoration: none;
 }
 
 .site-nav a:hover,
 .site-nav a:focus {
-  background: #E4B363;
-  color: #464655;
+  background: #bab5c9;
 }
 
 .menu-toggle {
   padding: 1em;
   position: absolute;
-  top: .5em;
-  right: .5em;
+  top: 1em;
+  right: .3em;
   cursor: pointer;
 }
 
@@ -109,20 +97,47 @@ header::after {
   transform: translateY(3px);
 }
 
-.open .hamburger {
+.hamburger--open .hamburger {
   transform: rotate(45deg);
 }
 
-.open .hamburger::before {
+.hamburger--open .hamburger::before {
   opacity: 0;
 }
 
-.open .hamburger::after {
+.hamburger--open .hamburger::after {
   transform: translateY(-3px) rotate(-90deg);
 }
 
+.fa.fa-chevron-down {
+  padding: 0px;
+}
 
-@media (min-width: 1200px) {
+.dropdown-button {
+  cursor: pointer;
+}
+
+.sub-menu {
+  position: absolute;
+  height: 0px;
+  overflow: hidden;
+  background: #e3e1e9;
+}
+
+.sub-menu a {
+  display: block;
+  padding: 26px 30px 26px 120px;
+}
+
+.sub-menu--open {
+  height: auto;
+}  
+
+@media screen and (min-width: 1075px) {
+
+  .container {
+    width: 98%;
+  }
   
   .menu-toggle {
     display: none;
@@ -130,36 +145,67 @@ header::after {
   
   .site-nav {
     height: auto;
+    width: auto;
     position: relative;
-    background: #ccc;
+    background: transparent;
     float: right;
     overflow: visible;
   }
 
-  .site-nav ul {
-    position: relative;
-  }
-
-  .site-nav ul li:hover ul {
-    display: block;
-  }
-  
   .site-nav li {
     display: inline-block;
     border: none;
   }
-  
+
   .site-nav a {
-    padding: 0;
-    margin-left: 2em;
+    padding: 22px 0px 22px 0px;
+    margin-left: 30px;
+    
   }
-  
+
   .site-nav a:hover,
   .site-nav a:focus {
     background: transparent;
   }
-  
-  
+
+  .site-nav li:first-child {
+    border-top: none;
+  }
+
+  .site-nav ul ul {
+    opacity: 0;
+    position: absolute; 
+    top: 63px; /* the height of the main nav */
+    left: 24px;
+    overflow: visible;
+    background: #d6d3de;
+    height: auto;
+    transition: opacity 1s linear;
+  }
+
+  .site-nav ul ul li {
+    width: 130px;
+    display: block;
+    position: relative;
+    padding: 0px;
+    margin: 20px 10px 10px 40px;
+    
+  }
+
+  .site-nav ul ul li a {
+    padding: 0px;
+    margin: 0px;
+  }
+
+  .site-nav ul li:hover ul {
+    opacity: 1;
+  }
 
 }
 
+@media screen and (max-width: 1074px) and (min-width: 500px) {
+
+  .site-nav {
+    width: 240px;
+  }
+}
