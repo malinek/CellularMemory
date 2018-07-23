@@ -1,27 +1,37 @@
 <?php get_header(); ?>
 
-<div class="column-sm-12 welcome-image parallax"style="background-image: url(<?php echo get_theme_file_uri('/images/mainheader6.jpg') ?>);">
+<div class="column-sm-12 welcome-image parallax"style="background-image: url(<?php echo get_theme_file_uri('/images/donheader.jpg') ?>);">
 
   <div class="column-sm-12 welcome-text">
-    <h1>Clean out your closet and open up to the sweetness and love of the universe<br><br>Come on in<br>Everybody is Welcome</h1>
+    <h1>Clean out your closet and open up to the sweetness and love of the universe<br>Come on in<br>Everybody is<br>Welcome</h1>
   </div><!-- end hero-headline -->
 
 </div><!-- end welcome-image -->
 
 <div class="container intro-text-column">
-  
-  <div class="intro-text">
+  <div class=" col-sm-12 intro-text">
     <h1>Transforming Cellular Memory...</h1>
-
-    <p>...is the process of taking the body/mind through deep cellular purification and metamorphosis. This is created through sitting in a transmission of divine light, allowing this energy of universal intelligence to clear out the old cloaks of world mind and awaken the sacred nature of who we truly are.</p>
-
+      <p>...is the process of taking the body/mind through deep cellular purification and metamorphosis. This is created through sitting in a transmission of divine light, allowing this energy of universal intelligence to clear out the old cloaks of world mind and awaken the sacred nature of who we truly are.</p>
     <h1>Expanding global consciousness</h1>
+      <p>There are many of us who are now and have been taking our bodies through deep purification. We are learning to live in alignment with the universal principles of love, gratitude and sweetness. Together we are pioneering a new global consciousness based on inclusion, connection and the recognition that we are all in this together as a global family. Together we now move beyond the grid of old world mind; fear, separation, exclusion, bigotry, greed/competition and self hatred.</p>
+    <h1>Through attending and committing to...</h1>
+      <p>...these courses, workshops and seminars on an on-going basis, participants will eventually become proficient and will develop a mastery in the areas of:</p>
+  </div>
 
-    <p>There are many of us who are now and have been taking our bodies through deep purification. We are learning to live in alignment with the universal principles of love, gratitude and sweetness. Together we are pioneering a new global consciousness based on inclusion, connection and the recognition that we are all in this together as a global family. Together we now move beyond the grid of old world mind; fear, separation, exclusion, bigotry, greed/competition and self hatred.</p>
+  <div class="col-sm-8 col-sm-offset-2 intro-effects" style="background-image: url(<?php echo get_theme_file_uri('/images/frontpage2.jpg') ?>);">
+    <div class="intro-effects-text">
+      <h4>Clear Thinking, Living Passionately</h4>
+      <h4>Self Love, Sweetness &amp; Gratitude</h4>
+      <h4>Energy as the Universal Language</h4>
+      <h4>Divine Alchemy; Body/Mind Ressurrection</h4>
+      <h4>Transforming Victim/Blame Consciousness</h4>
+      <h4>Understanding the Way the Universe Works</h4>
+      <h4>Vulnerability, Taking Ownership of your Own</h4>
+      <h4>Reactions &amp; Feelings</h4>
+    </div>
+  </div>
 
     <button type="button" class="btn btn-default main-button"><a href="#">Read more</a></button>
-
-  </div>
 
 </div><!-- end intro-text-column -->
 

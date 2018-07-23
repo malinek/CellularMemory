@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div class="hero" style="background-image: url(<?php echo get_theme_file_uri('/images/butterfly-background.jpg') ?>);">
+<div class="hero" style="background-image: url(<?php echo get_theme_file_uri('/images/hero-workshops-compressor.jpg') ?>);">
 
   <div class="hero-headline">
     <h1>More info about this workshop</h1>

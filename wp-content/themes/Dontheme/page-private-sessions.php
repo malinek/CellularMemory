@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
- <div class="hero" style="background-image: url(<?php echo get_theme_file_uri('/images/summer-background.jpg') ?>);">
+ <div class="hero" style="background-image: url(<?php echo get_theme_file_uri('/images/Hero-private-sessions-compressor.jpg') ?>);">
 
   <div class="hero-headline">
     <h1>Private Sessions</h1>

@@ -58,6 +58,7 @@ header::after {
 .site-nav a {
   color: $darkpurple;
   font-size: 14px;
+  font-family: Muli800, sans-serif;
   display: block;
   padding: 26px 30px 26px 80px;
   text-transform: uppercase;
@@ -133,7 +134,8 @@ header::after {
   height: auto;
 }  
 
-@media screen and (min-width: 1075px) {
+/* MEDIA QUERY FOR LAPTOPS */
+@media screen and (min-width: 1060px) {
 
   .container {
     width: 98%;
@@ -160,12 +162,24 @@ header::after {
   .site-nav a {
     padding: 22px 0px 22px 0px;
     margin-left: 30px;
-    
+    transition: color 800ms ease;
+    -webkit-transition: color 800ms ease;
+    -moz-transition: color 800ms ease;
+    -o-transition: color 800ms ease;
   }
 
   .site-nav a:hover,
   .site-nav a:focus {
     background: transparent;
+    color: $lightpurple;
+    transition: color 800ms ease;
+    -webkit-transition: color 800ms ease;
+    -moz-transition: color 800ms ease;
+    -o-transition: color 800ms ease;
+  }
+
+  .current-menu-item a {
+    color: $lightpurple;
   }
 
   .site-nav li:first-child {
@@ -176,7 +190,7 @@ header::after {
     opacity: 0;
     position: absolute; 
     top: 63px; /* the height of the main nav */
-    left: 24px;
+    left: -10px;
     overflow: visible;
     background: #d6d3de;
     height: auto;
@@ -184,12 +198,11 @@ header::after {
   }
 
   .site-nav ul ul li {
-    width: 130px;
+    width: 120px;
     display: block;
     position: relative;
     padding: 0px;
-    margin: 20px 10px 10px 40px;
-    
+    margin: 20px 15px 10px 40px;
   }
 
   .site-nav ul ul li a {
@@ -203,9 +216,15 @@ header::after {
 
 }
 
-@media screen and (max-width: 1074px) and (min-width: 500px) {
+/* MEDIA QUERY FOR MEDIUM SIZED DEVICES, ADJUSTING THE WIDTH */
+@media screen and (max-width: 1059px) and (min-width: 500px) {
 
   .site-nav {
-    width: 240px;
+    width: 280px;
   }
+
+  .sub-menu a {
+    padding: 26px 30px 26px 110px;
+  }
+
 }

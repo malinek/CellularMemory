@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div class="hero" style="background-image: url(<?php echo get_theme_file_uri('/images/pine-cones.jpg') ?>);">
+<div class="hero" style="background-image: url(<?php echo get_theme_file_uri('/images/deutsche-compressor.jpg') ?>);">
   <div class="hero-headline">
     <h1>Deutsche</h1>
   </div><!-- end hero-headline -->
@@ -13,11 +13,11 @@
       <p>Donald (Don) Hanson hat einen Master-Abschluss in transpersonaler Psychologie und ist lizenzierter interreligiöser Minister. Seit den frühen 1980igern leitet er sowohl in den USA als auch international workshops und hat Tausende von Menschen durch eine tiefe zelluläre / molekulare Reinigung und Metamorphose geführt.<br><br>Don ist seit über 47 Jahren auf dem spirituellen Weg. Im Zuge seiner jahrzehnte langen Studien, sowohl psychologische als auch spirituelle Disziplinen, öffnete sich die Quelle des Lichts in seinem Bewusstsein. Dies eröffnete einige spirituelle Gaben und Fähigkeiten, die ihn bei seiner Arbeit unterstützen. Sein Lieblingsgefühl ist es mit anderen das Licht zu fühlen - hierbei beherrscht er die Kunst Menschen in ihrer Tiefe wahrzunehmen (wie eine Stimmgabel) und seinen Körper als Kanal für heilende Energie zur Verfügung zu stellen, die andere dabei unterstützt sich von hinderlichen alten Mustern und kulturellen Konditionierungen zu lösen. Seine Workshops und privaten Sessions sind ein Übungsfeld um unser persönliches Verhältnis zu dieser heilenden göttlichen Energie zu bekommen oder zu vertiefen.</p>
   </div>
     
-     <div class="col-sm-4 about-don-deutsche-img img-responsive" style="background-image: url(<?php echo get_theme_file_uri('/images/Donwithapes2.jpg') ?>);">
-    
+  <div class="col-sm-4">
+    <img src="<?php echo get_theme_file_uri('/images/Don-about.jpg')?>" class="don-image-deutsche img-responsive">
   </div>
-   <div class="row">
-    
+
+  <div class="row">
     <div class="col-sm-12 ilse-contact">
       <h2>Anmeldung & Information</h2>
       <h3>Ilse Engel</h3>
