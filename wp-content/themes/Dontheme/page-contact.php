@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
- <div class="hero" style="background-image: url(<?php echo get_theme_file_uri('/images/contact2.jpg') ?>);">
+ <div class="hero" style="background-image: url(<?php echo get_theme_file_uri('/images/hero-contact-compressor.jpg') ?>);">
 
   <div class="hero-headline">
     <h1>Please get in touch</h1>

@@ -1,27 +1,82 @@
 /** FRONT PAGE **/
 
+.home {
+  background-image: url('images/symphony.png');
+  /*background-color: $lightlightpurple;*/
+}
+
 .welcome-image {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 700px;
+  height: 600px;
   position: relative;
 }
 
 .welcome-text h1 {
-  font-family: Muli800, sans-serif;
-  font-weight: 800;
-  font-size: 52px;
-  color: $buttondarkerpurple;
+  font-size: 42px;
+  color: $lightlightpurple;
   text-align: center;
-  margin-top: 0;
-  margin-bottom: 0;
-  border: solid black 0px;
-  border-radius: 5px;
   position: absolute;
-  left: 20%;
-  top: 18%;
-  right: 20%;
+  left: 35%;
+  top: 45%;
+  right: 35%;
+}
+
+@media screen and (max-width: 1252px) {
+
+  .welcome-text h1 {
+    left: 30%;
+    right: 30%;
+  }
+}
+
+@media screen and (max-width: 945px) {
+
+  .welcome-text h1 {
+    left: 25%;
+    right: 25%;
+  }
+}
+
+@media screen and (max-width: 760px) {
+
+  .welcome-text h1 {
+    left: 20%;
+    right: 20%;
+  }
+}
+
+@media screen and (max-width: 635px) {
+
+  .welcome-text h1 {
+    left: 15%;
+    right: 15%;
+  }
+}
+
+@media screen and (max-width: 635px) {
+
+  .welcome-text h1 {
+    left: 10%;
+    right: 10%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+
+  .welcome-text h1 {
+    left: 0%;
+    right: 0%;
+  }
+}
+
+@media screen and (max-width: 388px) {
+
+  .welcome-text h1 {
+    font-size: 38px;
+    top: 50%;
+  }
 }
 
 .intro-text-column {
@@ -37,6 +92,33 @@
   text-align: justify;
   padding-bottom: 15px;
 }
+
+.intro-effects {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 350px;
+  margin-bottom: 40px;
+  position: relative;
+  border-radius: 5px;
+  box-shadow: 0 20px 15px -12px rgba(0, 0, 0, 0.5);
+}
+
+.intro-effects-text {
+  position: absolute;
+  left: 0%;
+  top: 14%;
+  right: 0%;
+  /*border-top-left-radius: 50% 100%;
+  border-top-right-radius: 50% 100%;
+  background: linear-gradient(180deg, rgba(162,188,78,1) 0%, rgba(192,209,133,1) 100%); */
+}
+
+.intro-effects-text h4 {
+  font-family: Muli, sans-serif;
+  color: $lightlightpurple;
+}
+
 
 /** UPCOMING WORKSHOPS AND TESTIMONIALS**/
 

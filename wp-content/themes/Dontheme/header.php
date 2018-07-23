@@ -10,24 +10,25 @@
   <!-- NAVIGATION MENU -->
   <header>
     <div class="container">
-      <a href="<?php echo site_url() ?>"><img src="<?php echo get_theme_file_uri('/images/logo.png')?>" class="logo"></a>
+      <a href="<?php echo site_url() ?>"><img src="<?php echo get_theme_file_uri('/images/logo2.png')?>" class="logo"></a>
       
       <nav class="site-nav">
         <ul>        
           <li class="dropdown-button"><a href="#!">About <i class="fa fa-chevron-down"></i></a>
             <ul class="sub-menu">
-              <li><a href="<?php echo site_url('/about/donald-hanson') ?>">Don Hanson</a></li>
+              <li <?php if (is_page('donald-hanson')) echo 'class="current-menu-item"' ?>><a href="<?php echo site_url('/about/donald-hanson') ?>">Don Hanson</a></li>
               <li><a href="#">TCM</a></li>
-              <li><a href="<?php echo site_url('/about/testimonials') ?>">Testimonials</a></li>
+              <li <?php if (is_page('testimonials')) echo 'class="current-menu-item"' ?>><a href="<?php echo site_url('/about/testimonials') ?>">Testimonials</a></li>
               <li><a href="#">Payment</a></li>
             </ul>
           </li>
-          <li><a href="<?php echo site_url('/contact') ?>">Contact</a></li>
-          <li><a href="<?php echo get_post_type_archive_link('workshop') ?>">Workshops</a></li>
-          <li><a href="<?php echo site_url('/private-sessions') ?>">Private Sessions</a></li>
-          <li><a href="<?php echo site_url('/blog') ?>">Read More</a></li>
+          <li <?php if (is_page('contact')) echo 'class="current-menu-item"'; ?>><a href="<?php echo site_url('/contact') ?>">Contact</a></li>
+          <li <?php if (get_post_type() == 'workshop') echo 'class="current-menu-item"'; ?>>
+          <a href="<?php echo get_post_type_archive_link('workshop') ?>">Workshops</a>
+          <li <?php if (is_page('private-sessions')) echo 'class="current-menu-item"'; ?>><a href="<?php echo site_url('/private-sessions') ?>">Private Sessions</a></li>
+          <li <?php if (get_post_type() == 'post') echo 'class="current-menu-item"'; ?>><a href="<?php echo site_url('/blog') ?>">Read More</a></li>
           <li><a href="">Gallery</a></li>
-          <li><a href="<?php echo site_url('/deutsche') ?>">Deutsche</a></li>
+          <li <?php if (get_post_type() == 'deutsche') echo 'class="current-menu-item"'; ?>><a href="<?php echo site_url('/deutsche') ?>">Deutsche</a></li>
         </ul> 
       </nav>
     

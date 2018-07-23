@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div class="hero" style="background-image: url(<?php echo get_theme_file_uri('/images/pine-cones.jpg') ?>);">
+<div class="hero" style="background-image: url(<?php echo get_theme_file_uri('/images/deutsche-compressor.jpg') ?>);">
   <div class="hero-headline">
     <h1>Deutsche</h1>
   </div><!-- end hero-headline -->

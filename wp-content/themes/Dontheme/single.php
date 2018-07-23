@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div class="hero" style="background-image: url(<?php echo get_theme_file_uri('/images/blogsingle.jpg') ?>);">
+<div class="hero" style="background-image: url(<?php echo get_theme_file_uri('/images/hero-readmore-compressor.jpg') ?>);">
   <div class="hero-headline">
     <h1>Welcome to read more</h1>
   </div><!-- end hero-headline -->
