@@ -14,8 +14,8 @@
   <div class="col-sm-4 footer-column-3">
     <ul>
       <li>Follow us on facebook</li>
-      <li><a href="https://www.facebook.com/TransformingCellularMemoryinternationalevents/" target="_blank"><i class="fa fa-facebook-official fa-lg" aria-hidden="true"></i>International events</a></li>
-      <li><a href="https://www.facebook.com/TCMdeutschsprachig/" target="_blank"><i class="fa fa-facebook-official fa-lg" aria-hidden="true"></i>Deutschsprachig</a></li>
+      <li><a href="https://www.facebook.com/TransformingCellularMemoryinternationalevents/" target="_blank"><i class="fab fa-facebook-square fa-lg" aria-hidden="true"></i>International events</a></li>
+      <li><a href="https://www.facebook.com/TCMdeutschsprachig/" target="_blank"><i class="fab fa-facebook-square fa-lg" aria-hidden="true"></i>Deutschsprachig</a></li>
     </ul>
   </div>
 

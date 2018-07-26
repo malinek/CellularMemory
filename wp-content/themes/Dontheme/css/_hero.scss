@@ -5,17 +5,58 @@
   background-position: center;
   background-repeat: no-repeat;
   height: 350px;
-  text-align: left;
   margin-bottom: 60px;
+  position: relative;
   border-bottom-left-radius: 80% 15%;
   border-bottom-right-radius: 40% 5%;
 }
 
 .hero-headline h1 {
   font-family: 'Bilbo Swash Caps', cursive;
-  font-size: 80px;
+  font-size: 70px;
   color: #0E090C;
-  margin-top: 0px;
-  padding-top: 250px;
-  padding-left: 120px;
+  position: absolute;
+  top: 65%;
+  left: 13%;
+}
+
+@media (max-width: 600px) {
+
+  .hero-headline h1 {
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 550px) {
+
+  .hero-headline h1 {
+    font-size: 60px;
+    left: 10%;
+  }
+
+}
+
+@media (max-width: 500px) {
+
+  .hero-headline h1 {
+    font-size: 55px;
+    left: 10%;
+  }
+}
+
+@media (max-width: 450px) {
+
+  .hero-headline h1 {
+    font-size: 55px;
+    left: 5%;
+  }
+}
+
+@media (max-width: 400px) {
+
+  .hero-headline h1 {
+    font-size: 55px;
+    left: 5%;
+    top: 56%;
+  }
 }

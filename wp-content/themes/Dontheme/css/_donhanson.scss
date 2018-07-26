@@ -30,5 +30,15 @@ background-color: $lightlightpurple;
   margin-left: 10px;
 }
 
+@media (max-width: 768px) {
+
+.about-don-image-col {
+  
+  text-align: center;
+  margin: auto;
+  padding-left: 15px;
+  }
+}
+
 
 
