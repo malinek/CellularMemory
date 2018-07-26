@@ -23,7 +23,7 @@
     <?php the_post_thumbnail('medium', array('class' => 'about-don-image img-responsive')); ?>
   </div>
   
-  <div class="col-sm-6 book-session">
+  <div class="col-xs-6 book-session">
     <h3>To book your private session</h3>
     <h4>e-mail: info@donhanson.com (business manager)<br><br>Donald's skype address: donhanson-texas<br><br>Pay by cash / check or money order in the mail / paypal</h4>
     <h4><strong><?php the_field('cost_session'); ?></strong></h4>

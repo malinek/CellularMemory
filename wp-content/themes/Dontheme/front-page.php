@@ -18,16 +18,16 @@
       <p>...these courses, workshops and seminars on an on-going basis, participants will eventually become proficient and will develop a mastery in the areas of:</p>
   </div>
 
-  <div class="col-sm-8 col-sm-offset-2 intro-effects" style="background-image: url(<?php echo get_theme_file_uri('/images/frontpage2.jpg') ?>);">
+  <div class="col-sm-10 col-sm-offset-1 intro-effects" style="background-image: url(<?php echo get_theme_file_uri('/images/fronpage2.jpg') ?>);">
     <div class="intro-effects-text">
-      <h4>Clear Thinking, Living Passionately</h4>
-      <h4>Self Love, Sweetness &amp; Gratitude</h4>
-      <h4>Energy as the Universal Language</h4>
-      <h4>Divine Alchemy; Body/Mind Ressurrection</h4>
-      <h4>Transforming Victim/Blame Consciousness</h4>
-      <h4>Understanding the Way the Universe Works</h4>
-      <h4>Vulnerability, Taking Ownership of your Own</h4>
-      <h4>Reactions &amp; Feelings</h4>
+      <h4><i class="far fa-heart"></i>Clear Thinking, Living Passionately</h4>
+      <h4><i class="far fa-heart"></i>Self Love, Sweetness &amp; Gratitude</h4>
+      <h4><i class="far fa-heart"></i>Energy as the Universal Language</h4>
+      <h4><i class="far fa-heart"></i>Divine Alchemy; Body/Mind Ressurrection</h4>
+      <h4><i class="far fa-heart"></i>Transforming Victim/Blame Consciousness</h4>
+      <h4><i class="far fa-heart"></i>Understanding the Way the Universe Works</h4>
+      <h4><i class="far fa-heart"></i>Vulnerability, Taking Ownership of your Own</h4>
+      <h4><i class="far fa-heart"></i>Reactions &amp; Feelings</h4>
     </div>
   </div>
 

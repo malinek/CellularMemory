@@ -23,7 +23,7 @@
   right: 35%;
 }
 
-@media screen and (max-width: 1252px) {
+@media (max-width: 1252px) {
 
   .welcome-text h1 {
     left: 30%;
@@ -31,7 +31,7 @@
   }
 }
 
-@media screen and (max-width: 945px) {
+@media (max-width: 945px) {
 
   .welcome-text h1 {
     left: 25%;
@@ -39,7 +39,7 @@
   }
 }
 
-@media screen and (max-width: 760px) {
+@media (max-width: 760px) {
 
   .welcome-text h1 {
     left: 20%;
@@ -47,7 +47,7 @@
   }
 }
 
-@media screen and (max-width: 635px) {
+@media (max-width: 635px) {
 
   .welcome-text h1 {
     left: 15%;
@@ -55,7 +55,7 @@
   }
 }
 
-@media screen and (max-width: 635px) {
+@media (max-width: 635px) {
 
   .welcome-text h1 {
     left: 10%;
@@ -63,7 +63,7 @@
   }
 }
 
-@media screen and (max-width: 480px) {
+@media (max-width: 480px) {
 
   .welcome-text h1 {
     left: 0%;
@@ -71,7 +71,7 @@
   }
 }
 
-@media screen and (max-width: 388px) {
+@media (max-width: 388px) {
 
   .welcome-text h1 {
     font-size: 38px;
@@ -106,19 +106,90 @@
 
 .intro-effects-text {
   position: absolute;
-  left: 0%;
+  left: 22%;
   top: 14%;
   right: 0%;
-  /*border-top-left-radius: 50% 100%;
-  border-top-right-radius: 50% 100%;
-  background: linear-gradient(180deg, rgba(162,188,78,1) 0%, rgba(192,209,133,1) 100%); */
+  text-align: left;
 }
 
 .intro-effects-text h4 {
-  font-family: Muli, sans-serif;
   color: $lightlightpurple;
 }
 
+.intro-effects-text .fa-heart {
+  color: $lightlightpurple;
+}
+
+@media (max-width: 650px) {
+
+  .intro-effects-text {
+    left: 18%;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .intro-effects-text {
+    left: 15%;
+  }
+}
+
+@media (max-width: 550px) {
+
+  .intro-effects-text {
+    left: 10%;
+  }
+}
+
+@media (max-width: 500px) {
+
+  .intro-effects-text {
+    left: 5%;
+  }
+}
+
+@media (max-width: 470px) {
+
+  .intro-effects-text {
+    left: 2%;
+  }
+}
+
+@media (max-width: 450px) {
+
+  .intro-effects-text {
+    left: 5%;
+  }
+
+  .intro-effects-text h4 {
+    font-size: 16px;
+  }
+
+}
+
+@media (max-width: 425px) {
+
+  .intro-effects-text {
+    left: 2%;
+  }
+
+  .intro-effects-text h4 {
+    font-size: 16px;
+  }
+
+}
+
+@media (max-width: 400px) {
+
+  .intro-effects-text {
+    left: 2%;
+  }
+
+  .intro-effects-text h4 {
+    font-size: 15px;
+  }
+
+}
 
 /** UPCOMING WORKSHOPS AND TESTIMONIALS**/
 
