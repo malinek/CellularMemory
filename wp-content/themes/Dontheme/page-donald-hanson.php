@@ -10,7 +10,7 @@
 
 <div class="container about-don">
   
-    <div class="col-sm-8">
+    <div class="col-sm-8 about-don-content-col">
       <p>
       <?php
         while(have_posts()) {

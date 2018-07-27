@@ -17,9 +17,9 @@
           <li class="dropdown-button" <?php if (is_page('about')) echo 'class="current-menu-item"'; ?>><a href="#!">About <i class="fa fa-chevron-down"></i></a>
             <ul class="sub-menu">
               <li <?php if (is_page('donald-hanson')) echo 'class="current-menu-item"'; ?>><a href="<?php echo site_url('/about/donald-hanson') ?>">Don Hanson</a></li>
-              <li><a href="#">TCM</a></li>
+              <li <?php if (is_page('tcm')) echo 'class="current-menu-item"'; ?>><a href="<?php echo site_url('/about/tcm') ?>">TCM</a></li>
               <li <?php if (is_page('testimonials')) echo 'class="current-menu-item"' ?>><a href="<?php echo site_url('/about/testimonials') ?>">Testimonials</a></li>
-              <li><a href="#">Payment</a></li>
+              <li <?php if (is_page('payment')) echo 'class="current-menu-item"'; ?>><a href="<?php echo site_url('/about/payment') ?>">Payment</a></li>
             </ul>
           </li>
           <li <?php if (is_page('contact')) echo 'class="current-menu-item"'; ?>><a href="<?php echo site_url('/contact') ?>">Contact</a></li>
