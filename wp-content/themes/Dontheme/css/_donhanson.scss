@@ -7,9 +7,12 @@ background-color: $lightlightpurple;
   padding-bottom: 70px;
 }
 
+.about-don-content-col {
+  padding-right: 40px;
+}
+
 .about-don-image-col {
   padding-top: 16px;
-  padding-left: 40px;
 }
 
 .about-don-image {
@@ -32,11 +35,21 @@ background-color: $lightlightpurple;
 
 @media (max-width: 768px) {
 
-.about-don-image-col {
-  
-  text-align: center;
-  margin: auto;
-  padding-left: 15px;
+  .about-don-content-col {
+    padding-right: 15px;
+  }
+
+  .about-don-image-col {
+    padding-top: 20px;
+    padding-right: 0px;
+    padding-bottom: 5px;
+    padding-left: 0px;
+  }
+
+  .about-don-image {
+    display: block;
+    text-align: center;
+    margin: auto;
   }
 }
 
