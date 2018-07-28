@@ -7,7 +7,7 @@
 }
 
 header {
-  background: #d6d3de;
+  background: $navbar-bg;
   color: $darkpurple;
   padding: 3px 0;
   position: relative;
@@ -29,7 +29,7 @@ header::after {
   position: absolute;
   top: 100%;
   right: 0%;
-  background: #d6d3de;
+  background: $navbar-bg;
   height: 0px;
   width: 100vw;
   overflow: hidden;
@@ -192,7 +192,7 @@ header::after {
     top: 63px; /* the height of the main nav */
     left: -10px;
     overflow: visible;
-    background: #d6d3de;
+    background: $navbar-bg;
     height: auto;
     transition: opacity 1s linear;
   }

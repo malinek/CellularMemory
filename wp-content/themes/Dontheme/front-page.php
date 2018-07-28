@@ -31,7 +31,7 @@
     </div>
   </div>
 
-    <button type="button" class="btn btn-default main-button"><a href="#">Read more</a></button>
+    <button type="button" class="big-purple-button"><a href="<?php echo site_url('/about/tcm') ?>">Read more</a></button>
 
 </div><!-- end intro-text-column -->
 

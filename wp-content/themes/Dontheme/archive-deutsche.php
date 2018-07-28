@@ -41,7 +41,7 @@
       <h4>Posted on <?php the_time('F j Y'); ?></h4>
       <div class="col post-content-archive">
         <p><?php the_excerpt(); ?></p>
-        <a href="<?php the_permalink(); ?>" class="btn green-button" role="button">Read more</a>
+        <a href="<?php the_permalink(); ?>" class="green-button">Read more</a>
       </div>
     </div>
   </div><!-- end row post-row-->
