@@ -3,7 +3,7 @@
  <div class="hero" style="background-image: url(<?php echo get_theme_file_uri('/images/Hero-private-sessions-compressor.jpg') ?>);">
 
   <div class="hero-headline">
-    <h1>Private Sessions</h1>
+    <h1><?php the_field('hero_title'); ?></h1>
   </div><!-- end hero-headline -->
 
 </div><!-- end hero -->
@@ -26,12 +26,14 @@
     </div>
 
     <div class="book-session">
-      <h3>To book your private session</h3>
-      <h4>E-mail: info@donhanson.com (business manager)</h4>
-      <h4>Donald's skype address: donhanson-texas</h4>
-      <h4>Pay by cash / check or money order in the mail / paypal</h4>
+      <h3><?php the_field('title_book_your_session'); ?></h3>
+      <h4><?php the_field('e-mail_private_sessions'); ?></h4>
+      <h4><?php the_field('skype_address_private_sessions'); ?></h4>
+      <h4><?php the_field('payment_options_private_sessions'); ?></h4>
       <h4><strong><?php the_field('cost_session'); ?></strong></h4>
-       <p>Paypal button goes here</p>
+      <div class="paypal-button-private-sessions">
+        <?php the_field('private_sessions_paypal_button'); ?>
+      </div>
     </div>
 
   </div>
@@ -39,3 +41,4 @@
 </div><!-- end container -->
 
 <?php get_footer(); ?>
+

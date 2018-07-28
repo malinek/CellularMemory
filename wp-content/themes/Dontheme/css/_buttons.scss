@@ -1,66 +1,55 @@
-.main-button {
-  padding: 12px 65px;
+/* THE TWO MAIN BUTTONS */
+.big-purple-button, .big-green-button {
+  padding: 15px 40px;
   color: $buttontextgreen;
   font-family: Muli800, sans-serif;
   font-size: 18px;
   letter-spacing: 1.2px;
-  border: solid 0px;
   border-radius: 6px;
+  border: solid 0px;
   border-color: $buttondarkerpurple;
   background: rgb(139,123,130);
   background: linear-gradient(90deg, rgba(139,123,130,1) 0%, rgba(208,202,205,1) 100%);
-  transition: all 0.2s ease;
+  transition: transform 250ms ease;
   box-shadow: 0 12px 20px -8px rgba(0, 0, 0, 0.5);
 }
 
-.main-button:hover {
+.big-green-button {
+  background: rgb(149,174,66);
+  background: linear-gradient(90deg, rgba(149,174,66,1) 0%, rgba(201,218,146,1) 100%);
+}
+
+.big-purple-button:hover, .big-green-button:hover {
   transform: translateY(4px);
-  border-color: $buttondarkerpurple;
-  color: $buttontextgreen;
-  background-color: $lightpurple;
 }
 
-.main-button:active {
-  transform: translateY(3px);
-  border-color: $buttondarkerpurple;
-  color: $buttontextgreen;
-  background-color: $lightpurple;
-}
-
-.main-button:focus {
-  transform: translateY(3px);
-  border-color: $buttondarkerpurple;
-  color: $buttontextgreen;
-  background-color: $lightpurple;
-}
-
-.purple-button, .green-button {
-  padding: 8px 25px;
+/* SMALLER, NO GRADIENT BUTTONS */
+.purple-button, .green-button, .light-purple-button {
+  padding: 8px 20px;
   color: $buttontextgreen;
   border: solid 1px;
   border-radius: 4px;
   display: block;
   margin: auto;
   text-align: center;
-  transition: all 0.2s ease;
-}
-
-.purple-button {
-border-color: $buttondarkerpurple;
-background-color: $lightpurple;
+  transition: all 250ms ease;
+  border-color: $buttondarkerpurple;
+  background-color: $lightpurple;
 }
 
 .green-button {
-border-color: $buttongreenborder;
-background-color: $brightergreen;
+  border-color: $buttongreenborder;
+  background-color: $brightergreen;
 }
 
-.purple-button:hover, .green-button:hover {
-  color: $buttontextgreen;
+.light-purple-button {
+  background-color: darken($navbar-bg-darker,10%);
+  border-color: darken($navbar-bg-darker,15%);
+}
+
+.purple-button:hover, .green-button:hover, .light-purple-button:hover {
   transform: translateY(3px);
-}
-
-.purple-button:hover {
+  color: $buttontextgreen;
   border-color: $buttondarkerpurple;
   background-color: $buttonpurplehover;
 }
@@ -70,54 +59,52 @@ background-color: $brightergreen;
   background-color: $buttongreenhover;
 }
 
-.purple-button:active, .green-button:active {
-  color: $buttontextgreen;
-  transform: translateY(3px);
+.light-purple-button:hover {
+  border-color: darken($navbar-bg-darker,15%);
+  background-color: $lightpurple;
 }
 
-.purple-button:active {
-  color: $buttontextgreen;
-  background-color: $buttonpurplehover;
-}
+/****** PAYPAL BUTTONS ******/
 
-.green-button:active {
-  border-color: $buttongreenborder;
-  background-color: $buttongreenhover;
-}
-
-.purple-button:focus, .green-button:focus {
-  color: $buttontextgreen;
-  transform: translateY(3px);
-}
-
-.purple-button:focus {
-  border-color: $buttondarkerpurple;
-  background-color: $buttonpurplehover;
-}
-
-.green-button:focus {
-  border-color: $buttongreenborder;
-  background-color: $buttongreenhover;
-}
-
-.post-content-archive-col .green-button {
-  text-align: left;
-  display: inline-block;
-  margin-top: 10px;
-}
-
-/* Just the div, not the actual button */
-.button-post-single {
+/* PAYMENT PAGE */
+.container-payment form {
   display: block;
   text-align: center;
   margin: auto;
-  padding-bottom: 30px;
+  width: 234px;
 }
 
-.button-post-single .main-button {
-  padding: 10px 30px;
-  /* green gradient */
-  background: rgb(149,174,66);
-  background: linear-gradient(90deg, rgba(149,174,66,1) 0%, rgba(201,218,146,1) 100%);
-  
+.container-payment form input {
+  width: 234px;
+  margin-bottom: 5px;
+}
+
+.container-payment .pay-now-button {
+  display: block;
+  margin-top: 5px;
+  width: 140px;
+}
+
+/* PRIVATE SESSIONS PAGE AND BUTTON */
+.paypal-button-private-sessions form {
+  display: block;
+  text-align: center;
+  margin: auto;
+  width: 180px;
+}
+
+.book-session form input {
+  width: 180px;
+  margin-bottom: 5px;
+  background-color: $lightlightpurple;
+}
+
+.book-session input.light-purple-button {
+  background-color: darken($navbar-bg-darker,10%);
+  border-color: darken($navbar-bg-darker,15%);
+}
+
+.book-session input.light-purple-button:hover {
+  border-color: darken($navbar-bg-darker,15%);
+  background-color: $lightpurple;
 }
