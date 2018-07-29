@@ -11,20 +11,18 @@
 
 .post-container {
   max-width: 900px;
-  margin-top: 40px;
   margin-bottom: 30px;
 }
 
-.post-image-col {
+.post-image {
   height: 250px;
-  margin-top: 5px;
+  width: 250px;
+  margin-top: 4px;
+  box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.4);
 }
 
-.post-image {
-  height: 100%;
-  width: auto;
-  box-shadow: 0px 6px 5px -4px rgba(0,0,0,.4);
-  box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.4);
+.post-content-archive-col {
+  padding-left: 0px;
 }
 
 .post-content-archive-col h2 {
@@ -43,17 +41,39 @@ hr.divider {
   border-bottom: 1px solid $lightergreen;
 }
 
+@media (max-width: 850px) {
+
+  .post-image {
+    height: 230px;
+    width: 230px;
+  }
+}
+
+@media (max-width: 800px) {
+
+  .post-image {
+    height: 210px;
+    width: 210px;
+  }
+}
+
 @media (max-width: 768px) {
   .post-image {
+    height: 250px;
+    width: 250px;
     display: block;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
   }
 
+  .post-content-archive-col {
+    padding-left: 15px;
+  }
+
   .post-content-archive-col h2, h4 {
     text-align: center;
-    margin-top: 10px;
+    margin-top: 15px;
   }
 
   .post-content-archive .green-button {
@@ -68,9 +88,6 @@ hr.divider {
 .post-single-content-col {
   background-color: #fdfcf5;
   padding: 24px 50px;
-  /*-webkit-box-shadow: 10px 10px 10px -3px rgba(111,98,104,0.2);
-  -moz-box-shadow: 10px 10px 10px -3px rgba(111,98,104,0.2);
-  box-shadow: 10px 10px 10px -3px rgba(111,98,104,0.2); */
   box-shadow: 0px 0px 10px 0px rgba(0,0,0,.2);
 }
 
@@ -132,8 +149,24 @@ hr.second-page-divider {
 .button-post-single {
   display: block;
   text-align: center;
-  margin: auto;
-  padding-bottom: 30px;
+  margin: 0 auto 30px auto;
+}
+
+@media (max-width: 768px) {
+  
+  .post-image-single {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+}
+
+@media (max-width: 575px ) {
+
+  .post-single-content-col {
+    padding: 10px 15px;
+  }
 }
 
 /* DEUTSCHE ARCHIVE PAGE */
