@@ -77,12 +77,17 @@
 .container-payment form input {
   width: 234px;
   margin-bottom: 5px;
+  background-color: $lightlightpurple;
 }
 
-.container-payment .pay-now-button {
+.container-payment .green-button {
   display: block;
   margin-top: 5px;
-  width: 140px;
+  background-color: $brightergreen;
+}
+
+.container-payment input.green-button:hover {
+  background-color: $buttongreenhover;
 }
 
 /* PRIVATE SESSIONS PAGE AND BUTTON */
@@ -101,10 +106,8 @@
 
 .book-session input.light-purple-button {
   background-color: darken($navbar-bg-darker,10%);
-  border-color: darken($navbar-bg-darker,15%);
 }
 
 .book-session input.light-purple-button:hover {
-  border-color: darken($navbar-bg-darker,15%);
   background-color: $lightpurple;
 }

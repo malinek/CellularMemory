@@ -1,14 +1,13 @@
 <?php get_header(); ?>
 
- <div class="hero" style="background-image: url(<?php echo get_theme_file_uri('/images/Hero-private-sessions-compressor.jpg') ?>);">
-
+<div class="hero" style="background-image: url(<?php the_field('hero_image'); ?>);">
   <div class="hero-headline">
     <h1><?php the_field('hero_title'); ?></h1>
   </div><!-- end hero-headline -->
-
 </div><!-- end hero -->
 
-<div class="container about-don">
+<div class="container about-don-container">
+
   <div class="col-sm-8 about-don-content-col">
     <p><?php
       while(have_posts()) {
@@ -19,7 +18,7 @@
       ?></p>
   </div>
 
-  <div class="col-sm-4 private-sessions-col-2">
+  <div class="col-sm-4">
 
     <div class="about-don-image-col">
       <?php the_post_thumbnail('medium', array('class' => 'about-don-image img-responsive')); ?>
@@ -35,7 +34,7 @@
         <?php the_field('private_sessions_paypal_button'); ?>
       </div>
     </div>
-
+  
   </div>
 
 </div><!-- end container -->

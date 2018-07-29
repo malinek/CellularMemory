@@ -1,23 +1,25 @@
 <?php get_header(); ?>
 
-  <div class="hero" style="background-image: url(<?php echo get_theme_file_uri('/images/barley-field-hero-compressor.jpg') ?>);">
+<div class="hero" style="background-image: url(<?php the_field('hero_image'); ?>);">
+  <div class="hero-headline">
+    <h1><?php the_field('hero_title'); ?></h1>
+  </div><!-- end hero-headline -->
+</div><!-- end hero -->
 
-    <div class="hero-headline">
-      <h1>Transforming Cellular Memory</h1>
-    </div><!-- end hero-headline -->
+<div class="container container-tcm">
 
-  </div><!-- end hero -->
+  <?php
+    while(have_posts()) {
+    the_post();
 
-  <div class="container container-tcm">
+    the_content();
+    }
+  ?>
 
-    <?php
-      while(have_posts()) {
-      the_post();
+</div><!-- end container -->
 
-      the_content();
-      }
-    ?>
-
-  </div><!-- end container -->
+<div class="button-tcm-page">
+  <button type="button" class="big-purple-button"><a href="<?php echo site_url() ?>">Back to Home</a></button>
+</div>
 
 <?php get_footer(); ?>

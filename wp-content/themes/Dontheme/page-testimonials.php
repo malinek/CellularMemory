@@ -1,11 +1,9 @@
 <?php get_header(); ?>
 
-<div class="hero" style="background-image: url(<?php echo get_theme_file_uri('/images/testimonials-header2-compressor.jpg') ?>);">
-
+<div class="hero" style="background-image: url(<?php the_field('hero_image'); ?>);">
   <div class="hero-headline">
-    <h1>Testimonials</h1>
+    <h1><?php the_field('hero_title'); ?></h1>
   </div><!-- end hero-headline -->
-
 </div><!-- end hero -->
 
 <div class="container blog-container">

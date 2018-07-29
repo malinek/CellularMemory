@@ -1,23 +1,33 @@
 <?php get_header(); ?>
 
-  <div class="hero" style="background-image: url(<?php echo get_theme_file_uri('/images/hero-purpleflowers-compressor.jpg') ?>);">
+<div class="hero" style="background-image: url(<?php the_field('hero_image'); ?>);">
+  <div class="hero-headline">
+    <h1><?php the_field('hero_title'); ?></h1>
+  </div><!-- end hero-headline -->
+</div><!-- end hero -->
 
-    <div class="hero-headline">
-      <h1>Payment for bookings</h1>
-    </div><!-- end hero-headline -->
+<div class="container container-payment">
 
-  </div><!-- end hero -->
+  <?php the_field('headline_payment_page'); ?>
 
-  <div class="container container-payment">
+  <?php the_field('first_paragraph_payments'); ?>
 
-    <?php
-      while(have_posts()) {
-      the_post();
+  <?php the_field('paypal_button_dollars'); ?>
 
-      the_content();
-      }
-    ?>
-   
-  </div>
+  <?php the_field('paypal_button_euro'); ?>
 
-  <?php get_footer(); ?>
+  <?php
+    while(have_posts()) {
+    the_post();
+
+    the_content();
+    }
+  ?>
+
+</div><!-- end container -->
+
+<div class="button-payment-page">
+  <button type="button" class="big-purple-button"><a href="<?php echo site_url() ?>">Back to Home</a></button>
+</div>
+
+<?php get_footer(); ?>
