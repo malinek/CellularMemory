@@ -6,12 +6,10 @@
   </div><!-- end hero-headline -->
 </div><!-- end hero -->
 
-<div class="container post-container">
+<div class="container post-container-single">
   <?php
   while(have_posts()) {
     the_post(); ?>
-
-  <div class="post-single-content-col">
 
     <h1><?php the_title(); ?></h1>
     <h4>Posted on <?php the_time('F j Y'); ?></h4>
@@ -24,10 +22,9 @@
       <p><?php the_content(); ?></p>
     </div>
 
-  </div><!-- end post-single-content-col -->
   <?php }
   ?>
-</div><!-- end post-container -->
+</div><!-- end post-container-single -->
 
 <div class="button-post-single">
   <button type="button" class="big-green-button"><a href="<?php echo site_url('/blog') ?>">Back to all posts</a></button>

@@ -57,7 +57,7 @@ hr.divider {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .post-image {
     height: 250px;
     width: 250px;
@@ -85,23 +85,24 @@ hr.divider {
 
 /* READ MORE SINGLE PAGE */
 
-.post-single-content-col {
+.post-container-single {
+  max-width: 900px;
+  margin-bottom: 30px;
   background-color: #fdfcf5;
   padding: 24px 50px;
   box-shadow: 0px 0px 10px 0px rgba(0,0,0,.2);
 }
 
-.post-single-content-col h1 {
+.post-container-single h1 {
   color: $buttongreenborder;
   font-weight: 800;
   text-align: center;
 }
 
-.post-single-content-col h4 {
+.post-container-single h4 {
   text-align: center;
   padding-bottom: 15px;
   padding-top: 4px;
-  
   
   &::before, &::after {
   content: "§";
@@ -154,17 +155,27 @@ hr.second-page-divider {
 
 @media (max-width: 768px) {
   
+  .post-image-col-single {
+    padding-right: 0px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+  }
+
   .post-image-single {
     display: block;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
   }
+
+  hr.second-page-divider {
+    margin-bottom: 36px;
+  }
 }
 
 @media (max-width: 575px ) {
 
-  .post-single-content-col {
+  .post-container-single {
     padding: 10px 15px;
   }
 }
@@ -173,27 +184,30 @@ hr.second-page-divider {
 
 .about-don-deutsche-container {
   max-width: 900px;
-  padding-bottom: 70px;
+  margin-bottom: 80px;
 }
 
 .about-don-deutsche-col {
-  padding-right: 40px;
+  padding-left: 40px;
+  margin-bottom: 30px;
+}
+
+.about-don-deutsche-container h1 {
+  color: $buttongreenborder;
+  font-weight: 800;
+  text-align: center;
+  margin-top: 8px;
+  margin-bottom: 20px;
 }
 
 .don-image-deutsche {
   border: double 6px $buttongreenborder;
   padding: 15px;
   box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.4);
-  margin-top: 72px;
 }
  
 .ilse-contact {
-  max-width: 400px;
-  text-align: center;
-  margin-top: 20px;
-  margin-left: 26px;
-  margin-bottom: 50px;
-  padding-bottom: 20px;
+  padding: 15px 20px 26px 20px;
   background: #F1F0F4;
   border: solid 1px;
   border-color: $lightergreen;
@@ -203,6 +217,56 @@ hr.second-page-divider {
   background: linear-gradient(135deg, rgba(185,175,180,1) 0%, rgba(208,202,205,1) 50%, rgba(231,228,230,1) 100%);
 }
 
-.ilse-contact h2 {
-  font-size: 26px;
+.ilse-contact h1 {
+  color: $darkpurple;
+  font-weight: 400;
+  margin-top: 0px;
+  margin-bottom: 10px;
 }
+
+.ilse-contact h3 {
+  margin-top: 0px;
+  margin-bottom: 50px;
+}
+
+.ilse-contact-col {
+  padding-right: 0px;
+}
+
+.ilse-image {
+  height: 135px;
+  width: 135px;
+  border-radius: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 897px) {
+
+  .ilse-contact {
+    width: 435px;
+    height: 229px;
+  }
+}
+
+@media (max-width: 767px) {
+  
+  .don-image-deutsche {
+    height: 300px;
+    width: 300px;
+    display: block;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .about-don-deutsche-col {
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+
+  
+}
+
+

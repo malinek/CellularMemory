@@ -6,12 +6,11 @@
   </div><!-- end hero-headline -->
 </div><!-- end hero -->
 
-<div class="container post-container">
+<div class="container post-container-single container-deutsche-single">
   <?php
   while(have_posts()) {
     the_post(); ?>
 
-  <div class="col-sm-12 post-single-content-col">
     <h1><?php the_title(); ?></h1>
     <h4>Posted on <?php the_time('F j Y'); ?></h4>
     <hr class="page-divider first-page-divider">
@@ -22,13 +21,14 @@
     <div class="col post-content-single">
       <p><?php the_content(); ?></p>
     </div>
-  </div><!-- end col-sm-12 post-single-content-col -->
+  
   <?php }
   ?>
 </div><!-- end container -->
 
 <div class="button-post-single">
-  <a href="<?php echo site_url('/deutsche') ?>" class="btn main-button" role="button">Back to Deutsche</a>
+  <button type="button" class="big-green-button"><a href="<?php echo site_url('/deutsche') ?>">Back to Deutsche</a></button>
 </div>
 
 <?php get_footer(); ?>
+
