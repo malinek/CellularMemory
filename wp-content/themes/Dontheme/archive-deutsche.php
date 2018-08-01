@@ -16,22 +16,24 @@
   <div class="col-sm-8 about-don-deutsche-col">
     <p>Donald (Don) Hanson hat einen Master-Abschluss in transpersonaler Psychologie und ist lizenzierter interreligiöser Minister. Seit den frühen 1980igern leitet er sowohl in den USA als auch international workshops und hat Tausende von Menschen durch eine tiefe zelluläre / molekulare Reinigung und Metamorphose geführt.<br><br>Don ist seit über 47 Jahren auf dem spirituellen Weg. Im Zuge seiner jahrzehnte langen Studien, sowohl psychologische als auch spirituelle Disziplinen, öffnete sich die Quelle des Lichts in seinem Bewusstsein. Dies eröffnete einige spirituelle Gaben und Fähigkeiten, die ihn bei seiner Arbeit unterstützen. Sein Lieblingsgefühl ist es mit anderen das Licht zu fühlen - hierbei beherrscht er die Kunst Menschen in ihrer Tiefe wahrzunehmen (wie eine Stimmgabel) und seinen Körper als Kanal für heilende Energie zur Verfügung zu stellen, die andere dabei unterstützt sich von hinderlichen alten Mustern und kulturellen Konditionierungen zu lösen. Seine Workshops und privaten Sessions sind ein Übungsfeld um unser persönliches Verhältnis zu dieser heilenden göttlichen Energie zu bekommen oder zu vertiefen.</p>
   </div>
+
+</div><!-- end container -->
+
+<div class="container ilse-container">
     
-  <div class="col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-2 ilse-contact">
-    <div class="row">
+  <div class="col-sm-12 ilse-contact">
       <h1>Anmeldung & Information</h1>
-    </div>
     <div class="col-sm-7 col-xs-7 ilse-contact-col">
       <h3>Ilse Engel</h3>
-      <h4>Tel: +49-3379 – 20 20 02</h4>
-      <h4>Email: ilse.engel@web.de</h4>
+      <h4><i class="fas fa-phone"></i>+49-3379 – 20 20 02</h4>
+      <h4><i class="far fa-envelope"></i>ilse.engel@web.de</h4>
     </div>
     <div class="col-sm-5 col-xs-5 ilse-image-col">
       <img class="ilse-image" src="<?php echo get_template_directory_uri() . '/images/Ilse2.jpg'; ?>" />
     </div>
   </div>
  
-</div><!-- end container -->
+</div><!-- end ilse-container -->
 
 <div class="container post-container">
   <?php

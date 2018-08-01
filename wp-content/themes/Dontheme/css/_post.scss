@@ -184,7 +184,7 @@ hr.second-page-divider {
 
 .about-don-deutsche-container {
   max-width: 900px;
-  margin-bottom: 80px;
+  margin-bottom: 20px;
 }
 
 .about-don-deutsche-col {
@@ -205,8 +205,15 @@ hr.second-page-divider {
   padding: 15px;
   box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.4);
 }
+
+.ilse-container {
+  max-width: 900px;
+  margin-bottom: 80px;
+}
  
 .ilse-contact {
+  width: 435px;
+  height: 234px;
   padding: 15px 20px 26px 20px;
   background: #F1F0F4;
   border: solid 1px;
@@ -215,6 +222,8 @@ hr.second-page-divider {
   box-shadow: 0 20px 15px -12px rgba(0, 0, 0, 0.5);
   background: rgb(185,175,180);
   background: linear-gradient(135deg, rgba(185,175,180,1) 0%, rgba(208,202,205,1) 50%, rgba(231,228,230,1) 100%);
+  margin: auto;
+  float: none;
 }
 
 .ilse-contact h1 {
@@ -222,6 +231,7 @@ hr.second-page-divider {
   font-weight: 400;
   margin-top: 0px;
   margin-bottom: 10px;
+  text-align: center;
 }
 
 .ilse-contact h3 {
@@ -242,12 +252,8 @@ hr.second-page-divider {
   margin-right: auto;
 }
 
-@media (max-width: 897px) {
-
-  .ilse-contact {
-    width: 435px;
-    height: 229px;
-  }
+.ilse-contact .fas, .far {
+  color: $darkpurple;
 }
 
 @media (max-width: 767px) {
@@ -265,8 +271,50 @@ hr.second-page-divider {
     padding-right: 0px;
     padding-left: 0px;
   }
-
-  
 }
 
+@media (max-width: 475px) {
 
+  .ilse-contact {
+    width: 344px;
+    height: 194px;
+    padding: 10px 0px 10px 0px;
+  }
+
+  .ilse-contact h1 {
+    font-size: 32px;
+  }
+
+  .ilse-contact h3 {
+    font-size: 22px;
+    margin-bottom: 30px;
+  }
+
+  .ilse-contact h4 {
+    font-size: 16px;
+    text-align: left;
+  }
+
+  .ilse-image {
+    height: 115px;
+    width: 115px;
+  }
+}
+
+@media (max-width: 370px) {
+
+  .ilse-contact {
+    width: 335px;
+    height: 194px;
+    padding: 10px 0px 10px 0px;
+  }
+
+  .ilse-image {
+    height: 105px;
+    width: 105px;
+  }
+
+  .ilse-contact .fas, .far {
+    padding-right: 10px;
+  }
+}
