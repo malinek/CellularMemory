@@ -1,10 +1,12 @@
 <?php get_header(); ?>
 
-<div class="column-sm-12 welcome-image parallax"style="background-image: url(<?php echo get_theme_file_uri('/images/donheader.jpg') ?>);">
+
+<div class="column-sm-12 welcome-image myParallax" style="background-image: url(<?php echo get_theme_file_uri('/images/donheader.jpg') ?>);" data-speed="0.5">
 
   <div class="column-sm-12 welcome-text">
     <h1>Clean out your closet and open up to the sweetness and love of the universe<br>Come on in<br>Everybody is<br>Welcome</h1>
   </div><!-- end hero-headline -->
+
 
 </div><!-- end welcome-image -->
 
