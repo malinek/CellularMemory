@@ -5,12 +5,14 @@
   /*background-color: $lightlightpurple;*/
 }
 
-.myParallax {
-  background-size: cover;
-  background-position: center;
+.welcome-image {
+  height: 90vh;
   background-repeat: no-repeat;
-  height: 600px;
+  background-position: center 0px;
+  background-attachment: fixed;
+  background-size: cover;
   position: relative;
+  margin-bottom: 40px;
 }
 
 .welcome-text h1 {
@@ -24,6 +26,11 @@
 }
 
 @media (max-width: 1252px) {
+
+  .welcome-image {
+    background-attachment: scroll;
+
+  }
 
   .welcome-text h1 {
     left: 30%;
@@ -79,45 +86,59 @@
   }
 }
 
-.intro-text-column {
+.intro-text {
   max-width: 800px;
   text-align: center;
-  margin-top: 60px;
-  margin-bottom: 60px;
+  margin-bottom: 24px;
+}
+
+.intro-text h1 {
+  margin-top: 30px;
 }
 
 .intro-text p {
   font-size: 18px;
   line-height: 1.6;
   text-align: justify;
-  padding-bottom: 15px;
 }
 
 .intro-effects {
-  background-size: cover;
-  background-position: center;
+  height: 70vh;
   background-repeat: no-repeat;
-  height: 350px;
-  margin-bottom: 40px;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
   position: relative;
-  border-radius: 5px;
-  box-shadow: 0 20px 15px -12px rgba(0, 0, 0, 0.5);
+  margin-bottom: 70px;
 }
 
 .intro-effects-text {
   position: absolute;
-  left: 22%;
-  top: 14%;
-  right: 0%;
-  text-align: left;
+  top: 11%;
+  left: 27.5%;
+  border: double 6px $lightlightpurple;
+  padding: 0px 20px 0px 20px;
+  box-shadow: 0px 0px 20px 0px rgba(0,0,0,.9);
 }
 
 .intro-effects-text h4 {
   color: $lightlightpurple;
+  font-family: 'Bilbo Swash Caps', cursive;
+  font-weight: 800;
+  font-size: 26px;
+  letter-spacing: 3px;
 }
 
 .intro-effects-text .fa-heart {
   color: $lightlightpurple;
+}
+
+@media (max-width: 1252px) {
+
+  .intro-effects {
+    background-attachment: scroll;
+  }
+
 }
 
 @media (max-width: 650px) {
@@ -188,7 +209,12 @@
   .intro-effects-text h4 {
     font-size: 15px;
   }
+}
 
+.button-front-page {
+  display: block;
+  margin: auto 0 80px;
+  text-align: center;
 }
 
 /** UPCOMING WORKSHOPS AND TESTIMONIALS**/

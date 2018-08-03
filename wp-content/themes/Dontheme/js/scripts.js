@@ -1,6 +1,9 @@
 // WRAPPER FOR ALL CONTENT
 (function($) {
 
+$(document).ready(function(){
+
+
 // NAVBAR
 
   $('.menu-toggle').click(function() {
@@ -14,29 +17,47 @@
   });
 
 
-  $(".myParallax").parallax();
+  /*$(window).scroll(function() {
 
+    var sPos = $(this).scrollTop();
 
-  /*$('.site-nav li > .sub-menu').parent().hover(function() {
-  var submenu = $(this).children('.sub-menu');
-  if ( $(submenu).is(':hidden') ) {
-    $(submenu).slideDown(500);
-  } else {
-    $(submenu).slideUp(500);
-  }
+    
 
+    $(".welcome-image").css({
+      'background-position' : 'center '+ sPos/1.5 + 'px'
+    });
+
+  
   }); */
 
-  /*$(window).scroll(function(e) {
+ 
+
+/* (function() {
+            
+    var documentEl = $(document),
+        parallaxBg = $('.intro-effects');
+    
+    documentEl.on('scroll', function() {
+        var currScrollPos = documentEl.scrollTop();
+        parallaxBg.css('background-position', 'center ' + -currScrollPos/1.5 + 'px');
+    });
+    
+   
+    
+})(); */
+
+
+if( $(window).width() > 1100 ) {
+
+$(window).scroll(function(e) {
     parallax();
   })
-
 
   function parallax() {
     var scroll = $(window).scrollTop();
     var screenHeight = $(window).height();
 
-    $('.parallax').each(function() {
+    $('.welcome-image').each(function() {
       var offset = $(this).offset().top;
       var distanceFromBottom = offset - scroll - screenHeight
       
@@ -46,17 +67,10 @@
         $(this).css('background-position', 'center ' + (( -scroll ) * 0.5) + 'px');
       }
     })
-  } */
+  }
 
+}
 
+}); // document ready function
 // WRAPPER FOR ALL CONTENT
 })(jQuery);
-
-  
-/* PARALLAX EFFECT NO JQUERY
-let p = document.getElementsByClassName('parallax')[0];
-window.onscroll = function(){
-  let scrollY = (window.scrollY > 70);
-  p.style.backgroundPosition = 'center ' + (scrollY*0.4) + 'px';
-  
-};﻿ */
