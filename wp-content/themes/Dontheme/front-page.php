@@ -1,12 +1,12 @@
 <?php get_header(); ?>
 
-<div class="header">
+
 <div class="welcome-image" style="background-image: url(<?php echo get_theme_file_uri('/images/header3.jpg') ?>);">
   <div class="welcome-text">
-    <h1>Clean out your closet and open up to the sweetness and love of the universe<br>Come on in<br>Everybody is<br>Welcome</h1>
+    <h1>Clean out your closet and open up to the <br> sweetness and love of the universe<br>Come on in<br>Everybody is Welcome</h1>
   </div>
 </div><!-- end welcome-image -->
-</div>
+
 
 <div class="container intro-text">
   <div class="intro-text">
@@ -17,24 +17,38 @@
     <h1>Through attending and committing to...</h1>
       <p>...these courses, workshops and seminars on an on-going basis, participants will eventually become proficient and will develop a mastery in the areas of:</p>
   </div>
-</div>
+</div><!-- end container intro-text -->
 
-<div class="intro-effects" style="background-image: url(<?php echo get_theme_file_uri('/images/2ndheader.jpg') ?>);">
+<div class="intro-effects-bg-image" style="background-image: url(<?php echo get_theme_file_uri('/images/2ndheader.jpg') ?>);">
   <div class="intro-effects-text">
-    <h4><i class="far fa-heart"></i>Clear Thinking, Living Passionately</h4>
+    <ul>
+      <li>Clear Thinking, Living Passionately</li>
+      <li>Self Love, Sweetness &amp; Gratitude</li>
+      <li>Energy as the Universal Language</li>
+      <li>Divine Alchemy; Body/Mind Ressurrection</li>
+      <li>Transforming Victim/Blame Consciousness</li>
+      <li>Understanding the Way the Universe Works</li>
+      <li>Vulnerability, Taking Ownership of your Own</li>
+      <li>Reactions &amp; Feelings</li>
+    </ul>
+
+    <!--<h4><i class="far fa-heart"></i>Clear Thinking, Living Passionately</h4>
     <h4><i class="far fa-heart"></i>Self Love, Sweetness &amp; Gratitude</h4>
     <h4><i class="far fa-heart"></i>Energy as the Universal Language</h4>
     <h4><i class="far fa-heart"></i>Divine Alchemy; Body/Mind Ressurrection</h4>
     <h4><i class="far fa-heart"></i>Transforming Victim/Blame Consciousness</h4>
     <h4><i class="far fa-heart"></i>Understanding the Way the Universe Works</h4>
     <h4><i class="far fa-heart"></i>Vulnerability, Taking Ownership of your Own</h4>
-    <h4><i class="far fa-heart"></i>Reactions &amp; Feelings</h4>
+    <h4><i class="far fa-heart"></i>Reactions &amp; Feelings</h4> -->
+  </div>
+  <div class="button-front-page">
+    <button type="button" class="big-purple-button f-page-button"><a href="<?php echo site_url('/about/tcm') ?>">Read more</a></button>
   </div>
 </div>
 
-  <div class="button-front-page">
-    <button type="button" class="big-purple-button"><a href="<?php echo site_url('/about/tcm') ?>">Read more</a></button>
-  </div>
+
+
+  
 
 
 
