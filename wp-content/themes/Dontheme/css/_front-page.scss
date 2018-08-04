@@ -5,6 +5,8 @@
   /*background-color: $lightlightpurple;*/
 }
 
+/* ------------------------- */
+
 .welcome-image {
   height: 90vh;
   background-repeat: no-repeat;
@@ -15,76 +17,57 @@
   margin-bottom: 40px;
 }
 
-.welcome-text h1 {
-  font-size: 42px;
-  color: $lightlightpurple;
-  text-align: center;
+.welcome-text {
   position: absolute;
-  left: 35%;
-  top: 45%;
-  right: 35%;
+  top: 47%;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 
-@media (max-width: 1252px) {
+.welcome-text h1 {
+  font-size: 64px;
+  letter-spacing: 6px;
+  color: $lightlightpurple;
+  text-align: center;
+}
+
+@media (max-width: 1100px) {
 
   .welcome-image {
     background-attachment: scroll;
-
-  }
-
-  .welcome-text h1 {
-    left: 30%;
-    right: 30%;
   }
 }
 
-@media (max-width: 945px) {
+@media (max-width: 954px) {
 
   .welcome-text h1 {
-    left: 25%;
-    right: 25%;
+    font-size: 56px;
   }
 }
 
-@media (max-width: 760px) {
+@media (max-width: 867px) {
 
   .welcome-text h1 {
-    left: 20%;
-    right: 20%;
+    font-size: 48px;
   }
 }
 
-@media (max-width: 635px) {
+@media (max-width: 779px) {
 
   .welcome-text h1 {
-    left: 15%;
-    right: 15%;
+    font-size: 40px;
   }
 }
 
-@media (max-width: 635px) {
+@media (max-width: 692px) {
 
   .welcome-text h1 {
-    left: 10%;
-    right: 10%;
+    font-size: 32px;
   }
 }
 
-@media (max-width: 480px) {
-
-  .welcome-text h1 {
-    left: 0%;
-    right: 0%;
-  }
-}
-
-@media (max-width: 388px) {
-
-  .welcome-text h1 {
-    font-size: 38px;
-    top: 50%;
-  }
-}
+/* -----------------------------*/
 
 .intro-text {
   max-width: 800px;
@@ -102,26 +85,46 @@
   text-align: justify;
 }
 
-.intro-effects {
-  height: 70vh;
+/* SECOND BACKGROUND IMAGE + TEXT */
+/* ---------------------------------- */
+
+.intro-effects-bg-image {
+  height: 80vh;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center;
   background-attachment: fixed;
   background-size: cover;
   position: relative;
-  margin-bottom: 70px;
+  margin-bottom: 40px;
 }
 
 .intro-effects-text {
+  text-align: center;
+  width: 660px;
   position: absolute;
-  top: 11%;
-  left: 27.5%;
+  top: 8%;
+  left: 0;
+  right: 0;
+  margin: auto;
   border: double 6px $lightlightpurple;
-  padding: 0px 20px 0px 20px;
+  padding: 10px 10px 10px 10px;
   box-shadow: 0px 0px 20px 0px rgba(0,0,0,.9);
+  background: rgba(166, 194, 74, 0.3);
+  opacity: 0;
+  transition: 1000ms ease-in-out; 
+  transform: translateY(60px);
 }
 
-.intro-effects-text h4 {
+.intro-effects-text ul {
+  padding-left: 0px;
+}
+
+.is-showing {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.intro-effects-text li {
   color: $lightlightpurple;
   font-family: 'Bilbo Swash Caps', cursive;
   font-weight: 800;
@@ -133,89 +136,92 @@
   color: $lightlightpurple;
 }
 
-@media (max-width: 1252px) {
+.button-front-page {
+  /*display: block;
+  text-align: center;
+  margin: 0px auto 50px auto; */
+  position: absolute;
+  bottom: 8%;
+  left: 50%;
+  transform: translateX(-50%);
+}
 
-  .intro-effects {
+.f-page-button {
+  opacity: 0;
+  transition: all 800ms ease-in-out;
+  transform: translateY(-30px)
+}
+
+.button-scale {
+  opacity: 1;
+  transform: translateY(0px)
+}
+
+/* ---------------------------- */
+
+@media (max-width: 1100px) {
+
+  .intro-effects-bg-image {
     background-attachment: scroll;
   }
 
-}
-
-@media (max-width: 650px) {
-
   .intro-effects-text {
-    left: 18%;
+    opacity: 1;
+  }
+
+  .f-page-button {
+    opacity: 1;
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 750px) {
 
   .intro-effects-text {
-    left: 15%;
+    width: 500px;
+  }
+
+  .intro-effects-text li {
+    font-size: 22px;
   }
 }
 
 @media (max-width: 550px) {
 
   .intro-effects-text {
-    left: 10%;
+    border: none;
+    padding: 0px 0px 0px 0px;
+    box-shadow: none;
+    background: transparent;
+    top: 2%;
   }
-}
-
-@media (max-width: 500px) {
 
   .intro-effects-text {
-    left: 5%;
+    width: 500px;
+  }
+
+  .intro-effects-text li {
+    font-size: 20px;
   }
 }
 
-@media (max-width: 470px) {
+@media (max-width: 510px) {
 
   .intro-effects-text {
-    left: 2%;
+    border: none;
+    padding: 0px 0px 0px 0px;
+    box-shadow: none;
+    background: transparent;
   }
-}
-
-@media (max-width: 450px) {
 
   .intro-effects-text {
-    left: 5%;
+    width: 350px;
   }
 
-  .intro-effects-text h4 {
-    font-size: 16px;
-  }
-
-}
-
-@media (max-width: 425px) {
-
-  .intro-effects-text {
-    left: 2%;
-  }
-
-  .intro-effects-text h4 {
-    font-size: 16px;
-  }
-
-}
-
-@media (max-width: 400px) {
-
-  .intro-effects-text {
-    left: 2%;
-  }
-
-  .intro-effects-text h4 {
-    font-size: 15px;
+  .intro-effects-text li {
+    font-size: 20px;
   }
 }
 
-.button-front-page {
-  display: block;
-  margin: auto 0 80px;
-  text-align: center;
-}
 
 /** UPCOMING WORKSHOPS AND TESTIMONIALS**/
 
@@ -300,6 +306,66 @@ i {
 
 
 
+/* ----------------------------- */
 
+/*@media (max-width: 1252px) {
+
+  .welcome-image {
+    background-attachment: scroll;
+  }
+
+  .welcome-text h1 {
+    left: 30%;
+    right: 30%;
+  }
+}
+
+@media (max-width: 945px) {
+
+  .welcome-text h1 {
+    left: 25%;
+    right: 25%;
+  }
+}
+
+@media (max-width: 760px) {
+
+  .welcome-text h1 {
+    left: 20%;
+    right: 20%;
+  }
+}
+
+@media (max-width: 635px) {
+
+  .welcome-text h1 {
+    left: 15%;
+    right: 15%;
+  }
+}
+
+@media (max-width: 635px) {
+
+  .welcome-text h1 {
+    left: 10%;
+    right: 10%;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .welcome-text h1 {
+    left: 0%;
+    right: 0%;
+  }
+}
+
+@media (max-width: 388px) {
+
+  .welcome-text h1 {
+    font-size: 38px;
+    top: 50%;
+  }
+} */
 
 

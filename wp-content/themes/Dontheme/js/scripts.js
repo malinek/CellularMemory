@@ -16,21 +16,14 @@ $(document).ready(function(){
 
   });
 
-
   /*$(window).scroll(function() {
 
     var sPos = $(this).scrollTop();
 
-    
-
     $(".welcome-image").css({
       'background-position' : 'center '+ sPos/1.5 + 'px'
     });
-
-  
   }); */
-
- 
 
 /* (function() {
             
@@ -67,9 +60,93 @@ $(window).scroll(function(e) {
         $(this).css('background-position', 'center ' + (( -scroll ) * 0.5) + 'px');
       }
     })
+
+  
+    var wScroll = $(this).scrollTop();
+
+    if(wScroll > $('.intro-effects-bg-image').offset().top - ($(window).height() / 1.5)) {
+
+      $('.intro-effects-text').each(function() {
+
+      $('.intro-effects-text').addClass('is-showing');
+
+    });
+    }
+
+    if(wScroll > $('.button-front-page').offset().top - ($(window).height() / 1)) {
+
+      $('.f-page-button').each(function() {
+
+      $('.f-page-button').addClass('button-scale');
+
+      });
+
+    }
+
   }
 
 }
+
+
+
+/* This is working 
+
+$(window).scroll(function(){
+
+  var wScroll = $(this).scrollTop();
+
+  if(wScroll > $('.intro-effects').offset().top - ($(window).height() / 1.2)) {
+
+    $('.intro-effects-text').each(function() {
+
+    $('.intro-effects-text').addClass('is-showing');
+
+  });
+ }
+
+}); 
+
+*/
+
+
+
+/* From youtube 
+$(window).scroll(function(){
+
+  var wScroll = $(this).scrollTop();
+
+  $('.logo').css({
+    'transform' : 'translate(0px, '+ wScroll /2 +'%)'
+  });
+
+  $('.back-bird').css({
+    'transform' : 'translate(0px, '+ wScroll /4 +'%)'
+  });
+
+  $('.fore-bird').css({
+    'transform' : 'translate(0px, -'+ wScroll /40 +'%)'
+  });
+
+  if(wScroll > $('.clothes-pics').offset().top - ($(window).height() / 1.2)) {
+
+    $('.clothes-pics figure').each(function(i){
+
+      setTimeout(function(){
+        $('.clothes-pics figure').eq(i).addClass('is-showing');
+      }, 150 * (i+1));
+    });
+
+  }
+
+});  end from youtube */
+
+
+/*if (scroll > $('.intro-effects').offset().top - screenHeight / 1.2) {
+      $('.intro-effects-text').function() {
+
+        $('.intro-effects-text').addClass('is-showing');
+    }; */
+
 
 }); // document ready function
 // WRAPPER FOR ALL CONTENT
