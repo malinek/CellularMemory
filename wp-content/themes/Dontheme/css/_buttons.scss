@@ -111,3 +111,22 @@
 .book-session input.light-purple-button:hover {
   background-color: $lightpurple;
 }
+
+/** SINGLE WORKSHOP PAGE **/
+
+.container-single-workshop form {
+  display: block;
+  text-align: center;
+  margin: auto;
+  width: 300px;
+  margin-bottom: 40px;
+}
+
+.container-single-workshop form select {
+  
+  margin-bottom: 5px;
+  background-color: #fff;
+  border-color: $lightpurple;
+  margin-bottom: 10px;
+}
+
