@@ -3,7 +3,7 @@
 function dons_post_types() {
   // Workshop post type
   register_post_type('workshop', array(
-    'supports' => array('title', 'editor', 'excerpt'),
+    'supports' => array('title', 'editor', 'excerpt', 'thumbnail'),
     'rewrite' => array('slug' => 'workshops'),
     'has_archive' => true,
     'public' => true,

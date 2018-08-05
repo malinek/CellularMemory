@@ -8,7 +8,7 @@
 }
 
 .workshops-box {
-  padding-bottom: 20px;
+  padding-bottom: 30px;
   margin-bottom: 30px;
   background: #F1F0F4;
   border: solid 1px;
@@ -28,6 +28,14 @@
   margin-top: -45px;
 }
 
+@media (max-width: 400px) {
+
+  .calender-icon {
+    height: 70px;
+  }
+
+}
+
 .start-date {
   line-height: 1.4;
   display: inline-block;
@@ -38,6 +46,77 @@
 
 .content-workshops h3, .content-workshops p {
   text-align: center;
+}
+
+.content-workshops p {
+  margin-bottom: 15px;
+}
+
+/** SINGLE PAGE **/
+
+.container-single-workshop {
+  padding-top: 20px;
+  padding-bottom: 30px;
+  text-align: center;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,.3);
+}
+
+.container-single-workshop h1 {
+  color: $buttongreenborder;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.image-single-workshop {
+  display: block;
+  margin: auto;
+  text-align: center;
+  height: 250px;
+  width: 700px;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 750px) {
+
+  .image-single-workshop {
+    height: auto;
+    width: auto;
+  }
+}
+
+.container-single-workshop h4 {
+  margin-bottom: 40px;
+}
+
+.further-information {
+  max-width: 400px;
+  background: rgb(185,175,180);
+  background: linear-gradient(135deg, rgba(185,175,180,1) 0%, rgba(208,202,205,1) 50%, rgba(231,228,230,1) 100%);
+  /**background: #dcd7d9; **/
+  border: solid 0px;
+  border-color: $lightergreen;
+  border-radius: 10px;
+  box-shadow: 0 20px 12px -15px rgba(0, 0, 0, 0.4);
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  padding: 40px;
+  border-radius: 4px;
+}
+
+.button-workshop-single {
+  display: block;
+  text-align: center;
+  margin: 0 auto 30px auto;
+}
+
+.container-single-workshop a {
+  text-decoration: underline;
+  color: $lightpurple;
+}
+
+.container-single-workshop a:hover {
+  color: $darkpurple;
 }
 
 

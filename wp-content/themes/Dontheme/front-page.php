@@ -46,12 +46,6 @@
   </div>
 </div>
 
-
-
-  
-
-
-
 <!-- Section Upcoming workshops and testimonials -->
 <div class="container-fluid front-page-two-columns">
 
@@ -96,7 +90,8 @@
 
           <div class="col-sm-8 workshop-content">
             <span><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></span>
-            <p><?php echo wp_trim_words(get_the_content(), 25); ?><a href="<?php the_permalink(); ?>"><br>Read more</a></p>
+            <p><?php echo wp_trim_words(get_field('further_information'), 25); ?><a href="<?php the_permalink(); ?>"><br>Read more</a></p>
+            <button type="button" class="green-button"><a href="<?php the_permalink(); ?>">Read more</a></button>
           </div><!-- end div -->
         </div><!-- end row -->
         <?php }
