@@ -222,7 +222,6 @@
   }
 }
 
-
 /** UPCOMING WORKSHOPS AND TESTIMONIALS**/
 
 .front-page-two-columns {
@@ -231,15 +230,14 @@
 }
 
 .workshop-column, .testimonials-column {
-  min-height: 550px;
+  min-height: 600px;
   padding-top: 10px;
   margin-bottom: 60px;
-  padding-bottom: 30px;
+  padding-bottom: 40px;
   padding-left: 30px;
   padding-right: 30px;
   background: rgb(185,175,180);
   background: linear-gradient(135deg, rgba(185,175,180,1) 0%, rgba(208,202,205,1) 50%, rgba(231,228,230,1) 100%);
-  /**background: #dcd7d9; **/
   border: solid 0px;
   border-color: $lightergreen;
   border-radius: 10px;
@@ -247,33 +245,55 @@
 }
 
 .testimonials-column {
-/*background: #ccdc96; */
-background: rgb(185,175,180);
-background: linear-gradient(225deg, rgba(185,175,180,1) 0%, rgba(208,202,205,1) 50%, rgba(231,228,230,1) 100%);
+  background: rgb(185,175,180);
+  background: linear-gradient(225deg, rgba(185,175,180,1) 0%, rgba(208,202,205,1) 50%, rgba(231,228,230,1) 100%);
+}
+
+.icon-front {
+  height: 80px;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 .workshop-column h2, .testimonials-column h2 {
   text-align: center;
+  margin-top: 30px;
   padding-bottom: 20px;
 }
 
 .workshop-date {
-  padding-bottom: 15px;
+  padding: 0;
 }
 
 .workshop-content {
-  padding-bottom: 15px;
+  padding: 0;
 }
 
 .workshop-date, .workshop-content span {
   font-family: Muli800, sans-serif;
-  font-size: 16px;
   font-weight: 800;
   line-height: 1.6;
 }
 
+.workshop-content p {
+  text-align: left;
+}
+
+.frontpage-button-2 {
+  display: inline-block;
+  text-align: left;
+  padding: 4px 12px;
+  margin-bottom: 30px;
+}
+
+.button-view-all {
+  margin-top: 10px;
+  padding: 10px 24px;
+}
+
 .testimonials-content {
-  padding-bottom: 15px;
+  padding: 0px;
+  margin-bottom: 20px;
 }
 
 .testimonials-content p {
@@ -284,25 +304,57 @@ background: linear-gradient(225deg, rgba(185,175,180,1) 0%, rgba(208,202,205,1) 
 
 .testimonials-content span {
   font-family: Muli800, sans-serif;
-  font-size: 16px;
   font-weight: 800;
   line-height: 1.6;
 }
 
 .image-column {
   padding-top: 10px;
-  padding-left: 5px;
+  padding-left: 0px;
 }
 
 .testimonials-image-frontpage {
-  height: 115px;
+  height: 126px;
   border-radius: 50%;
 }
 
-i {
-  color: $darkpurple;
-  padding-right: 20px;
+@media (max-width: 1250px) {
+
+  .testimonials-image-frontpage {
+    height: 110px;
+  }
 }
+
+@media (max-width: 1150px) {
+
+  .testimonials-image-frontpage {
+    height: 100px;
+  }
+}
+
+@media (max-width: 1060px) {
+
+  .testimonials-image-frontpage {
+    height: 94px;
+  }
+}
+
+@media (max-width: 1000px) {
+
+  .testimonials-image-frontpage {
+    height: 80px;
+  }
+}
+
+@media (max-width: 880px) {
+
+  .testimonials-image-frontpage {
+    height: 70px;
+  }
+}
+
+
+
 
 
 

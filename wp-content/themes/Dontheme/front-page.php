@@ -48,15 +48,19 @@
 
 <!-- Section Upcoming workshops and testimonials -->
 <div class="container-fluid front-page-two-columns">
-
   <div class="row">
-
     <div class="col-sm-6">
-    
       <div class="col-sm-12 workshop-column">
 
-      <h2><i class="fa fa-calendar fa-lg"></i>Upcoming workshops</h2>
-      
+      <div class="col-sm-12 headline-row">
+        <div class="col-sm-3">
+          <img class="icon-front" src="<?php echo get_template_directory_uri() . '/images/calender-icon4.png'; ?>" />
+        </div>
+        <div class="col-sm-9">
+          <h2>Upcoming workshops</h2>
+        </div>
+      </div>
+
       <?php
         $today = date('Ymd');
         $homepageWorkshops = new WP_Query(array(
@@ -90,15 +94,15 @@
 
           <div class="col-sm-8 workshop-content">
             <span><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></span>
-            <p><?php echo wp_trim_words(get_field('further_information'), 25); ?><a href="<?php the_permalink(); ?>"><br>Read more</a></p>
-            <button type="button" class="green-button"><a href="<?php the_permalink(); ?>">Read more</a></button>
+            <p><?php echo wp_trim_words(get_field('further_information'), 25); ?></p>
+            <button type="button" class="light-purple-button frontpage-button-2"><a href="<?php the_permalink(); ?>">Read more</a></button>
           </div><!-- end div -->
         </div><!-- end row -->
         <?php }
       ?>
 
       <div class="col-sm-12">
-        <button type="button" class="btn btn-default purple-button"><a href="<?php echo get_post_type_archive_link('workshop') ?>">View all workshops</a></button>
+        <button type="button" class="purple-button button-view-all"><a href="<?php echo get_post_type_archive_link('workshop') ?>">View all workshops</a></button>
       </div>
 
     </div>
@@ -111,7 +115,14 @@
    
       <div class="col-sm-12 testimonials-column">
 
-      <h2><i class="fa fa-comments-o fa-lg"></i>Testimonials</h2>
+      <div class="col-sm-12 headline-row">
+        <div class="col-sm-3">
+          <img class="icon-front" src="<?php echo get_template_directory_uri() . '/images/quotationmark3.png'; ?>" />
+        </div>
+        <div class="col-sm-9">
+          <h2>Testimonials</h2>
+        </div>
+      </div>
 
       <div class="row">
         <div class="col-sm-3 image-column">
@@ -124,16 +135,16 @@
       </div><!-- end row -->
       <div class="row">
         <div class="col-sm-3 image-column">
-          <img class="testimonials-image-frontpage img-responsive" src="<?php echo get_template_directory_uri() . '/images/Gretta.jpg'; ?>" />
+          <img class="testimonials-image-frontpage img-responsive" src="<?php echo get_template_directory_uri() . '/images/Bridget.jpg'; ?>" />
         </div>
         <div class="col-sm-9 testimonials-content">
-          <p>For 10 years before meeting Donald I suffered from chronic back pain. In the first workshop with Donald he released a deep cellular memory within me that was causing it. Since then I have had no need for regular pain killers. Donald's channel and connection with Spirit is truly awesome and I have witnessed profound changes within me and others. Thank you Donald.</p>
-          <span>Gretta Barry, Ennis, Ireland</span>
+          <p>Donald has a rare gift to share. He has helped me get in touch with and release blocks in my energy flow as well as mental and emotional bodies. He works in a clear and direct way to assist deep and profound changes that are lasting.</p>
+          <span>Bridget Van Block, M.A. Psychology, Sedona, AZ</span>
         </div>
       </div><!-- end row -->
       <div class="row">
         <div class="col-sm-12">
-          <button type="button" class="btn btn-default purple-button"><a href="<?php echo site_url('/about/testimonials') ?>">View all testimonials</a></button>
+          <button type="button" class="purple-button button-view-all"><a href="<?php echo site_url('/about/testimonials') ?>">View all testimonials</a></button>
         </div>
       </div><!-- end row -->
     </div>

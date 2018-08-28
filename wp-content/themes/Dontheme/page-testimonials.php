@@ -169,7 +169,7 @@
       <div class="testimonial-content">
         <p>Donald has a rare gift to share. He has helped me get in touch with and release blocks in my energy flow as well as mental and emotional bodies. He works in a clear and direct way to assist deep and profound changes that are lasting.</p>
       </div>
-      <h4>Bridget Van Block<br>M.A. Psychology, Sedona, AZ.</h4>
+      <h4>Bridget Van Block<br>M.A. Psychology, Sedona, AZ</h4>
     </div>
   </div><!-- end row -->
 
@@ -184,7 +184,7 @@
       <div class="testimonial-content">
         <p>Donald Hanson's work taps into such a deeply spiritual, profoundly healing energy that mere words cannot possibly capture the wonder and scope of its essence. He is coming from such a boundless, generous, limitless place of acceptance, love and presence. My body released pain and trauma that had been lodged in my cellular makeup for over a decade. His workshop has been a catalyst for my unfolding into my beauty and power. He is a true healer and benevolent teacher filled with joy and light.</p>
       </div>
-      <h4>Dawn Colombo<br>Holistic Service Reviewer, Tendu Magazine, New York.</h4>
+      <h4>Dawn Colombo<br>Holistic Service Reviewer, Tendu Magazine, New York</h4>
     </div>
   </div><!-- end row -->
 
@@ -199,7 +199,7 @@
       <div class="testimonial-content">
         <p>Dear Donald, This is to appreciate your memorable visit to my school on Wednesday 23rd September 2003, and to thank you for donating cash and clothing to the children. Your kind gesture is not only inspiring but also supplements in practical terms the basic lessons of giving and receiving, which we impart to the children. Most importantly it is a motivating factor in our enrollment drive. You have opened your heart and your hand to the needy and deprived children. May the Holy Spirit uphold, preserve and fulfill your desires. May success crown all your untiring efforts. Thanks, Your Friend, Emmanuel Eghan</p>
       </div>
-      <h4>Emmanuel Eghan<br>Director, Christian Home Institute, Kokrobite, Accra, Ghana, Africa.</h4>
+      <h4>Emmanuel Eghan<br>Director, Christian Home Institute, Kokrobite, Accra, Ghana, Africa</h4>
     </div>
   </div><!-- end row -->
 
@@ -214,7 +214,7 @@
       <div class="testimonial-content">
         <p>On my first encounter with Donald's work, a 25 year struggle with the crippling pain of migraine simply vanished. Since then my life has changed immeasurably. I have an inner sense of peace and purpose I could never before have imagined. Donald is a great master and a wonderful gift to us all from Spirit.</p>
       </div>
-      <h4>Judy<br>Tourist Industry, Northern Ireland.</h4>
+      <h4>Judy<br>Tourist Industry, Northern Ireland</h4>
     </div>
   </div><!-- end row -->
 
