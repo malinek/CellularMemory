@@ -513,10 +513,13 @@ div.gg-shortcode {
 }
 
 .supsystic-plugin .ggCopyTextCode.shortcode {
-    width: 330px;
+    width: 185px;
 }
 .supsystic-plugin .ggCopyTextCode.phpcode {
-    width: 530px;
+    width: 185px;
+}
+.sggActionButtons{
+    margin-bottom: 5px!important;
 }
 
 .preset {
@@ -740,7 +743,7 @@ div.gg-shortcode {
 .gg-wraper-anchor-nav-links .gg-anchor-nav-links.active,
 .gg-wraper-anchor-nav-links .gg-anchor-nav-links:hover {
     color: #000;
-    font-weight: bold;
+    text-decoration: underline;
 }
 #gg-anl-main {
     margin-top: 0px;
@@ -957,4 +960,41 @@ label.sggCheckboxLabelInOneRow {
 }
 .sggFigCaptionIconsEntry {
 	font-size: 0.8em;
+}
+
+#galleries_wrapper .top{
+    float: left;
+}
+
+#galleries_wrapper .dt_rigth {
+    float: right !important;
+    text-align: right !important;
+}
+#galleries_wrapper .dataTables_paginate{
+    text-align: left !important;
+    width: 40%;
+    float: right;
+}
+.paginate_links {
+    box-sizing: border-box;
+    display: inline-block;
+    min-width: 1em;
+    padding: 0.5em;
+    margin-left: 2px;
+    text-align: center;
+    text-decoration: none !important;
+    cursor: pointer;
+    color: #333 !important;
+    border: 1px solid transparent;
+    border-radius: 2px;
+}
+.dataTables_info {
+    padding: 0.4em !important;
+}
+
+#gg-galleries #galleries_length select{
+    height: auto;
+}
+#gg-galleries #delete-group{
+    margin-top: 10px;
 }

@@ -167,24 +167,39 @@ class GridGallery_Galleries_Module extends GridGallery_Core_Module
 			$this->getLocationUrl() . '/assets/css/loaders.css',
 			$this->getLocationUrl() . '/assets/css/chosen.css',
 		);
+
+		$environment = $this->getEnvironment();
+		if ($environment->isAction('index')) {
+			$cssList[] = $this->getLocationUrl() . '/assets/css/jquery.dataTables.min.css';
+		}
+
 		return $cssList;
 	}
 
     public function getBackendJS() {
-       return array(
-            $this->getLocationUrl() . '/assets/js/settings.js',
-            $this->getLocationUrl() . '/assets/js/attrchange.js',
-            $this->getLocationUrl() . '/assets/js/addImages.js',
-            $this->getLocationUrl() . '/assets/js/position.js',
-            $this->getLocationUrl() . '/assets/js/jquery.jqGrid.min.js',
-            $this->getLocationUrl() . '/assets/js/grid.locale-en.js',
-            $this->getLocationUrl() . '/assets/js/holder.js',
-            $this->getLocationUrl() . '/assets/js/grid-gallery.galleries.index.js',
-            $this->getLocationUrl() . '/assets/js/grid-gallery.galleries.view.js',
-            $this->getLocationUrl() . '/assets/js/grid-gallery.galleries.preview.js',
-            $this->getLocationUrl() . '/assets/js/grid-gallery.galleries.thumb.js',
-		   	$this->getLocationUrl() . '/assets/js/lib/chosen.jquery.js',
-        );
+
+    	$jsList = array(
+			$this->getLocationUrl() . '/assets/js/settings.js',
+			$this->getLocationUrl() . '/assets/js/attrchange.js',
+			$this->getLocationUrl() . '/assets/js/addImages.js',
+			$this->getLocationUrl() . '/assets/js/position.js',
+			$this->getLocationUrl() . '/assets/js/jquery.jqGrid.min.js',
+			$this->getLocationUrl() . '/assets/js/grid.locale-en.js',
+			$this->getLocationUrl() . '/assets/js/holder.js',
+			$this->getLocationUrl() . '/assets/js/grid-gallery.galleries.index.js',
+			$this->getLocationUrl() . '/assets/js/grid-gallery.galleries.view.js',
+			$this->getLocationUrl() . '/assets/js/grid-gallery.galleries.preview.js',
+			$this->getLocationUrl() . '/assets/js/grid-gallery.galleries.thumb.js',
+			$this->getLocationUrl() . '/assets/js/lib/chosen.jquery.js',
+		);
+
+		$environment = $this->getEnvironment();
+		if ($environment->isAction('index')) {
+			$jsList[] = $this->getLocationUrl() . '/assets/js/lib/jquery.dataTables.min.js';
+			$jsList[] = $this->getLocationUrl() . '/assets/js/gallery.index.js';
+		}
+
+		return $jsList;
     }
 
     /**

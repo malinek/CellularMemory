@@ -24,9 +24,13 @@ return array(
 		'default-settings' =>__('All new galleries you create after enabling the option will be created with these settings by default (even gallery type). Important! This feature may be enabled only in single gallery at once. ', 'sgg'),
 	    // Border
 		'border-type' => __('Select border type for your gallery thumbnails. ', 'sgg') . '<p><img src=@url/solid_border.jpg><img src=@url/Dashed_border.jpg></p><p><img src=@url/dotted_border.jpg><img src=@url/double_border.jpg></p>',
+		'border-type-popup' => __('Select border type for your popup thumbnails. ', 'sgg') . '<p><img src=@url/solid_border.jpg><img src=@url/Dashed_border.jpg></p><p><img src=@url/dotted_border.jpg><img src=@url/double_border.jpg></p>',
 		// 'border-type' => __('Select border type for your gallery thumbnails. ', 'sgg') . '<a target=\'_blank\' href=\'https://supsystic.com/documentation/border-type/\'>https://supsystic.com/documentation/border-type/</a>',
 		'border-color' => __('Select border color for your gallery thumbnails.', 'sgg'),
+		'border-color-popup' => __('Select border color for your popup thumbnails.', 'sgg'),
 		'border-width' =>__('Select border thickness for your gallery thumbnails.', 'sgg'),
+		'border-width-popup' =>__('Select border thickness for your popup thumbnails.', 'sgg'),
+		'popup-border-enable' =>__('Enable border for your popup. (Work only in 6 theme popup)', 'sgg'),
 		'border-radius' => __('Set the radius of corner rounding for your button in pixels. ', 'sgg') . '</br><img src=@url/image-radius.jpg>',
 		'cropQuality' => __('Here you may set the quality of your displayed gallery thumbnails in percents. ', 'sgg') . '<a target=\'_blank\' href=\'https://supsystic.com/documentation/main-settings/\'>https://supsystic.com/documentation/main-settings/</a>',
         'display-first-photo' => __('When this option is enabled, only first picture from this gallery will be seen on the website. The other pictures will be seen in the popup window after clicking on the first picture.', 'sgg'),

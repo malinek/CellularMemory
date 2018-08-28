@@ -40,16 +40,16 @@ class __TwigTemplate_bdf03d9189e2fc7f289a03a59487cf2c10cb512566a217b0441e94265d1
 \t\t";
             // line 16
             $this->displayBlock('gallery_attributes', $context, $blocks);
-            // line 193
+            // line 197
             echo ">
 
 \t\t";
-            // line 195
+            // line 199
             if ((($this->getAttribute($this->getAttribute(($context["settings"] ?? null), "preload", array()), "enabled", array()) == "true") || ($this->getAttribute($this->getAttribute(($context["settings"] ?? null), "preload", array()), "enabled", array()) == null))) {
-                // line 196
+                // line 200
                 echo "\t\t\t";
                 if (((($this->getAttribute($this->getAttribute(($context["settings"] ?? null), "preload", array()), "icon_name", array()) == "default") || ($this->getAttribute(($context["environment"] ?? null), "isPro", array(), "method") != true)) || ($this->getAttribute($this->getAttribute(($context["settings"] ?? null), "preload", array()), "enabled", array()) == null))) {
-                    // line 197
+                    // line 201
                     echo "\t\t\t\t<div class=\"gallery-loading\">
 \t\t\t\t\t<div class=\"blocks\">
 \t\t\t\t\t\t<div class=\"block\"></div>
@@ -60,69 +60,69 @@ class __TwigTemplate_bdf03d9189e2fc7f289a03a59487cf2c10cb512566a217b0441e94265d1
 \t\t\t\t</div>
 \t\t\t";
                 } else {
-                    // line 206
+                    // line 210
                     echo "\t\t\t\t<div class=\"gallery-loading\">
 \t\t\t\t\t<div class=\"la-";
-                    // line 207
+                    // line 211
                     echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute(($context["settings"] ?? null), "preload", array()), "icon_name", array()), "html", null, true);
                     echo "\" style=\"color: ";
                     echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute(($context["settings"] ?? null), "preload", array()), "background", array()), "html", null, true);
                     echo "\">
 \t\t\t\t\t\t";
-                    // line 208
+                    // line 212
                     $context['_parent'] = $context;
                     $context['_seq'] = twig_ensure_traversable(range(1, $this->getAttribute($this->getAttribute(($context["settings"] ?? null), "preload", array()), "icon_items", array())));
                     foreach ($context['_seq'] as $context["_key"] => $context["i"]) {
-                        // line 209
+                        // line 213
                         echo "\t\t\t\t\t\t\t<div></div>
 \t\t\t\t\t\t";
                     }
                     $_parent = $context['_parent'];
                     unset($context['_seq'], $context['_iterated'], $context['_key'], $context['i'], $context['_parent'], $context['loop']);
                     $context = array_intersect_key($context, $_parent) + $_parent;
-                    // line 211
+                    // line 215
                     echo "\t\t\t\t\t</div>
 \t\t\t\t</div>
 \t\t\t";
                 }
-                // line 214
+                // line 218
                 echo "\t\t";
             }
-            // line 215
-            echo "
-\t\t";
-            // line 216
-            $this->displayBlock('photos_before', $context, $blocks);
-            // line 218
-            echo "
-\t\t";
             // line 219
+            echo "
+\t\t";
+            // line 220
+            $this->displayBlock('photos_before', $context, $blocks);
+            // line 222
+            echo "
+\t\t";
+            // line 223
             if ($this->getAttribute($this->getAttribute(($context["settings"] ?? null), "socialSharing", array()), "enabled", array())) {
-                // line 220
+                // line 224
                 echo "            <div id=\"social-share-html\" style=\"display:none;\">
                 ";
-                // line 221
+                // line 225
                 echo $this->getAttribute($this->getAttribute(($context["settings"] ?? null), "socialSharing", array()), "html", array());
                 echo "
                 ";
-                // line 223
+                // line 227
                 echo "            </div>
         ";
             }
-            // line 225
+            // line 229
             echo "
 \t\t<div class=\"gallery-sharing-top\"></div>
 \t\t<div
 \t\t\t";
-            // line 228
+            // line 232
             $this->displayBlock('photos_attributes', $context, $blocks);
-            // line 231
+            // line 235
             echo ">
 
 \t\t\t";
-            // line 233
+            // line 237
             $this->displayBlock('photos', $context, $blocks);
-            // line 241
+            // line 245
             echo "
 \t\t\t<div class=\"grid-gallery-clearfix\"></div>
 \t\t</div>
@@ -131,13 +131,13 @@ class __TwigTemplate_bdf03d9189e2fc7f289a03a59487cf2c10cb512566a217b0441e94265d1
 \t\t<div class=\"grid-gallery-clearfix\"></div>
 
 \t\t";
-            // line 248
+            // line 252
             $this->displayBlock('photos_after', $context, $blocks);
-            // line 250
+            // line 254
             echo "\t</div>
 \t
 \t<!-- Gallery by Supsystic plugin ";
-            // line 252
+            // line 256
             echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute(($context["environment"] ?? null), "getConfig", array(), "method"), "get", array(0 => "plugin_version"), "method"), "html", null, true);
             echo "  ";
             if (($this->getAttribute(($context["environment"] ?? null), "isPro", array(), "method") == true)) {
@@ -147,10 +147,10 @@ class __TwigTemplate_bdf03d9189e2fc7f289a03a59487cf2c10cb512566a217b0441e94265d1
             echo " -->
 ";
         }
-        // line 254
+        // line 258
         echo "
 ";
-        // line 255
+        // line 259
         $this->displayBlock('styleForEffectInclude', $context, $blocks);
     }
 
@@ -424,227 +424,243 @@ class __TwigTemplate_bdf03d9189e2fc7f289a03a59487cf2c10cb512566a217b0441e94265d1
         // line 79
         echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute(($context["settings"] ?? null), "box", array()), "disableHistory", array()), "html", null, true);
         echo "\"
-\t\t\tdata-fullscreen=\"";
+\t\t\tdata-popup-border-type=\"";
         // line 80
+        echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($this->getAttribute(($context["settings"] ?? null), "popup", array()), "border", array()), "type", array()), "html", null, true);
+        echo "\"
+\t\t\tdata-popup-border-color=\"";
+        // line 81
+        echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($this->getAttribute(($context["settings"] ?? null), "popup", array()), "border", array()), "color", array()), "html", null, true);
+        echo "\"
+\t\t\tdata-popup-border-width=\"";
+        // line 82
+        echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($this->getAttribute(($context["settings"] ?? null), "popup", array()), "border", array()), "width", array()), "html", null, true);
+        echo "\"
+\t\t\tdata-popup-border-enable=\"";
+        // line 83
+        echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($this->getAttribute(($context["settings"] ?? null), "popup", array()), "border", array()), "enable", array()), "html", null, true);
+        echo "\"
+\t\t\tdata-fullscreen=\"";
+        // line 84
         echo (($this->getAttribute(($context["settings"] ?? null), "fullscreen", array())) ? ("true") : ("false"));
         echo "\"
 \t\t\tdata-hide-tooltip=\"";
-        // line 81
+        // line 85
         echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute(($context["settings"] ?? null), "thumbnail", array()), "tooltip", array()), "html", null, true);
         echo "\"
 \t\t\tdata-caption-font-family=\"";
-        // line 82
+        // line 86
         echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($this->getAttribute(($context["settings"] ?? null), "thumbnail", array()), "overlay", array()), "font_family", array()), "html", null, true);
         echo "\"
 \t\t\tdata-caption-text-size=\"";
-        // line 83
+        // line 87
         echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($this->getAttribute(($context["settings"] ?? null), "thumbnail", array()), "overlay", array()), "text_size", array()), "html", null, true);
         echo twig_escape_filter($this->env, twig_replace_filter($this->getAttribute($this->getAttribute($this->getAttribute(($context["settings"] ?? null), "thumbnail", array()), "overlay", array()), "text_size_unit", array()), array(0 => "px", 1 => "%", 2 => "em")), "html", null, true);
         echo "\"
 \t\t\tdata-is-mobile=\"";
-        // line 84
+        // line 88
         echo twig_escape_filter($this->env, ((array_key_exists("isMobile", $context)) ? (_twig_default_filter(($context["isMobile"] ?? null), "0")) : ("0")), "html", null, true);
         echo "\"
 \t\t\tdata-caption-mobile=\"";
-        // line 85
+        // line 89
         echo twig_escape_filter($this->env, (($this->getAttribute($this->getAttribute(($context["settings"] ?? null), "thumbnail", array(), "any", false, true), "isMobile", array(), "any", true, true)) ? (_twig_default_filter($this->getAttribute($this->getAttribute(($context["settings"] ?? null), "thumbnail", array(), "any", false, true), "isMobile", array()), "false")) : ("false")), "html", null, true);
         echo "\" ";
-        // line 86
+        // line 90
         echo "\t\t\tdata-hide-long-tltp-title=\"";
         echo ((($this->getAttribute(($context["settings"] ?? null), "hideLongTooltipTitles", array()) == "on")) ? ("1") : ("0"));
         echo "\"
 \t\t\tdata-caption-disabled-on-mobile=\"";
-        // line 87
+        // line 91
         echo twig_escape_filter($this->env, (($this->getAttribute($this->getAttribute(($context["settings"] ?? null), "thumbnail", array(), "any", false, true), "isDisableMobileCaption", array(), "any", true, true)) ? (_twig_default_filter($this->getAttribute($this->getAttribute(($context["settings"] ?? null), "thumbnail", array(), "any", false, true), "isDisableMobileCaption", array()), "false")) : ("false")), "html", null, true);
         echo "\"
 \t\t\t";
-        // line 88
+        // line 92
         if (($this->getAttribute($this->getAttribute(($context["settings"] ?? null), "lazyload", array()), "enabled", array()) == "1")) {
             echo " data-lazyload-enable='1' ";
         }
-        // line 89
+        // line 93
         echo "\t\t\t";
         if (($this->getAttribute($this->getAttribute($this->getAttribute(($context["settings"] ?? null), "thumbnail", array()), "overlay", array()), "effect", array()) == "polaroid")) {
-            // line 90
+            // line 94
             echo "\t\t\t\tdata-polaroid-animation=\"";
             echo twig_escape_filter($this->env, (($this->getAttribute($this->getAttribute($this->getAttribute(($context["settings"] ?? null), "thumbnail", array(), "any", false, true), "overlay", array(), "any", false, true), "polaroidAnimation", array(), "any", true, true)) ? (_twig_default_filter($this->getAttribute($this->getAttribute($this->getAttribute(($context["settings"] ?? null), "thumbnail", array(), "any", false, true), "overlay", array(), "any", false, true), "polaroidAnimation", array()), "true")) : ("true")), "html", null, true);
             echo "\"
 \t\t\t\tdata-polaroid-scattering=\"";
-            // line 91
+            // line 95
             echo twig_escape_filter($this->env, (($this->getAttribute($this->getAttribute($this->getAttribute(($context["settings"] ?? null), "thumbnail", array(), "any", false, true), "overlay", array(), "any", false, true), "polaroidScattering", array(), "any", true, true)) ? (_twig_default_filter($this->getAttribute($this->getAttribute($this->getAttribute(($context["settings"] ?? null), "thumbnail", array(), "any", false, true), "overlay", array(), "any", false, true), "polaroidScattering", array()), "true")) : ("true")), "html", null, true);
             echo "\"
 \t\t\t\tdata-polaroid-frame-width=\"";
-            // line 92
+            // line 96
             echo twig_escape_filter($this->env, (($this->getAttribute($this->getAttribute($this->getAttribute(($context["settings"] ?? null), "thumbnail", array(), "any", false, true), "overlay", array(), "any", false, true), "polaroidFrameWidth", array(), "any", true, true)) ? (_twig_default_filter($this->getAttribute($this->getAttribute($this->getAttribute(($context["settings"] ?? null), "thumbnail", array(), "any", false, true), "overlay", array(), "any", false, true), "polaroidFrameWidth", array()), 20)) : (20)), "html", null, true);
             echo "\"
 \t\t\t";
         }
-        // line 94
+        // line 98
         echo "\t\t\t";
         if (($this->getAttribute($this->getAttribute(($context["settings"] ?? null), "area", array()), "grid", array()) == "3")) {
-            // line 95
+            // line 99
             echo "\t\t\t\tdata-responsive-colums=\"";
             echo twig_escape_filter($this->env, twig_jsonencode_filter((($this->getAttribute($this->getAttribute(($context["settings"] ?? null), "general", array(), "any", false, true), "responsiveColumns", array(), "any", true, true)) ? (_twig_default_filter($this->getAttribute($this->getAttribute(($context["settings"] ?? null), "general", array(), "any", false, true), "responsiveColumns", array()), "")) : (""))));
             echo "\"
 \t\t\t";
         }
-        // line 97
+        // line 101
         echo "\t\t\t";
         if (($this->getAttribute(($context["settings"] ?? null), "horizontalScroll", array(), "any", true, true) && ($this->getAttribute($this->getAttribute(($context["settings"] ?? null), "horizontalScroll", array()), "enabled", array()) == "true"))) {
-            // line 98
+            // line 102
             echo "\t\t\t\tdata-horizontal-scroll=\"";
             echo twig_escape_filter($this->env, twig_jsonencode_filter($this->getAttribute(($context["settings"] ?? null), "horizontalScroll", array())));
             echo "\"
 \t\t\t";
         }
-        // line 100
+        // line 104
         echo "\t\t\t";
         if (($this->getAttribute($this->getAttribute($this->getAttribute(($context["settings"] ?? null), "thumbnail", array()), "overlay", array()), "personal", array()) == "true")) {
-            // line 101
+            // line 105
             echo "\t\t\t\tdata-thumb-overlay-personal=\"1\"
 \t\t\t";
         }
-        // line 103
+        // line 107
         echo "\t\t\tdata-popup-placement-type=\"";
         echo twig_escape_filter($this->env, (($this->getAttribute($this->getAttribute(($context["settings"] ?? null), "popup", array(), "any", false, true), "placementType", array(), "any", true, true)) ? (_twig_default_filter($this->getAttribute($this->getAttribute(($context["settings"] ?? null), "popup", array(), "any", false, true), "placementType", array()), 0)) : (0)), "html", null, true);
         echo "\"
 
             ";
-        // line 105
+        // line 109
         $context["imageSharingButPos"] = $this->getAttribute($this->getAttribute($this->getAttribute(($context["settings"] ?? null), "socialSharing", array()), "imageSharing", array()), "buttonsPosition", array());
-        // line 106
+        // line 110
         echo "            ";
         $context["imageSharingWrapperClass"] = (($context["imageSharingButPos"] ?? null) . " ");
-        // line 107
+        // line 111
         echo "            ";
         if (((($context["imageSharingButPos"] ?? null) == "top") || (($context["imageSharingButPos"] ?? null) == "bottom"))) {
-            // line 108
+            // line 112
             echo "                ";
             $context["imageSharingWrapperClass"] = (($context["imageSharingWrapperClass"] ?? null) . $this->getAttribute($this->getAttribute($this->getAttribute(($context["settings"] ?? null), "socialSharing", array()), "imageSharing", array()), "buttonsAlignHorizontal", array()));
-            // line 109
+            // line 113
             echo "            ";
         } else {
-            // line 110
+            // line 114
             echo "                    ";
-            $context["imageSharingWrapperClass"] = ((($context["imageSharingWrapperClass"] ?? null) . "vertical ") . $this->getAttribute($this->getAttribute($this->getAttribute(            // line 111
+            $context["imageSharingWrapperClass"] = ((($context["imageSharingWrapperClass"] ?? null) . "vertical ") . $this->getAttribute($this->getAttribute($this->getAttribute(            // line 115
 ($context["settings"] ?? null), "socialSharing", array()), "imageSharing", array()), "buttonsAlignVertical", array()));
-            // line 112
+            // line 116
             echo "            ";
         }
-        // line 113
+        // line 117
         echo "
             ";
-        // line 124
+        // line 128
         echo "
             ";
-        // line 125
-        $context["socialSharing"] = array("enabled" => $this->getAttribute($this->getAttribute(        // line 126
-($context["settings"] ?? null), "socialSharing", array()), "enabled", array()), "gallerySharing" => array("enabled" => $this->getAttribute($this->getAttribute($this->getAttribute(        // line 128
-($context["settings"] ?? null), "socialSharing", array()), "gallerySharing", array()), "enabled", array()), "position" => $this->getAttribute($this->getAttribute($this->getAttribute(        // line 129
-($context["settings"] ?? null), "socialSharing", array()), "gallerySharing", array()), "buttonsPosition", array())), "imageSharing" => array("enabled" => $this->getAttribute($this->getAttribute($this->getAttribute(        // line 132
-($context["settings"] ?? null), "socialSharing", array()), "imageSharing", array()), "enabled", array()), "wrapperClass" => $this->getAttribute(        // line 133
-$this, "getSocialSharingWrapperClass", array(0 => $this->getAttribute($this->getAttribute($this->getAttribute(        // line 134
-($context["settings"] ?? null), "socialSharing", array()), "imageSharing", array()), "buttonsPosition", array()), 1 => $this->getAttribute($this->getAttribute($this->getAttribute(        // line 135
-($context["settings"] ?? null), "socialSharing", array()), "imageSharing", array()), "buttonsAlignHorizontal", array()), 2 => $this->getAttribute($this->getAttribute($this->getAttribute(        // line 136
-($context["settings"] ?? null), "socialSharing", array()), "imageSharing", array()), "buttonsAlignVertical", array())), "method")), "popupSharing" => array("enabled" => $this->getAttribute($this->getAttribute($this->getAttribute(        // line 140
-($context["settings"] ?? null), "socialSharing", array()), "popupImageSharing", array()), "enabled", array()), "wrapperClass" => $this->getAttribute(        // line 141
-$this, "getSocialSharingWrapperClass", array(0 => $this->getAttribute($this->getAttribute($this->getAttribute(        // line 142
-($context["settings"] ?? null), "socialSharing", array()), "popupImageSharing", array()), "buttonsPosition", array()), 1 => $this->getAttribute($this->getAttribute($this->getAttribute(        // line 143
-($context["settings"] ?? null), "socialSharing", array()), "popupImageSharing", array()), "buttonsAlignHorizontal", array()), 2 => $this->getAttribute($this->getAttribute($this->getAttribute(        // line 144
+        // line 129
+        $context["socialSharing"] = array("enabled" => $this->getAttribute($this->getAttribute(        // line 130
+($context["settings"] ?? null), "socialSharing", array()), "enabled", array()), "gallerySharing" => array("enabled" => $this->getAttribute($this->getAttribute($this->getAttribute(        // line 132
+($context["settings"] ?? null), "socialSharing", array()), "gallerySharing", array()), "enabled", array()), "position" => $this->getAttribute($this->getAttribute($this->getAttribute(        // line 133
+($context["settings"] ?? null), "socialSharing", array()), "gallerySharing", array()), "buttonsPosition", array())), "imageSharing" => array("enabled" => $this->getAttribute($this->getAttribute($this->getAttribute(        // line 136
+($context["settings"] ?? null), "socialSharing", array()), "imageSharing", array()), "enabled", array()), "wrapperClass" => $this->getAttribute(        // line 137
+$this, "getSocialSharingWrapperClass", array(0 => $this->getAttribute($this->getAttribute($this->getAttribute(        // line 138
+($context["settings"] ?? null), "socialSharing", array()), "imageSharing", array()), "buttonsPosition", array()), 1 => $this->getAttribute($this->getAttribute($this->getAttribute(        // line 139
+($context["settings"] ?? null), "socialSharing", array()), "imageSharing", array()), "buttonsAlignHorizontal", array()), 2 => $this->getAttribute($this->getAttribute($this->getAttribute(        // line 140
+($context["settings"] ?? null), "socialSharing", array()), "imageSharing", array()), "buttonsAlignVertical", array())), "method")), "popupSharing" => array("enabled" => $this->getAttribute($this->getAttribute($this->getAttribute(        // line 144
+($context["settings"] ?? null), "socialSharing", array()), "popupImageSharing", array()), "enabled", array()), "wrapperClass" => $this->getAttribute(        // line 145
+$this, "getSocialSharingWrapperClass", array(0 => $this->getAttribute($this->getAttribute($this->getAttribute(        // line 146
+($context["settings"] ?? null), "socialSharing", array()), "popupImageSharing", array()), "buttonsPosition", array()), 1 => $this->getAttribute($this->getAttribute($this->getAttribute(        // line 147
+($context["settings"] ?? null), "socialSharing", array()), "popupImageSharing", array()), "buttonsAlignHorizontal", array()), 2 => $this->getAttribute($this->getAttribute($this->getAttribute(        // line 148
 ($context["settings"] ?? null), "socialSharing", array()), "popupImageSharing", array()), "buttonsAlignVertical", array())), "method")));
-        // line 150
+        // line 154
         echo "\t\t\tdata-social-sharing=\"";
         echo twig_escape_filter($this->env, twig_jsonencode_filter(($context["socialSharing"] ?? null)));
         echo "\"
 \t\t\t";
-        // line 151
+        // line 155
         ob_start();
-        // line 152
+        // line 156
         echo "\t\t\t\t";
         $this->displayBlock('additionalGridGalleryClass', $context, $blocks);
-        // line 159
+        // line 163
         echo "\t\t\t";
         $context["varAdditionalGalleryClass"] = ('' === $tmp = ob_get_clean()) ? '' : new Twig_Markup($tmp, $this->env->getCharset());
-        // line 160
+        // line 164
         echo "\t\t\tclass=\"grid-gallery
 \t\t\t\t";
-        // line 161
+        // line 165
         echo twig_escape_filter($this->env, ($context["varAdditionalGalleryClass"] ?? null), "html", null, true);
         echo "
 \t\t\t\t";
-        // line 162
-        if (($this->getAttribute($this->getAttribute(($context["settings"] ?? null), "thumbs", array()), "enable", array()) == "1")) {
-            // line 163
-            echo "\t\t\t\t\tgrid-gallery-thumbs
-\t\t\t\t";
-        }
-        // line 165
-        echo "
-\t\t\t\t";
         // line 166
-        if ((($this->getAttribute($this->getAttribute(($context["environment"] ?? null), "getConfig", array(), "method"), "get", array(0 => "optimizations"), "method") == 1) && ($this->getAttribute(($context["environment"] ?? null), "isPro", array(), "method") == false))) {
+        if (($this->getAttribute($this->getAttribute(($context["settings"] ?? null), "thumbs", array()), "enable", array()) == "1")) {
             // line 167
-            echo "\t\t\t\t\t\toptimizations
+            echo "\t\t\t\t\tgrid-gallery-thumbs
 \t\t\t\t";
         }
         // line 169
         echo "
 \t\t\t\t";
         // line 170
-        if (($this->getAttribute(($context["settings"] ?? null), "openByLink", array()) == "on")) {
+        if ((($this->getAttribute($this->getAttribute(($context["environment"] ?? null), "getConfig", array(), "method"), "get", array(0 => "optimizations"), "method") == 1) && ($this->getAttribute(($context["environment"] ?? null), "isPro", array(), "method") == false))) {
             // line 171
-            echo "\t\t\t\t    hidden-item
-                ";
+            echo "\t\t\t\t\t\toptimizations
+\t\t\t\t";
         }
         // line 173
         echo "
 \t\t\t\t";
         // line 174
-        if (($this->getAttribute(($context["settings"] ?? null), "displayFirstPhoto", array()) == "on")) {
+        if (($this->getAttribute(($context["settings"] ?? null), "openByLink", array()) == "on")) {
             // line 175
-            echo "\t\t\t\t    one-photo
+            echo "\t\t\t\t    hidden-item
                 ";
         }
         // line 177
+        echo "
+\t\t\t\t";
+        // line 178
+        if (($this->getAttribute(($context["settings"] ?? null), "displayFirstPhoto", array()) == "on")) {
+            // line 179
+            echo "\t\t\t\t    one-photo
+                ";
+        }
+        // line 181
         echo "                \"
 \t\t\tstyle=\"
 \t\t\t\twidth:";
-        // line 179
+        // line 183
         echo twig_escape_filter($this->env, ($this->getAttribute($this->getAttribute(($context["settings"] ?? null), "area", array()), "width", array()) . twig_replace_filter($this->getAttribute($this->getAttribute(($context["settings"] ?? null), "area", array()), "width_unit", array()), array(0 => "px", 1 => "%"))), "html", null, true);
         echo ";
 \t\t\t\theight:";
-        // line 180
+        // line 184
         echo twig_escape_filter($this->env, (($this->getAttribute($this->getAttribute(($context["settings"] ?? null), "area", array(), "any", false, true), "height", array(), "any", true, true)) ? (_twig_default_filter($this->getAttribute($this->getAttribute(($context["settings"] ?? null), "area", array(), "any", false, true), "height", array()), "auto")) : ("auto")), "html", null, true);
         echo "
 \t\t\t\t\t";
-        // line 181
+        // line 185
         if ((($this->getAttribute($this->getAttribute(($context["settings"] ?? null), "area", array()), "height", array()) != "auto") && ($this->getAttribute($this->getAttribute(($context["settings"] ?? null), "area", array()), "height", array()) != null))) {
             echo "px ";
         }
         echo ";
 \t\t\t\t";
-        // line 182
+        // line 186
         if ((($this->getAttribute($this->getAttribute(($context["settings"] ?? null), "area", array()), "position", array()) == "1") || ($this->getAttribute($this->getAttribute(($context["settings"] ?? null), "area", array()), "position", array()) == "left"))) {
-            // line 183
+            // line 187
             echo "\t\t\t\t\tfloat: left;
 \t\t\t\t";
         }
-        // line 185
+        // line 189
         echo "\t\t\t\t";
         if ((($this->getAttribute($this->getAttribute(($context["settings"] ?? null), "area", array()), "position", array()) == "2") || ($this->getAttribute($this->getAttribute(($context["settings"] ?? null), "area", array()), "position", array()) == "right"))) {
-            // line 186
+            // line 190
             echo "\t\t\t\t\tfloat: left;
 \t\t\t\t";
         }
-        // line 188
+        // line 192
         echo "\t\t\t\t";
         if (($this->getAttribute($this->getAttribute(($context["settings"] ?? null), "area", array()), "position", array()) == "center")) {
-            // line 189
+            // line 193
             echo "\t\t\t\tmargin-left:auto;
 \t\t\t\tmargin-right:auto;
 \t\t\t\t";
         }
-        // line 192
+        // line 196
         echo "\t\t\t";
         if ($this->getAttribute($this->getAttribute(($context["settings"] ?? null), "fullscreen", array()), "enabled", array())) {
             echo "position: fixed; z-index: 9999999; top: 0; left: 0; background-color: white;";
@@ -655,40 +671,40 @@ $this, "getSocialSharingWrapperClass", array(0 => $this->getAttribute($this->get
 \t\t";
     }
 
-    // line 152
+    // line 156
     public function block_additionalGridGalleryClass($context, array $blocks = array())
     {
-        // line 153
+        // line 157
         echo "\t\t\t\t\t";
         if (($this->getAttribute($this->getAttribute(($context["settings"] ?? null), "area", array()), "grid", array()) == "1")) {
-            // line 154
+            // line 158
             echo "\t\t\t\t\t\tgrid-gallery-fluid-height
 \t\t\t\t\t";
         } else {
-            // line 156
+            // line 160
             echo "\t\t\t\t\t\tgrid-gallery-fixed
 \t\t\t\t\t";
         }
-        // line 158
+        // line 162
         echo "\t\t\t\t";
     }
 
-    // line 216
+    // line 220
     public function block_photos_before($context, array $blocks = array())
     {
-        // line 217
+        // line 221
         echo "\t\t";
     }
 
-    // line 228
+    // line 232
     public function block_photos_attributes($context, array $blocks = array())
     {
-        // line 229
+        // line 233
         echo "\t\t\t\tid=\"photos-";
         echo twig_escape_filter($this->env, $this->getAttribute(($context["gallery"] ?? null), "id", array()), "html", null, true);
         echo "\"
 \t\t\t\tclass=\"grid-gallery-photos ";
-        // line 230
+        // line 234
         $this->displayBlock('photos_attributes_class', $context, $blocks);
         echo "\"
 \t\t\t";
@@ -698,51 +714,51 @@ $this, "getSocialSharingWrapperClass", array(0 => $this->getAttribute($this->get
     {
     }
 
-    // line 233
+    // line 237
     public function block_photos($context, array $blocks = array())
     {
-        // line 234
+        // line 238
         echo "\t\t\t    ";
         $context["i"] = 0;
-        // line 235
+        // line 239
         echo "
 \t\t\t\t";
-        // line 236
+        // line 240
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable($this->getAttribute(($context["gallery"] ?? null), "photos", array()));
         foreach ($context['_seq'] as $context["_key"] => $context["photo"]) {
-            // line 237
+            // line 241
             echo "\t\t\t\t\t";
-            $this->loadTemplate("@galleries/shortcode/helpers.twig", "@galleries/shortcode/gallery.twig", 237)->display(array("gallery" => ($context["gallery"] ?? null), "photo" => $context["photo"], "settings" => ($context["settings"] ?? null), "index" => ($context["i"] ?? null)));
-            // line 238
+            $this->loadTemplate("@galleries/shortcode/helpers.twig", "@galleries/shortcode/gallery.twig", 241)->display(array("gallery" => ($context["gallery"] ?? null), "photo" => $context["photo"], "settings" => ($context["settings"] ?? null), "index" => ($context["i"] ?? null)));
+            // line 242
             echo "\t\t\t\t    ";
             $context["i"] = (($context["i"] ?? null) + 1);
-            // line 239
+            // line 243
             echo "\t\t\t\t";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['photo'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 240
+        // line 244
         echo "\t\t\t";
     }
 
-    // line 248
+    // line 252
     public function block_photos_after($context, array $blocks = array())
     {
-        // line 249
+        // line 253
         echo "\t\t";
     }
 
-    // line 255
+    // line 259
     public function block_styleForEffectInclude($context, array $blocks = array())
     {
-        // line 256
+        // line 260
         echo "\t";
-        $this->loadTemplate("@galleries/shortcode/style_for_effects.twig", "@galleries/shortcode/gallery.twig", 256)->display(array_merge($context, array("gallery" => ($context["gallery"] ?? null), "settings" => ($context["settings"] ?? null))));
+        $this->loadTemplate("@galleries/shortcode/style_for_effects.twig", "@galleries/shortcode/gallery.twig", 260)->display(array_merge($context, array("gallery" => ($context["gallery"] ?? null), "settings" => ($context["settings"] ?? null))));
     }
 
-    // line 114
+    // line 118
     public function getgetSocialSharingWrapperClass($__position__ = null, $__horizontalAlign__ = null, $__verticalAlign__ = null, ...$__varargs__)
     {
         $context = $this->env->mergeGlobals(array(
@@ -756,26 +772,26 @@ $this, "getSocialSharingWrapperClass", array(0 => $this->getAttribute($this->get
 
         ob_start();
         try {
-            // line 115
+            // line 119
             echo "                ";
             $context["class"] = (($context["position"] ?? null) . " ");
-            // line 116
+            // line 120
             echo "                ";
             if (((($context["position"] ?? null) == "top") || (($context["position"] ?? null) == "bottom"))) {
-                // line 117
+                // line 121
                 echo "                    ";
                 $context["class"] = (($context["class"] ?? null) . ($context["horizontalAlign"] ?? null));
-                // line 118
+                // line 122
                 echo "                ";
             } else {
-                // line 119
+                // line 123
                 echo "                        ";
-                $context["class"] = ((($context["class"] ?? null) . "vertical ") .                 // line 120
+                $context["class"] = ((($context["class"] ?? null) . "vertical ") .                 // line 124
 ($context["verticalAlign"] ?? null));
-                // line 121
+                // line 125
                 echo "                ";
             }
-            // line 122
+            // line 126
             echo "                ";
             echo twig_escape_filter($this->env, ($context["class"] ?? null), "html", null, true);
             echo "
@@ -805,7 +821,7 @@ $this, "getSocialSharingWrapperClass", array(0 => $this->getAttribute($this->get
 
     public function getDebugInfo()
     {
-        return array (  779 => 122,  776 => 121,  774 => 120,  772 => 119,  769 => 118,  766 => 117,  763 => 116,  760 => 115,  746 => 114,  741 => 256,  738 => 255,  734 => 249,  731 => 248,  727 => 240,  721 => 239,  718 => 238,  715 => 237,  711 => 236,  708 => 235,  705 => 234,  702 => 233,  692 => 230,  687 => 229,  684 => 228,  680 => 217,  677 => 216,  673 => 158,  669 => 156,  665 => 154,  662 => 153,  659 => 152,  648 => 192,  643 => 189,  640 => 188,  636 => 186,  633 => 185,  629 => 183,  627 => 182,  621 => 181,  617 => 180,  613 => 179,  609 => 177,  605 => 175,  603 => 174,  600 => 173,  596 => 171,  594 => 170,  591 => 169,  587 => 167,  585 => 166,  582 => 165,  578 => 163,  576 => 162,  572 => 161,  569 => 160,  566 => 159,  563 => 152,  561 => 151,  556 => 150,  554 => 144,  553 => 143,  552 => 142,  551 => 141,  550 => 140,  549 => 136,  548 => 135,  547 => 134,  546 => 133,  545 => 132,  544 => 129,  543 => 128,  542 => 126,  541 => 125,  538 => 124,  535 => 113,  532 => 112,  530 => 111,  528 => 110,  525 => 109,  522 => 108,  519 => 107,  516 => 106,  514 => 105,  508 => 103,  504 => 101,  501 => 100,  495 => 98,  492 => 97,  486 => 95,  483 => 94,  478 => 92,  474 => 91,  469 => 90,  466 => 89,  462 => 88,  458 => 87,  453 => 86,  450 => 85,  446 => 84,  441 => 83,  437 => 82,  433 => 81,  429 => 80,  425 => 79,  421 => 78,  417 => 77,  413 => 76,  409 => 75,  405 => 74,  401 => 73,  395 => 71,  393 => 70,  390 => 69,  385 => 67,  382 => 66,  376 => 64,  373 => 63,  368 => 61,  365 => 60,  359 => 58,  354 => 56,  351 => 55,  347 => 53,  344 => 52,  338 => 50,  335 => 49,  331 => 47,  328 => 46,  324 => 44,  321 => 43,  316 => 41,  313 => 40,  310 => 39,  304 => 37,  300 => 35,  298 => 34,  290 => 33,  282 => 32,  278 => 31,  270 => 30,  261 => 28,  257 => 26,  255 => 25,  251 => 24,  247 => 23,  243 => 22,  239 => 21,  235 => 20,  231 => 19,  227 => 18,  220 => 17,  217 => 16,  213 => 13,  201 => 10,  191 => 9,  179 => 8,  167 => 7,  164 => 6,  161 => 5,  158 => 4,  154 => 255,  151 => 254,  141 => 252,  137 => 250,  135 => 248,  126 => 241,  124 => 233,  120 => 231,  118 => 228,  113 => 225,  109 => 223,  105 => 221,  102 => 220,  100 => 219,  97 => 218,  95 => 216,  92 => 215,  89 => 214,  84 => 211,  77 => 209,  73 => 208,  67 => 207,  64 => 206,  53 => 197,  50 => 196,  48 => 195,  44 => 193,  42 => 16,  38 => 14,  35 => 4,  33 => 3,  30 => 2,  28 => 1,);
+        return array (  795 => 126,  792 => 125,  790 => 124,  788 => 123,  785 => 122,  782 => 121,  779 => 120,  776 => 119,  762 => 118,  757 => 260,  754 => 259,  750 => 253,  747 => 252,  743 => 244,  737 => 243,  734 => 242,  731 => 241,  727 => 240,  724 => 239,  721 => 238,  718 => 237,  708 => 234,  703 => 233,  700 => 232,  696 => 221,  693 => 220,  689 => 162,  685 => 160,  681 => 158,  678 => 157,  675 => 156,  664 => 196,  659 => 193,  656 => 192,  652 => 190,  649 => 189,  645 => 187,  643 => 186,  637 => 185,  633 => 184,  629 => 183,  625 => 181,  621 => 179,  619 => 178,  616 => 177,  612 => 175,  610 => 174,  607 => 173,  603 => 171,  601 => 170,  598 => 169,  594 => 167,  592 => 166,  588 => 165,  585 => 164,  582 => 163,  579 => 156,  577 => 155,  572 => 154,  570 => 148,  569 => 147,  568 => 146,  567 => 145,  566 => 144,  565 => 140,  564 => 139,  563 => 138,  562 => 137,  561 => 136,  560 => 133,  559 => 132,  558 => 130,  557 => 129,  554 => 128,  551 => 117,  548 => 116,  546 => 115,  544 => 114,  541 => 113,  538 => 112,  535 => 111,  532 => 110,  530 => 109,  524 => 107,  520 => 105,  517 => 104,  511 => 102,  508 => 101,  502 => 99,  499 => 98,  494 => 96,  490 => 95,  485 => 94,  482 => 93,  478 => 92,  474 => 91,  469 => 90,  466 => 89,  462 => 88,  457 => 87,  453 => 86,  449 => 85,  445 => 84,  441 => 83,  437 => 82,  433 => 81,  429 => 80,  425 => 79,  421 => 78,  417 => 77,  413 => 76,  409 => 75,  405 => 74,  401 => 73,  395 => 71,  393 => 70,  390 => 69,  385 => 67,  382 => 66,  376 => 64,  373 => 63,  368 => 61,  365 => 60,  359 => 58,  354 => 56,  351 => 55,  347 => 53,  344 => 52,  338 => 50,  335 => 49,  331 => 47,  328 => 46,  324 => 44,  321 => 43,  316 => 41,  313 => 40,  310 => 39,  304 => 37,  300 => 35,  298 => 34,  290 => 33,  282 => 32,  278 => 31,  270 => 30,  261 => 28,  257 => 26,  255 => 25,  251 => 24,  247 => 23,  243 => 22,  239 => 21,  235 => 20,  231 => 19,  227 => 18,  220 => 17,  217 => 16,  213 => 13,  201 => 10,  191 => 9,  179 => 8,  167 => 7,  164 => 6,  161 => 5,  158 => 4,  154 => 259,  151 => 258,  141 => 256,  137 => 254,  135 => 252,  126 => 245,  124 => 237,  120 => 235,  118 => 232,  113 => 229,  109 => 227,  105 => 225,  102 => 224,  100 => 223,  97 => 222,  95 => 220,  92 => 219,  89 => 218,  84 => 215,  77 => 213,  73 => 212,  67 => 211,  64 => 210,  53 => 201,  50 => 200,  48 => 199,  44 => 197,  42 => 16,  38 => 14,  35 => 4,  33 => 3,  30 => 2,  28 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */

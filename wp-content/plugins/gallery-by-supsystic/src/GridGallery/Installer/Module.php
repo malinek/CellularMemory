@@ -43,10 +43,7 @@ class GridGallery_Installer_Module extends GridGallery_Core_Module
                 return;
             }
 
-            $model = self::getModel();
-            $queries = self::getQueries();
-
-            $model->update($queries);
+            self::executeUpdate();
         }
 
         if ($config->get('is_pro')) {
@@ -57,7 +54,29 @@ class GridGallery_Installer_Module extends GridGallery_Core_Module
                 update_option(self::LAST_PRO_VERSION, $currentProVersion);
             }
         }
-
+    }
+	
+	protected static function executeUpdate()
+    {
+		$model = self::getModel();
+		$queries = self::getQueries();
+		
+		$config = $this->getEnvironment()->getConfig();
+        $currentVersion = $config->get('plugin_version');
+		
+		if (function_exists('is_multisite') && is_multisite()) {
+			global $wpdb;
+			$blog_id = $wpdb->get_col("SELECT blog_id FROM $wpdb->blogs");
+			foreach ($blog_id as $id) {
+				if (switch_to_blog($id)) {
+					$model->update($queries);
+					update_option(self::LAST_VERSION, $currentVersion);
+					restore_current_blog();
+				}
+			}
+		} else {
+			$model->update($queries);
+		}
     }
 
     /**
@@ -69,13 +88,29 @@ class GridGallery_Installer_Module extends GridGallery_Core_Module
 
         $model = self::getModel();
         $queries = self::getQueries();
+		
+		$config = $this->getEnvironment()->getConfig();
+		$currentVersion = $config->get('plugin_version');
 
-        if (!$model->install($queries)) {
-            wp_die('Failed to update database.');
-        }
+		if (function_exists('is_multisite') && is_multisite()) {
+			global $wpdb;
+			$blog_id = $wpdb->get_col("SELECT blog_id FROM $wpdb->blogs");
+            foreach ($blog_id as $id) {
+                if (switch_to_blog($id)) {
+                    $model->install($queries);
+					update_option(self::LAST_VERSION, $currentVersion);
+					restore_current_blog();
+                }
+            }
+		} else {
+			if (!$model->install($queries)) {
+				wp_die ('Failed to update database.');
+			}
+			update_option(self::LAST_VERSION, $currentVersion);
+		}
     }
 
-    public function onDeactivation()
+    /*public function onDeactivation()
     {
         $response = false;
         //Uncomment to enable deactivation page
@@ -91,7 +126,7 @@ class GridGallery_Installer_Module extends GridGallery_Core_Module
 
             $model->drop($queries);
         }
-    }
+    }*/
 
     /**
      * {@inheritdoc}
@@ -101,7 +136,24 @@ class GridGallery_Installer_Module extends GridGallery_Core_Module
         global $grid_gallery_supsystic;
         
         $self = $grid_gallery_supsystic->getResolver()->getModulesList()->get('installer');
-        $self->onDeactivation();
+		
+		$model = self::getModel();
+		$queries = self::getQueries();
+
+		if (function_exists('is_multisite') && is_multisite()) {
+			global $wpdb;
+			$blog_id = $wpdb->get_col("SELECT blog_id FROM $wpdb->blogs");
+            foreach ($blog_id as $id) {
+                if (switch_to_blog($id)) {
+                    $model->drop($queries);
+					delete_option(self::LAST_VERSION);
+					restore_current_blog();
+                }
+            }
+		} else {
+			$model->drop($queries);
+		}
+		
     }
 
     /**

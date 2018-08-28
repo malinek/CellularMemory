@@ -349,6 +349,18 @@ Version: 3.1.6
             if(movie_height.indexOf('%') != -1) { movie_height = parseFloat(($(window).height() * parseFloat(movie_height) / 100) - 150); percentBased = true; }
             if(movie_width.indexOf('%') != -1) { movie_width = parseFloat(($(window).width() * parseFloat(movie_width) / 100) - 150); percentBased = true; }
 
+			if(pp_settings.popup_border_enable  && pp_settings.popup_border_color
+				&& pp_settings.popup_border_type && pp_settings.popup_border_width)
+			{
+				$pp_pic_holder.css({
+					"border-color": pp_settings.popup_border_color,
+					"border-width": pp_settings.popup_border_width +"px",
+					"border-style": pp_settings.popup_border_type,
+					//"box-sizing": 'content-box'
+				});
+			}
+
+
             // Fade the holder
             $pp_pic_holder.fadeIn(function(){
                 // Set the title
@@ -374,6 +386,7 @@ Version: 3.1.6
                         imgPreloader.onload = function(){
                             // Fit item to viewport
                             pp_dimensions = _fitToViewportImage(imgPreloader.width,imgPreloader.height);
+
                             _showContent();
                         };
 
@@ -658,6 +671,7 @@ Version: 3.1.6
 
             $ppt.fadeTo(settings.animation_speed,1);
 
+
             // Resize the content holder
             $pp_pic_holder.find('.pp_content')
                 .animate({
@@ -666,7 +680,7 @@ Version: 3.1.6
 					}
 					,	settings.animation_speed
 					,	function(){
-							// Resize picture the holder
+                	// Resize picture the holder
 							$pp_pic_holder.animate({
 								'top': projectedTop,
 								'left': ((windowWidth/2) - (pp_dimensions['containerWidth']/2) < 0) ? 0 : (windowWidth/2) - (pp_dimensions['containerWidth']/2),
@@ -675,6 +689,7 @@ Version: 3.1.6
 								var $ppHoverContainer = $pp_pic_holder.find('.pp_hoverContainer')
 								,	$ppImageWrapper = $pp_pic_holder.find('#pp_full_res')
 								,	$ppPopupImage = $pp_pic_holder.find('#fullResImage');
+								
 								$ppHoverContainer.height(pp_dimensions['height']).width(pp_dimensions['width']);
 								$ppPopupImage.height(pp_dimensions['height']).width(pp_dimensions['width']);
 
@@ -717,6 +732,14 @@ Version: 3.1.6
 
             _insert_gallery();
             pp_settings.ajaxcallback();
+			//centered popup after init with real width params
+			setTimeout(function () {
+				$pp_pic_holder.animate({
+					'left': ((windowWidth/2) - (pp_dimensions['containerWidth']/2) < 0) ? 0 : (windowWidth/2) - ($pp_pic_holder.outerWidth()/2),
+					width:pp_dimensions['containerWidth']
+				});
+			}, 600);
+
         };
 
 		$selfPp.initRotate = (function() {
@@ -836,12 +859,12 @@ Version: 3.1.6
 
                     _fitToViewport(pp_containerWidth,pp_containerHeight)
                 };
-
                 _getDimensions(imageWidth,imageHeight);
             };
 
 
             return  {
+            	// - 20px necessary for centering popup img
                 width:Math.floor(imageWidth),
                 height:Math.floor(imageHeight),
                 containerHeight:Math.floor(pp_containerHeight),
@@ -940,6 +963,7 @@ Version: 3.1.6
                     'top': projectedTop,
                     'left': (windowWidth/2) + scroll_pos['scrollLeft'] - (contentwidth/2)
                 });
+
             };
         };
 

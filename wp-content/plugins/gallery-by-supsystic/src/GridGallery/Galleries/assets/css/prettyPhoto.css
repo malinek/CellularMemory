@@ -296,6 +296,7 @@
 		position: absolute;
 		width: 100px;
 		z-index: 999999;
+		box-sizing: content-box;
 	}
 
 
@@ -339,7 +340,7 @@
 		}
 		* html .pp_content { width: 40px; }
 
-		.pp_fade { display: none; }
+		.pp_fade { display: none; position: relative; }
 
 		.pp_content_container {
 			position: relative;
@@ -562,6 +563,7 @@
 		
 		img#fullResImage {
 				margin-bottom: 0px!important;
+				max-width: 100%;
 			}
 
 		/*@media only screen and (min-width: 320px) and (max-width: 767px) {*/
@@ -763,3 +765,4 @@ a.pp_next {
 	display: inline-block;
 	float: left;
 }
+

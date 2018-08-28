@@ -35,8 +35,14 @@
 	{% endif %}
 {% endset %}
 
+{% if mosaicParams is defined and mosaicParams.photoCountLeft > 0 %}
+	{% set is_ext_link = false %}
+{% else %}
+	{% set is_ext_link = photo.attachment.external_link is defined and photo.attachment.external_link is not empty %}
+{% endif %}
+
 {% set aClass %}
-	{% if (photo.attachment.external_link is not defined or photo.attachment.external_link|trim is empty) and (photo.attachment.video is not defined or photo.attachment.video|trim is empty) and settings.box.type == '0' %}
+	{% if (is_ext_link == false) and (photo.attachment.video is not defined or photo.attachment.video|trim is empty) and settings.box.type == '0' %}
 		gg-colorbox
 	{% endif %}
 
@@ -44,13 +50,13 @@
 		gg-video
 	{% endif %}
 
-	{% if settings.box.type == '2' and (photo.attachment.external_link is not defined or photo.attachment.external_link|trim is empty or (photo.attachment.video is defined and photo.attachment.video|trim is not empty)) %}
+	{% if settings.box.type == '2' and (is_ext_link == false or (photo.attachment.video is defined and photo.attachment.video|trim is not empty)) %}
 		pbox
 	{% endif %}
 {% endset %}
 
 {% set aHref %}
-	{% if photo.attachment.external_link is defined and photo.attachment.external_link is not empty %}
+	{% if is_ext_link == true %}
 		{{ photo.attachment.external_link|force_http }}
 		{% set link = true %}
 	{% else %}

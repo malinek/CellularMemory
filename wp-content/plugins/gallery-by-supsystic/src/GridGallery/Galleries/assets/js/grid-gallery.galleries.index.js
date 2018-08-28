@@ -106,6 +106,7 @@
                 $(this).addClass('active');
 
                 $field.val($(this).data('preset'));
+                $('#gallery-create-title').focus();
             });
 
             $('#gallery-create').on('click', function() {
@@ -119,38 +120,34 @@
                 var title = $container.find('input').val(),
                     preset = $container.find('#presetValue').val();
 
-                if (!title) {
-                    $.jGrowl('Gallery name can\'t be empty!');
-                    return false;
-                }
-
                 $(this).find('i').removeClass('fa-check').addClass('fa-spinner fa-spin');
                 layers.text.hide();
                 layers.loader.show();
 
-                if (title) {
+                request = $.extend('', request, {
+                    title: (title ? title : ''),
+                    preset: preset
+                });
 
-                    request = $.extend('', request, {
-                        title: title,
-                        preset: preset
-                    });
+                $.post(wp.ajax.settings.url, request, function (response) {
+                    $.jGrowl(response.message);
 
-                    $.post(wp.ajax.settings.url, request, function (response) {
-                        $.jGrowl(response.message);
+                    if (!response.error) {
+                        window.location.href = response.url;
+                    }
 
-                        if (!response.error) {
-                            window.location.href = response.url;
-                        }
-
-                        //$container.dialog('close');
-                        $container.find('#newGalleryAlert').hide();
-                    });
-
-                }
+                    //$container.dialog('close');
+                    $container.find('#newGalleryAlert').hide();
+                });
 
                 layers.text.show();
                 layers.loader.hide();
             });
+            $('#gallery-create-form').on('submit', function() {
+                $('#gallery-create').click();
+                return false;
+            });
+            $('#gallery-create-title').focus();
             /*$('#gallery-cancel').on('click', function() {
                 $('#gg-create-gallery-dialog').dialog('close');
             });*/

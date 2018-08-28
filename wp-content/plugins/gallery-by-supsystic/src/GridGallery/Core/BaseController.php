@@ -16,7 +16,8 @@ class GridGallery_Core_BaseController extends Rsc_Mvc_Controller
     public function __construct(Rsc_Environment $environment, Rsc_Http_Request $request)
     {
         parent::__construct($environment, $request);
-        if ($environment->isPluginPage() && !$environment->isModule('promo', 'welcome') && !$environment->getConfig()->get('welcome_page_was_showed')) {
+        if ($environment->isPluginPage() && !$environment->isModule('license')
+            && !$environment->isModule('promo', 'welcome') && !$environment->getConfig()->get('welcome_page_was_showed')) {
             return $this->redirect($this->generateUrl('promo', 'welcome'));
         }
     }

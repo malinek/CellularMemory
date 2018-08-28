@@ -134,7 +134,10 @@ class GridGallery_Galleries_Model_Galleries extends GridGallery_Core_BaseModel
      */
     public function createFromRequest(Rsc_Http_Request $request, Rsc_Lang $lang, Rsc_Config $config)
     {
-        if (!$title = $request->post->get('title')) {
+        $title = $request->post->get('title');
+        $unnamed = (!$title || sizeof($title) == 0);
+
+        if($unnamed) {
             $title = $lang->translate('Unnamed gallery');
         }
 
@@ -144,6 +147,10 @@ class GridGallery_Galleries_Model_Galleries extends GridGallery_Core_BaseModel
 
         if ($res) {
             $id = $this->db->insert_id;
+
+            if($unnamed) {
+                $this->rename($id, $lang->translate('Gallery ').$id);
+            }
 
             $config->load('@galleries/presets.php');
             $presets = $config->get('gallery_presets');

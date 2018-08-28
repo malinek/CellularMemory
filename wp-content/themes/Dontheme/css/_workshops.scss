@@ -112,11 +112,13 @@
 
 .container-single-workshop a {
   text-decoration: underline;
-  color: $lightpurple;
+  color: $darkpurple;
+  transition: color 800ms ease;
 }
 
 .container-single-workshop a:hover {
-  color: $darkpurple;
+  color: $lightpurple;
+  transition: color 800ms ease;
 }
 
 
