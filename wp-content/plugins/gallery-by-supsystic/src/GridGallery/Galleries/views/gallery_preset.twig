@@ -43,7 +43,8 @@
 				~ ' <a target=\'_blank\' href=\'https://supsystic.com/documentation/gallery-getting-started/\'>https://supsystic.com/documentation/gallery-getting-started/</a>'
 			, 'top', true) }}
 		</h3>
-        <input name="title" type="text" style="float: left; width: 60%; height: 36px;"/>
+        <form id="gallery-create-form">
+        <input id="gallery-create-title" name="title" type="text" style="float: left; width: 60%; height: 36px;"/>
         <button id="gallery-create" class="button button-primary" type="button" style="height:37px;">
             <i class="fa fa-check"></i>
             {{ translate('Save') }}
@@ -51,6 +52,7 @@
         {#<button id="gallery-cancel" class="button button-primary" type="button">
             {{ environment.translate('Cancel') }}
         </button>#}
+        </form">
 
         <div class="clear"></div>
         <input id="presetValue" name="preset" type="hidden" value="1"/>

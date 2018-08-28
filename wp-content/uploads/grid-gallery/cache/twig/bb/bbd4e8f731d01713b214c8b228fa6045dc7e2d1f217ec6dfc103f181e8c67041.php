@@ -56,284 +56,248 @@ class __TwigTemplate_64b5e25b68a9abba2f20f488e43081c148db6ef9ab1825f63a3056d62bf
         echo "
     <section id=\"gg-galleries\">
 
-        ";
-        // line 17
-        if ( !array_key_exists("galleries", $context)) {
-            // line 18
-            echo "            ";
-            // line 19
-            echo "        ";
-        } else {
-            // line 20
-            echo "
-            <div class=\"gg-galleries-grid\">
-                ";
-            // line 23
-            echo "                ";
-            $context['_parent'] = $context;
-            $context['_seq'] = twig_ensure_traversable(($context["galleries"] ?? null));
-            $context['_iterated'] = false;
-            foreach ($context['_seq'] as $context["_key"] => $context["gallery"]) {
-                // line 24
-                echo "                    <div id=\"";
-                echo twig_escape_filter($this->env, $this->getAttribute($context["gallery"], "id", array()), "html", null, true);
-                echo "\" class=\"gg-item gg-gallery\" style=\"height: auto;\">
-                        <h3 class=\"gallery-title\">";
-                // line 25
-                echo twig_title_string_filter($this->env, $this->getAttribute($context["gallery"], "title", array()));
-                echo "</h3>
-                        <div class=\"image\">
-                            ";
-                // line 28
-                echo "                            ";
-                $context["cover"] = call_user_func_array($this->env->getFunction('get_attachment')->getCallable(), array($this->getAttribute($context["gallery"], "attachment_id", array()), "350", "225", "true"));
-                // line 29
-                echo "
-                            ";
-                // line 30
-                if ((twig_length_filter($this->env, ($context["cover"] ?? null)) < 1)) {
-                    // line 31
-                    echo "                                ";
-                    if ((twig_length_filter($this->env, $this->getAttribute($this->getAttribute($this->getAttribute($context["gallery"], "settings", array()), "posts", array()), "postCover", array())) > 1)) {
-                        // line 32
-                        echo "                                    ";
-                        $context["cover"] = $this->getAttribute($this->getAttribute($this->getAttribute($context["gallery"], "settings", array()), "posts", array()), "postCover", array());
-                        // line 33
-                        echo "                                ";
-                    }
-                    // line 34
-                    echo "                            ";
-                }
-                // line 35
-                echo "                            <img src=\"";
-                echo twig_escape_filter($this->env, ((array_key_exists("cover", $context)) ? (_twig_default_filter(($context["cover"] ?? null), ("holder.js/350x220?theme=gray&text=" . $this->getAttribute($context["gallery"], "title", array())))) : (("holder.js/350x220?theme=gray&text=" . $this->getAttribute($context["gallery"], "title", array())))), "html", null, true);
-                echo "\" alt=\"";
-                echo $this->getAttribute($context["gallery"], "title", array());
-                echo "\" width=\"350px\" height=\"220px\"/>
-                            ";
-                // line 37
-                echo "                            ";
-                // line 41
-                echo "                            <div class=\"sgg-images-info\" style=\"padding-left: 20px;position: relative;\">
-                                <h4>
-                                    ";
-                // line 43
-                echo twig_escape_filter($this->env, call_user_func_array($this->env->getFunction('translate')->getCallable(), array("Images: ")), "html", null, true);
-                echo "
-                                    <div class=\"gg-counter\"
-                                         style=\"display: inline-block; font-weight: 200; margin-right: 20px;\"
-                                         title=\"";
-                // line 46
-                echo twig_escape_filter($this->env, sprintf(call_user_func_array($this->env->getFunction('translate')->getCallable(), array("There are %s photos in the gallery %s")), twig_length_filter($this->env, $this->getAttribute($context["gallery"], "photos", array())), $this->getAttribute($context["gallery"], "title", array())), "html", null, true);
-                echo "\">
-                                        ";
-                // line 47
-                echo twig_escape_filter($this->env, ($this->getAttribute($context["gallery"], "total", array()) + (($this->getAttribute($this->getAttribute($this->getAttribute($context["gallery"], "settings", array(), "any", false, true), "posts", array(), "any", false, true), "length", array(), "any", true, true)) ? (_twig_default_filter($this->getAttribute($this->getAttribute($this->getAttribute($context["gallery"], "settings", array(), "any", false, true), "posts", array(), "any", false, true), "length", array()), 0)) : (0))), "html", null, true);
-                echo "
-                                    </div>
-                                    ";
-                // line 50
-                echo "                                    ";
-                // line 51
-                echo "                                    ";
-                // line 52
-                echo "                                </h4>
-                            </div>
-                        </div>
-                        <div class=\"controls-wrap\" style=\"display: inline-block; margin-top: 10px;\">
-                            <!-- Control buttons -->
-                            <ul class=\"gg-control-btn\">
-                                <li>
-                                    <a href=\"";
-                // line 59
-                echo twig_escape_filter($this->env, $this->getAttribute(($context["environment"] ?? null), "generateUrl", array(0 => "galleries", 1 => "settings", 2 => array("gallery_id" => $this->getAttribute($context["gallery"], "id", array()))), "method"), "html", null, true);
-                echo "\"
-                                       class=\"button background\">
-\t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-cogs\"></i>
-                                        ";
-                // line 62
-                echo twig_escape_filter($this->env, call_user_func_array($this->env->getFunction('translate')->getCallable(), array("Settings")), "html", null, true);
-                echo "
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href=\"";
-                // line 66
-                echo twig_escape_filter($this->env, $this->getAttribute(($context["environment"] ?? null), "generateUrl", array(0 => "galleries", 1 => "view", 2 => array("gallery_id" => $this->getAttribute($context["gallery"], "id", array()))), "method"), "html", null, true);
-                echo "\"
-                                       class=\"button background\">
-                                        <i class=\"fa fa-bars\"></i>
-                                        ";
-                // line 69
-                echo twig_escape_filter($this->env, call_user_func_array($this->env->getFunction('translate')->getCallable(), array("Images list")), "html", null, true);
-                echo "
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href=\"";
-                // line 73
-                echo twig_escape_filter($this->env, $this->getAttribute(($context["environment"] ?? null), "generateUrl", array(0 => "galleries", 1 => "preview", 2 => array("gallery_id" => $this->getAttribute($context["gallery"], "id", array()))), "method"), "html", null, true);
-                echo "\"
-                                       class=\"button background\">
-                                        <i class=\"fa fa-eye\"></i>
-                                        ";
-                // line 76
-                echo twig_escape_filter($this->env, call_user_func_array($this->env->getFunction('translate')->getCallable(), array("Preview")), "html", null, true);
-                echo "
-                                    </a>
-                                </li>
-                            </ul>
-                            <ul class=\"gg-control-btn\">
-                                ";
-                // line 82
-                echo "                                    ";
-                // line 83
-                echo "                                        ";
-                // line 84
-                echo "                                        ";
-                // line 85
-                echo "                                    ";
-                // line 86
-                echo "                                ";
-                // line 87
-                echo "                                <li title=\"";
-                echo twig_escape_filter($this->env, call_user_func_array($this->env->getFunction('translate')->getCallable(), array("Upload new images")), "html", null, true);
-                echo "\">
-                                    <button class=\"button button-primary gallery import-to-gallery\" id=\"!sgg-btn-upload\" data-folder-id=\"0\"
-                                            data-gallery-id=\"";
-                // line 89
-                echo twig_escape_filter($this->env, $this->getAttribute($context["gallery"], "id", array()), "html", null, true);
-                echo "\" ";
-                echo ">
-                                        <i class=\"fa fa-fw fa-camera\"></i>
-                                        ";
-                // line 91
-                echo twig_escape_filter($this->env, call_user_func_array($this->env->getFunction('translate')->getCallable(), array("Add Images")), "html", null, true);
-                echo "
-                                    </button>
-                                </li>
-                                <li>
-                                    <a id=\"delete-gallery\" data-confirm=\"";
-                // line 95
-                echo twig_escape_filter($this->env, call_user_func_array($this->env->getFunction('translate')->getCallable(), array("Are you sure you want to delete this gallery?")), "html", null, true);
-                echo "\" class=\"button button-primary\" title=\"Delete this gallery\"
-                                       href=\"";
-                // line 96
-                echo twig_escape_filter($this->env, $this->getAttribute(($context["environment"] ?? null), "generateUrl", array(0 => "galleries", 1 => "delete", 2 => array("gallery_id" => $this->getAttribute($context["gallery"], "id", array()), "_wpnonce" => ($context["_wpnonce"] ?? null))), "method"), "html", null, true);
-                echo "\">
-                                        <i class=\"fa fa-trash-o\"></i>
-                                        ";
-                // line 98
-                echo twig_escape_filter($this->env, call_user_func_array($this->env->getFunction('translate')->getCallable(), array("Delete gallery")), "html", null, true);
-                echo "
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class=\"shortcode-wrap\">
-                            <div class=\"gg-shortcode\">
-                                ";
-                // line 105
-                echo twig_escape_filter($this->env, call_user_func_array($this->env->getFunction('translate')->getCallable(), array("Shortcode:")), "html", null, true);
-                echo "<br /><br /> <input type=\"text\" id=\"shortcode-";
-                echo twig_escape_filter($this->env, $this->getAttribute($context["gallery"], "id", array()), "html", null, true);
-                echo "\" class=\"ggCopyTextCode shortcode\" value=\"[supsystic-gallery id='";
-                echo twig_escape_filter($this->env, $this->getAttribute($context["gallery"], "id", array()), "html", null, true);
-                echo "']\"><br /><br />
-                                ";
-                // line 106
-                echo twig_escape_filter($this->env, call_user_func_array($this->env->getFunction('translate')->getCallable(), array("PHPCode:")), "html", null, true);
-                echo "<br /><br /> 
-                                <input type=\"text\" id=\"phpcode-";
-                // line 107
-                echo twig_escape_filter($this->env, $this->getAttribute($context["gallery"], "id", array()), "html", null, true);
-                echo "\" class=\"ggCopyTextCode phpcode\"
-                                       value=\"";
-                // line 108
-                echo twig_escape_filter($this->env, (("<?php echo do_shortcode('[supsystic-gallery id=" . $this->getAttribute($context["gallery"], "id", array())) . "]') ?>"), "html", null, true);
-                echo "\">
-                            </div>
-                        </div>
-                    </div>
-                ";
-                $context['_iterated'] = true;
-            }
-            if (!$context['_iterated']) {
-                // line 113
-                echo "                    <h3>";
-                echo twig_escape_filter($this->env, call_user_func_array($this->env->getFunction('translate')->getCallable(), array("You have no galleries")), "html", null, true);
-                echo "</h3>
-                    <p>
-                        ";
-                // line 115
-                echo twig_escape_filter($this->env, call_user_func_array($this->env->getFunction('translate')->getCallable(), array("You don't have any galleries yet.")), "html", null, true);
-                echo "
-                        <a href=\"";
-                // line 116
-                echo twig_escape_filter($this->env, $this->getAttribute(($context["environment"] ?? null), "generateUrl", array(0 => "galleries", 1 => "showPresets"), "method"), "html", null, true);
-                echo "\"
-                           id=\"gg-create-gallery-link\"
-                           style = \"color: #4ae8ea;\">";
-                // line 118
-                echo twig_escape_filter($this->env, call_user_func_array($this->env->getFunction('translate')->getCallable(), array("Want to create one right now?")), "html", null, true);
-                echo "</a>
-                    </p>
+        <div class=\"row\">
+            <div class=\"col-xs-12\">
 
-                    <h3>";
-                // line 121
-                echo twig_escape_filter($this->env, call_user_func_array($this->env->getFunction('translate')->getCallable(), array("What is a gallery")), "html", null, true);
-                echo "</h3>
-                    <p>
-                        ";
-                // line 123
-                echo call_user_func_array($this->env->getFunction('translate')->getCallable(), array("<strong>Gallery</strong> &mdash; the highest type of entity in the Gallery by Supsystic."));
-                echo "
-                        <br/>
-                        ";
-                // line 125
-                echo twig_escape_filter($this->env, call_user_func_array($this->env->getFunction('translate')->getCallable(), array("You can have an unlimited number of galleries, to which you can attach the preloaded pictures.")), "html", null, true);
-                echo "
-                        ";
-                // line 126
-                echo twig_escape_filter($this->env, call_user_func_array($this->env->getFunction('translate')->getCallable(), array("Each gallery has a number of display settings and behaviors that you can save to presets and apply to other galleries.")), "html", null, true);
-                echo "
-                    </p>
                 ";
-            }
-            $_parent = $context['_parent'];
-            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['gallery'], $context['_parent'], $context['loop']);
-            $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 129
-            echo "            </div>
-        ";
+        // line 20
+        $context["columns"] = array(0 => "ID", 1 => $this->getAttribute(        // line 22
+($context["environment"] ?? null), "translate", array(0 => "Title"), "method"), 2 => $this->getAttribute(        // line 23
+($context["environment"] ?? null), "translate", array(0 => "Thumbnail"), "method"), 3 => $this->getAttribute(        // line 24
+($context["environment"] ?? null), "translate", array(0 => "Shortcode"), "method"), 4 => $this->getAttribute(        // line 25
+($context["environment"] ?? null), "translate", array(0 => "PHP"), "method"), 5 => $this->getAttribute(        // line 26
+($context["environment"] ?? null), "translate", array(0 => "Actions"), "method"));
+        // line 28
+        echo "
+                <table id=\"galleries\" class=\"wp-list-galleries\" style=\"min-width: 100%;\">
+                    <thead>
+                        <tr>
+                            <th scope=\"col\">
+                                <input type=\"checkbox\" id=\"check_all\" name=\"check_all\">
+                            </th>
+                            ";
+        // line 35
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(($context["columns"] ?? null));
+        foreach ($context['_seq'] as $context["_key"] => $context["column"]) {
+            // line 36
+            echo "                                <th scope=\"col\">";
+            echo twig_escape_filter($this->env, $context["column"], "html", null, true);
+            echo "</th>
+                            ";
         }
-        // line 131
-        echo "    </section>
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['column'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 38
+        echo "                        </tr>
+                    </thead>
+                    <tbody>
+                    ";
+        // line 41
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(($context["galleries"] ?? null));
+        foreach ($context['_seq'] as $context["_key"] => $context["gallery"]) {
+            // line 42
+            echo "                        <tr id=\"gallery-";
+            echo twig_escape_filter($this->env, $this->getAttribute($context["gallery"], "id", array()), "html", null, true);
+            echo "\" data-gallery-id=\"";
+            echo twig_escape_filter($this->env, $this->getAttribute($context["gallery"], "id", array()), "html", null, true);
+            echo "\">
+                            <td>
+                                <input type=\"checkbox\" class=\"tableCheckbox\" id=\"check_";
+            // line 44
+            echo twig_escape_filter($this->env, $this->getAttribute($context["gallery"], "id", array()), "html", null, true);
+            echo "\" data-gallery-id=\"";
+            echo twig_escape_filter($this->env, $this->getAttribute($context["gallery"], "id", array()), "html", null, true);
+            echo "\" name=\"check_";
+            echo twig_escape_filter($this->env, $this->getAttribute($context["gallery"], "id", array()), "html", null, true);
+            echo "\">
+                            </td>
+                            <td>
+                                ";
+            // line 47
+            echo twig_escape_filter($this->env, $this->getAttribute($context["gallery"], "id", array()), "html", null, true);
+            echo "
+                            </td>
+                            <td>
+                                <a href=\"";
+            // line 50
+            echo twig_escape_filter($this->env, $this->getAttribute(($context["environment"] ?? null), "generateUrl", array(0 => "galleries", 1 => "settings", 2 => array("gallery_id" => $this->getAttribute($context["gallery"], "id", array()))), "method"), "html", null, true);
+            echo "\" data-toggle=\"tooltip\" title=\"";
+            echo twig_escape_filter($this->env, sprintf($this->getAttribute(($context["environment"] ?? null), "translate", array(0 => "Edit gallery \"%s\""), "method"), $this->getAttribute($context["gallery"], "title", array())), "html", null, true);
+            echo "\">
+                                    ";
+            // line 51
+            echo twig_title_string_filter($this->env, $this->getAttribute($context["gallery"], "title", array()));
+            echo "
+                                </a>
+                                <i class=\"fa fa-fw fa-pencil\"></i>
+                            </td>
+                            <td>
+                                ";
+            // line 56
+            $context["cover"] = call_user_func_array($this->env->getFunction('get_attachment')->getCallable(), array($this->getAttribute($context["gallery"], "attachment_id", array()), "155", "100", "true"));
+            // line 57
+            echo "
+                                ";
+            // line 58
+            if ((twig_length_filter($this->env, ($context["cover"] ?? null)) < 1)) {
+                // line 59
+                echo "                                    ";
+                if ((twig_length_filter($this->env, $this->getAttribute($this->getAttribute($this->getAttribute($context["gallery"], "settings", array()), "posts", array()), "postCover", array())) > 1)) {
+                    // line 60
+                    echo "                                        ";
+                    $context["cover"] = $this->getAttribute($this->getAttribute($this->getAttribute($context["gallery"], "settings", array()), "posts", array()), "postCover", array());
+                    // line 61
+                    echo "                                    ";
+                }
+                // line 62
+                echo "                                ";
+            }
+            // line 63
+            echo "                                <img src=\"";
+            echo twig_escape_filter($this->env, ((array_key_exists("cover", $context)) ? (_twig_default_filter(($context["cover"] ?? null), ("holder.js/350x220?theme=gray&text=" . $this->getAttribute($context["gallery"], "title", array())))) : (("holder.js/350x220?theme=gray&text=" . $this->getAttribute($context["gallery"], "title", array())))), "html", null, true);
+            echo "\" alt=\"";
+            echo $this->getAttribute($context["gallery"], "title", array());
+            echo "\" width=\"155px\" height=\"100px\"/>
+                            </td>
+                            <td>
+                                <input type=\"text\" id=\"shortcode-";
+            // line 66
+            echo twig_escape_filter($this->env, $this->getAttribute($context["gallery"], "id", array()), "html", null, true);
+            echo "\" class=\"ggCopyTextCode shortcode\" value=\"[supsystic-gallery id='";
+            echo twig_escape_filter($this->env, $this->getAttribute($context["gallery"], "id", array()), "html", null, true);
+            echo "']\">
+                            </td>
+                            <td>
+                                <input type=\"text\" id=\"phpcode-";
+            // line 69
+            echo twig_escape_filter($this->env, $this->getAttribute($context["gallery"], "id", array()), "html", null, true);
+            echo "\" class=\"ggCopyTextCode phpcode\"
+                                       value=\"";
+            // line 70
+            echo twig_escape_filter($this->env, (("<?php echo do_shortcode('[supsystic-gallery id=" . $this->getAttribute($context["gallery"], "id", array())) . "]') ?>"), "html", null, true);
+            echo "\">
+                            </td>
+                            <td>
+                                <a href=\"";
+            // line 73
+            echo twig_escape_filter($this->env, $this->getAttribute(($context["environment"] ?? null), "generateUrl", array(0 => "galleries", 1 => "settings", 2 => array("gallery_id" => $this->getAttribute($context["gallery"], "id", array()))), "method"), "html", null, true);
+            echo "\"
+                                   class=\"button background sggActionButtons\">
+                                    <i class=\"fa fa-cogs\"></i>
+                                    ";
+            // line 76
+            echo twig_escape_filter($this->env, call_user_func_array($this->env->getFunction('translate')->getCallable(), array("Settings")), "html", null, true);
+            echo "
+                                </a>
+                                <a href=\"";
+            // line 78
+            echo twig_escape_filter($this->env, $this->getAttribute(($context["environment"] ?? null), "generateUrl", array(0 => "galleries", 1 => "view", 2 => array("gallery_id" => $this->getAttribute($context["gallery"], "id", array()))), "method"), "html", null, true);
+            echo "\"
+                                   class=\"button background sggActionButtons\">
+                                    <i class=\"fa fa-bars\"></i>
+                                    ";
+            // line 81
+            echo twig_escape_filter($this->env, call_user_func_array($this->env->getFunction('translate')->getCallable(), array("Images list")), "html", null, true);
+            echo "
+                                </a>
+                                <a href=\"";
+            // line 83
+            echo twig_escape_filter($this->env, $this->getAttribute(($context["environment"] ?? null), "generateUrl", array(0 => "galleries", 1 => "preview", 2 => array("gallery_id" => $this->getAttribute($context["gallery"], "id", array()))), "method"), "html", null, true);
+            echo "\"
+                                   class=\"button background sggActionButtons\">
+                                    <i class=\"fa fa-eye\"></i>
+                                    ";
+            // line 86
+            echo twig_escape_filter($this->env, call_user_func_array($this->env->getFunction('translate')->getCallable(), array("Preview")), "html", null, true);
+            echo "
+                                </a>
+                                <br>
+                                <button class=\"button button-primary gallery import-to-gallery sggActionButtons\" data-folder-id=\"0\"
+                                        data-gallery-id=\"";
+            // line 90
+            echo twig_escape_filter($this->env, $this->getAttribute($context["gallery"], "id", array()), "html", null, true);
+            echo "\" ";
+            echo ">
+                                    <i class=\"fa fa-fw fa-camera\"></i>
+                                    ";
+            // line 92
+            echo twig_escape_filter($this->env, call_user_func_array($this->env->getFunction('translate')->getCallable(), array("Add Images")), "html", null, true);
+            echo "
+                                </button>
+                                <a id=\"delete-gallery\" data-confirm=\"";
+            // line 94
+            echo twig_escape_filter($this->env, call_user_func_array($this->env->getFunction('translate')->getCallable(), array("Are you sure you want to delete this gallery?")), "html", null, true);
+            echo "\" class=\"button button-primary sggActionButtons\" title=\"Delete this gallery\"
+                                   href=\"";
+            // line 95
+            echo twig_escape_filter($this->env, $this->getAttribute(($context["environment"] ?? null), "generateUrl", array(0 => "galleries", 1 => "delete", 2 => array("gallery_id" => $this->getAttribute($context["gallery"], "id", array()), "_wpnonce" => ($context["_wpnonce"] ?? null))), "method"), "html", null, true);
+            echo "\">
+                                    <i class=\"fa fa-trash-o\"></i>
+                                    ";
+            // line 97
+            echo twig_escape_filter($this->env, call_user_func_array($this->env->getFunction('translate')->getCallable(), array("Delete gallery")), "html", null, true);
+            echo "
+                                </a>
+                                ";
+            // line 100
+            echo "                                ";
+            // line 101
+            echo "                                ";
+            // line 102
+            echo "                                ";
+            // line 103
+            echo "                                ";
+            // line 104
+            echo "                                ";
+            // line 105
+            echo "                            </td>
+                        </tr>
+                    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['gallery'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 108
+        echo "                    </tbody>
+                </table>
+
+            </div>
+            <div class=\"col-xs-12\">
+                <button class=\"button group_button\" id=\"delete-group\" disabled>
+                    <i class=\"fa fa-fw fa-trash-o\"></i>";
+        // line 114
+        echo twig_escape_filter($this->env, $this->getAttribute(($context["environment"] ?? null), "translate", array(0 => "Delete selected"), "method"), "html", null, true);
+        echo "
+                </button>
+            </div>
+        </div>
+    </section>
 
     ";
-        // line 154
+        // line 141
         echo "
-    <!-- Create dialog -->
+
+
     ";
-        // line 197
-        echo "
-    ";
-        // line 198
-        $context["importTypes"] = $this->loadTemplate("@galleries/shortcode/import.twig", "@galleries/index.twig", 198);
-        // line 199
+        // line 144
+        $context["importTypes"] = $this->loadTemplate("@galleries/shortcode/import.twig", "@galleries/index.twig", 144);
+        // line 145
         echo "    <div id=\"importDialog\" title=\"";
         echo twig_escape_filter($this->env, call_user_func_array($this->env->getFunction('translate')->getCallable(), array("Select source to import from")), "html", null, true);
         echo "\" style=\"display: none;\">
         ";
-        // line 200
+        // line 146
         echo $context["importTypes"]->getshow(400);
         echo "
     </div>
 
 \t";
-        // line 203
-        $context["form"] = $this->loadTemplate("@core/form.twig", "@galleries/index.twig", 203);
-        // line 204
+        // line 149
+        $context["form"] = $this->loadTemplate("@core/form.twig", "@galleries/index.twig", 149);
+        // line 150
         echo "\t<div id=\"videoUrlAddDialog\" title=\"";
         echo "Add video url";
         echo "\" style=\"display:none;\" data-gallery-id=\"";
@@ -343,35 +307,35 @@ class __TwigTemplate_64b5e25b68a9abba2f20f488e43081c148db6ef9ab1825f63a3056d62bf
 \t\t\t<div class=\"sggTableRow\">
 \t\t\t\t<div class=\"sggTableColumn6\">
 \t\t\t\t\t<div class=\"sggDlgVideoTypeH3\">";
-        // line 208
+        // line 154
         echo twig_escape_filter($this->env, call_user_func_array($this->env->getFunction('translate')->getCallable(), array("Video type:")), "html", null, true);
         echo "</div>
 \t\t\t\t</div>
 \t\t\t\t<div class=\"sggTableColumn6\">
 \t\t\t\t\t";
-        // line 211
-        echo ((((        // line 212
-$context["form"]->getradio("sggDlgVideoType", "youtube", array("id" => "sggDlgYoutubeVideoType", "class" => "sggDlgVideoTypeRadio", "checked" => "checked")) .         // line 217
-$context["form"]->getlabel(call_user_func_array($this->env->getFunction('translate')->getCallable(), array("Youtube url")), "sggDlgYoutubeVideoType")) . "<br/>") .         // line 221
-$context["form"]->getradio("sggDlgVideoType", "vimeo", array("id" => "sggDlgVimeoVideoType", "class" => "sggDlgVideoTypeRadio"))) .         // line 226
+        // line 157
+        echo ((((        // line 158
+$context["form"]->getradio("sggDlgVideoType", "youtube", array("id" => "sggDlgYoutubeVideoType", "class" => "sggDlgVideoTypeRadio", "checked" => "checked")) .         // line 163
+$context["form"]->getlabel(call_user_func_array($this->env->getFunction('translate')->getCallable(), array("Youtube url")), "sggDlgYoutubeVideoType")) . "<br/>") .         // line 167
+$context["form"]->getradio("sggDlgVideoType", "vimeo", array("id" => "sggDlgVimeoVideoType", "class" => "sggDlgVideoTypeRadio"))) .         // line 172
 $context["form"]->getlabel(call_user_func_array($this->env->getFunction('translate')->getCallable(), array("Vimeo url")), "sggDlgVimeoVideoType"));
-        // line 230
+        // line 176
         echo "
 \t\t\t\t</div>
 \t\t\t</div>
 \t\t\t<div class=\"sggTableRow\">
 \t\t\t\t<div class=\"sggTableColumn6\">
 \t\t\t\t\t<div class=\"sggDlgVideoTypeH3\">";
-        // line 235
+        // line 181
         echo twig_escape_filter($this->env, call_user_func_array($this->env->getFunction('translate')->getCallable(), array("Video url:")), "html", null, true);
         echo "</div>
 \t\t\t\t</div>
 \t\t\t\t<div class=\"sggTableColumn6\">
 \t\t\t\t\t";
-        // line 238
-        echo         // line 239
+        // line 184
+        echo         // line 185
 $context["form"]->getinput("text", "sggDlgUrlVideoValue", "", array("id" => "sggDlgUrlVideoInp", "class" => ""));
-        // line 245
+        // line 191
         echo "
 \t\t\t\t</div>
 \t\t\t</div>
@@ -382,7 +346,7 @@ $context["form"]->getinput("text", "sggDlgUrlVideoValue", "", array("id" => "sgg
 ";
     }
 
-    // line 133
+    // line 120
     public function getputPreset($__data__ = null, ...$__varargs__)
     {
         $context = $this->env->mergeGlobals(array(
@@ -394,58 +358,58 @@ $context["form"]->getinput("text", "sggDlgUrlVideoValue", "", array("id" => "sgg
 
         ob_start();
         try {
-            // line 134
+            // line 121
             echo "        <div class=\"preset ";
             if ((($this->getAttribute(($context["environment"] ?? null), "isPro", array(), "method") == false) && $this->getAttribute(($context["data"] ?? null), "pro", array()))) {
                 echo "disabled";
             }
             echo "\"
              data-preset=\"";
-            // line 135
+            // line 122
             echo twig_escape_filter($this->env, $this->getAttribute(($context["data"] ?? null), "value", array()), "html", null, true);
             echo "\">
             <p>";
-            // line 136
+            // line 123
             echo twig_escape_filter($this->env, twig_title_string_filter($this->env, $this->getAttribute(($context["data"] ?? null), "title", array())), "html", null, true);
             echo "</p>
             <img src=\"";
-            // line 137
+            // line 124
             echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute(($context["environment"] ?? null), "getModule", array(0 => "galleries"), "method"), "getLocationUrl", array(), "method"), "html", null, true);
             echo "/assets/img/";
             echo twig_escape_filter($this->env, $this->getAttribute(($context["data"] ?? null), "image", array()), "html", null, true);
             echo "\" alt=\"\"/>
             ";
-            // line 138
+            // line 125
             if (($this->getAttribute(($context["data"] ?? null), "pro", array()) && ($this->getAttribute(($context["environment"] ?? null), "isPro", array(), "method") == false))) {
-                // line 139
+                // line 126
                 echo "                <a class=\"button button-primary inPro\"
                     ";
-                // line 140
+                // line 127
                 if (($this->getAttribute(($context["data"] ?? null), "title", array()) == "Categories")) {
-                    // line 141
+                    // line 128
                     echo "                        href=\"http://supsystic.com/plugins/photo-gallery/\" target=\"_blank\">
                     ";
                 }
-                // line 143
+                // line 130
                 echo "                    ";
                 if (($this->getAttribute(($context["data"] ?? null), "title", array()) == "Icons")) {
-                    // line 144
+                    // line 131
                     echo "                        href=\"http://supsystic.com/plugins/photo-gallery/\" target=\"_blank\">
                     ";
                 }
-                // line 146
+                // line 133
                 echo "                    ";
                 if (($this->getAttribute(($context["data"] ?? null), "title", array()) == "Pagination")) {
-                    // line 147
+                    // line 134
                     echo "                        href=\"http://supsystic.com/plugins/photo-gallery/\" target=\"_blank\">
                     ";
                 }
-                // line 149
+                // line 136
                 echo "                    Available in PRO
                 </a>
             ";
             }
-            // line 152
+            // line 139
             echo "        </div>
     ";
         } catch (Exception $e) {
@@ -473,7 +437,7 @@ $context["form"]->getinput("text", "sggDlgUrlVideoValue", "", array("id" => "sgg
 
     public function getDebugInfo()
     {
-        return array (  449 => 152,  444 => 149,  440 => 147,  437 => 146,  433 => 144,  430 => 143,  426 => 141,  424 => 140,  421 => 139,  419 => 138,  413 => 137,  409 => 136,  405 => 135,  398 => 134,  386 => 133,  375 => 245,  373 => 239,  372 => 238,  366 => 235,  359 => 230,  357 => 226,  356 => 221,  355 => 217,  354 => 212,  353 => 211,  347 => 208,  337 => 204,  335 => 203,  329 => 200,  324 => 199,  322 => 198,  319 => 197,  315 => 154,  311 => 131,  307 => 129,  298 => 126,  294 => 125,  289 => 123,  284 => 121,  278 => 118,  273 => 116,  269 => 115,  263 => 113,  253 => 108,  249 => 107,  245 => 106,  237 => 105,  227 => 98,  222 => 96,  218 => 95,  211 => 91,  205 => 89,  199 => 87,  197 => 86,  195 => 85,  193 => 84,  191 => 83,  189 => 82,  181 => 76,  175 => 73,  168 => 69,  162 => 66,  155 => 62,  149 => 59,  140 => 52,  138 => 51,  136 => 50,  131 => 47,  127 => 46,  121 => 43,  117 => 41,  115 => 37,  108 => 35,  105 => 34,  102 => 33,  99 => 32,  96 => 31,  94 => 30,  91 => 29,  88 => 28,  83 => 25,  78 => 24,  72 => 23,  68 => 20,  65 => 19,  63 => 18,  61 => 17,  56 => 14,  53 => 13,  43 => 8,  36 => 6,  32 => 4,  29 => 3,  11 => 1,);
+        return array (  413 => 139,  408 => 136,  404 => 134,  401 => 133,  397 => 131,  394 => 130,  390 => 128,  388 => 127,  385 => 126,  383 => 125,  377 => 124,  373 => 123,  369 => 122,  362 => 121,  350 => 120,  339 => 191,  337 => 185,  336 => 184,  330 => 181,  323 => 176,  321 => 172,  320 => 167,  319 => 163,  318 => 158,  317 => 157,  311 => 154,  301 => 150,  299 => 149,  293 => 146,  288 => 145,  286 => 144,  281 => 141,  272 => 114,  264 => 108,  256 => 105,  254 => 104,  252 => 103,  250 => 102,  248 => 101,  246 => 100,  241 => 97,  236 => 95,  232 => 94,  227 => 92,  221 => 90,  214 => 86,  208 => 83,  203 => 81,  197 => 78,  192 => 76,  186 => 73,  180 => 70,  176 => 69,  168 => 66,  159 => 63,  156 => 62,  153 => 61,  150 => 60,  147 => 59,  145 => 58,  142 => 57,  140 => 56,  132 => 51,  126 => 50,  120 => 47,  110 => 44,  102 => 42,  98 => 41,  93 => 38,  84 => 36,  80 => 35,  71 => 28,  69 => 26,  68 => 25,  67 => 24,  66 => 23,  65 => 22,  64 => 20,  56 => 14,  53 => 13,  43 => 8,  36 => 6,  32 => 4,  29 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */

@@ -15,7 +15,7 @@ class __TwigTemplate_5d0fdb48e644830e7d43e6b698fd86e2cf30e2bfe9e5a64764db56b1964
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        // line 115
+        // line 97
         echo "
 ";
     }
@@ -185,91 +185,58 @@ $context["form1"]->getcheckbox("importExifData", 0, array("disabled" => "disable
                 echo "            <h3>";
                 echo twig_escape_filter($this->env, call_user_func_array($this->env->getFunction('translate')->getCallable(), array("Get Pro to enable import")), "html", null, true);
                 echo "</h3>
-            <a class=\"button button-primary button-hero\" href=\"http://supsystic.com/plugins/photo-gallery/\" style=\"width: 400px;margin-bottom: 20px;\">
+            <a class=\"button button-primary button-hero\" href=\"http://supsystic.com/plugins/photo-gallery/\" target=\"_blank\" style=\"width: 400px;margin-bottom: 20px;\">
                 <i class=\"fa fa-unlock fa-2x\"></i>
                 ";
                 // line 68
                 echo twig_escape_filter($this->env, call_user_func_array($this->env->getFunction('translate')->getCallable(), array("Get PRO")), "html", null, true);
                 echo "
             </a>
-\t\t\t<button class=\"button button-primary button-hero gallery disabled\" data-folder-id=\"0\"
-\t\t\t\t\tstyle=\"width: 400px;margin-bottom: 20px;\"
-\t\t\t\t\tdata-src=\"http://supsystic.com/plugins/photo-gallery/\"
-\t\t\t>
-\t\t\t\t<i class=\"fa fa-youtube-play fa-2x\" aria-hidden=\"true\"></i>
-\t\t\t\t";
-                // line 75
+            <a class=\"button button-primary button-hero disabled\" href=\"http://supsystic.com/plugins/photo-gallery/\" target=\"_blank\" style=\"width: 400px;margin-bottom: 20px;\">
+                <i class=\"fa fa-youtube-play fa-2x\"></i>
+                ";
+                // line 72
                 echo twig_escape_filter($this->env, call_user_func_array($this->env->getFunction('translate')->getCallable(), array("Add video")), "html", null, true);
                 echo "
-\t\t\t</button>
-            <button class=\"button button-primary button-hero gallery disabled\" data-folder-id=\"0\"
-                    style=\"width: 400px;margin-bottom: 20px;\"
-                    data-gallery-id=\"";
-                // line 79
-                echo twig_escape_filter($this->env, $this->getAttribute(($context["gallery"] ?? null), "id", array()), "html", null, true);
-                echo "\" data-upload
-                    data-src=\"https://supsystic.com/documentation/flickr/\" >
+            </a>
+            <a class=\"button button-primary button-hero disabled\" href=\"https://supsystic.com/documentation/flickr/\" target=\"_blank\" style=\"width: 400px;margin-bottom: 20px;\">
                 <i class=\"fa fa-flickr fa-2x\"></i>
                 ";
-                // line 82
+                // line 76
                 echo twig_escape_filter($this->env, call_user_func_array($this->env->getFunction('translate')->getCallable(), array("Import from your Flickr account")), "html", null, true);
                 echo "
-            </button>
-            <button class=\"button button-primary button-hero gallery disabled\" data-folder-id=\"0\"
-                    style=\"width: 400px;margin-bottom: 20px;\"
-                    data-gallery-id=\"";
-                // line 86
-                echo twig_escape_filter($this->env, $this->getAttribute(($context["gallery"] ?? null), "id", array()), "html", null, true);
-                echo "\" data-upload
-                    data-src=\"https://supsystic.com/documentation/tumblr/\" >
+            </a>
+            <a class=\"button button-primary button-hero disabled\" href=\"https://supsystic.com/documentation/tumblr/\" target=\"_blank\" style=\"width: 400px;margin-bottom: 20px;\">
                 <i class=\"fa fa-tumblr fa-2x\"></i>
                 ";
-                // line 89
+                // line 80
                 echo twig_escape_filter($this->env, call_user_func_array($this->env->getFunction('translate')->getCallable(), array("Import from your Tumblr account")), "html", null, true);
                 echo "
-            </button>
-            <button class=\"button button-primary button-hero gallery disabled\" data-folder-id=\"0\"
-                    style=\"width: 400px;margin-bottom: 20px;\"
-                    data-gallery-id=\"";
-                // line 93
-                echo twig_escape_filter($this->env, $this->getAttribute(($context["gallery"] ?? null), "id", array()), "html", null, true);
-                echo "\" data-upload
-                    data-src=\"https://supsystic.com/documentation/facebook/\" >
+            </a>
+            <a class=\"button button-primary button-hero disabled\" href=\"https://supsystic.com/documentation/facebook/\" target=\"_blank\" style=\"width: 400px;margin-bottom: 20px;\">
                 <i class=\"fa fa-facebook fa-2x\"></i>
                 ";
-                // line 96
+                // line 84
                 echo twig_escape_filter($this->env, call_user_func_array($this->env->getFunction('translate')->getCallable(), array("Import from your Facebook account")), "html", null, true);
                 echo "
-            </button>
-            <button class=\"button button-primary button-hero gallery disabled\" data-folder-id=\"0\"
-                    style=\"width: 400px;margin-bottom: 20px;\"
-                    data-gallery-id=\"";
-                // line 100
-                echo twig_escape_filter($this->env, $this->getAttribute(($context["gallery"] ?? null), "id", array()), "html", null, true);
-                echo "\" data-upload
-                    data-src=\"https://supsystic.com/documentation/ftp-import/\" >
+            </a>
+            <a class=\"button button-primary button-hero disabled\" href=\"https://supsystic.com/documentation/ftp-import/\" target=\"_blank\" style=\"width: 400px;margin-bottom: 20px;\">
                 <i class=\"fa fa-file-image-o fa-2x\"></i>
                 ";
-                // line 103
+                // line 88
                 echo twig_escape_filter($this->env, call_user_func_array($this->env->getFunction('translate')->getCallable(), array("Import from your FTP server")), "html", null, true);
                 echo "
-            </button>
-            <button class=\"button button-primary button-hero gallery disabled\" data-folder-id=\"0\"
-                    style=\"width: 400px;margin-bottom: 20px;\"
-                    data-gallery-id=\"";
-                // line 107
-                echo twig_escape_filter($this->env, $this->getAttribute(($context["gallery"] ?? null), "id", array()), "html", null, true);
-                echo "\" data-upload
-                    data-src=\"https://supsystic.com/documentation/google-drive-import/\" >
+            </a>
+            <a class=\"button button-primary button-hero disabled\" href=\"https://supsystic.com/documentation/google-drive-import/\" target=\"_blank\" style=\"width: 400px;margin-bottom: 20px;\">
                 <i class=\"fa fa-google fa-2x\"></i>
                 ";
-                // line 110
+                // line 92
                 echo twig_escape_filter($this->env, call_user_func_array($this->env->getFunction('translate')->getCallable(), array("Import from your Google Drive account")), "html", null, true);
                 echo "
-            </button>
+            </a>
         ";
             }
-            // line 113
+            // line 95
             echo "    </div>
 ";
         } catch (Exception $e) {
@@ -297,7 +264,7 @@ $context["form1"]->getcheckbox("importExifData", 0, array("disabled" => "disable
 
     public function getDebugInfo()
     {
-        return array (  273 => 113,  267 => 110,  261 => 107,  254 => 103,  248 => 100,  241 => 96,  235 => 93,  228 => 89,  222 => 86,  215 => 82,  209 => 79,  202 => 75,  192 => 68,  185 => 65,  179 => 62,  174 => 60,  169 => 58,  164 => 56,  160 => 55,  154 => 52,  149 => 50,  144 => 48,  139 => 46,  134 => 44,  128 => 42,  126 => 41,  121 => 39,  116 => 37,  111 => 36,  105 => 33,  99 => 29,  97 => 28,  92 => 26,  87 => 24,  80 => 21,  74 => 18,  71 => 17,  69 => 16,  68 => 12,  65 => 11,  59 => 8,  55 => 7,  51 => 5,  49 => 4,  40 => 3,  37 => 2,  24 => 1,  19 => 115,);
+        return array (  240 => 95,  234 => 92,  227 => 88,  220 => 84,  213 => 80,  206 => 76,  199 => 72,  192 => 68,  185 => 65,  179 => 62,  174 => 60,  169 => 58,  164 => 56,  160 => 55,  154 => 52,  149 => 50,  144 => 48,  139 => 46,  134 => 44,  128 => 42,  126 => 41,  121 => 39,  116 => 37,  111 => 36,  105 => 33,  99 => 29,  97 => 28,  92 => 26,  87 => 24,  80 => 21,  74 => 18,  71 => 17,  69 => 16,  68 => 12,  65 => 11,  59 => 8,  55 => 7,  51 => 5,  49 => 4,  40 => 3,  37 => 2,  24 => 1,  19 => 97,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */

@@ -2,8 +2,20 @@
 {% macro label(label, for) %}
     <label for="{{ for }}">{{ label }}</label>
 {% endmacro %}
+ {% set borderTypes = {
+     'solid': 'Solid',
+     'dotted': 'Dotted',
+     'dashed': 'Dashed',
+     'double': 'Double',
+     'groove': 'Groove',
+     'ridge': 'Ridge',
+     'inset': 'Inset',
+     'outset': 'Outset',
+     'none': 'None'
+ } %}
 
 {% block header %}
+    {#{{ dump(settings) }}#}
     <nav id="supsystic-breadcrumbs" class="supsystic-breadcrumbs" style="float: left; padding-top: 20px;">
         {#
             <ul class="supsystic-bar-controls">
@@ -764,18 +776,6 @@
             {% block border %}
                 <table class="form-table" name="border" id="gg-anl-border-type">
                     <thead>
-                        {% set borderTypes = {
-                            'solid': 'Solid',
-                            'dotted': 'Dotted',
-                            'dashed': 'Dashed',
-                            'double': 'Double',
-                            'groove': 'Groove',
-                            'ridge': 'Ridge',
-                            'inset': 'Inset',
-                            'outset': 'Outset',
-                            'none': 'None'
-                        } %}
-
                         {#
                             <tr id="useBorderRow">
                                 <th scope="row">
@@ -921,6 +921,27 @@
                                 {'id':'bigImageTheme'}
 							), 'sgg-t-popup-theme')
                         }}
+
+                        {# Enable/Disable popup border #}
+                        {{ form.row(translate('Enable popup border'),
+                            form.checkbox(
+                                'popup[border][enable]',
+                                'on',
+                                settings.popup.border.enable == 'on' ? {'checked':'checked'} : {}
+                            ),
+                            'popup-border-enable')
+                        }}
+
+                        {{ form.row(translate('Pop up border type'),
+                            form.select('popup[border][type]', borderTypes, settings.popup.border.type, { 'style': 'width: auto;' }) , 'border-type-popup')
+                        }}
+
+                        {{ form.row(translate('Pop up border color'),
+                            form.input('text', 'popup[border][color]', settings.popup.border.color, { 'class': 'gg-color-picker' }), 'border-color-popup') }}
+
+                        {{ form.row(translate('Pop up border width'),
+                            form.input('number', 'popup[border][width]', settings.popup.border.width, { 'style': { 'width': '140px;'} })
+                            ~ form.span('', 'pixels'), 'border-width-popup') }}
 
                         {# Enable/Disable popup on mobile devices #}
                         {{ form.row(translate('Disable on mobile'),
@@ -1340,13 +1361,13 @@
                 <h1 style="line-height: 1;">
                     {{ translate("Show Posts and Pages") }}
                     </br>
-                    <a class="button get-pro"
+                    <a class="button get-pro" target="_blank"
                        href="{{ getProUrl('?utm_source=plugin&utm_medium=postfeed&utm_campaign=gallery') }}">Get
                         PRO for 29$</a>
                 </h1>
 
                 <div>
-                    <a href="{{ getProUrl('?utm_source=plugin&utm_medium=postfeed&utm_campaign=gallery') }}">
+                    <a href="{{ getProUrl('?utm_source=plugin&utm_medium=postfeed&utm_campaign=gallery') }}" target="_blank">
                         <img src="{{ environment.module('galleries').getLocationUrl() }}/assets/img/posts_pro.jpg" />
                     </a>
                 </div>
@@ -1838,7 +1859,7 @@
 								<td>
 									<h1 style="line-height: 1;">
 										{{ translate("Show EXIF data") }}</br>
-										<a class="button get-pro" href="{{ getProUrl('?utm_source=plugin&utm_medium=exif-data&utm_campaign=gallery') }}">
+										<a class="button get-pro" href="{{ getProUrl('?utm_source=plugin&utm_medium=exif-data&utm_campaign=gallery') }}" target="_blank">
 											{{ translate('GetPRO for 29$') }}
 										</a>
 									</h1>
@@ -1856,12 +1877,12 @@
                 <h1 style="line-height: 1;">
                     {{ translate('Categorize images in the gallery') }}
                     </br>
-                    <a class="button get-pro"
+                    <a class="button get-pro" target="_blank"
                        href="{{ getProUrl('?utm_source=plugin&utm_medium=categories&utm_campaign=gallery') }}">Get PRO</a>
                 </h1>
 
                 <div>
-                    <a href="{{ getProUrl('?utm_source=plugin&utm_medium=categories&utm_campaign=gallery') }}">
+                    <a href="{{ getProUrl('?utm_source=plugin&utm_medium=categories&utm_campaign=gallery') }}" target="_blank">
                         <img src="{{ environment.module('galleries').getLocationUrl() }}/assets/img/cats_pro.jpg" />
                     </a>
                 </div>
@@ -1869,12 +1890,12 @@
                     <h1 style="line-height: 1;">
                         {{ translate('Let user switch gallery pages') }}
                         </br>
-                        <a class="button get-pro"
+                        <a class="button get-pro" target="_blank"
                            href="{{ getProUrl('?utm_source=plugin&utm_medium=pages&utm_campaign=gallery') }}">Get PRO</a>
                     </h1>
                     <div name="pagination">
                         <div>
-                            <a href="{{ getProUrl('?utm_source=plugin&utm_medium=pages&utm_campaign=gallery') }}">
+                            <a href="{{ getProUrl('?utm_source=plugin&utm_medium=pages&utm_campaign=gallery') }}" target="_blank">
                                 <img src="{{ environment.module('galleries').getLocationUrl() }}/assets/img/pagination_pro.jpg" />
                             </a>
                         </div>
@@ -1888,11 +1909,11 @@
                 <h1 style="line-height: 1em;">
                     {{ translate('Add watermarks to your photos') }}
                     </br>
-                    <a class="button get-pro"
+                    <a class="button get-pro" target="_blank"
                        href="{{ getProUrl('?utm_source=plugin&utm_medium=watermarks&utm_campaign=gallery') }}">Get PRO for 29$</a>
                 </h1>
                 <div>
-                    <a href="{{ getProUrl('?utm_source=plugin&utm_medium=watermarks&utm_campaign=gallery') }}">
+                    <a href="{{ getProUrl('?utm_source=plugin&utm_medium=watermarks&utm_campaign=gallery') }}" target="_blank">
                         <img src="{{ environment.module('galleries').getLocationUrl() }}/assets/img/water_m_pro.png" />
                     </a>
                 </div>

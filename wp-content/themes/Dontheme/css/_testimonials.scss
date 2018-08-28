@@ -34,6 +34,17 @@
   padding-top: 15px;
 }
 
+.testimonials-box a {
+  text-decoration: underline;
+  color: $darkpurple;
+  transition: color 800ms ease;
+}
+
+.testimonials-box a:hover {
+  color: $lightpurple;
+  transition: color 800ms ease;
+}
+
 @media (max-width: 930px) {
 
   .testimonials-box {

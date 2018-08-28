@@ -446,7 +446,6 @@
 
         //===========|Popup gallery scripts|===========//
         if(popupType == 'colorbox') {
-
             var $this = this.$container;
 			// simple selector
 			var colorBoxItemSelector = '.grid-gallery-photos > .gg-colorbox:visible,'
@@ -484,6 +483,9 @@
 
 					$(document).on('cbox_complete', function(event) {
 						$colorboxtooltip.html($("#cboxTitle").html());
+                        if($('#colorbox').width() < 300) {
+                            $('#colorbox').filter('.theme_1').find('#cboxSlideshow').css('bottom', '30px');
+                        }
 					});
 				}
 			}
@@ -534,10 +536,12 @@
 							clearTimeout(timeoutId);
 							$('.cboxSlideshow_on #cboxSlideshow').click();
 						},function(){
-							clearTimeout(timeoutId);
-							timeoutId = setTimeout(function(){
-								$('.cboxSlideshow_off #cboxSlideshow').click();
-							},slideshowSpeed);
+							if(slidePlayAuto) {
+								clearTimeout(timeoutId);
+								timeoutId = setTimeout(function(){
+									$('.cboxSlideshow_off #cboxSlideshow').click();
+								},slideshowSpeed);
+							}
 						})
 					}
 				},
@@ -567,7 +571,6 @@
         }
 
         if(popupType == 'pretty-photo') {
-
 			// simple selector
 			var prettyPhotoItemSelector = '.grid-gallery-photos > a[data-rel^="prettyPhoto"]:visible,'
 				+ ' .grid-gallery-photos .gg-mosaic-wrapper a[data-rel^="prettyPhoto"],'	// mosaic selector
@@ -620,6 +623,10 @@
 							var imgTile = self.getPopupTitle($element);
 							return imgTile;
 						},
+						'popup_border_type': this.$container.attr('data-popup-border-type'),
+						'popup_border_color': this.$container.attr('data-popup-border-color'),
+						'popup_border_width': this.$container.attr('data-popup-border-width'),
+						'popup_border_enable': this.$container.attr('data-popup-border-enable') == 'on',
                         changepicturecallback: function(element){
                             self.changePopUpHash(element.attr('id') || element.attr('data-id'));
                             self.popup_opened_image = element;
@@ -639,7 +646,9 @@
                                 $('.pp_hoverContainer').hover(function(){
                                     $('.pp_nav .pp_pause').click();
                                 },function(){
-                                    $('.pp_nav .pp_play').click();
+                                    if(slidePlayAuto) {
+                                    	$('.pp_nav .pp_play').click();
+                                    }
                                 })
                             }
                             var $_desc = $('.pp_description'),
@@ -674,7 +683,6 @@
         }
 
         if(popupType == 'photobox') {
-
 			var photoBoxItemSelector = 'a.pbox:visible'
 			,	photoBoxConfig = null;
             // for popup "Display only first image"
@@ -724,7 +732,9 @@
                 $('.pbWrapper img').hover(function(){
                     $('#pbOverlay .playing').click();
                 },function(){
-                    $('#pbOverlay .play').click();
+                	if(slidePlayAuto) {
+                    	$('#pbOverlay .play').click();
+                    }
                 })
             }
 
@@ -2315,6 +2325,9 @@
 					// if hidden images  not showing
 					setTimeout(function() {
 						self.lazyLoadTriggerHandler();
+                        setTimeout(function() {
+                            self.wookmark.trigger('refreshWookmark');
+                        }, 50);
 					}, 450); // animation transition time
 					break;
 				case 1:

@@ -8,26 +8,18 @@
 
 <div class="container container-testimonails">
 
-  <?php
-    while(have_posts()) {
-    the_post();
-
-    the_content();
-    }
-  ?>
-  
   <div class="row testimonials-box">
     <div class="col-sm-4 image-column">
-      <img src="<?php the_field('image_testimonials'); ?>" />
+      <img class="testimonials-image" src="<?php echo get_template_directory_uri() . '/images/cathy.jpg'; ?>" />
     </div>
     <div class="col-sm-8">
       <div class="quotation-mark">
         <img class="testimonials-icon" src="<?php echo get_template_directory_uri() . '/images/quotationmark2.png'; ?>" />
       </div>
       <div class="testimonial-content">
-        <p><?php the_field('content_testimonials'); ?></p>
+        <p>I have been working with Donald now consistently for over 15 years. During this time I have gone though such a great metamorphose that I feel like I can now say I feel love and joy pretty much most of the time and I have created a really wonderful life for myself. I teach yoga, offer sessions in this work, make films and travel the world all while being a mama. Donald has been my guide & my friend and helped me through the darkest days of my spiritual journey and taught me how to embrace it all. He is a pioneer, a trailblazer, a risk taker and the brightest Channel of light I have ever had the privilege of meeting. To work with him is to enter into an entirely new vibration of light.</p>
       </div>
-      <h4>Cathy Pearson<br>Yoga Teacher and Film Director<br><a href="http://www.yogadeep.com/">www.yogadeep.com</a></h4>
+      <h4>Cathy Pearson<br>Yoga Teacher & Film Director<br><a href="https://www.yogadeep.com" target="_blank">www.yogadeep.com</a></h4>
     </div>
   </div><!-- end row -->
 
@@ -227,5 +219,9 @@
   </div><!-- end row -->
 
 </div><!--end container -->
+
+<div class="button-tcm-page">
+  <button type="button" class="big-green-button"><a href="<?php echo site_url() ?>">Back to Home</a></button>
+</div>
 
 <?php get_footer(); ?>

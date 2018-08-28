@@ -80,7 +80,15 @@ class GridGallery_Installer_Model extends GridGallery_Core_BaseModel
 
     protected function dropTable($table)
     {
-        $query = 'DROP TABLE IF EXISTS ' . $this->prefix($table);
-        $this->db->query($query);
+        $importantTable = array(
+            $this->prefix('{prefix}gg_photos'),
+            $this->prefix('{prefix}gg_galleries_resources'),
+            $this->prefix('{prefix}gg_settings_sets'),
+            $this->prefix('{prefix}gg_galleries'),
+        );
+        if(!in_array($this->prefix($table), $importantTable)){
+            $query = 'DROP TABLE IF EXISTS ' . $this->prefix($table);
+            $this->db->query($query);
+        }
     }
 }

@@ -1,9 +1,9 @@
 ﻿=== Photo Gallery by Supsystic ===
 Contributors: supsystic.com
-Donate link: http://supsystic.com/plugins/gallery
+Donate link: https://supsystic.com/plugins/gallery
 Tags: gallery, wordpress gallery plugin, photo gallery, grid gallery, image gallery, video gallery, responsive gallery, polaroid gallery 
-Tested up to: 4.9.6
-Stable tag: 1.12.3
+Tested up to: 4.9.7
+Stable tag: 1.12.4
 
 Photo Gallery with template editor to build amazing media gallery. Responsive mobile gallery with grid, masonry, carousel, polaroid and more gallery
 
@@ -17,45 +17,45 @@ Photo Gallery with template editor to build amazing media gallery. Responsive mo
 
 = Gallery types =
 
-* [Full Width Gallery](https://supsystic.com/example/full-width-gallery-example/ "Full Width Gallery")
-* [Polaroid Gallery](https://supsystic.com/example/polaroid-gallery/ "Polaroid Gallery Style")
-* [Video Gallery](https://supsystic.com/example/video-gallery/ "Video gallery")
-* [Fixed Gallery](https://supsystic.com/documentation/fixed-type/ "Fixed Gallery")
-* [Post Feed Gallery](https://supsystic.com/documentation/gallery-posts-feature/ "Post Feed Gallery")
-* [Carousel Gallery](http://supsystic.com/gallery-horizontal-scroll/ "Carousel Gallery")
-* Masonry Gallery
+* [Full Width Gallery](https://supsystic.com/example/full-width-gallery-example?utm_source=wordpress&utm_medium=fullwidth&utm_campaign=gallery "Full Width Gallery")
+* [Polaroid Gallery](https://supsystic.com/example/polaroid-gallery?utm_source=wordpress&utm_medium=polaroid&utm_campaign=gallery "Polaroid Gallery Style")
+* [Video Gallery](https://supsystic.com/example/video-gallery?utm_source=wordpress&utm_medium=videogallery&utm_campaign=gallery "Video gallery")
+* [Fixed Gallery](https://supsystic.com/documentation/fixed-type?utm_source=wordpress&utm_medium=fixedgallery&utm_campaign=gallery "Fixed Gallery")
+* [Post Feed Gallery](https://supsystic.com/documentation/gallery-posts-feature?utm_source=wordpress&utm_medium=postfeed&utm_campaign=gallery "Post Feed Gallery")
+* [Carousel Gallery](http://supsystic.com/gallery-horizontal-scroll?utm_source=wordpress&utm_medium=Carousel&utm_campaign=gallery "Carousel Gallery")
+* [Masonry Gallery](https://supsystic.com/example/masonry-gallery?utm_source=wordpress&utm_medium=masonry&utm_campaign=gallery "Masonry Gallery") 
 * Grid Gallery
 
-**[Check all gallery types](https://supsystic.com/gallery-examples/ "Check all gallery types")**
+**[Check all gallery types](https://supsystic.com/gallery-examples?utm_source=wordpress&utm_medium=gallerytypes&utm_campaign=gallery "Check all gallery types")**
 
 = Main Features =
 
-* **Fully customization gallery styles: [shadow](https://supsystic.com/example/shadow-gallery-example/ "Shadow"), [border](https://supsystic.com/documentation/border-type/ "border"), [caption and icons](https://supsystic.com/example/captionsicons-gallery-example/ "caption and icons")**
-WordPress Gallery by Supsystic plugin gives you the versatility to create any type of gallery you want. Choose the shadow preset and set the color and thickness as you like, highlight your images and photos. Use different types of border, give photo description and icon on each image of the gallery.
-
-* **[Load More button](https://supsystic.com/documentation/load-more-button/ "Load More button")**, [Paginations](https://supsystic.com/example/pagination-gallery-example/ "Paginations") and **[Lazy Load](https://supsystic.com/documentation/lazy-load/ "Lazy Load")** 
-
-* **[Social Sharing](https://supsystic.com/example/social-sharing/ "Social Sharing")**
-We integrated our [Social Share Buttons](https://supsystic.com/plugins/social-share-plugin/ "Social Share Buttons") plugin with Gallery. Now you can share the photos, gather likes of your followers on Facebook, Pinterest, Twitter or any other social media. Stay in touch with your audience and keep contact with them. 
+* **Fully customization gallery styles: [shadow](https://supsystic.com/example/shadow-gallery-example?utm_source=wordpress&utm_medium=shadow&utm_campaign=gallery "Shadow"), [border](https://supsystic.com/documentation/border-type?utm_source=wordpress&utm_medium=border&utm_campaign=gallery "border"), [caption and icons](https://supsystic.com/example/captionsicons-gallery-example?utm_source=wordpress&utm_medium=captionandicons&utm_campaign=gallery "caption and icons")**
+WordPress Gallery by Supsystic plugin gives you the versatility to create any type of gallery. Choose the shadow preset and set the color and thickness as you like. Highlight images. Use different types of border, give photo description and icon on each gallery image.
 
 * **SEO Friendly**
-Set title and desctiption of the gallery media so gallery become SEO friendly.
+Set title and description of the gallery media so gallery become SEO friendly.
 
-* **[Watermark option](https://supsystic.com/example/gallery-watermark-example/ "Watermark 
+* **[Responsive Mobile Friendly](https://supsystic.com/documentation/gallery-responsive-mode?utm_source=wordpress&utm_medium=responsive&utm_campaign=gallery "Responsive Mobile Friendly WordPress Gallery")**
+
+* **[Load More button](https://supsystic.com/documentation/load-more-button?utm_source=wordpress&utm_medium=loadmore&utm_campaign=gallery "Load More button")**, [Pagination](https://supsystic.com/example/pagination-gallery-example?utm_source=wordpress&utm_medium=pagination&utm_campaign=gallery "Paginations") and **[Lazy Load](https://supsystic.com/documentation/lazy-load?utm_source=wordpress&utm_medium=lazyload&utm_campaign=gallery "Lazy Load")** 
+
+* **[Social Sharing](https://supsystic.com/example/social-sharing?utm_source=wordpress&utm_medium=socialsharing&utm_campaign=gallery "Social Sharing")**
+We integrated our [Social Share Buttons](https://supsystic.com/plugins/social-share-plugin?utm_source=wordpress&utm_medium=sharebuttons&utm_campaign=gallery "Social Share Buttons") plugin with Gallery. Now you can share the photos, gather likes of your followers on Facebook, Pinterest, Twitter or any other social media. Stay in touch with your audience and keep contact with them. 
+
+* **[Watermark option](https://supsystic.com/example/gallery-watermark-example?utm_source=wordpress&utm_medium=watermark&utm_campaign=gallery "Watermark 
 option")**
 Protect photos from theft and make them unique using Watermark (PRO feature). You can also reflect a logo of your organization on each photos and this helps to build branded gallery
 
-* **[CDN options](https://supsystic.com/documentation/transfer-to-cdn/ "CDN options")**, **[Image compression and optimization](https://supsystic.com/documentation/optimization-gallery-images/ "Image compression and optimization")**.
+* **[CDN options](https://supsystic.com/documentation/transfer-to-cdn?utm_source=wordpress&utm_medium=cdn&utm_campaign=gallery "CDN options")**, **[Image compression and optimization](https://supsystic.com/documentation/optimization-gallery-images?utm_source=wordpress&utm_medium=imagecompressionandoptimization&utm_campaign=gallery "Image compression and optimization")**.
 Transfer to CDN function can maintain and accelerate images loading. 
 Images compression and optimization speed up your website and improve your visitors' experience.
 
-* **[Add Images to the Gallery from FTP and Social Networks](https://supsystic.com/docs/import-images/ "Import images")** 
-
-* **[Responsive Mobile Friendly](https://supsystic.com/documentation/gallery-responsive-mode/ "Responsive Mobile Friendly WordPress Gallery")**
+* **[Add Images to the Gallery from FTP and Social Networks](https://supsystic.com/docs/import-images?utm_source=wordpress&utm_medium=importimages&utm_campaign=gallery "Import images")** 
 
 = Support =
 
-Ask your questions in the [support forum](https://wordpress.org/support/plugin/gallery-by-supsystic), or [contact us](https://supsystic.com/contact-us/ "Contact Us") directly.
+Ask your questions in the [support forum](https://wordpress.org/support/plugin/gallery-by-supsystic?utm_source=wordpress&utm_medium=supportforum&utm_campaign=gallery "Support Forum"), or [contact us](https://supsystic.com/contact-us?utm_source=wordpress&utm_medium=contactus&utm_campaign=gallery "Contact Us") directly.
 
 = Translate Photo Gallery by Supsystic to Your Language =
 
@@ -79,37 +79,73 @@ You have an incredible opportunity to get PRO version of the photo gallery for f
 * Spanish
 * Turkish
 
+== Frequently Asked Questions ==
+
+= First time Photo Gallery by Supsystic user =
+
+Complete tutorial [How to create your first WordPress Media Gallery](https://supsystic.com/documentation/gallery-getting-started?utm_source=wordpress&utm_medium=gettingstarted&utm_campaign=gallery "How to create your first WordPress media gallery")
+
+= Where is documentation for Gallery by Supsystic? =
+
+Here it is [Gallery Documentation](https://supsystic.com/docs/gallery?utm_source=wordpress&utm_medium=documentation&utm_campaign=gallery "WordPress Gallery plugin documentation")
+
+= How to import images to the Gallery by Supsystic plugin? =
+
+You can see all import methods [here](https://supsystic.com/docs/import-images?utm_source=wordpress&utm_medium=importmethods&utm_campaign=gallery "Import images")
+
+= How to add media gallery into site content? =
+
+You can add media gallery via shortcode or PHP code. More info [here](https://supsystic.com/documentation/add-gallery-site-content?utm_source=wordpress&utm_medium=addgallery&utm_campaign=gallery "Add media gallery to WordPress") 
 
 == Screenshots ==
 
-1. [Fixed Gallery](http://supsystic.com/plugins/photo-gallery/#examples?utm_source=wordpress&utm_medium=screenshots&utm_campaign=gallery "Fixed Gallery") It's still responsive and compatible all mobile devices, but fixed :)
-2. [Photo Gallery WordPress Plugin](http://supsystic.com/plugins/photo-gallery?utm_source=wordpress&utm_medium=screenshots&utm_campaign=gallery "Photo Gallery WordPress plugin") by Supsystic the complete set for any user that can assist quickly create stunning online presentation, photo gallery or slideshow
-3. Photo gallery plugin admin area. Choose one of the professional image gallery template and manage any aspect of the gallery with easy-to-use options
+1. [Fixed Gallery](http://supsystic.com/plugins/photo-gallery/#examples?utm_source=wordpress&utm_medium=screenshots&utm_campaign=gallery "Fixed Gallery") It's still responsive and compatible all mobile devices, but fixed.
+2. [Photo Gallery WordPress Plugin](http://supsystic.com/plugins/photo-gallery?utm_source=wordpress&utm_medium=screenshots&utm_campaign=gallery "Photo Gallery WordPress plugin") by Supsystic the complete set for any user that can assist quickly create stunning online presentation, photo gallery or slideshow.
+3. Photo gallery plugin admin area. Choose one of the professional image gallery template and manage any aspect of the gallery with easy-to-use options.
 4. [Post Feed Gallery](http://supsystic.com/post-feed-animated-gallery-example?utm_source=wordpress&utm_medium=screenshots&utm_campaign=gallery "Post Feed Gallery") - it never was so easy to show Posts, Pages or any Content in an amazing view of the post feed gallery.
 5. [Image Circle Gallery](http://supsystic.com/plugins/photo-gallery/#examples?utm_source=wordpress&utm_medium=screenshots&utm_campaign=gallery "Image Circle Gallery") - perform your best ideas with Gallery by Supsystic!
-6. [Polaroid Gallery](http://supsystic.com/polaroid-gallery/ "Polaroid WordPress Gallery Plugin") with Load More button
-7. [Video Gallery](http://supsystic.com/video-gallery/ "WordPress Video Gallery")
+6. [Polaroid Gallery](http://supsystic.com/polaroid-gallery?utm_source=wordpress&utm_medium=screenshots&utm_campaign=gallery "Polaroid WordPress Gallery Plugin") with Load More button
+7. [Video Gallery](http://supsystic.com/video-gallery?utm_source=wordpress&utm_medium=videogallery&utm_campaign=gallery "WordPress Video Gallery")
+
 
 == Changelog ==
 
+= Gallery 1.12.4 / 24.07.2018 =
+ * Centering popup img position
+ * Fix the first click on the License Link
+ * Changed gallery list view
+ * Fixed size of Image Loading
+ * Fix location of buttons in popup for right-to-left languages
+ * Added border to popup in 6 popup theme
+ * Fix Multisite Installation process
+ * Added option Enable Multi-select for Categories
+ * Fixed popup border position
+ * Added the choice of the first image from the post for Post Feed Gallery
+ * Removed duplicate tooltips
+ * Fixed img position in popup
+ * Add new option: Multiselect Results
+ * Fix for uninstall
+ * Fix overlay images by Lazy Load
+ * Minor issues fixes
+
 = Gallery 1.12.3 / 03.07.2018 =
-* Add options to change the size of the Watermark
-* Fixed the work of the Load More option in conjunction with Categories
-* Minor issues fixes
+ * Add options to change the size of the Watermark
+ * Fixed the work of the Load More option in conjunction with Categories
+ * Minor issues fixes
 
 = Gallery 1.12.2 / 21.06.2018 =
-* Fixed popup-rotate for "portrait images"
-* Fixed labels text and styles in admin
-* Improve admin page
-* Added slimScroll position to admin page, to restore scroll postion, after gallery save
-* Fixed LazyLoad compatibility with "Fixed columns"
-* Fixed bug with some Mosaic gallery empty places
-* Fixed "Load More Button" text, to "Load More"
-* Removed "Use old icons and overlay" option from Caption Builder
-* Fixed option "Mobile - show always caption". Now popup opened in one click
-* Improved render "Strict use of images order" script for mosaic Gallery
-* Fixed tooltips
-* Minor issues fixes
+ * Fixed popup-rotate for "portrait images"
+ * Fixed labels text and styles in admin
+ * Improve admin page
+ * Added slimScroll position to admin page, to restore scroll postion, after gallery save
+ * Fixed LazyLoad compatibility with "Fixed columns"
+ * Fixed bug with some Mosaic gallery empty places
+ * Fixed "Load More Button" text, to "Load More"
+ * Removed "Use old icons and overlay" option from Caption Builder
+ * Fixed option "Mobile - show always caption". Now popup opened in one click
+ * Improved render "Strict use of images order" script for mosaic Gallery
+ * Fixed tooltips
+ * Minor issues fixes
 
 = Gallery 1.12.1 / 30.05.2018 =
  * Fixed "Full screen width" parameter, when "Gallery Position" is "right"

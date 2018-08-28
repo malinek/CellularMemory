@@ -1,0 +1,39 @@
+.container-about {
+  max-width: 400px;
+  margin-bottom: 50px;
+  padding-bottom: 30px;
+  background: #F1F0F4;
+  border: solid 1px;
+  border-color: $lightergreen;
+  border-radius: 4px;
+  box-shadow: 0 20px 15px -12px rgba(0, 0, 0, 0.5);
+}
+
+.container-about h2 {
+  margin: 20px auto 20px auto;
+  text-align: center;
+}
+
+.container-about ul {
+  margin: 0 auto;
+  text-align: center;
+  padding: 0;
+}
+
+.container-about li {
+  padding: 10px;
+}
+
+.container-about a {
+  font-family: Muli, sans-serif;
+  color: $darkpurple;
+  font-size: 24px;
+  text-decoration: underline;
+  color: $darkpurple;
+  transition: color 800ms ease;
+}
+
+.container-about a:hover {
+  color: $lightpurple;
+  transition: color 800ms ease;
+}

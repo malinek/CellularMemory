@@ -775,7 +775,7 @@ form.photo-editor .description a {
     overflow: hidden;
 }
 
-.categories-order label {
+.categories-order label, .subOpt label {
     font-size: 16px;
     padding: 20px 10px 20px 10px;
     line-height: 1.3;

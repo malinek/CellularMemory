@@ -20,6 +20,7 @@ class GridGallery_Galleries_Controller extends GridGallery_Core_BaseController
             'chooseAction',
             'renameAction',
             'deleteAction',
+            'deleteGroupAction',
             'deleteResourceAction',
             'addImagesAction',
             'saveSettingsAction',
@@ -527,6 +528,45 @@ class GridGallery_Galleries_Controller extends GridGallery_Core_BaseController
 		$this->getModule('galleries')->cleanCache($request->query->get('gallery_id'), $cleanAllCache);
         return $this->redirect($this->generateUrl('galleries'));
     }
+
+	/**
+	 * Delete Group Action
+	 * Deletes the gallery list
+	 *
+	 * @param Rsc_Http_Request $request An instance of the HTTP request
+	 * @return Rsc_Http_Response
+	 */
+	public function deleteGroupAction(Rsc_Http_Request $request)
+	{
+		$env = $this->getEnvironment();
+		$logger = $env->getLogger();
+
+		$ids = $request->post->get('gallery_ids');
+
+		foreach ($ids as $id) {
+			try {
+				$this->getModel('galleries')->delete(	$id );
+
+			} catch (Exception $e) {
+
+				if ($logger) {
+					$logger->error(
+						'Failed to delete the gallery: {exception}',
+						array(
+							'exception' => $e,
+						)
+					);
+				}
+
+				return $this->response(
+					'ajax',
+					$this->getErrorResponseData($e->getMessage())
+				);
+			}
+		}
+
+
+	}
 
     /**
      * Deletes the resources from the specified gallery.

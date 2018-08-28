@@ -1,7 +1,7 @@
 // WRAPPER FOR ALL CONTENT
 (function($) {
 
-$(document).ready(function(){
+ $(document).ready(function(){
 
 
 // NAVBAR

@@ -1,4 +1,5 @@
 {% macro list_view(entities, sliderSettings, galleryId) %}
+    {% import '@core/helpers.twig' as hlp %}
     {% import _self as view %}
     {% set head %}
     <tr class="ui-jqgrid-labels-custom" role="rowheader">
@@ -10,6 +11,17 @@
         </th>
         <th scope="col" id="title" class="ui-state-default ui-th-column ui-th-ltr jqgh_ui-jqgrid-htable_id">
             {{ translate('Properties') }}
+            {{ hlp.showTooltip('<b>' ~ translate('Caption') ~ '</b>: ' ~ translate('Add image caption. You may find detailed caption settings at Settings > Captions page')
+                ~ '</br><b>' ~ translate('Description') ~ '</b>: ' ~ translate('Add image description. You may find detailed description settings at Settings > Captions page. Note: in order to show descriptions and to change the description settings \'Caption builder\' option should be enabled first.')
+                 ~ '</br><b>' ~ translate('SEO') ~ '</b>: ' ~ translate('Add SEO keywords, separated by comma, or SEO-optimized sentences. They will appear under your image, when it opens in pop-up window.')
+                 ~ '</br><b>' ~ translate('Link') ~ '</b>: ' ~ translate('You may add the link, which opens when clicking on your image thumbnail instead of pop-up window. Note: if you add video URL, this option will be inactive.')
+                 ~ '</br><b>' ~ translate('Video') ~ '</b>: ' ~ translate('Here you may add the video url. After clicking on the image thumbnail, video will open in pop-up window instead of the image.')
+                 ~ '</br><b>' ~ translate('Categories') ~ '</b>: ' ~ translate('If you want to arrange your gallery by categories, you should add category names here and separate them by commas.')
+                 ~ '</br><b>' ~ translate('Linked images') ~ '</b>: ' ~ translate('Here you may choose one or several linked images for this image thumbnail. Note: this option works only with Popup theme #7.')
+                 ~ ' <a target=\'_blank\' href=\'https://supsystic.com/example/linked-images-popup/\'>https://supsystic.com/example/linked-images-popup/</a></br><b>' ~ translate('Crop') ~ '</b>: ' ~ translate('In some gallery types image thumbnails are cropped. Here you may select the crop position to be sure that the most important part of the image will be visible.')
+                 ~ '</br><b>' ~ translate('Image on hover') ~ '</b>: ' ~ translate('Here you may add the image that will the original image when mouse cursor is over the thumbnail. Note: in order to make this feature work, you should enable \'Image on hover\' option in Settings > Captions.')
+                ~ '</br><a target=\'_blank\' href=\'https://supsystic.com/documentation/images-settings/\'>https://supsystic.com/documentation/images-settings/</a>'
+                , 'top', true) }}
         </th>
         <th scope="col" id="date" class="ui-state-default ui-th-column ui-th-ltr jqgh_ui-jqgrid-htable_id">
             {{ translate('Date') }}
@@ -190,66 +202,30 @@
 				<div class="gg-tab-links gg-image-params" data-tabs="gg-image-{{ image.id }}">
 					<div class="gg-tab-link active" data-tab-info="page-{{ image.id }}-1">
 						{{ translate('Caption') }}
-						{{ hlp.showTooltip(
-							translate('Add image caption. You may find detailed caption settings at Settings > Captions page.')
-							~ ' <a target=\'_blank\' href=\'https://supsystic.com/documentation/images-settings/\'>https://supsystic.com/documentation/images-settings/</a>'
-						, 'top', true) }}
 					</div>
 					<div class="gg-tab-link" data-tab-info="page-{{ image.id }}-2">
 						{{ translate('Description') }}
-						{{ hlp.showTooltip(
-							translate('Add image description. You may find detailed description settings at Settings>Captions page. Note: in order to show descriptions and to change the description settings \'Caption builder\' option should be enabled first.')
-							~ ' <a target=\'_blank\' href=\'https://supsystic.com/documentation/images-settings/\'>https://supsystic.com/documentation/images-settings/</a>'
-						, 'top', true) }}
 					</div>
 					<div class="gg-tab-link" data-tab-info="page-{{ image.id }}-3">
-						{{ translate('SEO') }}
-						{{ hlp.showTooltip(
-							translate('Add SEO keywords, separated by comma, or SEO-optimized sentences. They will appear under your image, when it opens in pop-up window.')
-							~ ' <a target=\'_blank\' href=\'https://supsystic.com/documentation/images-settings/\'>https://supsystic.com/documentation/images-settings/</a>'
-						, 'top', true) }}
+                        {{ translate('SEO') }}
 					</div>
 					<div class="gg-tab-link" data-tab-info="page-{{ image.id }}-4">
 						{{ translate('Link') }}
-						{{ hlp.showTooltip(
-							translate('You may add the link, which opens when clicking on your image thumbnail instead of pop-up window. Note: if you add video URL, this option will be inactive.')
-							~ ' <a target=\'_blank\' href=\'https://supsystic.com/documentation/images-settings/\'>https://supsystic.com/documentation/images-settings/</a>'
-						, 'top', true) }}
 					</div>
 					<div class="gg-tab-link" data-tab-info="page-{{ image.id }}-5">
 						{{ translate('Video') }}
-						{{ hlp.showTooltip(
-							translate('Here you may add the video url. After clicking on the image thumbnail, video will open in pop-up window instead of the image.')
-							~ ' <a target=\'_blank\' href=\'https://supsystic.com/documentation/images-settings/\'>https://supsystic.com/documentation/images-settings/</a>'
-						, 'top', true) }}
 					</div>
 					<div class="gg-tab-link" data-tab-info="page-{{ image.id }}-6">
 						{{ translate('Categories') }}
-						{{ hlp.showTooltip(
-							translate('If you want to arrange your gallery by categories, you should add category names here and separate them by commas.')
-							~ ' <a target=\'_blank\' href=\'https://supsystic.com/documentation/images-settings/\'>https://supsystic.com/documentation/images-settings/</a>'
-						, 'top', true) }}
 					</div>
 					<div class="gg-tab-link" data-tab-info="page-{{ image.id }}-7">
 						{{ translate('Linked images') }}
-						{{ hlp.showTooltip(
-							translate('Here you may choose one or several linked images for this image thumbnail. Note: this option works only with Popup theme #7.')
-							~ ' <a target=\'_blank\' href=\'https://supsystic.com/example/linked-images-popup/\'>https://supsystic.com/example/linked-images-popup/</a>'
-						, 'top', true) }}
 					</div>
 					<div class="gg-tab-link" data-tab-info="page-{{ image.id }}-8">
 						{{ translate('Crop') }}
-						{{ hlp.showTooltip(
-							translate('In some gallery types image thumbnails are cropped. Here you may select the crop position to be sure that the most important part of the image will be visible.')
-							~ ' <a target=\'_blank\' href=\'https://supsystic.com/documentation/images-settings/\'>https://supsystic.com/documentation/images-settings/</a>'
-						, 'top', true) }}
 					</div>
 					<div class="gg-tab-link" data-tab-info="page-{{ image.id }}-9">
 						{{ translate('Image on hover') }}
-						{{ hlp.showTooltip(
-							translate('Here you may add the image that will the original image when mouse cursor is over the thumbnail. Note: in order to make this feature work, you should enable \'Image on hover\' option in Settings > Captions.')
-							~ ' <a target=\'_blank\' href=\'https://supsystic.com/documentation/images-settings/\'>https://supsystic.com/documentation/images-settings/</a>'
-						, 'top', true) }}
 					</div>
 
 					<a data-image-id="{{ image.id }}" data-attachment-id="{{ image.attachment.id }}"
