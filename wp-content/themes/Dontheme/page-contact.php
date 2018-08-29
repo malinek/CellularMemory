@@ -8,13 +8,13 @@
 
 <div class="container contact-content">
   
-  <p><?php
+  <?php
     while(have_posts()) {
     the_post();
 
     the_content();
     }
-  ?></p>
+  ?>
 
 </div>
 
