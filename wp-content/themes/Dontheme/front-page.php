@@ -52,15 +52,8 @@
     <div class="col-sm-6">
       <div class="col-sm-12 workshop-column">
 
-      <div class="col-sm-12 headline-row">
-        <div class="col-sm-3">
-          <img class="icon-front" src="<?php echo get_template_directory_uri() . '/images/calender-icon4.png'; ?>" />
-        </div>
-        <div class="col-sm-9">
-          <h2>Upcoming workshops</h2>
-        </div>
-      </div>
-
+        <h1><i class="far fa-calendar-alt"></i>Upcoming workshops</h1>
+        
       <?php
         $today = date('Ymd');
         $homepageWorkshops = new WP_Query(array(
@@ -115,15 +108,8 @@
    
       <div class="col-sm-12 testimonials-column">
 
-      <div class="col-sm-12 headline-row">
-        <div class="col-sm-3">
-          <img class="icon-front" src="<?php echo get_template_directory_uri() . '/images/quotationmark3.png'; ?>" />
-        </div>
-        <div class="col-sm-9">
-          <h2>Testimonials</h2>
-        </div>
-      </div>
-
+        <h1><i class="far fa-comments"></i>Testimonials</h1>
+        
       <div class="row">
         <div class="col-sm-3 image-column">
           <img class="testimonials-image-frontpage img-responsive" src="<?php echo get_template_directory_uri() . '/images/brett.jpg'; ?>" />
