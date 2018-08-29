@@ -14,7 +14,7 @@
   background-attachment: fixed;
   background-size: cover;
   position: relative;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .welcome-text {
@@ -230,8 +230,7 @@
 }
 
 .workshop-column, .testimonials-column {
-  min-height: 600px;
-  padding-top: 10px;
+  min-height: 560px;
   margin-bottom: 60px;
   padding-bottom: 40px;
   padding-left: 30px;
@@ -244,21 +243,82 @@
   box-shadow: 0 20px 15px -12px rgba(0, 0, 0, 0.5);
 }
 
+@media (max-width: 1180px) {
+
+  .workshop-column, .testimonials-column {
+    min-height: 580px;
+  }
+}
+
+@media (max-width: 1172px) {
+
+  .workshop-column, .testimonials-column {
+    min-height: 600px;
+  }
+}
+
+@media (max-width: 1160px) {
+
+  .workshop-column, .testimonials-column {
+    min-height: 620px;
+  }
+}
+
+@media (max-width: 1058px) {
+
+  .workshop-column, .testimonials-column {
+    min-height: 640px;
+  }
+}
+
+@media (max-width: 971px) {
+
+  .workshop-column, .testimonials-column {
+    min-height: 680px;
+  }
+}
+
+@media (max-width: 960px) {
+
+  .workshop-column, .testimonials-column {
+    min-height: 720px;
+  }
+}
+
+@media (max-width: 901px) {
+
+  .workshop-column, .testimonials-column {
+    min-height: 760px;
+  }
+}
+
+@media (max-width: 857px) {
+
+  .workshop-column, .testimonials-column {
+    min-height: 800px;
+  }
+}
+
+@media (max-width: 798px) {
+
+  .workshop-column, .testimonials-column {
+    min-height: 820px;
+  }
+}
+
 .testimonials-column {
   background: rgb(185,175,180);
   background: linear-gradient(225deg, rgba(185,175,180,1) 0%, rgba(208,202,205,1) 50%, rgba(231,228,230,1) 100%);
 }
 
-.icon-front {
-  height: 80px;
-  margin-top: 10px;
-  margin-bottom: 20px;
+.workshop-column h1, .testimonials-column h1 {
+  text-align: center;
+  padding-bottom: 10px;
 }
 
-.workshop-column h2, .testimonials-column h2 {
-  text-align: center;
-  margin-top: 30px;
-  padding-bottom: 20px;
+.workshop-column i, .testimonials-column i {
+  padding-right: 10px;
+  color: #6f6268;
 }
 
 .workshop-date {
@@ -350,6 +410,40 @@
 
   .testimonials-image-frontpage {
     height: 70px;
+  }
+}
+
+@media (max-width: 767px) {
+
+  .front-page-two-columns {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+  .workshop-column, .testimonials-column {
+    padding-top: 2px;
+    text-align: center;
+    min-height: 400px;
+  }
+
+  .workshop-content p {
+    text-align: center;
+  }
+
+  .workshop-date {
+    margin-bottom: 15px;
+  }
+
+  .testimonials-image-frontpage {
+    height: 126px;
+    display: block;
+    margin: 0 auto 15px auto;
+    text-align: center;
+  }
+
+  .testimonials-content span {
+    display: block;
+    text-align: left;
   }
 }
 
