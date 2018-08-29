@@ -123,10 +123,33 @@
 }
 
 .container-single-workshop form select {
-  
   margin-bottom: 5px;
   background-color: #fff;
   border-color: $lightpurple;
   margin-bottom: 10px;
 }
 
+/******* CONTACT PAGE FORM *******/
+
+.wpforms-form input, .wpforms-form textarea {
+  border-color: darken($lightlightpurple,20%)!important;
+}
+
+.wpforms-form button {
+  padding: 8px 20px!important;
+  color: $buttontextgreen!important;
+  border: solid 1px!important;
+  border-radius: 4px!important;
+  transition: all 250ms ease;
+  border-color: $buttongreenborder!important;
+  background-color: $brightergreen!important;
+}
+
+@media (max-width: 600px) {
+
+  .wpforms-form button {
+    display: block!important;
+    margin: auto!important;
+    text-align: center!important;
+  }
+}
