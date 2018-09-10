@@ -15,16 +15,20 @@
 					'<option value="1000">1000</option>'+
 					'</select>'
 				},
-				dom: '<"top"f><"clear"><"dt_rigth"il><"dt_left"p>rt',
+				dom: '<"top"f><"dt_rigth"il><"dt_left"p>rt',
 				columnDefs: [
 					{ "orderable": false, "targets": [0, 3, 4, 5, 6] },
-					// { "className": "dt-right", "targets": [0, 1] },
 					{ "className": "dt-center", "targets": [0, 1, 2, 3, 4, 5] }
 				],
 				order: [[1, 'asc']],
 				fnInitComplete: function () {
 					setCustomStyle();
 					setCheckboxesClick();
+				},
+				fnDrawCallback: function(oSettings) {
+					if (oSettings._iDisplayLength >= oSettings.fnRecordsDisplay()) {
+						$(oSettings.nTableWrapper).find('.dataTables_paginate').hide();
+					}
 				}
 			});
 
@@ -118,26 +122,5 @@
 
 		$('.shortcode').on('click', function () { $(this).select() });
 
-		// var $proNotify = $('.pro-notify');
-		// $proNotify.each(function() {
-		// 	var $this = $(this);
-		//
-		// 	$($this.data('dialog')).dialog({
-		// 		autoOpen: false,
-		// 		title: $this.data('dtitle'),
-		// 		width: $this.data('dwidth'),
-		// 		modal: true,
-		// 		buttons: {
-		// 			Close: function () {
-		// 				$(this).dialog('close');
-		// 			}
-		// 		}
-		// 	})
-		// });
-		// $proNotify.on('click', function (e) {
-		// 	e.preventDefault();
-		// 	$($(this).data('dialog')).dialog('open');
-		// 	return false;
-		// });
 	});
 }(window.jQuery));

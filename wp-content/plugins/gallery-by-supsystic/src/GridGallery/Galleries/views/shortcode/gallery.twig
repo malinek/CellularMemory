@@ -31,6 +31,9 @@
 			data-padding="{{ settings.area.padding }}"
 			data-quicksand="{% if settings.quicksand.enabled == '1' %}enabled{% else %}disabled{% endif %}"
 			data-quicksand-duration="{% if settings.quicksand.duration is not empty %}{{ settings.quicksand.duration }}{% else %}none{% endif %}"
+			{% if settings.browserUrlTooltipHide is defined and settings.browserUrlTooltipHide == 1 %}
+				data-popup-type="disable"
+			{% else %}
 				{% if settings.box.enabled is defined and settings.box.enabled == 'false' %}
 					data-popup-type="disable"
 				{% else %}
@@ -66,6 +69,7 @@
 				{% else %} 
 					data-popup-heightsize="{{ settings.box.popupheight }}"
 				{% endif %}
+			{% endif %}
 
 			{% set popup_i18n_words = {close: translate('close'), next: translate('next'),previous: translate('previous'), start_slideshow: translate('start slideshow'),stop_slideshow: translate('stop slideshow'), image: translate('image'),of: translate('of'), 'prev': translate('prev'), 'cExpand': translate('Expand'), 'cPrevious': translate('Previous'), 'cNext': translate('Next'), 'cExpandStr': translate('Expand the image'), 'cRotate': translate('Rotate'), 'cDetails': translate('Details')} %}
 			data-popup-i18n-words="{{ popup_i18n_words|json_encode|e }}"
@@ -77,6 +81,7 @@
 			data-popup-background="{{ settings.box.background }}"
 			data-popup-transparency="{{ settings.box.transparency|default(30) }}"
 			data-popup-disable-history="{{ settings.box.disableHistory }}"
+			data-popup-disable-changed-url="{{ settings.box.disableChangeUrl }}"
 			data-popup-border-type="{{ settings.popup.border.type }}"
 			data-popup-border-color="{{ settings.popup.border.color }}"
 			data-popup-border-width="{{ settings.popup.border.width }}"

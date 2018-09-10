@@ -1614,6 +1614,10 @@ sggDataSelectorsCache.prototype.getFromArray = (function(key) {
 			'id': '#gg-anl-preloader',
 			'offset': Math.abs(Math.floor($("#gg-anl-preloader").offset().top) - offsetTop2 - 40),
 		});
+        _self.linksOyPositions.push({
+            'id': '#gg-anl-attributes',
+            'offset': Math.abs(Math.floor($("#gg-anl-attributes").offset().top) - offsetTop2 - 40),
+        });
 		_self.linksOyPositions.push({
 			'id': '#gg-anl-caption-add-sett',
 			'offset': Math.abs(Math.floor($("#gg-anl-caption-add-sett").offset().top) - offsetTop2 - 40),

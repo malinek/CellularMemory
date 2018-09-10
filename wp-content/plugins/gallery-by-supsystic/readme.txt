@@ -2,8 +2,8 @@
 Contributors: supsystic.com
 Donate link: https://supsystic.com/plugins/gallery
 Tags: gallery, wordpress gallery plugin, photo gallery, grid gallery, image gallery, video gallery, responsive gallery, polaroid gallery 
-Tested up to: 4.9.7
-Stable tag: 1.12.4
+Tested up to: 4.9.8
+Stable tag: 1.12.6
 
 Photo Gallery with template editor to build amazing media gallery. Responsive mobile gallery with grid, masonry, carousel, polaroid and more gallery
 
@@ -31,27 +31,27 @@ Photo Gallery with template editor to build amazing media gallery. Responsive mo
 = Main Features =
 
 * **Fully customization gallery styles: [shadow](https://supsystic.com/example/shadow-gallery-example?utm_source=wordpress&utm_medium=shadow&utm_campaign=gallery "Shadow"), [border](https://supsystic.com/documentation/border-type?utm_source=wordpress&utm_medium=border&utm_campaign=gallery "border"), [caption and icons](https://supsystic.com/example/captionsicons-gallery-example?utm_source=wordpress&utm_medium=captionandicons&utm_campaign=gallery "caption and icons")**
-WordPress Gallery by Supsystic plugin gives you the versatility to create any type of gallery. Choose the shadow preset and set the color and thickness as you like. Highlight images. Use different types of border, give photo description and icon on each gallery image.
+WordPress Gallery by Supsystic plugin gives you the versatility to create any type of gallery. Choose the shadow preset and set the color and thickness as you like. Highlight images. Use different types of borders, add a photo description and an icon to each gallery image.
 
 * **SEO Friendly**
-Set title and description of the gallery media so gallery become SEO friendly.
+Set title and description of the gallery media to make your gallery SEO friendly.
 
 * **[Responsive Mobile Friendly](https://supsystic.com/documentation/gallery-responsive-mode?utm_source=wordpress&utm_medium=responsive&utm_campaign=gallery "Responsive Mobile Friendly WordPress Gallery")**
 
 * **[Load More button](https://supsystic.com/documentation/load-more-button?utm_source=wordpress&utm_medium=loadmore&utm_campaign=gallery "Load More button")**, [Pagination](https://supsystic.com/example/pagination-gallery-example?utm_source=wordpress&utm_medium=pagination&utm_campaign=gallery "Paginations") and **[Lazy Load](https://supsystic.com/documentation/lazy-load?utm_source=wordpress&utm_medium=lazyload&utm_campaign=gallery "Lazy Load")** 
 
 * **[Social Sharing](https://supsystic.com/example/social-sharing?utm_source=wordpress&utm_medium=socialsharing&utm_campaign=gallery "Social Sharing")**
-We integrated our [Social Share Buttons](https://supsystic.com/plugins/social-share-plugin?utm_source=wordpress&utm_medium=sharebuttons&utm_campaign=gallery "Social Share Buttons") plugin with Gallery. Now you can share the photos, gather likes of your followers on Facebook, Pinterest, Twitter or any other social media. Stay in touch with your audience and keep contact with them. 
+We integrated our [Social Share Buttons](https://supsystic.com/plugins/social-share-plugin?utm_source=wordpress&utm_medium=sharebuttons&utm_campaign=gallery "Social Share Buttons") plugin with Gallery. Now you can share photos, get likes from your followers on Facebook, Pinterest, Twitter or any other social media site. Stay in touch with your audience! 
 
 * **[Watermark option](https://supsystic.com/example/gallery-watermark-example?utm_source=wordpress&utm_medium=watermark&utm_campaign=gallery "Watermark 
 option")**
-Protect photos from theft and make them unique using Watermark (PRO feature). You can also reflect a logo of your organization on each photos and this helps to build branded gallery
+Protect your photos against theft and make them unique using Watermark (PRO feature). You can also reflect the logo of your organization on each photo to build a branded gallery.
 
 * **[CDN options](https://supsystic.com/documentation/transfer-to-cdn?utm_source=wordpress&utm_medium=cdn&utm_campaign=gallery "CDN options")**, **[Image compression and optimization](https://supsystic.com/documentation/optimization-gallery-images?utm_source=wordpress&utm_medium=imagecompressionandoptimization&utm_campaign=gallery "Image compression and optimization")**.
-Transfer to CDN function can maintain and accelerate images loading. 
+Transfer to CDN function can maintain and boost image loading speed. 
 Images compression and optimization speed up your website and improve your visitors' experience.
 
-* **[Add Images to the Gallery from FTP and Social Networks](https://supsystic.com/docs/import-images?utm_source=wordpress&utm_medium=importimages&utm_campaign=gallery "Import images")** 
+* **[Add Images to the Gallery from FTP and Social Media](https://supsystic.com/docs/import-images?utm_source=wordpress&utm_medium=importimages&utm_campaign=gallery "Import images")** 
 
 = Support =
 
@@ -59,9 +59,8 @@ Ask your questions in the [support forum](https://wordpress.org/support/plugin/g
 
 = Translate Photo Gallery by Supsystic to Your Language =
 
-You have an incredible opportunity to get PRO version of the photo gallery for free. Just make translation of the Photo Gallery by Supsystic plugin!
-
-* Arabic Language
+You have an incredible opportunity to get PRO version of the photo gallery for free. Just translate the Photo Gallery via Supsystic plugin!
+* Arabic 
 * Chinese
 * Czech
 * Dutch
@@ -109,6 +108,21 @@ You can add media gallery via shortcode or PHP code. More info [here](https://su
 
 
 == Changelog ==
+
+= Gallery 1.12.6 / 28.08.2018 =
+ * Fix for Lazyload with Categories and LoadMore
+ * Аdded option that allow disable changing URL in browser
+ * Image list interface changed
+ * Added Custom Attributes, Filtering and Searching
+ * Fix LazyLoad for two Galleries on page
+ * Updated Spanish translation
+ * Disable context menu for Ligthbox
+ * Minor issues fixes
+
+= Gallery 1.12.5 / 08.08.2018 =
+ * Minor improvement for gallery list view
+ * Added fontawesome files to the plugin
+ * Added support the parameter rel=0 for youtube links
 
 = Gallery 1.12.4 / 24.07.2018 =
  * Centering popup img position

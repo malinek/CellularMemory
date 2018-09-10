@@ -139,6 +139,11 @@
                 return this;
             }
 
+            // disable contextmenu
+            if (settings.isDisableRightClick) {
+                overlay.off('contextmenu').on('contextmenu', function(e){return false;});
+            }
+
             o = $.extend({}, defaults, settings || {});
             photobox = new Photobox(o, this, target);
 

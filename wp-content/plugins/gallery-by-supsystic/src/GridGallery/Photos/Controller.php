@@ -319,6 +319,27 @@ class GridGallery_Photos_Controller extends GridGallery_Core_BaseController
         ));
     }
 
+    public function rotatePhotoAction(Rsc_Http_Request $request)
+    {
+        $env = $this->getEnvironment();
+        $ids = $request->post->get('ids');
+        $rotateType = $request->post->get('rotateType');
+        $rotated = 0;
+        if(isset($ids) && sizeof($ids) > 0) {
+            $photos = $this->getModel('photos');
+
+            foreach($ids as $i => $photoId) {
+                $photo = $photos->getById($photoId);
+                $attachment = $photo->attachment;
+                if($photos->rotateAttachment($attachment, $rotateType)) {
+                    $rotated++; 
+                }
+            }
+        }
+        $this->getModule('galleries')->cleanCache($request->post->get('gallery_id'));
+        return $this->response(Rsc_Http_Response::AJAX, array('message' => sprintf($env->translate('There are %d photos successfully rotated'), $rotated)));
+    }
+
     /**
      * Move Action
      * Moves photos to the folders
@@ -487,7 +508,6 @@ class GridGallery_Photos_Controller extends GridGallery_Core_BaseController
 		$photos = $this->getModel('photos');
 
         $alt = $request->post->get('alt');
-        if(empty($alt)) $alt = " ";
         $attachmentId = $request->post->get('attachment_id');
 		$replaceAttachmentId = (int)$request->post->get('replace_attachment_id');
 		if($replaceAttachmentId) {
@@ -506,17 +526,20 @@ class GridGallery_Photos_Controller extends GridGallery_Core_BaseController
         } else {
             $rel = '';
         }
-        
-        $photos->updateMetadata($attachmentId, array(
-            'alt'           => $alt,
-            'caption'       => $caption,
-            'description'   => $description,
-            'link'          => $link,
-            'captionEffect' => $captionEffect,
-            'target' => $target,
-            'rel' => $rel,
-            'cropPosition' => $cropPosition
-        ));
+
+        $update = array();
+        if(isset($alt)) $update['alt'] = (empty($alt) ? " " : $alt);
+        if(isset($caption)) $update['caption'] = $caption;
+        if(isset($description)) $update['description'] = $description;
+        if(isset($captionEffect)) $update['captionEffect'] = $captionEffect;
+        if(isset($cropPosition)) $update['cropPosition'] = $cropPosition;
+        if(isset($link))
+        {
+            $update['link'] = $link;
+            $update['target'] = $target;
+            $update['rel'] = $rel;
+        } 
+        $photos->updateMetadata($attachmentId, $update);
 
         $this->getModule('galleries')->cleanCache($request->post->get('gallery_id'));
 

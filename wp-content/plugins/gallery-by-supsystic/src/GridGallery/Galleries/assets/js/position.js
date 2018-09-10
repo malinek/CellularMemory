@@ -65,10 +65,16 @@
 		,	currPosition = (!isNaN(currPageVal) && !isNaN(perPageVal) ? currPageVal*perPageVal : 0);
 		$.each($entities, function (index, entity) {
 			var $entity = $(entity)
-			,	position = index + currPosition;
+			,	position = index + currPosition
+            ,   imageId = parseInt($entity.data('entity-id'), 10)
+            ,   $input = $('#position-image-' + imageId);
+
+            if($input.length > 0) {
+                $input.val(position + 1);
+            }
 
             data.elements.push({
-                photo_id: parseInt($entity.data('entity-info').id, 10),
+                photo_id: imageId,
                 position: parseInt(position, 10),
             });
         });
@@ -83,6 +89,7 @@
         var Ctrl = new Controller();
 
         $('[data-sortable]').on('sortstop', $.proxy(Ctrl.updatePosition, Ctrl));
+        app.PositionCtrl = Ctrl;
     });
 
 }(window.SupsysticGallery = window.SupsysticGallery || {}, jQuery));

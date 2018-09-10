@@ -65,6 +65,7 @@ return array(
 		'sgg-t-popup-slideshow-autostart' => __('If this option is enabled, slideshow starts automatically. If it is disabled, the play/pause button will appear in left down corner of your pop-up gallery window.', 'sgg'),
 		'box-popupsize' => __('Here you may set your pop-up image size.', 'sgg'),
 		'box-disableHistory' => __('If this option is enabled, after clicking \'back\' button in your browser, pop-up window will be closed and all image data will be cleared. If disabled - images will be saved in browser history and will be opened again on \'back\' or \'forward\' button click.', 'sgg'),
+		'box-disableChangeUrl' => __('If this option is enabled, browser url will not changed.', 'sgg'),
 		// lazy-load
 		'sgg-t-lazyload-enable' => __('This option is important for big galleries. When it is enabled, images are loading gradually as the page scrolls down.', 'sgg'),
 		// Gallery Loader

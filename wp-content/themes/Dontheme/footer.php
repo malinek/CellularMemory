@@ -8,12 +8,12 @@
 
   <ul>
     <li><a href="#myModal" data-toggle="modal">Responsibility Agreement</a></li>
-    <li>Sign up for our newsletter</li>
+    <li><a href="#myModal2" data-toggle="modal">Sign up for our newsletter</a></li>
   </ul>
 
   <h4>&copy; Don Hanson 2018</h4>
 
-  <!-- Modal -->
+  <!-- Modal Responsibility agreement -->
   <div id="myModal" class="modal fade" role="dialog">
     <div class="modal-dialog modal-lg">
 
@@ -28,6 +28,23 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="green-button" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Newsletter -->
+  <div id="myModal2" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-sm">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Sign up for our newsletter</h4>
+        </div>
+        <div class="modal-body">
+          <?php echo do_shortcode('[mc4wp_form]'); ?>
         </div>
       </div>
     </div>

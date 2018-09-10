@@ -585,6 +585,10 @@
         }
 
         appendHTML();
+        // disable contextmenu
+        if(options.isDisableRightClick) {
+            $wrap.off('contextmenu').on('contextmenu', function(e){return false;});
+        }
 
         if (addBindings()) {
 

@@ -153,3 +153,28 @@
     text-align: center!important;
   }
 }
+
+/******* NEWSLETTER FORM *********/
+
+.mc4wp-form-fields p {
+  display: block;
+  text-align: center;
+  margin: auto;
+}
+
+.mc4wp-form-fields input {
+  width: 220px;
+  margin-bottom: 10px;
+  border-color: darken($lightlightpurple,20%)!important;
+}
+
+
+
+/*<div class="mc4wp-form-fields"><p>
+    <label>Email Address</label>
+    <input type="email" name="EMAIL" placeholder="Please enter your email" required="">
+</p>
+
+<p>
+  <input type="submit" value="Sign up">
+</p></div> */

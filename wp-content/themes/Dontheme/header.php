@@ -14,7 +14,7 @@
 
       <nav class="site-nav">
         <ul>        
-          <li class="dropdown-button" <?php if (is_page('about')) echo 'class="current-menu-item"'; ?>><a href="#!">About <i class="fa fa-chevron-down"></i></a>
+          <li class="dropdown-button" <?php if (is_page('about')) echo 'class="current-menu-item"'; ?>><a href="#">About <i class="fa fa-chevron-down"></i></a>
             <ul class="sub-menu">
               <li <?php if (is_page('donald-hanson')) echo 'class="current-menu-item"'; ?>><a href="<?php echo site_url('/about/donald-hanson') ?>">Don Hanson</a></li>
               <li <?php if (is_page('tcm')) echo 'class="current-menu-item"'; ?>><a href="<?php echo site_url('/about/tcm') ?>">TCM</a></li>

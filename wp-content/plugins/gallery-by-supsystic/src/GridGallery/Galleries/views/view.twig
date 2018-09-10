@@ -1,125 +1,190 @@
 {% extends 'grid-gallery.twig' %}
 
 {% block header %}
-    <nav id="supsystic-breadcrumbs" class="supsystic-breadcrumbs">
+    <nav id="supsystic-breadcrumbs" class="supsystic-breadcrumbs" style="float: left; padding: 20px 0 0 20px;">
         <a href="{{ environment.generateUrl('galleries') }}">{{ translate('Gallery by Supsystic') }}</a>
         <i class="fa fa-angle-right"></i>
         <a href="{{ environment.generateUrl('galleries') }}">{{ translate('Galleries') }}</a>
         <i class="fa fa-angle-right"></i>
-        <a href="{{ environment.generateUrl('galleries', 'view', { 'gallery_id': gallery.id }) }}">{{ gallery.title }}</a>
+        <a href="{{ environment.generateUrl('galleries', 'settings', { 'gallery_id': gallery.id }) }}">{{ gallery.title }}</a>
+        <i class="fa fa-angle-right"></i>
+        <a href="{{ environment.generateUrl('galleries', 'view', { 'gallery_id': gallery.id }) }}">{{ translate('Images List') }}</a>
     </nav>
 
-    <section class="supsystic-bar sgg-all-img-info-sect" id="single-gallery-toolbar">
-        <ul class="supsystic-bar-controls">
-            <li title="{{ translate('Upload new images') }}">
-                <button class="button button-primary gallery import-to-gallery">
-                    <i class="fa fa-fw fa-upload"></i>
-                    {{ translate('Add Images') }}
-                </button>
-            </li>
-            <li>
-                <a href="{{ environment.generateUrl('galleries', 'settings', { 'gallery_id': gallery.id }) }}"
-                   class="button">
-                    <i class="fa fa-fw fa-cogs"></i>
-					{{ translate('Settings') }}
-                </a>
-            </li>
+    <section class="sgg-all-img-info-sect" id="single-gallery-head-toolbar" style="margin-left: 75px;">
+    	<div class="gg-settings-row">
+	    	<div class="gg-settings-block">
+		    	<ul class="supsystic-bar-controls" style="padding-left: 20px;">
+		            <li title="{{ translate('Upload new images') }}">
+		                <button class="button button-primary gallery import-to-gallery">
+		                    <i class="fa fa-fw fa-upload"></i>
+		                    {{ translate('Add Images') }}
+		                </button>
+		            </li>
+		            <li>
+		                <a href="{{ environment.generateUrl('galleries', 'sort', { 'gallery_id': gallery.id }) }}"
+		                   class="button">
+		                    <i class="fa fa-fw fa-sort"></i>
+							{{ translate('Sort Images Mode') }}
+		                </a>
+		            </li>
+		        </ul>
+        	</div>
+    		<div class="gg-settings-block">
+		    	<ul class="supsystic-bar-controls">
+		    		<li>
+		            	<a href="{{ environment.generateUrl('galleries', 'settings', { 'gallery_id': gallery.id }) }}"
+		                	class="button">
+		                    <i class="fa fa-fw fa-cogs"></i>
+							{{ translate('Settings') }}
+		                </a>
+		            </li>
 
-            <li>
-                <a target="_blank"
-                   href="{{ environment.generateUrl('galleries', 'preview', { 'gallery_id': gallery.id }) }}"
-                   class="button" data-button="preview">
-                    <i class="fa fa-fw fa-eye"></i>
-                    {{ translate('Preview') }}
-                </a>
-            </li>
-			<li class="separator">|</li>
-        </ul>
-
-		<ul class="supsystic-bar-controls">
-			<li>
-				<button class="button" data-button="remove" disabled>
-					<i class="fa fa-fw fa-trash-o"></i>
-					{{ translate('Delete Image') }}
-				</button>
-			</li>
-			<li class="separator">|</li>
-		</ul>
-
-		<ul class="supsystic-bar-controls">
-			<li>
-				<input id="find-by-caption" type="text" style="height:34px; width: 200px;" placeholder="{{ translate('Search') }}">
-			</li>
-			<li class="separator">|</li>
-		</ul>
-
-        <ul class="supsystic-bar-controls">
-            <li title="{{ translate('Sort By: ') }}">
-				{{  translate('Sort By: ') }}
-                <select name="sortby" style="height: 34px;">
-                    <option value="postion" {% if settings.sort.sortby == 'position' %}selected{% endif %}>Position</option>
-                    <option value="adate" {% if settings.sort.sortby == 'adate' %}selected{% endif %}>Add date</option>
-                    <option value="date" {% if settings.sort.sortby == 'date' %}selected{% endif %}>Create date</option>
-                    <option value="size" {% if settings.sort.sortby == 'size' %}selected{% endif %}>Size</option>
-                    <option value="name" {% if settings.sort.sortby == 'name' %}selected{% endif %}>Name</option>
-                    <option value="filename" {% if settings.sort.sortby == 'filename' %}selected{% endif %}>File name</option>
-					{% if(environment.isPro() == true) %}<option value="tags" {% if settings.sort.sortby == 'tags' %}selected{% endif %}>Tags</option>{% endif %}
-                    <option value="randomly" {% if settings.sort.sortby == 'randomly' %}selected{% endif %}>Randomly</option>
-                </select>
-            </li>
-
-			<li id="sortToLi" title="{{ translate('Sort To: ') }}" style="{% if settings.sort.sortby == 'randomly' %} display:none; {% endif %} }}">
-				{{  translate('Sort To: ') }}
-				<select name="sortto" style="height: 34px;">
-					<option value="asc" {% if settings.sort.sortto == 'asc' %}selected{% endif %}>Asc</option>
-					<option value="desc" {% if settings.sort.sortto == 'desc' %}selected{% endif %}>Desc</option>
-				</select>
-			</li>
-
-			<li>
-				<button class="button button-primary" data-button="sortbtn">
-					<i class="fa fa-fw fa-check"></i>
-					Ok
-				</button>
-			</li>
-        </ul>
-
-        <ul class="supsystic-bar-controls">
-			{% if(environment.isPro() == true) %}
-                <li>
-                    <select name="bulkactions" style="height: 34px;">
-						{% if(gallery.tags|length > 0) %}
-                            <option value="add">Add Selected Images to</option>
-						{% endif %}
-                        <option value="newcat">Create New Category</option>
-						{% if(gallery.tags|length > 0) %}
-                            <option value="delcat">Delete Category</option>
-                            <option value="rencat">Rename Category</option>
-						{% endif %}
-                    </select>
-                </li>
-
-                <li>
-					{% if(gallery.tags|length > 0) %}
-                        <select name="catactions" style="height: 34px;">
-							{% for value, title in gallery.tags %}
-                                <option value="{{ value }}">{{ title }}</option>
-							{% endfor %}
-                            <option value="allcat" style="display:none;">All Categories</option>
-                        </select>
+		            <li>
+		                <a target="_blank"
+		                   href="{{ environment.generateUrl('galleries', 'preview', { 'gallery_id': gallery.id }) }}"
+		                   class="button" data-button="preview">
+		                    <i class="fa fa-fw fa-eye"></i>
+		                    {{ translate('Preview') }}
+		                </a>
+		            </li>
+		        </ul>
+        	</div>
+        </div>
+    </section>
+    <section class="supsystic-bar sgg-all-img-info-sect" id="single-gallery-toolbar" style="padding-bottom:0;">
+    	<div class="gg-settings-row">
+    		<div class="gg-settings-block">
+		    	<ul class="supsystic-bar-controls gg-checked-options">
+		            <li id="checkedDoLi" data-delete-confirm="{{ translate('Are you sure you want to delete photo from this gallery?') }}">
+						<select name="checkedDo" style="height: 34px;">
+							<option value="rotate-clock">{{ translate('Rotate Clockwise') }}</option>
+							<option value="rotate-cclock">{{ translate('Rotate Counter-Clockwise') }}</option>
+							<option value="copy">{{ translate('Copy to') }}</option>
+							<option value="move">{{ translate('Move to') }}</option>
+							<option value="crop">{{ translate('Crop') }}</option>
+							<option value="delete">{{ translate('Delete selected') }}</option>
+							{% if(environment.isPro() == true) %}
+								<option value="new-category">{{ translate('New Category') }}</option>
+								<option value="add-category">{{ translate('Add Category') }}</option>
+								<option value="del-category">{{ translate('Delete Category') }}</option>
+							{% endif %}
+							{% if environment.isPro() == true and settings.attributes is defined and settings.attributes.order|length > 0 %}
+								<optgroup label="Add Attributes">
+									{% for index, name in settings.attributes.order %}
+										<option data-attribute value="{{ index }}">{{ name }}</option>
+									{% endfor %}
+								</optgroup>
+							{% endif %}
+						</select>
+					</li>
+					{% if(environment.isPro() == true) %}
+						<li class="gg-checked-container gg-checked-attributes ggSettingsDisplNone">
+							<select id="gg-attribute-values" style="height: 34px; width: 150px;" data-values="{{ gallery.attributes|json_encode }}">
+							</select>
+						</li>
+						<li class="gg-checked-container gg-checked-new-category ggSettingsDisplNone">
+							<input type="text" id="gg-new-category" style="width: 150px; height:34px;" value="" placeholder="Category name...">
+			 			</li>
+						<li class="gg-checked-container gg-checked-add-category ggSettingsDisplNone">
+							<select id="gg-categories-list" style="height: 34px;">
+								{% if(gallery.tags|length > 0) %}	                    
+									{% for value, title in gallery.tags %}
+										<option value="{{ title }}">{{ title }}</option>
+									{% endfor %}
+								{% endif %}
+							</select>
+						</li>
+						<li class="gg-checked-container gg-checked-del-category ggSettingsDisplNone">
+							<select id="gg-categories-del" style="height: 34px;">
+								{% if(gallery.tags|length > 0) %}	                    
+									{% for value, title in gallery.tags %}
+										<option value="{{ title }}">{{ title }}</option>
+									{% endfor %}
+									<option value="allcat">{{ translate('All Categories') }}</option>
+								{% endif %}
+							</select>
+						</li>
 					{% endif %}
-                    <input type="text" name="newTag" {% if(gallery.tags|length != 0) %} style="display:none; height:34px; width: 150px;" {% else %} style="width: 150px; height:34px;" {% endif %}value="" placeholder="Category name...">
-                </li>
+					<li class="gg-checked-copy gg-checked-move gg-checked-container ggSettingsDisplNone">
+						<select id="gg-galleries-list" style="height: 34px;">
+							{% for obj in galleries %}
+								{% if obj.id != gallery.id %}
+									<option value="{{ obj.id }}">{{ obj.title }}</option>
+								{% endif %}
+							{% endfor %}
+						</select>
+					</li>
+					<li class="gg-checked-crop gg-checked-container ggSettingsDisplNone">
+						{% set cropPositionList = {
+                            "left-top":"Top Left",
+                            "center-top":"Top Center",
+                            "right-top":"Top Right",
+                            "left-center":"Center Left",
+                            "center-center":"Center Center",
+                            "right-center":"Center Right",
+                            "left-bottom":"Bottom Left",
+                            "center-bottom":"Bottom Center",
+                            "right-bottom":"Bottom Right"
+                        } %}
+						<select id="gg-crop-positions" style="height: 34px;">
+                            {% for value, title in cropPositionList %}
+                                <option value="{{ value }}" {% if image.attachment.cropPosition|default('center-center') == value %} selected="selected" {% endif %}>{{ title }}</option>
+                            {% endfor %}
+                        </select>
+					</li>
+					<li>
+						<button class="button button-primary" data-button="checkedbtn" {% if gallery.photos is empty %}disabled{% endif %}>
+							<i class="fa fa-fw fa-check"></i>
+							{{ translate('Apply') }}
+						</button>
+					</li>
+		        </ul>
+        	</div>
 
-                <li>
-                    <button class="button button-primary" data-button="allimagetags">
-                        <i class="fa fa-fw fa-check"></i>
-						{{ translate('Apply') }}
-                    </button>
-                </li>
+	        <div class="gg-settings-block">
+		        <ul class="supsystic-bar-controls">
+					<li>
+						<input id="find-by-caption" type="text" style="height:34px; width: 150px;" placeholder="{{ translate('Search') }}">
+					</li>
+					<li class="separator">|</li>
+				</ul>
+		        	
+		        <ul class="supsystic-bar-controls">
+		            <li title="{{ translate('Sort By: ') }}">
+						{{  translate('Sort By: ') }}
+		                <select name="sortby" style="height: 34px;">
+		                    <option value="postion" {% if settings.sort.sortby == 'position' %}selected{% endif %}>Position</option>
+		                    <option value="adate" {% if settings.sort.sortby == 'adate' %}selected{% endif %}>Add date</option>
+		                    <option value="date" {% if settings.sort.sortby == 'date' %}selected{% endif %}>Create date</option>
+		                    <option value="size" {% if settings.sort.sortby == 'size' %}selected{% endif %}>Size</option>
+		                    <option value="name" {% if settings.sort.sortby == 'name' %}selected{% endif %}>Name</option>
+		                    <option value="filename" {% if settings.sort.sortby == 'filename' %}selected{% endif %}>File name</option>
+							{% if(environment.isPro() == true) %}<option value="tags" {% if settings.sort.sortby == 'tags' %}selected{% endif %}>Tags</option>{% endif %}
+		                    <option value="randomly" {% if settings.sort.sortby == 'randomly' %}selected{% endif %}>Randomly</option>
+		                </select>
+		            </li>
+					<li id="sortToLi" title="{{ translate('Sort To: ') }}" style="{% if settings.sort.sortby == 'randomly' %} display:none; {% endif %} }}">
+						<button class="button button-invisible" data-button="sortbtn">
+							<i class="fa fa-fw fa-arrow-{% if settings.sort.sortto == 'asc' %}up{% else %}down{% endif %}"></i>
+						</button>
+					</li>
+		        </ul>
 
-			{% endif %}
-        </ul>
+		        <ul class="supsystic-bar-controls">
+					<li>
+						{% if gallery.photos | length > 0 %}
+							{% import '@galleries/helpers/pagination_view.twig' as pagination_view %}
+							{{ pagination_view.paginationRender(paginationSettings) }}
+						{% endif %}
+					</li>
+					<li>
+						{{ gallery.photos | length }} {{ translate('media') }}
+					</li>
+				</ul>
+			</div>
+		</div>
+
     </section>
 
 {% endblock %}
@@ -142,15 +207,10 @@
             {% import '@ui/type.twig' as view %}
             {% set entity = { images: gallery.photos } %}
             {% set sliderSettings = settings %}
-
+ 
             {% if viewType == 'block' %}
                 {{ view.block_view(entity) }}
             {% endif %}
-
-			{% if entity.images | length > 0 %}
-				{% import '@galleries/helpers/pagination_view.twig' as pagination_view %}
-				{{ pagination_view.paginationRender(paginationSettings) }}
-			{% endif %}
 
             {% if viewType == 'list' %}
                 {{ view.list_view(entity, sliderSettings, gallery.id) }}
@@ -158,9 +218,7 @@
         {% endif %}
     {% endif %}
 
-    <div id="importDialog" title="{{ translate('Select source to import from') }}" style="display: none;">
-        {{ importTypes.show(400, gallery.id) }}
-    </div>
+    {{ importTypes.view_dialogs(gallery.id) }}
 
     <div id="linkedImagesDialog" title="{{ translate('Linked Images') }}" style="display:none;">
         <div class="linked-images-action-buttons">
@@ -373,52 +431,65 @@
 		{% endblock %}
     </div>
 
-	<div id="videoUrlAddDialog" title="{{ 'Add video url' }}" style="display:none;" data-gallery-id="{{ gallery.id }}">
-		<div class="sggVideoUrlAddWr">
-			<div class="sggTableRow">
-				<div class="sggTableColumn6">
-					<div class="sggDlgVideoTypeH3">{{ translate('Video type:') }}</div>
-				</div>
-				<div class="sggTableColumn6">
-					{{(
-						form.radio(
-							'sggDlgVideoType',
-							'youtube',
-							{'id':'sggDlgYoutubeVideoType', 'class':'sggDlgVideoTypeRadio', 'checked':'checked'}
-						) ~
-						form.label(
-							translate('Youtube url'),
-							'sggDlgYoutubeVideoType'
-						) ~ '<br/>' ~
-						form.radio(
-							'sggDlgVideoType',
-							'vimeo',
-							{'id':'sggDlgVimeoVideoType', 'class':'sggDlgVideoTypeRadio',}
-						) ~
-						form.label(
-							translate('Vimeo url'),
-							'sggDlgVimeoVideoType'
-						)
-					) |raw }}
-				</div>
-			</div>
-			<div class="sggTableRow">
-				<div class="sggTableColumn6">
-					<div class="sggDlgVideoTypeH3">{{ translate('Video url:') }}</div>
-				</div>
-				<div class="sggTableColumn6">
-					{{
-						form.input(
-							'text',
-							'sggDlgUrlVideoValue',
-							'',
-							{'id': 'sggDlgUrlVideoInp', 'class': '', }
-						)
-					}}
-				</div>
-			</div>
-			<div class="sggTableRow sggAduHiden" id="sggAduErrorText"></div>
-		</div>
-	</div>
+	<div id="ggImageMetaDialog" title="{{ translate('Meta Data') }}" style="display:none;">
+        <div class="image-meta-list">
+        </div>
+    </div>
+
+    {% if environment.isPro() == true %}
+    	<div id="ggImageAttributesDialog" class="supsystic-plugin" title="{{ translate('Custom Attributes') }}" data-image-id="" style="display:none;">
+        	<div>
+        		<table>
+        			{% if settings.attributes is defined and settings.attributes.order|length > 0 %}
+	   					{% for index, name in settings.attributes.order %}
+	   						<tr style="height:auto">
+	   							<td>
+	   								{{ name }}
+	   								<input class="gg-attribute-names" type="hidden" value="{{ name }}">
+	   							</td>
+	   							<td>
+	   								<select class="gg-attribute-values" data-attribute="{{ index }}" style="height: 30px; width: 200px;">
+									</select>
+	   							</td>
+	   							<td>
+	   								<input class="gg-attribute-new" type="text" data-attribute="{{ index }}" style="height:30px; width: 100%;" placeholder="{{ translate('New value') }}">
+	   							</td>
+	   						</tr>
+						{% endfor %}
+        			{% else %}
+	        			<tr>
+	        				<td colspan="3">
+	        					{{ translate('No custom attributes have been specified for the gallery.') }}
+	        				</td>
+	        			</tr>
+        			{% endif %}
+        			<tr style="height:auto">
+        				<td colspan="3">
+        					<hr>
+        				</td>
+        			</tr>
+        			<tr>
+        				<td>
+        					<span style="font-weight: bold">{{ translate('Button Link') }}</span>
+        				</td>
+        				<td>
+        					<input id="ggButtonLinkUrl" type="text" style="height:30px; width: 100%;" placeholder="{{ translate('Url') }}">
+        				</td>
+        				<td>
+        					<input id="ggButtonLinkTitle" type="text" style="height:30px; width: 100%;" placeholder="{{ translate('Title') }}">
+        				</td>
+        			</tr>
+        			<tr>
+        				<td>
+        					<span style="font-weight: bold">{{ translate('Keywords') }}</span>
+        				</td>
+        				<td colspan="2">
+        					<input id="ggImageKeywords" type="text" style="height:30px; width: 100%;">
+        				</td>
+        			</tr>
+        		</table>
+        	</div>
+    	</div>
+    {% endif %}
 
 {% endblock %}
