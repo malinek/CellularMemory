@@ -61,6 +61,24 @@ Version: 3.1.6
 		var ppTranslationVar = pp_settings.ppTranslates || {}
 		,	markupHtml;
 
+		if(typeof(pp_settings.isShowAttributes) == 'undefined') {
+			pp_settings.isShowAttributes = false;
+		}
+		if(pp_settings.isShowAttributes) {
+			if(typeof(pp_settings.attributesPosition) == 'undefined') {
+				pp_settings.attributesPosition = 'right';
+			}
+			if(typeof(pp_settings.attributesWidth) == 'undefined') {
+				pp_settings.attributesWidth = '200';
+			}
+			var attributesHtml = '<div class="pp_attributes_container" style="width:' + pp_settings.attributesWidth + 'px"><div id="ppCustomAttributes"></div>';
+
+			if(pp_settings.isShowButtonLink) {
+				attributesHtml += '<div id="ppAttributeButton"><a target="_blank" href="#" style="' + pp_settings.buttonLinkStyle + '"></a></div>';
+			}
+			attributesHtml += '</div>';
+		}
+
 		markupHtml =
 			'<div class="pp_pic_holder">' +
 				'<div class="ppt">&nbsp;</div>' +
@@ -89,9 +107,17 @@ Version: 3.1.6
 												'<i class="fa fa-chevron-left" aria-hidden="true"></i>' +
 											'</span>' +
 										'</a>' +
-									'</div>' +
-									'<div id="pp_full_res"></div>' +
-									'<div class="pp_details">' +
+									'</div>';
+		if(pp_settings.isShowAttributes) {
+			if(pp_settings.attributesPosition == 'left') {
+				markupHtml +=  attributesHtml + '<div id="pp_full_res" style="float:left;"></div>';
+			} else {
+				markupHtml +=		'<div id="pp_full_res" style="float:left;"></div>' + attributesHtml;
+			}
+		} else {
+			markupHtml +=			'<div id="pp_full_res"></div>';
+		}
+		markupHtml +=				'<div class="pp_details">' +
 										'<div class="pp_nav">' +
 											'<a href="#" class="pp_arrow_previous">' + ppTranslationVar['cPrevious'] + '</a>' +
 											'<p class="currentTextHolder">0/0</p>' +
@@ -174,7 +200,7 @@ Version: 3.1.6
             ie6_fallback: true,
 			'is_lazy_load': 0,
 			markup: markupHtml,
-            gallery_markup: '<div class="pp_gallery">' + 
+            gallery_markup: '<div style="clear: both;"></div><div class="pp_gallery">' + 
 								'<a href="#" class="pp_arrow_previous">' + ppTranslationVar['cPrevious'] + '</a>' +
                                 '<div>' + 
                                     '<ul>' + 
@@ -201,6 +227,7 @@ Version: 3.1.6
 		// prettyPhoto container specific
 		,	pp_contentHeight
 		,	pp_contentWidth
+		,	pp_attributesWidth = (pp_settings.isShowAttributes ? parseFloat(pp_settings.attributesWidth) : 0)
 		,	pp_containerHeight
 		,	pp_containerWidth
 		// Window size
@@ -708,6 +735,15 @@ Version: 3.1.6
 								// Show the nav
 								if(isSet && _getFileType(pp_images[set_position])=="image") { $pp_pic_holder.find('.pp_hoverContainer').show(); }else{ $pp_pic_holder.find('.pp_hoverContainer').hide(); }
 
+								if(settings.isShowAttributes) {
+									if(settings.attributesPosition == 'left') {
+										$ppHoverContainer.css('left', pp_attributesWidth);
+									} else {
+										$('a.pp_expand').css('right', pp_attributesWidth + 10 + 'px');
+									}
+									$pp_pic_holder.find('#ppCustomAttributes').height(pp_dimensions['height'] - (settings.isShowButtonLink ? $pp_pic_holder.find('#ppAttributeButton').height() + 5 : 0));
+								}
+
 								if(settings.allow_expand) {
 									if(pp_dimensions['resized']){ // Fade the resizing link if the image is resized
 										$('a.pp_expand,a.pp_contract').show();
@@ -839,11 +875,9 @@ Version: 3.1.6
                 while (!fitting){
 
                     if((pp_containerWidth > windowWidth)){
-                        imageWidth = (windowWidth - 60);
+                        imageWidth = (windowWidth - 60 - pp_attributesWidth);
                         imageHeight = (height/width) * imageWidth;
-                    }
-
-                    if((pp_containerHeight > windowHeight)){
+                    } else if((pp_containerHeight > windowHeight)){
                         imageHeight = (windowHeight - 80 );
                         imageWidth = (width/height) * imageHeight;
                     }
@@ -881,7 +915,7 @@ Version: 3.1.6
         * @param height {integer} Height of the item to be opened
         */
         function _getDimensions(width,height){
-            width = parseFloat(width);
+            width = parseFloat(width) + pp_attributesWidth;
             height = parseFloat(height);
 
             // Get the details height, to do so, I need to clone it since it's invisible
@@ -988,7 +1022,7 @@ Version: 3.1.6
                 itemWidth = 52+5; // 52 beign the thumb width, 5 being the right margin.
                 navWidth = (settings.theme == "facebook" || settings.theme == "pp_default") ? 50 : 30; // Define the arrow width depending on the theme
 
-                itemsPerPage = Math.floor((pp_dimensions['containerWidth'] - 100 - navWidth) / itemWidth);
+                itemsPerPage = Math.floor((pp_dimensions['containerWidth'] - 100 - pp_attributesWidth - navWidth) / itemWidth);
                 itemsPerPage = (itemsPerPage < pp_images.length) ? itemsPerPage : pp_images.length;
                 totalPage = Math.ceil(pp_images.length / itemsPerPage) - 1;
 
@@ -1005,7 +1039,7 @@ Version: 3.1.6
 
                 // Set the proper width to the gallery items
                 $pp_gallery
-                    .css('margin-left',-((galleryWidth/2) + (navWidth/2)))
+                    .css('margin-left',-((galleryWidth/2) + (navWidth/2) + (settings.isShowAttributes ? pp_attributesWidth/2 * (settings.attributesPosition == 'left' ? -1 : 1) : 0)))
                     .find('div:first').width(galleryWidth+5)
                     .find('ul').width(fullGalleryWidth)
                     .find('li.selected').removeClass('selected');
@@ -1034,6 +1068,11 @@ Version: 3.1.6
 			$selfPp.initOnHoverPreview($(caller), pp_settings.galleryId);
 
             $pp_pic_holder = $('.pp_pic_holder') , $ppt = $('.ppt'), $pp_overlay = $('div.pp_overlay'); // Set my global selectors
+            
+            // disable contextmenu
+            if (settings.isDisableRightClick) {
+                $pp_pic_holder.off('contextmenu').on('contextmenu', function(e){return false;});
+            }
 
             // Inject the inline gallery!
             if(isSet && settings.overlay_gallery) {
@@ -1060,7 +1099,7 @@ Version: 3.1.6
 
                 toInject = settings.gallery_markup.replace(/{gallery}/g,toInject);
 
-                $pp_pic_holder.find('#pp_full_res').after(toInject);
+                $pp_pic_holder.find(settings.isShowAttributes && settings.attributesPosition == 'right' ? '.pp_attributes_container' : '#pp_full_res').after(toInject);
 
                 $pp_gallery = $('.pp_pic_holder .pp_gallery'), $pp_gallery_li = $pp_gallery.find('li'); // Set the gallery selectors
 

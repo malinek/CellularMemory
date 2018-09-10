@@ -81,6 +81,7 @@
                             SupsysticGallery.Loader.hide();
                             //location.reload(true);
                             window.location.search = 'page=supsystic-gallery&module=galleries&action=view&gallery_id='+defaults.galleryId;
+                            location.reload(true);
                         }
                     }
 

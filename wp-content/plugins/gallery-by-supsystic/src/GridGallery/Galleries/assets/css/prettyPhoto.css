@@ -410,6 +410,51 @@
 			position: absolute;
 			z-index: 10000;
 		}
+		.pp_attributes_container {
+			margin: 0;
+			padding: 0;
+			float: left;
+			position: relative;
+		}
+		#ppCustomAttributes {
+			padding-left: 10px;
+			overflow-y: auto;
+		}
+		#ppCustomAttributes .pp_attribute_name {
+			font-family: Arial;
+			font-style: italic;
+			font-weight: bold;
+			font-size: 12px; 
+		}
+		#ppCustomAttributes .pp_attribute_value {
+			padding-left: 10px;
+			font-family: Arial;
+			font-style: normal;
+			font-size: 12px; 
+		}
+		#ppAttributeButton {
+			padding-left: 10px;
+			position: absolute;
+			/*bottom: 2px;*/
+		}
+		.grid-gallery-filter, .grid-gallery-search {
+			float: left;
+		}
+		.grid-gallery-filter option {
+			padding: 2px; 
+		}
+		.gg-filter-attributes-names, .gg-filter-attributes-values {
+			width: 150px;
+			float:  left;
+			margin: 0 10px 15px 0;
+		}
+		.gg-search-keywords, .gg-search-btn, .gg-filter-attributes-clear {
+			float: left;
+			margin: 0 10px 15px 0;
+		}
+		.gg-search-keywords {
+			width: 150px !important;
+		}
 
 			.pp_gallery div {
 				float: left;

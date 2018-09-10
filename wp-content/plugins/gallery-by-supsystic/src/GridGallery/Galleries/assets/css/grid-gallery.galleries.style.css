@@ -713,7 +713,7 @@ div.gg-shortcode {
 }
 
 #themeDialog .grid-gallery-caption img {
-    width:262px;
+    width: 262px;
     height: 170px;
 }
 .settings-wrap {
@@ -721,6 +721,44 @@ div.gg-shortcode {
 }
 .settings-wrap .form-gall-settings {
     border: none !important;
+}
+.gg-attribute-rename {
+    padding: 5px 10px 0 10px;
+}
+.gg-hidden-entity {
+    display: none;
+}
+.gg-category {
+    width: 100%;
+    border: 1px solid #000;
+    margin: 0 0 10px -5px;
+}
+.gg-category .gg-sort-entities {
+    margin: 0;
+    height: 220px;
+    width: 100%;
+    overflow-y: scroll;
+}
+.gg-category .gg-category-caption {
+    width:100%;
+    background:#e5e5e5;
+}
+.gg-category-caption .gg-rename-category {
+    text-decoration: none;
+    color: #777;
+    font-weight: 500;
+}
+.gg-wraper-option-links {
+    position: relative;
+    padding-right: 20px;
+    text-align: left;
+}
+.gg-wraper-option-links .gg-option-links {
+    text-decoration: none;
+    color: #777;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
 }
 .gg-wraper-anchor-nav-links {
     position: relative;
@@ -741,7 +779,10 @@ div.gg-shortcode {
     border-right: 1px solid #aaa;
 }
 .gg-wraper-anchor-nav-links .gg-anchor-nav-links.active,
-.gg-wraper-anchor-nav-links .gg-anchor-nav-links:hover {
+.gg-wraper-anchor-nav-links .gg-anchor-nav-links:hover,
+.gg-wraper-option-links .gg-option-links.active,
+.gg-wraper-option-links .gg-option-links:hover,
+.gg-rename-category:hover {
     color: #000;
     text-decoration: underline;
 }
@@ -845,11 +886,44 @@ div.gg-shortcode {
             box-shadow: none !important;
 }
 .gg-sett-pagination-wrapper .gg-sett-pagination-link {
-    margin: 0px 1px 5px;
+    margin: 0px 1px 0px;
 }
 .gg-pagination-per-page-lbl {
-    margin: 3px 20px 3px 0;
+    margin: 3px 5px 3px 10px;
     float: left;
+}
+
+.gg-settings-row {
+    font-size: 0;
+    line-height: 0;
+    text-align: justify;
+    padding: 0 0 0 25px;
+}
+.gg-settings-row:after {
+    content: '';
+    width: 100%;
+    display: inline-block;
+}
+.gg-settings-block {
+    font-size: 14px;
+    line-height: normal;
+    display: inline-block;
+    padding: 0;
+}
+.gg-sort-entities .selected {
+    background: rgb(204, 204, 204);
+}
+.gg-sort-entities li {
+    margin: 0;
+}
+.button-invisible {
+    border: 0 !important;
+    padding: 0 !important;
+}
+div.image-meta-list {
+    height: 400px;
+    width: 520px;
+    overflow-y: scroll;
 }
 .ggSettingsDisplNone {
 	display: none !important;

@@ -71,11 +71,13 @@ tr.ui-search-toolbar select {margin: 1px 0 0 0}
     padding-left: 0 !important;
 }
 
-.ui-jqgrid-labels-custom th:hover,
 .ui-sortable tr:hover,
 .ui-sortable tr:hover td,
 .ui-sortable tr:hover th{
     border: 1px none rgb(231, 231, 231) !important;
+    background-color: rgb(231, 231, 231) !important;
+}
+.ui-jqgrid-labels-custom th:hover {
     background-color: rgb(231, 231, 231) !important;
 }
 

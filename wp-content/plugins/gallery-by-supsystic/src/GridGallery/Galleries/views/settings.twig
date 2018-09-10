@@ -311,6 +311,7 @@
 		<a href="#gg-anl-popup" class="gg-anchor-nav-links">{{ translate('Lightbox')}}</a>
 		<a href="#gg-anl-lazyload" class="gg-anchor-nav-links">{{ translate('LazyLoad')}}</a>
 		<a href="#gg-anl-preloader" class="gg-anchor-nav-links">{{ translate('Loader')}}</a>
+		<a href="#gg-anl-attributes" class="gg-anchor-nav-links">{{ translate('Attributes')}}</a>
 		<a href="#gg-anl-caption-add-sett" class="gg-anchor-nav-links">{{ translate('Caption Transformations')}}</a>
 	</div>
     <div class="settings-wrap" data-leave-confirm="{{ translate('Your changes not saved. You really want to leave without saving?') }}">
@@ -1141,6 +1142,17 @@
                             'box-disableHistory'
                         ) }}
 
+                        {# Disable popup changing url in browser #}
+                        {{ form.row(
+                            translate('Disable change url'),
+                            form.checkbox(
+                                'box[disableChangeUrl]',
+                                'true',
+                                settings.box.disableChangeUrl == 'true' ? {'checked':'checked'} : {}
+                            ),
+                            'box-disableChangeUrl'
+                        ) }}
+
                         {# Popup pro-option present #}
                         {% block popupAfter %}
                             {# Popup video size #}
@@ -1316,6 +1328,21 @@
                         </tr>
                     </tbody>
                 {% endif %}
+                </table>
+            {% endblock %}
+
+            {% block attributes %}
+                <table class="form-table" name="attributes" id="gg-anl-attributes">
+                    <thead>
+                    	{{ form.rowpro(translate('Custom Attributes'),
+							'utm_source=plugin&utm_campaign=gallery',
+							'customAttributes',
+							form.radio('attributes[enabled]', 'true', {'id':'attributes-enable', 'disabled': 'disabled'}) ~
+							form.label(translate('Enable'),	'attributes-enable') ~
+							form.radio('attributes[enabled]', 'false', {'id':'attributes-disable', 'checked':'checked', 'disabled': 'disabled'}) ~
+							form.label(translate('Disable'), 'attributes-disable'),	true, 1
+						) }}
+                    </thead>
                 </table>
             {% endblock %}
 

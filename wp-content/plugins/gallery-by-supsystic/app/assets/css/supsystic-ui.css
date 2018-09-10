@@ -305,8 +305,8 @@ input[type="color"] {
 
 .column-icon .attachment-thumbnail {
     margin-top: 10px;
-    width: 75px;
-    height: 75px;
+    width: 150px;
+    height: 150px;
     display: inline-block;
 }
 
@@ -323,6 +323,15 @@ input[type="color"] {
 
 td.title.column-title {
     width: auto !important;
+}
+td.top-align {
+    vertical-align: top;
+}
+td.title.column-textarea {
+    padding: 1px 2px 1px 2px !important;
+}
+td.title.column-textarea textarea {
+    width: 100%;
 }
 /*Admin footer links*/
 .swrAdminFooterCell {
@@ -872,3 +881,7 @@ table[name="cats"] {
  outline: none!important;
 }
 /*****/
+
+#galleries a{
+    color: black;
+}

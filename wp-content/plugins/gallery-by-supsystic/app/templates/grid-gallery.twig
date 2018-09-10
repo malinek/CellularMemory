@@ -130,7 +130,7 @@
                     {% endif %}#}
                 </ul>
             </nav>
-            <div class="supsystic-container supsystic-item supsystic-panel">
+            <div class="supsystic-container supsystic-item supsystic-panel" {% if request.query.module == 'galleries' %}style="min-height: 500px"{% endif %}>
                 {% block preview %}{% endblock %}
                 {% block content %}{% endblock %}
                 <div class="clear"></div>

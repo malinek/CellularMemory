@@ -191,14 +191,61 @@ class GridGallery_Galleries_Controller extends GridGallery_Core_BaseController
 				$gallery->photos = array_slice($gallery->photos, $fromImg, $imgPerPage, true);
 			}
 		}
+        $galleries = $this->getModel('galleries')->getList();
 		return array(
 			'gallery'   => $gallery,
 			'viewType'  => $request->query->get('view', self::STD_VIEW),
 			'ajaxUrl'   => admin_url('admin-ajax.php'),
 			'settings'  => $settings->data,
+            'galleries'  => $galleries,
 			'paginationSettings' => isset($paginationSettings) ? $paginationSettings : null,
 		);
 	}
+
+    protected function getSortActionParams($request) {
+        if (!$galleryId = $request->query->get('gallery_id')) {
+            $this->redirect($this->generateUrl('galleries', 'index'));
+        }
+
+        if ( !$gallery = $this->getModel('galleries')->getById((int)$galleryId) ) {
+            $this->redirect($this->generateUrl('galleries', 'index'));
+        }
+
+        $settings = $this->getModel('settings')->get($galleryId);
+        if (!is_object($settings) || null === $settings->data) {
+            $config = $this->getEnvironment()->getConfig();
+            $config->load('@galleries/settings.php');
+
+            $settings = new stdClass;
+
+            $settings->id = null;
+            $settings->data = unserialize($config->get('gallery_settings'));
+        }
+
+        $position = $this->getModel('position');
+
+        if (is_object($gallery) && (property_exists($gallery, 'photos') && is_array($gallery->photos))) {
+            foreach ($gallery->photos as $index => $row) {
+                $gallery->photos[$index] = $position->setPosition(
+                    $row,
+                    'gallery',
+                    $gallery->id
+                );
+            }
+
+            //ASC && DESC sort
+            if(isset($settings->data['sort'])){
+                $gallery->photos = $position->sort($gallery->photos, $settings->data['sort']);
+            } else {
+                $gallery->photos = $position->sort($gallery->photos);
+            }
+        }     
+        return array(
+            'gallery'   => $gallery,
+            'ajaxUrl'   => admin_url('admin-ajax.php'),
+            'settings'  => $settings->data,
+        );
+    }
 
     /**
      * View Action
@@ -214,6 +261,23 @@ class GridGallery_Galleries_Controller extends GridGallery_Core_BaseController
         return $this->response(
             '@galleries/view.twig',
 			$params
+        );
+    }
+
+    /**
+     * SortMode Action
+     * Renders single gallery page
+     *
+     * @param Rsc_Http_Request $request
+     * @return Rsc_Http_Response
+     */
+    public function sortAction(Rsc_Http_Request $request) {
+
+        $params = $this->getSortActionParams($request);
+
+        return $this->response(
+            '@galleries/sort.twig',
+            $params
         );
     }
 
@@ -748,8 +812,21 @@ class GridGallery_Galleries_Controller extends GridGallery_Core_BaseController
             do_action('sss_show_at_grid_gallery', $postData['socialSharing']['projectId']);
         }
 
-        $settings->settingsDiff($stats, $galleryId, $request->post->all());
-        $data = $settings->getCatsFromPreset($request->post->all(), $config);
+        $allSettings = $request->post->all();
+        if(isset($allSettings['attributes']) && isset($allSettings['attributes']['order'])) {
+            $allSettings['attributes']['order'] = json_decode($allSettings['attributes']['order']);
+            if(isset($allSettings['attributes']['rename'])) {
+                $rename = json_decode($allSettings['attributes']['rename']);
+                if(class_exists('GridGalleryPro_Galleries_Model_Attributes')) {
+                    $attributesModel = new GridGalleryPro_Galleries_Model_Attributes();
+                    $attributesModel->renameAttributes($galleryId, $rename);
+                }
+                unset($allSettings['attributes']['rename']);
+            }
+        }
+        
+        $settings->settingsDiff($stats, $galleryId, $allSettings);
+        $data = $settings->getCatsFromPreset($allSettings, $config);
         $data = $settings->getPagesFromPreset($data, $config);
 
 
@@ -1321,7 +1398,7 @@ class GridGallery_Galleries_Controller extends GridGallery_Core_BaseController
         $mydata = array_merge($mydata, $sort_fields);
 
 		// for pagination
-		if($sort_fields['sort']['sortby'] == 'postion') {
+		/*if($sort_fields['sort']['sortby'] == 'postion') {
 			$resourceModel = $this->getModel('resources');
 			$photoRows = $resourceModel->getPhotoIdsByGalleryId($galleryId);
 			$positionModel = $this->getModel('position');
@@ -1330,7 +1407,7 @@ class GridGallery_Galleries_Controller extends GridGallery_Core_BaseController
 				$sortType = 0;
 			}
 			$positionModel->cleanAndCreate($galleryId, $photoRows, $sortType);
-		}
+		}*/
 
         $this->getModel('settings')->save($galleryId, $mydata);
         $this->getModule('galleries')->cleanCache($galleryId);

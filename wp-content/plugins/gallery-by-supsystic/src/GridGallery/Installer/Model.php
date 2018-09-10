@@ -85,6 +85,8 @@ class GridGallery_Installer_Model extends GridGallery_Core_BaseModel
             $this->prefix('{prefix}gg_galleries_resources'),
             $this->prefix('{prefix}gg_settings_sets'),
             $this->prefix('{prefix}gg_galleries'),
+            $this->prefix('{prefix}gg_tags'),
+            $this->prefix('{prefix}gg_attributes'),
         );
         if(!in_array($this->prefix($table), $importantTable)){
             $query = 'DROP TABLE IF EXISTS ' . $this->prefix($table);

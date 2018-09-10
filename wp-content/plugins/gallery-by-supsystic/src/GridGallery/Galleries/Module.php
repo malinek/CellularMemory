@@ -99,7 +99,7 @@ class GridGallery_Galleries_Module extends GridGallery_Core_Module
 
     public function getFrontendCSS() {
         return array(
-			'//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css',
+			$this->getEnvironment()->getConfig()->get('plugin_url') . '/app/assets/css/libraries/fontawesome/font-awesome.min.css',
             $this->getLocationUrl() . '/assets/css/grid-gallery.galleries.frontend.css',
             $this->getLocationUrl() . '/assets/css/grid-gallery.galleries.effects.css',
             $this->getLocationUrl() . '/assets/css/jquery.flex-images.css',

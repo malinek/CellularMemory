@@ -616,4 +616,106 @@ class GridGallery_Photos_Model_Photos extends Rsc_Mvc_Model
 		$res2 = $this->db->get_var($query->build());
 		return intval($res2);
 	}
+
+    private function rotateImage($pathfile, $degrees) {
+        $imgParams = getimagesize($pathfile);
+        $fileType = $imgParams[2];
+
+        $imgHandle = null;
+        switch($fileType) {
+            case 1:
+                if(function_exists('imagecreatefromgif')) {
+                    $imgHandle = imagecreatefromgif($pathfile);
+                }
+                break;
+            case 2:
+                if(function_exists('imagecreatefromjpeg')) {
+                    $imgHandle = imagecreatefromjpeg($pathfile);
+                }
+                break;
+            case 3:
+                if(function_exists('imagecreatefrompng')) {
+                    $imgHandle = imagecreatefrompng($pathfile);
+                }
+            case 4:
+                if(function_exists('imagecreatefrompng')) {
+                    $imgHandle = imagecreatefrompng($pathfile);
+                }
+                break;
+            case 6:
+                if(function_exists('imagecreatefrombmp')) {
+                    $imgHandle = imagecreatefrombmp($pathfile);
+                }
+                break;
+            case 8:
+                if(function_exists('imagecreatefromwbmp')) {
+                    $imgHandle = imagecreatefromwbmp($pathfile);
+                }
+                break;
+            default:
+                $imgHandle = null;
+                break;
+        }
+        if(!$imgHandle) return false;
+ 
+        $imgRotated = imagerotate($imgHandle, $degrees, 0);
+
+        switch($fileType) {
+            case 1:
+                if(function_exists('imagegif')) {
+                    imagegif($imgRotated, $pathfile);
+                }
+                break;
+            case 2:
+                if(function_exists('imagejpeg')) {
+                    imagejpeg($imgRotated, $pathfile, 100);
+                }
+                break;
+            case 3:
+                if(function_exists('imagepng')) {
+                    imagepng($imgRotated, $pathfile);
+                }
+            case 4:
+                if(function_exists('imagepng')) {
+                    imagepng($imgRotated, $pathfile);
+                }
+                break;
+            case 6:
+                if(function_exists('imagebmp')) {
+                    imagebmp($imgRotated, $pathfile);
+                }
+                break;
+            case 8:
+                if(function_exists('imagewbmp')) {
+                    imagewbmp($imgRotated, $pathfile);
+                }
+                break;
+            default:
+                $imgHandle = null;
+                break;
+        }
+        return true;
+    }
+
+    public function rotateAttachment($attachment, $rotateType) {
+        $attachmentId = $attachment['id'];
+
+        $uploadDir = wp_upload_dir();
+        $basedir = $uploadDir['basedir'];
+        $pathfile = get_attached_file($attachmentId);
+
+        $dirfile = dirname($pathfile);
+        $filename = basename($pathfile);
+        $name = substr($filename, 0, strpos($filename, '.'));
+
+        $degrees = (isset($rotateType) && $rotateType == 'clockwise' ? -90 : 90);
+        $files = glob($dirfile.'/'.$name.'*');
+
+        if(isset($files) && is_array($files)) {
+            foreach($files as $key => $path) {
+                $this->rotateImage($path, $degrees);
+            }
+        }
+        return true;
+    }
 }

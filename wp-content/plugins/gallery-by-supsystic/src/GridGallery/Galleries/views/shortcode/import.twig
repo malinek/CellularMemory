@@ -95,3 +95,58 @@
     </div>
 {% endmacro %}
 
+{% macro view_dialogs(gallery_id) %}
+    {% import '@core/form.twig' as form %}
+    {% import _self as importTypes %}
+    <div id="importDialog" title="{{ translate('Select source to import from') }}" style="display: none;">
+        {{ importTypes.show(400, gallery_id) }}
+    </div>
+
+    <div id="videoUrlAddDialog" title="{{ 'Add video url' }}" style="display:none;" data-gallery-id="{{ gallery_id }}">
+        <div class="sggVideoUrlAddWr">
+            <div class="sggTableRow">
+                <div class="sggTableColumn6">
+                    <div class="sggDlgVideoTypeH3">{{ translate('Video type:') }}</div>
+                </div>
+                <div class="sggTableColumn6">
+                    {{(
+                        form.radio(
+                            'sggDlgVideoType',
+                            'youtube',
+                            {'id':'sggDlgYoutubeVideoType', 'class':'sggDlgVideoTypeRadio', 'checked':'checked'}
+                        ) ~
+                        form.label(
+                            translate('Youtube url'),
+                            'sggDlgYoutubeVideoType'
+                        ) ~ '<br/>' ~
+                        form.radio(
+                            'sggDlgVideoType',
+                            'vimeo',
+                            {'id':'sggDlgVimeoVideoType', 'class':'sggDlgVideoTypeRadio',}
+                        ) ~
+                        form.label(
+                            translate('Vimeo url'),
+                            'sggDlgVimeoVideoType'
+                        )
+                    ) |raw }}
+                </div>
+            </div>
+            <div class="sggTableRow">
+                <div class="sggTableColumn6">
+                    <div class="sggDlgVideoTypeH3">{{ translate('Video url:') }}</div>
+                </div>
+                <div class="sggTableColumn6">
+                    {{
+                        form.input(
+                            'text',
+                            'sggDlgUrlVideoValue',
+                            '',
+                            {'id': 'sggDlgUrlVideoInp', 'class': '', }
+                        )
+                    }}
+                </div>
+            </div>
+            <div class="sggTableRow sggAduHiden" id="sggAduErrorText"></div>
+        </div>
+    </div>
+{% endmacro %}

@@ -509,6 +509,7 @@
 				previous: self.popupTranslates.previous,
 				next: self.popupTranslates.next,
 				close: self.popupTranslates.close,
+                'isDisableRightClick': this.$container.attr('data-disable-right-click') == 'true',
 				title: function() {
 					return self.getPopupTitle($(this));
 				},
@@ -597,6 +598,10 @@
 					}, '.pp_content_container .pp_description');
 				}
 
+                if(this.$container.attr('data-show-buttonlink-in-popup') == 1 && window.prettyPhotoDetailLink) {
+                   this.loadButtonsFontFamily(this.$container.attr('data-buttonlink-font'), null);
+                }
+
 				this.$prettyPhoto = this.$container
 					.find(prettyPhotoItemSelector)
                     .off('click')
@@ -614,7 +619,13 @@
                         getImageDimensions : getImageDimension,
 						'is_lazy_load': isLazyLoad,
 						'ppTranslates': self.popupTranslates,
+                        'isDisableRightClick': this.$container.attr('data-disable-right-click') == 'true',
 						'isShowRotateBtn': this.$container.attr('data-show-rotate-btn-in-popup') == 1,
+                        'isShowAttributes': this.$container.attr('data-show-attributes-in-popup') == 1,
+                        'attributesPosition': this.$container.attr('data-attributes-position'),
+                        'attributesWidth': this.$container.attr('data-attributes-width'),
+                        'isShowButtonLink': this.$container.attr('data-show-buttonlink-in-popup') == 1,
+                        'buttonLinkStyle': this.$container.attr('data-buttonlink-style'),
 						'isShowLinkBtn': this.$container.attr('data-show-link-btn-in-popup') == 1,
 						'isShowHovThumbnail': this.$container.attr('data-show-thumb-hov-in-popup') == 1,
 						'galleryId': this.$container.attr('data-gg-id'),
@@ -640,6 +651,10 @@
 							if(self.$container.attr('data-show-link-btn-in-popup') == 1 && window.prettyPhotoDetailLink) {
 								window.prettyPhotoDetailLink(element);
 							}
+                            if(self.$container.attr('data-show-attributes-in-popup') == 1 && window.prettyPhotoAttributes) 
+                            {
+                                window.prettyPhotoAttributes(element, self.$container);
+                            }
 
                             //Enable/Disable stop slideshow on mouse hover
                             if(popupHoverStop){
@@ -696,6 +711,7 @@
             this.initPhotobox = true;
 			photoBoxConfig = {
 				autoplay: slidePlayAuto,
+                'isDisableRightClick': this.$container.attr('data-disable-right-click') == 'true',
 				thumb: function(link) {
 					if(self.$container.data('caption-buider') == '1' && self.$container.data('caption-builder-icons') == 1) {
 						return link.closest('.grid-gallery-caption').find('img')[0];
@@ -2186,68 +2202,71 @@
 
         var galleryId = this.$container.attr('data-gg-id')
         ,   galleryOpenPopupHashRegex = new RegExp('gg-' + galleryId + '(?:-(\\d+))*')
-        ,   regexFoundGalleryImageId = galleryOpenPopupHashRegex.exec(hash);
-        // if image id not exits
-        if(!regexFoundGalleryImageId || regexFoundGalleryImageId.length < 2 || !regexFoundGalleryImageId[1]) {
-            return;
-        }
-		this.popupIsOpened = true;
+        ,   regexFoundGalleryImageId = galleryOpenPopupHashRegex.exec(hash)
+		,   changedUrlDisabled = this.$container.attr('data-popup-disable-changed-url');
 
-		if (this.ignoreStateChange) {
-			this.ignoreStateChange = false;
-			return;
-		}
-		var queryParams = this.updateQueryParams(window.location.search, {'_gallery': hash}),
-			stateUrl = window.location.pathname + queryParams;
+		if(changedUrlDisabled !== 'true') {
+			// if image id not exits
+			if (!regexFoundGalleryImageId || regexFoundGalleryImageId.length < 2 || !regexFoundGalleryImageId[1]) {
+				return;
+			}
+			this.popupIsOpened = true;
 
-		this.historyStateChange = true;
+			if (this.ignoreStateChange) {
+				this.ignoreStateChange = false;
+				return;
+			}
+			var queryParams = this.updateQueryParams(window.location.search, {'_gallery': hash}),
+				stateUrl = window.location.pathname + queryParams;
 
-		if (!this.popupIsInit) {
+			this.historyStateChange = true;
 
-			if (queryParams === document.location.search) {
+			if (!this.popupIsInit) {
 
-				History.replaceState({
-					type: 'sc-gallery',
-					hash: hash,
-					state: 'close'
-				}, document.title, window.location.pathname + this.updateQueryParams(window.location.search, {'_gallery': null}));
+				if (queryParams === document.location.search) {
 
-				History.pushState({
-					type: 'sc-gallery',
-					hash: hash,
-					state: 'init'
-				}, document.title,  stateUrl);
+					History.replaceState({
+						type: 'sc-gallery',
+						hash: hash,
+						state: 'close'
+					}, document.title, window.location.pathname + this.updateQueryParams(window.location.search, {'_gallery': null}));
+
+					History.pushState({
+						type: 'sc-gallery',
+						hash: hash,
+						state: 'init'
+					}, document.title, stateUrl);
+
+				} else {
+
+					History.replaceState({
+						type: 'sc-gallery',
+						hash: hash,
+						state: 'init'
+					}, document.title, stateUrl);
+				}
+
+				this.popupIsInit = true;
 
 			} else {
 
-				History.replaceState({
-					type: 'sc-gallery',
-					hash: hash,
-					state: 'init'
-				}, document.title, stateUrl);
+				if (this.disablePopupHistory) {
+					History.replaceState({
+						type: 'sc-gallery',
+						hash: hash,
+						state: 'change'
+					}, document.title, stateUrl);
+				} else {
+					History.pushState({
+						type: 'sc-gallery',
+						hash: hash,
+						state: 'change'
+					}, document.title, stateUrl);
+				}
 			}
 
-			this.popupIsInit = true;
-
-		} else {
-
-			if (this.disablePopupHistory) {
-				History.replaceState({
-					type: 'sc-gallery',
-					hash: hash,
-					state: 'change'
-				}, document.title, stateUrl);
-			} else {
-				History.pushState({
-					type: 'sc-gallery',
-					hash: hash,
-					state: 'change'
-				}, document.title, stateUrl);
-			}
+			this.historyStateChange = false;
 		}
-
-		this.historyStateChange = false;
-
 	};
 
     Gallery.prototype.clearPopUpHash = function() {
@@ -2326,7 +2345,9 @@
 					setTimeout(function() {
 						self.lazyLoadTriggerHandler();
                         setTimeout(function() {
-                            self.wookmark.trigger('refreshWookmark');
+                            if(self.wookmark) {
+                                self.wookmark.trigger('refreshWookmark');
+                            }
                         }, 50);
 					}, 450); // animation transition time
 					break;
@@ -2351,11 +2372,13 @@
 			// lazy load not work for image on hover
 			return;
 		}
+        var showMoreCategory = this.$container.find('.showMoreCategory');
 
 		self.ggLazyTimeOut = null;
-		$('.ggLazyImg').ggLazyLoad({
+		this.$container.find('.ggLazyImg').ggLazyLoad({
 			'data_attribute': 'gg-real-image-href',
 			'threshold': 200,
+            'skip_invisible': (showMoreCategory.length > 0),
 			'load': function(event) {
 				self.lazyLoadDistanceRefresh();
                 $(this).closest('div .crop').css('height', '');

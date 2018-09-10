@@ -85,6 +85,14 @@
  PRIMARY KEY (`id`)
 ) AUTO_INCREMENT=0 DEFAULT CHARSET=utf8',
 
+    '{prefix}gg_attributes' => 'CREATE TABLE `{prefix}gg_attributes` (
+ `id` int(11) NOT NULL AUTO_INCREMENT,
+ `pid` int(11) NOT NULL,
+ `attributes` text NOT NULL,
+ PRIMARY KEY (`id`),
+ INDEX (`pid`)
+) AUTO_INCREMENT=0 DEFAULT CHARSET=utf8',
+
 	'{prefix}gg_image_optimize' => 'CREATE TABLE `{prefix}gg_image_optimize` (
  `gallery_id` INT(11) NOT NULL,
  `photo_count` INT(11) DEFAULT 0,
