@@ -64,7 +64,7 @@
           'order' => 'ASC',
           'meta_query' => array(
             array(
-              'key' => 'workshop_start_date',
+              'key' => 'workshop_end_date',
               'compare' => '>',
               'value' => $today,
               'type' => 'numeric'

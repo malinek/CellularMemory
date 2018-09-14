@@ -140,9 +140,16 @@
   color: $buttontextgreen!important;
   border: solid 1px!important;
   border-radius: 4px!important;
-  transition: all 250ms ease;
+  transition: all 250ms ease!important;
   border-color: $buttongreenborder!important;
   background-color: $brightergreen!important;
+}
+
+.wpforms-form button:hover {
+  transform: translateY(3px)!important;
+  color: $buttontextgreen!important;
+  border-color: $buttongreenborder!important;
+  background-color: $buttongreenhover!important;
 }
 
 @media (max-width: 600px) {
