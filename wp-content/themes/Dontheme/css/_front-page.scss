@@ -91,7 +91,7 @@
 .intro-effects-bg-image {
   height: 80vh;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center 0px;
   background-attachment: fixed;
   background-size: cover;
   position: relative;
@@ -110,19 +110,20 @@
   padding: 10px 10px 10px 10px;
   box-shadow: 0px 0px 20px 0px rgba(0,0,0,.9);
   background: rgba(166, 194, 74, 0.3);
-  opacity: 0;
+  /*opacity: 0;
   transition: 1000ms ease-in-out; 
-  transform: translateY(60px);
+  transform: translateY(60px); */
+
 }
 
 .intro-effects-text ul {
   padding-left: 0px;
 }
 
-.is-showing {
+/*.is-showing {
   opacity: 1;
   transform: translateY(0px);
-}
+}*/
 
 .intro-effects-text li {
   color: $lightlightpurple;
@@ -146,7 +147,7 @@
   transform: translateX(-50%);
 }
 
-.f-page-button {
+/*.f-page-button {
   opacity: 0;
   transition: all 800ms ease-in-out;
   transform: translateY(-30px)
@@ -155,7 +156,7 @@
 .button-scale {
   opacity: 1;
   transform: translateY(0px)
-}
+} */
 
 /* ---------------------------- */
 
