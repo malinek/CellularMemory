@@ -31,18 +31,9 @@
       <li>Vulnerability, Taking Ownership of your Own</li>
       <li>Reactions &amp; Feelings</li>
     </ul>
-
-    <!--<h4><i class="far fa-heart"></i>Clear Thinking, Living Passionately</h4>
-    <h4><i class="far fa-heart"></i>Self Love, Sweetness &amp; Gratitude</h4>
-    <h4><i class="far fa-heart"></i>Energy as the Universal Language</h4>
-    <h4><i class="far fa-heart"></i>Divine Alchemy; Body/Mind Ressurrection</h4>
-    <h4><i class="far fa-heart"></i>Transforming Victim/Blame Consciousness</h4>
-    <h4><i class="far fa-heart"></i>Understanding the Way the Universe Works</h4>
-    <h4><i class="far fa-heart"></i>Vulnerability, Taking Ownership of your Own</h4>
-    <h4><i class="far fa-heart"></i>Reactions &amp; Feelings</h4> -->
   </div>
   <div class="button-front-page">
-    <button type="button" class="big-purple-button f-page-button"><a href="<?php echo site_url('/about/tcm') ?>">Read more</a></button>
+    <button type="button" class="big-purple-button"><a href="<?php echo site_url('/about/tcm') ?>">Read more</a></button>
   </div>
 </div>
 

@@ -89,7 +89,7 @@
 /* ---------------------------------- */
 
 .intro-effects-bg-image {
-  height: 80vh;
+  height: 500px;
   background-repeat: no-repeat;
   background-position: center 0px;
   background-attachment: fixed;
@@ -123,7 +123,7 @@
 /*.is-showing {
   opacity: 1;
   transform: translateY(0px);
-}*/
+} */
 
 .intro-effects-text li {
   color: $lightlightpurple;
@@ -133,16 +133,12 @@
   letter-spacing: 3px;
 }
 
-.intro-effects-text .fa-heart {
-  color: $lightlightpurple;
-}
-
 .button-front-page {
-  /*display: block;
+  display: block;
   text-align: center;
-  margin: 0px auto 50px auto; */
+  margin: 0px auto 50px auto;
   position: absolute;
-  bottom: 8%;
+  bottom: -2%;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -164,14 +160,6 @@
 
   .intro-effects-bg-image {
     background-attachment: scroll;
-  }
-
-  .intro-effects-text {
-    opacity: 1;
-  }
-
-  .f-page-button {
-    opacity: 1;
   }
 }
 
@@ -447,72 +435,5 @@
     text-align: left;
   }
 }
-
-
-
-
-
-
-/* ----------------------------- */
-
-/*@media (max-width: 1252px) {
-
-  .welcome-image {
-    background-attachment: scroll;
-  }
-
-  .welcome-text h1 {
-    left: 30%;
-    right: 30%;
-  }
-}
-
-@media (max-width: 945px) {
-
-  .welcome-text h1 {
-    left: 25%;
-    right: 25%;
-  }
-}
-
-@media (max-width: 760px) {
-
-  .welcome-text h1 {
-    left: 20%;
-    right: 20%;
-  }
-}
-
-@media (max-width: 635px) {
-
-  .welcome-text h1 {
-    left: 15%;
-    right: 15%;
-  }
-}
-
-@media (max-width: 635px) {
-
-  .welcome-text h1 {
-    left: 10%;
-    right: 10%;
-  }
-}
-
-@media (max-width: 480px) {
-
-  .welcome-text h1 {
-    left: 0%;
-    right: 0%;
-  }
-}
-
-@media (max-width: 388px) {
-
-  .welcome-text h1 {
-    font-size: 38px;
-    top: 50%;
-  }
-} */
 
 

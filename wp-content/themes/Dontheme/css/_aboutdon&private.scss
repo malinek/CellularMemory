@@ -45,6 +45,17 @@
   font-size: 16px;
 }
 
+.about-don-content-col a {
+  text-decoration: underline;
+  color: $darkpurple;
+  transition: color 800ms ease;
+}
+
+.about-don-content-col a:hover {
+  color: $lightpurple;
+  transition: color 800ms ease;
+}
+
 /** Media queries for both about don and private sessions pages **/
 @media (max-width: 768px) {
 
