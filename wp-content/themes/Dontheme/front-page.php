@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 
-<div class="welcome-image" style="background-image: url(<?php echo get_theme_file_uri('/images/header3.jpg') ?>);">
+<div class="welcome-image" style="background-image: url(<?php echo get_theme_file_uri('/images/donheader.jpg') ?>);">
   <div class="welcome-text">
     <h1>Clean out your closet and open up to the <br> sweetness and love of the universe<br>Come on in<br>Everybody is Welcome</h1>
   </div>
