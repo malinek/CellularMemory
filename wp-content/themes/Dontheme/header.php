@@ -10,7 +10,7 @@
   <!-- NAVIGATION MENU -->
   <header>
     <div class="container">
-      <a href="<?php echo site_url() ?>"><img src="<?php echo get_theme_file_uri('/images/logo2.png')?>" class="logo"></a>
+      <a href="<?php echo site_url() ?>"><img src="<?php echo get_theme_file_uri('/images/logo.png')?>" class="logo"></a>
 
       <nav class="site-nav">
         <ul>        
