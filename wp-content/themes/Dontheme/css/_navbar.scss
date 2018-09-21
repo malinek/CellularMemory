@@ -134,7 +134,7 @@ header::after {
 }  
 
 /* MEDIA QUERY FOR LAPTOPS */
-@media screen and (min-width: 1060px) {
+@media screen and (min-width: 1075px) {
 
   .container {
     width: 98%;
@@ -160,7 +160,7 @@ header::after {
 
   .site-nav a {
     padding: 22px 0px 22px 0px;
-    margin-left: 30px;
+    margin-left: 24px;
     transition: color 800ms ease;
     -webkit-transition: color 800ms ease;
     -moz-transition: color 800ms ease;

@@ -20,7 +20,7 @@ function dons_post_types() {
   // Deutsche post type
   register_post_type('deutsche', array(
     'supports' => array('title', 'editor', 'excerpt', 'thumbnail'),
-    'rewrite' => array('slug' => 'deutsche'),
+    'rewrite' => array('slug' => 'deutsch'),
     'has_archive' => true,
     'public' => true,
     'labels' => array(
