@@ -3,7 +3,7 @@
   <ul class="icons-list">
     <li><a href="https://www.facebook.com/TransformingCellularMemoryinternationalevents/" target="_blank"><i class="fab fa-facebook-square fa-2x" aria-hidden="true"></i>International events</a></li>
     <li><a href="https://www.facebook.com/TCMdeutschsprachig/" target="_blank"><i class="fab fa-facebook-square fa-2x" aria-hidden="true"></i>Deutschsprachig</a></li>
-    <li><a href="#"><i class="fab fa-instagram fa-2x" aria-hidden="true"></i>Instagram</a></li>
+    <li><a href="https://instagram.com/p/BP5T0K6FVavdkN1AA2k138hEpFrWa_q6XbavCs0/" target="_blank"><i class="fab fa-instagram fa-2x" aria-hidden="true"></i>Instagram</a></li>
   </ul>
 
   <ul>

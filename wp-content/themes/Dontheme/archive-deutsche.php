@@ -2,7 +2,7 @@
 
 <div class="hero" style="background-image: url(<?php echo get_theme_file_uri('/images/deutsche-compressor.jpg') ?>);">
   <div class="hero-headline">
-    <h1>Deutsche</h1>
+    <h1>Deutsch</h1>
   </div><!-- end hero-headline -->
 </div><!-- end hero -->
 
@@ -25,7 +25,7 @@
       <h1>Anmeldung & Information</h1>
     <div class="col-sm-7 col-xs-7 ilse-contact-col">
       <h3>Ilse Engel</h3>
-      <h4><i class="fas fa-phone"></i>+49-3379 – 20 20 02</h4>
+      <h4><i class="fas fa-phone"></i>+49-3379-20 20 02</h4>
       <h4><i class="far fa-envelope"></i>ilse.engel@web.de</h4>
     </div>
     <div class="col-sm-5 col-xs-5 ilse-image-col">
