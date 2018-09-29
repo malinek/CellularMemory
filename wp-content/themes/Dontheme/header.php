@@ -10,7 +10,7 @@
   <!-- NAVIGATION MENU -->
   <header>
     <div class="container">
-      <a href="<?php echo site_url() ?>"><img src="<?php echo get_theme_file_uri('/images/logo-use.png')?>" class="logo"></a>
+      <a href="<?php echo site_url() ?>"><img src="<?php echo get_theme_file_uri('/images/logo.png')?>" class="logo"></a>
 
       <nav class="site-nav">
         <ul>        
@@ -27,7 +27,7 @@
           <a href="<?php echo get_post_type_archive_link('workshop') ?>">Workshops</a>
           <li <?php if (is_page('private-sessions')) echo 'class="current-menu-item"'; ?>><a href="<?php echo site_url('/private-sessions') ?>">Private Sessions</a></li>
           <li <?php if (get_post_type() == 'post') echo 'class="current-menu-item"'; ?>><a href="<?php echo site_url('/blog') ?>">Read More</a></li>
-          <li <?php if (is_page('vlog')) echo 'class="current-menu-item"'; ?>><a href="<?php echo site_url('/vlog') ?>">Vlog</a></li>
+          <li <?php if (get_post_type() == 'vlog') echo 'class="current-menu-item"'; ?>><a href="<?php echo site_url('/vlog') ?>">Vlog</a></li>
           <li <?php if (is_page('gallery')) echo 'class="current-menu-item"'; ?>><a href="<?php echo site_url('/gallery') ?>">Gallery</a></li>
           <li <?php if (get_post_type() == 'deutsche') echo 'class="current-menu-item"'; ?>><a href="<?php echo site_url('/deutsch') ?>">Deutsch</a></li>
         </ul> 
