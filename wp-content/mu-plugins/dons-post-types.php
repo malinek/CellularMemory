@@ -32,6 +32,23 @@ function dons_post_types() {
     ),
     'menu_icon' => 'dashicons-format-aside'
   ));
+
+   // Vlog post type
+  register_post_type('vlog', array(
+    'supports' => array('title', 'editor', 'excerpt'),
+    'rewrite' => array('slug' => 'vlog'),
+    'has_archive' => true,
+    'public' => true,
+    'labels' => array(
+      'name' => 'Vlog',
+      'add_new_item' => 'Add New Vlog',
+      'edit_item' => 'Edit Vlog',
+      'all_items' => 'All Vlog',
+      'singular_name' => 'Vlog'
+    ),
+    'menu_icon' => 'dashicons-video-alt2'
+  ));
+
 }
 
 add_action('init', 'dons_post_types');
