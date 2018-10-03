@@ -7,3 +7,9 @@ background-color: $lightlightpurple;
   max-width: 600px;
 }
 
+.contact-content a {
+  text-decoration: underline;
+  color: $darkpurple;
+  transition: color 800ms ease;
+}
+
