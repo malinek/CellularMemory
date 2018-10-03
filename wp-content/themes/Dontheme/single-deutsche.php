@@ -27,7 +27,7 @@
 </div><!-- end container -->
 
 <div class="button-post-single">
-  <button type="button" class="big-green-button"><a href="<?php echo site_url('/deutsche') ?>">Back to Deutsche</a></button>
+  <button type="button" class="big-green-button"><a href="<?php echo site_url('/deutsch') ?>">Back to Deutsch</a></button>
 </div>
 
 <?php get_footer(); ?>
