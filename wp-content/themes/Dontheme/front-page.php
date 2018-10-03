@@ -1,17 +1,14 @@
 <?php get_header(); ?>
 
-<div class="welcome-image" style="background-image: url(<?php echo get_theme_file_uri('/images/donheader.jpg') ?>);">
+<div class="welcome-image" style="background-image: url(<?php the_field('hero_image'); ?>);">
   <div class="welcome-text">
-    <h1>Clean out your closet and open up to the <br> sweetness and love of the universe<br>Come on in<br>Everybody is Welcome</h1>
+    <h1><?php the_field('hero_title'); ?></h1>
   </div>
 </div><!-- end welcome-image -->
 
 <div class="container intro-text">
   <div class="intro-text">
-    <h1>Transforming Cellular Memory...</h1>
-      <p>...is the process of taking the body/mind through deep cellular purification and metamorphosis. This is created through sitting in a transmission of divine light, allowing this energy of universal intelligence to clear out the old cloaks of world mind and awaken the sacred nature of who we truly are.</p>
-    <h1>Expanding global consciousness</h1>
-      <p>There are many of us who are now and have been taking our bodies through deep purification. We are learning to live in alignment with the universal principles of love, gratitude and sweetness. Together we are pioneering a new global consciousness based on inclusion, connection and the recognition that we are all in this together as a global family. Together we now move beyond the grid of old world mind; fear, separation, exclusion, bigotry, greed/competition and self hatred.</p>
+    <?php the_field('intro_text_1'); ?>
 
     <div class="col-sm-12 video-section">
       <?php
@@ -28,9 +25,9 @@
     <button type="button" class="big-green-button button-vlog-front"><a href="<?php echo site_url('/vlog') ?>">To vlog page</a></button>
     </div>
  
-    <h1>Through attending and committing to...</h1>
-      <p>...these courses, workshops and seminars on an on-going basis, participants will eventually become proficient and will develop a mastery in the areas of:</p>
-  </div>
+    <?php the_field('intro_text_2'); ?>
+
+  </div><!-- end intro-text -->
 </div><!-- end container intro-text -->
 
 <div class="intro-effects-bg-image" style="background-image: url(<?php echo get_theme_file_uri('/images/2ndheader.jpg') ?>);">
