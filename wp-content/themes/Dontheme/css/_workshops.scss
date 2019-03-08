@@ -51,10 +51,13 @@
   margin-bottom: 15px;
 }
 
+<<<<<<< HEAD
 .content-workshops a {
   width: 125px;
 }
 
+=======
+>>>>>>> b032d36b758f5ffcb54898073be9b3f9294dea77
 /** SINGLE PAGE **/
 
 .container-single-workshop {
@@ -95,6 +98,10 @@
   max-width: 400px;
   background: rgb(185,175,180);
   background: linear-gradient(135deg, rgba(185,175,180,1) 0%, rgba(208,202,205,1) 50%, rgba(231,228,230,1) 100%);
+<<<<<<< HEAD
+=======
+  /**background: #dcd7d9; **/
+>>>>>>> b032d36b758f5ffcb54898073be9b3f9294dea77
   border: solid 0px;
   border-color: $lightergreen;
   border-radius: 10px;
@@ -109,8 +116,12 @@
 .button-workshop-single {
   display: block;
   text-align: center;
+<<<<<<< HEAD
   margin: 0 auto 40px auto;
   padding-top: 10px;
+=======
+  margin: 0 auto 30px auto;
+>>>>>>> b032d36b758f5ffcb54898073be9b3f9294dea77
 }
 
 .container-single-workshop a {

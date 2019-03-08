@@ -10,12 +10,17 @@
   border-color: $buttondarkerpurple;
   background: rgb(139,123,130);
   background: linear-gradient(90deg, rgba(139,123,130,1) 0%, rgba(208,202,205,1) 100%);
+<<<<<<< HEAD
   box-shadow: 0 12px 20px -8px rgba(0, 0, 0, 0.5);
   transition: all 250ms ease;
   display: block;
   margin: auto;
   text-align: center;
   width: 300px;
+=======
+  transition: transform 250ms ease;
+  box-shadow: 0 12px 20px -8px rgba(0, 0, 0, 0.5);
+>>>>>>> b032d36b758f5ffcb54898073be9b3f9294dea77
 }
 
 .big-green-button {
@@ -25,22 +30,36 @@
 
 .big-purple-button:hover, .big-green-button:hover {
   transform: translateY(4px);
+<<<<<<< HEAD
   color: $buttontextgreen;
 }
 
 
+=======
+}
+
+>>>>>>> b032d36b758f5ffcb54898073be9b3f9294dea77
 /* SMALLER, NO GRADIENT BUTTONS */
 .purple-button, .green-button, .light-purple-button {
   padding: 8px 20px;
   color: $buttontextgreen;
   border: solid 1px;
   border-radius: 4px;
+<<<<<<< HEAD
   border-color: $buttondarkerpurple;
   background-color: $lightpurple;
   transition: all 250ms ease;
   display: block;
   margin: auto;
   text-align: center;
+=======
+  display: block;
+  margin: auto;
+  text-align: center;
+  transition: all 250ms ease;
+  border-color: $buttondarkerpurple;
+  background-color: $lightpurple;
+>>>>>>> b032d36b758f5ffcb54898073be9b3f9294dea77
 }
 
 .green-button {

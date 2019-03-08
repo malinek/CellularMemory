@@ -44,7 +44,14 @@
 </div><!-- end container -->
 
 <div class="button-workshop-single">
+<<<<<<< HEAD
   <a href="<?php echo get_post_type_archive_link('workshop'); ?>" class="big-green-button">Back to all workshops</a>
 </div>
 
 <?php get_footer(); ?>
+=======
+  <button type="button" class="big-green-button"><a href="<?php echo get_post_type_archive_link('workshop'); ?>">Back to all workshops</a></button>
+</div>
+
+<?php get_footer(); ?>
+>>>>>>> b032d36b758f5ffcb54898073be9b3f9294dea77

@@ -27,7 +27,11 @@
 </div><!-- end post-container-single -->
 
 <div class="button-post-single">
+<<<<<<< HEAD
   <a href="<?php echo site_url('/blog') ?>" class="big-green-button back-to-all-posts">Back to all posts</a>
+=======
+  <button type="button" class="big-green-button"><a href="<?php echo site_url('/blog') ?>">Back to all posts</a></button>
+>>>>>>> b032d36b758f5ffcb54898073be9b3f9294dea77
 </div>
 
 <?php get_footer(); ?>

@@ -27,7 +27,11 @@
 </div><!-- end container -->
 
 <div class="button-payment-page">
+<<<<<<< HEAD
   <a href="<?php echo site_url() ?>" class="big-purple-button back-to-home">Back to Home</a>
+=======
+  <button type="button" class="big-purple-button"><a href="<?php echo site_url() ?>">Back to Home</a></button>
+>>>>>>> b032d36b758f5ffcb54898073be9b3f9294dea77
 </div>
 
 <?php get_footer(); ?>

@@ -2,7 +2,11 @@
 
 <div class="hero" style="background-image: url(<?php echo get_theme_file_uri('/images/deutsche-compressor.jpg') ?>);">
   <div class="hero-headline">
+<<<<<<< HEAD
     <h1>Deutsch</h1>
+=======
+    <h1>Deutsche</h1>
+>>>>>>> b032d36b758f5ffcb54898073be9b3f9294dea77
   </div><!-- end hero-headline -->
 </div><!-- end hero -->
 
@@ -27,7 +31,11 @@
 </div><!-- end container -->
 
 <div class="button-post-single">
+<<<<<<< HEAD
   <a href="<?php echo site_url('/deutsch') ?>" class="big-green-button back-to-deutsch">Back to Deutsch</a>
+=======
+  <button type="button" class="big-green-button"><a href="<?php echo site_url('/deutsch') ?>">Back to Deutsch</a></button>
+>>>>>>> b032d36b758f5ffcb54898073be9b3f9294dea77
 </div>
 
 <?php get_footer(); ?>

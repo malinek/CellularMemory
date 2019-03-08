@@ -19,11 +19,20 @@
       <h1><?php the_field('video_title'); ?></h1>
       <?php the_field('video_link'); ?>
       <p><?php the_field('description_video'); ?></p>
+<<<<<<< HEAD
       <div class="container-vlog-button">
         <a href="<?php echo site_url('/vlog') ?>" class="big-purple-button first-button-frontpage">To vlog page</a>
       </div>
     </div><!-- end video-section-->
 
+=======
+    </div><!-- end video-section-->
+
+    <div class="button-post-single">
+    <button type="button" class="big-green-button button-vlog-front"><a href="<?php echo site_url('/vlog') ?>">To vlog page</a></button>
+    </div>
+ 
+>>>>>>> b032d36b758f5ffcb54898073be9b3f9294dea77
     <?php the_field('intro_text_2'); ?>
 
   </div><!-- end intro-text -->
@@ -43,7 +52,11 @@
     </ul>
   </div>
   <div class="button-front-page">
+<<<<<<< HEAD
     <a href="<?php echo site_url('/about/tcm') ?>" class="big-purple-button second-button-frontpage">Read more</a>
+=======
+    <button type="button" class="big-purple-button"><a href="<?php echo site_url('/about/tcm') ?>">Read more</a></button>
+>>>>>>> b032d36b758f5ffcb54898073be9b3f9294dea77
   </div>
 </div>
 
@@ -89,14 +102,22 @@
           <div class="col-sm-8 workshop-content">
             <span><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></span>
             <p><?php echo wp_trim_words(get_field('further_information'), 25); ?></p>
+<<<<<<< HEAD
             <a href="<?php the_permalink(); ?>" class="light-purple-button frontpage-button-2">Read more</a>
+=======
+            <button type="button" class="light-purple-button frontpage-button-2"><a href="<?php the_permalink(); ?>">Read more</a></button>
+>>>>>>> b032d36b758f5ffcb54898073be9b3f9294dea77
           </div><!-- end div -->
         </div><!-- end row -->
         <?php }
       ?>
 
       <div class="col-sm-12">
+<<<<<<< HEAD
         <a href="<?php echo get_post_type_archive_link('workshop') ?>" class="purple-button button-view-all">View all workshops</a>
+=======
+        <button type="button" class="purple-button button-view-all"><a href="<?php echo get_post_type_archive_link('workshop') ?>">View all workshops</a></button>
+>>>>>>> b032d36b758f5ffcb54898073be9b3f9294dea77
       </div>
 
     </div>
@@ -113,25 +134,45 @@
         
       <div class="row">
         <div class="col-sm-3 image-column">
+<<<<<<< HEAD
           <img class="testimonials-image-frontpage img-responsive" src="<?php echo get_template_directory_uri() . '/images/Johanna.jpg'; ?>" />
         </div>
         <div class="col-sm-9 testimonials-content">
           <p>Don Hanson is a truly gifted and very experienced teacher. I have known him for 20 years and seen miracle after miracle taking place in these circles. This is very powerful work for those who are willing to be vulnerable, take responsibility for their feelings and expand beyond the ego mind into higher vibrational reality [...] <a href="<?php echo site_url('/about/testimonials') ?>">Read more</a></p>
           <span>Johanna Harmala, Costa Rica</span>
+=======
+          <img class="testimonials-image-frontpage img-responsive" src="<?php echo get_template_directory_uri() . '/images/brett.jpg'; ?>" />
+        </div>
+        <div class="col-sm-9 testimonials-content">
+          <p>Donald reconnected me with the divine within. His gift of bringing through the unconditional love necessary to melt away the emotional, mental and physical blocks to our divine self is beyond works. Experiencing his work helped me remember what I came to do. He is Unconditional Love.</p>
+          <span>Brett Cotter, Energy Worker, New York</span>
+>>>>>>> b032d36b758f5ffcb54898073be9b3f9294dea77
         </div>
       </div><!-- end row -->
       <div class="row">
         <div class="col-sm-3 image-column">
+<<<<<<< HEAD
           <img class="testimonials-image-frontpage img-responsive" src="<?php echo get_template_directory_uri() . '/images/Dawn.jpg'; ?>" />
         </div>
         <div class="col-sm-9 testimonials-content">
           <p>Don Hanson's work taps into such a deeply spiritual, profoundly healing energy that mere words cannot possibly capture the wonder and scope of its essence. He is coming from such a boundless, generous, limitless place of acceptance, love and presence [...] <a href="<?php echo site_url('/about/testimonials') ?>">Read more</a></p>
           <span>Dawn Colombo, New York</span>
+=======
+          <img class="testimonials-image-frontpage img-responsive" src="<?php echo get_template_directory_uri() . '/images/Bridget.jpg'; ?>" />
+        </div>
+        <div class="col-sm-9 testimonials-content">
+          <p>Donald has a rare gift to share. He has helped me get in touch with and release blocks in my energy flow as well as mental and emotional bodies. He works in a clear and direct way to assist deep and profound changes that are lasting.</p>
+          <span>Bridget Van Block, M.A. Psychology, Sedona, AZ</span>
+>>>>>>> b032d36b758f5ffcb54898073be9b3f9294dea77
         </div>
       </div><!-- end row -->
       <div class="row">
         <div class="col-sm-12">
+<<<<<<< HEAD
           <a href="<?php echo site_url('/about/testimonials') ?>" class="purple-button button-view-all">View all testimonials</a>
+=======
+          <button type="button" class="purple-button button-view-all"><a href="<?php echo site_url('/about/testimonials') ?>">View all testimonials</a></button>
+>>>>>>> b032d36b758f5ffcb54898073be9b3f9294dea77
         </div>
       </div><!-- end row -->
     </div>
