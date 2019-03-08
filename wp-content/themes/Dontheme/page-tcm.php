@@ -19,7 +19,7 @@
 </div><!-- end container -->
 
 <div class="button-tcm-page">
-  <button type="button" class="big-purple-button"><a href="<?php echo site_url() ?>">Back to Home</a></button>
+  <a href="<?php echo site_url() ?>" class="big-purple-button back-to-home">Back to Home</a>
 </div>
 
 <?php get_footer(); ?>

@@ -51,6 +51,10 @@
   margin-bottom: 15px;
 }
 
+.content-workshops a {
+  width: 125px;
+}
+
 /** SINGLE PAGE **/
 
 .container-single-workshop {
@@ -91,7 +95,6 @@
   max-width: 400px;
   background: rgb(185,175,180);
   background: linear-gradient(135deg, rgba(185,175,180,1) 0%, rgba(208,202,205,1) 50%, rgba(231,228,230,1) 100%);
-  /**background: #dcd7d9; **/
   border: solid 0px;
   border-color: $lightergreen;
   border-radius: 10px;
@@ -106,7 +109,8 @@
 .button-workshop-single {
   display: block;
   text-align: center;
-  margin: 0 auto 30px auto;
+  margin: 0 auto 40px auto;
+  padding-top: 10px;
 }
 
 .container-single-workshop a {

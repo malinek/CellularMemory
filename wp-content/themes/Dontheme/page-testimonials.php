@@ -221,7 +221,7 @@
 </div><!--end container -->
 
 <div class="button-tcm-page">
-  <button type="button" class="big-green-button"><a href="<?php echo site_url() ?>">Back to Home</a></button>
+  <a href="<?php echo site_url() ?>" class="big-green-button back-to-home">Back to Home</a>
 </div>
 
 <?php get_footer(); ?>

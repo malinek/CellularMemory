@@ -31,9 +31,9 @@
     <div class="col-sm-12 content-workshops">
       <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
       <p><?php the_field('further_information'); ?></p>
-      <button type="button" class="green-button"><a href="<?php the_permalink(); ?>">Read more</a></button>
+      <a href="<?php the_permalink(); ?>" class="green-button">Read more</a>
     </div>
-   
+
   </div><!-- end row workshops-box-->
 
   <?php }

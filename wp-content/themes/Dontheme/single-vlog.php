@@ -34,7 +34,7 @@
 </div><!-- end container container-vlog -->
 
 <div class="button-post-single">
-  <button type="button" class="big-green-button"><a href="<?php echo site_url('/vlog') ?>">Back to all vlogs</a></button>
+  <a href="<?php echo site_url('/vlog') ?>" class="big-green-button back-to-home">Back to Vlog</a>
 </div>
 
 <?php get_footer(); ?>

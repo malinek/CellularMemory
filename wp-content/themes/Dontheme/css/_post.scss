@@ -152,6 +152,10 @@ hr.second-page-divider {
   margin: 0 auto 30px auto;
 }
 
+.back-to-all-posts {
+  width: 250px;
+}
+
 @media (max-width: 768px) {
   
   .post-image-col-single {
@@ -317,4 +321,10 @@ hr.second-page-divider {
   .ilse-contact .fas, .far {
     padding-right: 10px;
   }
+}
+
+/* DEUTSCHE SINGLE PAGE */
+
+.back-to-deutsch {
+  width: 250px;
 }
